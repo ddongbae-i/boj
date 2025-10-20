@@ -34,6 +34,7 @@ body {
     font-size: 1rem;
     color: var(--txt_main);
     font-family: var(--txt_font);
+    line-height: 1.4;
 }
 
 .inner {
@@ -90,7 +91,7 @@ nav ul.gnb {
     align-items: center;
 }
 
-nav ul.gnb> li> a{
+nav ul.gnb>li>a {
     display: block;
     width: 100%;
     height: 100%;
@@ -109,7 +110,8 @@ ul.sub {
     gap: 32px;
 }
 
-.nav_right button, .nav_right a{
+.nav_right button,
+.nav_right a {
     display: inline-block;
     width: 30px;
     height: 30px;
