@@ -2,148 +2,676 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brand Story</title>
-
-  <!-- CSS -->
-
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/vars.css">
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/reset.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty of Joseon · Brand Story</title>
+  <link rel="stylesheet" href="css/vars.css" />
+  <link rel="stylesheet" href="css/brandstory.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/reset.css" />
 </head>
 
 <body>
-  <main class="brand-story-1920">
-
-    <!-- ✅ GNB -->
-    <header class="gnb">
-      <div class="frame-1430103150">
-        <div class="logo">
-          <h1 class="beauty-of-joseon">BEAUTY OF JOSEON</h1>
-        </div>
-
-        <nav class="nav-center">
-          <a href="#" class="brand">Brand</a>
-          <a href="#" class="shop">Shop</a>
-          <a href="#" class="skin-examination">Skin Examination</a>
-          <a href="#" class="membership">Membership</a>
-        </nav>
-
-        <div class="nav-right">
-          <img src="./img/frame-14301031150.svg" alt="Search">
-          <img src="./img/user0.svg" alt="User">
-          <img src="./img/heart0.svg" alt="Wishlist">
-          <img src="./img/frame-14301031160.svg" alt="Cart">
-        </div>
+  <header>
+    <div class="inner">
+      <a href="" class="logo">
+        <h1>BEAUTY OF JOSEON</h1>
+      </a>
+      <nav>
+        <ul class="gnb">
+          <li>
+            <a href="">Brand</a>
+            <ul class="sub">
+              <li><a href="">Brand Story</a></li>
+              <li><a href="">Hanbang</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Find a Retailer</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Shop</a>
+            <ul class="sub">
+              <li><a href="">All Products</a></li>
+              <li><a href="">Best Seller</a></li>
+              <li><a href="">Sunscreen</a></li>
+              <li><a href="">Cleanser</a></li>
+              <li><a href="">Exfoliator</a></li>
+              <li><a href="">Toner & Essence</a></li>
+              <li><a href="">Serum</a></li>
+              <li><a href="">Moisturizer</a></li>
+              <li><a href="">Mask</a></li>
+              <li><a href="">Sale&Sets</a></li>
+              <li><a href="">Life Style</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Skin examination</a>
+            <ul class="sub">
+              <li><a href="">Tailored for You</a></li>
+              <li><a href="">Joseon Beauty Test</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Membership</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav_right">
+        <button type="button" class="serch">
+        </button>
+        <a href="" class="user"></a>
+        <button type="button" class="bag"></button>
+        <button type="button" class="ham_menu"></button>
       </div>
-    </header>
+    </div>
+  </header>
 
-
-    <!-- ✅ Section 1 : Hero -->
-    <section class="section-1" style="background: url('./img/section-10.png') center / cover no-repeat;">
+  <main>
+    <div class="section-1" style="
+      background: url(./img/section-10.png) center; background-size: cover; background-repeat: no-repeat;">
       <div class="inner">
-
-        <!-- 이건 header 아님! 그냥 타이틀 박스 -->
         <div class="hero">
           <div class="line"></div>
-          <p class="est-2014-seoul">EST · 2014 · SEOUL</p>
+          <div class="est-2014-seoul">EST · 2014 · SEOUL</div>
         </div>
-
         <div class="tit">
-          <h2 class="div">조선미녀</h2>
-          <p class="beauty-of-joseon2">BEAUTY OF JOSEON</p>
+          <div class="div">조선미녀</div>
+          <div class="beauty-of-joseon2">BEAUTY OF JOSEON</div>
         </div>
-
-        <p class="traditional-korean-beauty-wisdom-refined-for-modern-skin">
-          Traditional Korean beauty wisdom refined for modern skin
-        </p>
-
-        <div class="img">
-          <img src="./img/line-img0.png" alt="Decorative Line" class="line-img">
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ✅ Section 2 : Our Story -->
-    <section class="section-2">
-      <div class="inner2">
-
-        <!-- Title -->
-        <div class="con-tit">
-          <div class="tit2">
-            <span class="line2"></span>
-            <h2 class="our-story tit">Our Story</h2>
-            <span class="line2"></span>
+        <div class="txt">
+          <div class="traditional-korean-beauty-wisdom-refined-for-modern-skin">
+            Traditional Korean beauty wisdom refined for modern skin
           </div>
-          <p class="bridging-five-centuries">
-            Bridging five centuries of Korean beauty wisdom
-            with modern skincare innovation
+        </div>
+        <div class="img">
+          <img class="line-img" src="./img/line-img0.png" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="story-cards">
+      <article class="story-card">
+        <figure class="story-card__media" aria-hidden="true">
+          <div class="frame">
+            <img src="img/con-img0.png" alt="Royal beauty ritual" />
+          </div>
+        </figure>
+        <div class="story-card__copy">
+          <p class="caption">01 · Royal Beauty Rituals</p>
+          <h3>Time-honoured recipes of the royal court</h3>
+          <p>
+            For centuries, Korean royal courts preserved ancient beauty
+            secrets using the finest natural ingredients. These
+            time-honored formulations were passed down through
+            generations of court ladies.
           </p>
+          <p class="caption">Traditional wisdom dating back 500 years</p>
+        </div>
+      </article>
+
+
+
+      <article class="story-card">
+        <figure class="story-card__media" aria-hidden="true">
+          <div class="frame">
+            <img src="img/con-img1.png" alt="Modern laboratory" />
+          </div>
+        </figure>
+        <div class="story-card__copy">
+          <p class="caption">02 · Modern Science</p>
+          <h3>When heritage meets innovation</h3>
+          <p>
+            We honour this legacy by combining traditional Korean
+            botanicals with contemporary skincare science, creating
+            products that deliver proven results while respecting
+            ancestral knowledge.
+          </p>
+          <p class="caption">Scientifically validated ingredients</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="section-divider">
+      <p>
+        Every product tells a story of timeless beauty — where ancient
+        wisdom meets modern excellence.
+      </p>
+    </div>
+    </div>
+    </section>
+
+    <section id="key-ingredients" aria-labelledby="ingredients-heading">
+      <div class="section-inner">
+        <div class="section-title">
+          <p class="eyebrow">Key Ingredients</p>
+          <h2 id="ingredients-heading">
+            Carefully selected botanicals that have nourished Korean skin for
+            centuries
+          </h2>
         </div>
 
-        <!-- Card List -->
-        <div class="cardlist">
+        <div class="ingredients-grid">
+          <article class="ingredient-card">
+            <img src="img/img1.png" alt="Ginseng" />
+            <div class="details">
+              <span>Key Ingredient</span>
+              <h3>Ginseng · 인삼</h3>
+              <p>
+                Revered for centuries as the king of herbs, Korean ginseng
+                delivers powerful antioxidants and essential nutrients to
+                revitalise and strengthen the skin’s natural barrier.
+              </p>
+              <div class="ingredient-benefits">
+                <h4>Benefits</h4>
+                <ul>
+                  <li>Skin revitalisation</li>
+                  <li>Antioxidant protection</li>
+                  <li>Improved elasticity</li>
+                </ul>
+              </div>
+              <p class="ingredient-quote">
+                “Used in royal courts as the ultimate anti-ageing remedy”
+              </p>
 
-          <!-- Card 01 -->
-          <article class="card-01">
-            <div class="card-img">
-              <span class="line3"></span>
-              <img src="./img/con-img0.png" alt="Royal Beauty Rituals" class="con-img">
-              <span class="line4"></span>
             </div>
 
-            <div class="card-txt">
-              <div class="num"><span class="_01">01</span></div>
-              <h3 class="tit3">Royal Beauty Rituals</h3>
-              <p class="txt2">
-                For centuries, Korean royal courts preserved ancient
-                beauty secrets using the finest natural ingredients.
-                These time-honored formulations were passed down
-                through generations of court ladies.
+          </article>
+
+          <article class="ingredient-card">
+            <img src="img/img2.png" alt="Centella asiatica" />
+            <div class="details">
+              <span>Key Ingredient</span>
+              <h3>Centella Asiatica · 병풀</h3>
+              <p>
+                Known as “tiger grass” for its legendary healing powers,
+                centella accelerates skin repair, strengthens barriers and
+                provides deep calming benefits.
               </p>
-              <p class="ps">Traditional wisdom dating back 500 years</p>
+              <div class="ingredient-benefits">
+                <h4>Benefits</h4>
+                <ul>
+                  <li>Wound healing</li>
+                  <li>Barrier strengthening</li>
+                  <li>Redness reduction</li>
+                </ul>
+              </div>
+              <p class="ingredient-quote">
+                “The miracle herb of Asian skincare”
+              </p>
             </div>
           </article>
 
-          <!-- Card 02 -->
-          <article class="card-02">
-            <div class="card-txt2">
-              <div class="num2"><span class="_02">02</span></div>
-              <h3 class="tit4">Modern Science Meets Tradition</h3>
-              <p class="txt3">
-                We honor this legacy by combining traditional Korean botanicals
-                with contemporary skincare science,
-                creating products that deliver proven results
-                while respecting ancestral knowledge.
+          <article class="ingredient-card">
+            <img src="img/img3.png" alt="Red bean" />
+            <div class="details">
+              <span>Key Ingredient</span>
+              <h3>Red Bean · 팥</h3>
+              <p>
+                Rich in saponins and natural enzymes, red bean gently
+                exfoliates while nourishing skin, revealing a clearer, more
+                radiant complexion.
               </p>
-              <p class="ps2">Scientifically validated traditional ingredients</p>
+              <div class="ingredient-benefits">
+                <h4>Benefits</h4>
+                <ul>
+                  <li>Gentle exfoliation</li>
+                  <li>Pore refinement</li>
+                  <li>Brightening effect</li>
+                </ul>
+              </div>
+              <p class="ingredient-quote">
+                “Traditional cleansing ritual of Korean noblewomen”
+              </p>
             </div>
 
-            <div class="card-img">
-              <img src="./img/con-img1.png" alt="Modern Science Meets Tradition" class="con-img2">
-              <span class="line3"></span>
-              <span class="line4"></span>
+          </article>
+
+          <article class="ingredient-card">
+            <img src="img/img4.png" alt="Rice" />
+            <div class="details">
+              <span>Key Ingredient</span>
+              <h3>Rice · 쌀</h3>
+              <p>
+                Fermented rice water, a beauty secret of the Joseon Dynasty,
+                deeply moisturises and brightens skin while improving overall
+                texture and tone.
+              </p>
+              <div class="ingredient-benefits">
+                <h4>Benefits</h4>
+                <ul>
+                  <li>Deep hydration</li>
+                  <li>Skin brightening</li>
+                  <li>Texture improvement</li>
+                </ul>
+              </div>
+              <p class="ingredient-quote">
+                “The secret to porcelain skin in ancient Korea”
+              </p>
+            </div>
+          </article>
+
+          <article class="ingredient-card">
+            <img src="img/img5.png" alt="Green plum" />
+            <div class="details">
+              <span>Key Ingredient</span>
+              <h3>Green Plum · 청매실</h3>
+              <p>
+                Packed with organic acids and vitamins, green plum extract
+                provides gentle exfoliation and helps maintain skin’s optimal
+                pH balance.
+              </p>
+              <div class="ingredient-benefits">
+                <h4>Benefits</h4>
+                <ul>
+                  <li>pH balancing</li>
+                  <li>Natural AHA source</li>
+                  <li>Skin renewal</li>
+                </ul>
+              </div>
+              <p class="ingredient-quote">
+                “Beloved for its rejuvenating properties in Korean medicine”
+              </p>
+            </div>
+          </article>
+
+          <article class="ingredient-card">
+            <img src="img/img6.png" alt="Propolis" />
+            <div class="details">
+              <span>Key Ingredient</span>
+              <h3>Propolis · 프로폴리스</h3>
+              <p>
+                Nature’s protective resin, propolis offers powerful
+                antibacterial and healing properties while soothing and
+                strengthening sensitive skin.
+              </p>
+              <div class="ingredient-benefits">
+                <h4>Benefits</h4>
+                <ul>
+                  <li>Antibacterial action</li>
+                  <li>Skin barrier repair</li>
+                  <li>Soothing effect</li>
+                </ul>
+              </div>
+              <p class="ingredient-quote">
+                “Precious healing elixir from nature”
+              </p>
+            </div>
+          </article>
+
+          <article class="ingredient-card">
+            <img src="img/img7.png" alt="Mugwort" />
+            <div class="details">
+              <span>Key Ingredient</span>
+              <h3>Mugwort · 쑥</h3>
+              <p>
+                Sacred herb in Korean culture, mugwort calms inflammation,
+                reduces redness and provides powerful antioxidant protection
+                for troubled skin.
+              </p>
+              <div class="ingredient-benefits">
+                <h4>Benefits</h4>
+                <ul>
+                  <li>Anti-inflammatory</li>
+                  <li>Calming effect</li>
+                  <li>Antioxidant rich</li>
+                </ul>
+              </div>
+              <p class="ingredient-quote">
+                “Traditional remedy for skin purification”
+              </p>
+            </div>
+          </article>
+
+          <article class="ingredient-card">
+            <img src="img/img8.png" alt="Green tea" />
+            <div class="details">
+              <span>Key Ingredient</span>
+              <h3>Green Tea · 녹차</h3>
+              <p>
+                Rich in catechins and polyphenols, green tea protects against
+                environmental damage while controlling sebum and refining skin
+                texture.
+              </p>
+              <div class="ingredient-benefits">
+                <h4>Benefits</h4>
+                <ul>
+                  <li>Sebum control</li>
+                  <li>UV protection</li>
+                  <li>Pore minimising</li>
+                </ul>
+              </div>
+              <p class="ingredient-quote">
+                “Essence of longevity in Korean wellness”
+              </p>
             </div>
           </article>
         </div>
-
-        <!-- Bottom -->
-        <div class="con-bottom">
-          <p class="txt4">
-            Every product tells a story of timeless beauty,<br>
-            where ancient wisdom meets modern excellence.
-          </p>
-          <div class="line5"></div>
-        </div>
-
       </div>
     </section>
 
+    <section + id="philosophy" + class="philosophy" + aria-labelledby="philosophy-heading" +>
+      <div class="section-inner">
+        <div class="section-title">
+          <p class="eyebrow">Our Philosophy</p>
+          <h2 id="philosophy-heading">
+            Beauty rooted in authenticity, crafted with reverence for
+            tradition, and designed for the modern world
+          </h2>
+          <p>
+            We create skincare that honours your skin’s natural wisdom while
+            delivering transformative results you can see and feel.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Natural Integrity</h3>
+            <p>
+              We believe in the power of pure, unadulterated ingredients.
+              Every formulation begins with the finest natural botanicals,
+              free from harmful chemicals and synthetic additives.
+            </p>
+            <p class="quote">「자연 그대로의 순수함이 가장 아름답다」</p>
+          </article>
+          <article class="card">
+            <h3>Timeless Wisdom</h3>
+            <p>
+              Our products honour centuries-old Korean beauty traditions,
+              combining ancestral knowledge with modern scientific
+              understanding to create truly effective skincare.
+            </p>
+            <p class="quote">「옛것을 알아야 새것을 안다」</p>
+          </article>
+          <article class="card">
+            <h3>Conscious Beauty</h3>
+            <p>
+              We are committed to creating products that benefit both your
+              skin and our planet, using sustainable practices and ethical
+              sourcing throughout our supply chain.
+            </p>
+            <p class="quote">
+              「아름다움은 지속되어야 진정한 가치가 있다」
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section + id="heritage" + class="timeline" + aria-labelledby="heritage-heading" +>
+      <div class="section-inner">
+        <div class="section-title">
+          <p class="eyebrow">Cultural Heritage</p>
+          <h2 id="heritage-heading">Royal Beauty Traditions of Joseon</h2>
+          <p>
+            For over 500 years, the royal court of Joseon Dynasty preserved
+            sacred beauty rituals that embodied the Korean philosophy of
+            natural harmony and inner radiance.
+          </p>
+        </div>
+
+        <div class="timeline-list">
+          <article class="timeline-card">
+            <div>
+              <h3>1392</h3>
+              <div class="glyph" aria-hidden="true">始</div>
+            </div>
+            <div>
+              <h4>Foundation of beauty culture</h4>
+              <p>
+                The establishment of the Joseon Dynasty marked the beginning
+                of sophisticated court beauty culture, where natural
+                ingredients became the foundation of royal skincare rituals.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div>
+              <h3>1400</h3>
+              <div class="glyph" aria-hidden="true">參</div>
+            </div>
+            <div>
+              <h4>The art of natural ingredients</h4>
+              <p>
+                Royal physicians developed a sophisticated understanding of
+                ginseng, rice bran and pearl powder, creating the foundational
+                ingredients still cherished today.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div>
+              <h3>1500</h3>
+              <div class="glyph" aria-hidden="true">美</div>
+            </div>
+            <div>
+              <h4>Golden age of royal beauty</h4>
+              <p>
+                The height of Joseon cultural refinement saw the development
+                of intricate beauty rituals that balanced inner wellness with
+                outer radiance, becoming the pinnacle of Korean beauty
+                philosophy.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div>
+              <h3>1809</h3>
+              <div class="glyph" aria-hidden="true">書</div>
+            </div>
+            <div>
+              <h4>The sacred encyclopedia</h4>
+              <p>
+                Lady Bingheo completed the monumental Gyuhap Chongseo, the
+                comprehensive encyclopedia of women’s wisdom that preserved
+                centuries of beauty secrets, culinary arts and household
+                knowledge.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div>
+              <h3>Present</h3>
+              <div class="glyph" aria-hidden="true">今</div>
+            </div>
+            <div>
+              <h4>Modern renaissance</h4>
+              <p>
+                Today, we honour this magnificent heritage by reviving the
+                wisdom of Gyuhap Chongseo through contemporary innovation,
+                bringing royal beauty traditions to modern women worldwide.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="encyclopedia" aria-labelledby="encyclopedia-heading">
+      <div class="section-inner">
+        <div class="section-title">
+          <p class="eyebrow">Gyuhap Chongseo</p>
+          <h2 id="encyclopedia-heading">The encyclopedia of women’s wisdom</h2>
+        </div>
+
+        <div class="encyclopedia-content">
+          <div class="copy">
+            <p>
+              In 1809, the remarkable Lady Bingheo (憑虛閣 李氏) completed what
+              would become the most comprehensive guide to Korean women’s
+              wisdom: the Gyuhap Chongseo (閨閤叢書).
+            </p>
+            <blockquote>
+              “Within these pages lie the secrets of radiant skin achieved
+              through natural harmony — the very principles that guide our
+              formulations today.”
+            </blockquote>
+            <p>
+              This extraordinary four-volume encyclopedia contained
+              everything from royal beauty formulations to seasonal skincare
+              rituals, preserving centuries of knowledge that might otherwise
+              have been lost to time.
+            </p>
+          </div>
+          <figure>
+            <img src="img/image-5350.png" alt="Gyuhap Chongseo manuscript" />
+          </figure>
+        </div>
+
+        <div class="two-column">
+          <div>
+            <h3>Cultural legacy</h3>
+            <p>
+              “Beauty in Korean culture has always been inseparable from
+              virtue, health and harmony with nature. The Gyuhap Chongseo
+              stands as testament to this philosophy — a sacred text that
+              preserved not merely beauty formulations, but a profound way of
+              living that honours both inner cultivation and outer
+              expression.”
+            </p>
+          </div>
+          <div>
+            <h3>Living heritage</h3>
+            <p>
+              Today, we are the guardians of this extraordinary legacy. Every
+              formulation honours the wisdom of Lady Bingheo; every ritual
+              connects us to centuries of Korean women who understood that
+              true beauty emanates from the harmony between natural
+              ingredients and mindful practice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="section-inner">
+        <div class="section-title">
+          <p class="eyebrow">Newsletter</p>
+          <h2 id="newsletter-heading">
+            Where Korean heritage meets modern beauty
+          </h2>
+          <p>
+            Subscribe to receive exclusive K-beauty tips, product launches
+            and stories from our heritage. Join 50,000+ beauty enthusiasts —
+            unsubscribe anytime.
+          </p>
+        </div>
+        <form>
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email address" required />
+          <button type="submit">Join our newsletter</button>
+        </form>
+        <div class="perks">
+          <p>Weekly tips · K-beauty secrets</p>
+          <p>Exclusive access · New launches first</p>
+          <p>Special offers · Subscriber only</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="journal" aria-labelledby="journal-heading">
+      <div class="section-inner">
+        <div class="section-title">
+          <p class="eyebrow">Journal</p>
+          <h2 id="journal-heading">Hanbang skincare insights</h2>
+        </div>
+        <div class="journal-grid">
+          <article class="journal-card">
+            <img src="img/frame-2790.png" alt="Herbal textures" />
+            <div class="card-body">
+              <h3>
+                Hanbang skincare secrets: how to exfoliate without irritation
+              </h3>
+              <span>September 25, 2025</span>
+            </div>
+          </article>
+          <article class="journal-card">
+            <img src="img/frame-2800.png" alt="Serene forest" />
+            <div class="card-body">
+              <h3>Harnessing ginseng for resilience and radiance</h3>
+              <span>September 12, 2025</span>
+            </div>
+          </article>
+          <article class="journal-card">
+            <img src="img/frame-2810.png" alt="Skincare ritual" />
+            <div class="card-body">
+              <h3>Rituals inspired by Joseon court ladies</h3>
+              <span>August 30, 2025</span>
+            </div>
+          </article>
+          <article class="journal-card">
+            <img src="img/frame-2820.png" alt="Botanical study" />
+            <div class="card-body">
+              <h3>Modern science meets timeless botanicals</h3>
+              <span>August 12, 2025</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="subscribe">
+          <h4>Join our community</h4>
+          <p>
+            Get on the list for K-beauty tips, exclusive deals and more
+            surprises from us.
+          </p>
+          <form>
+            <label for="footer-email" class="sr-only">Email</label>
+            <input id="footer-email" type="email" name="email" placeholder="Email" required />
+            <button type="submit">Sign up now</button>
+          </form>
+          <small>By signing up, you agree to receive email marketing.</small>
+        </div>
+
+        <div>
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#">Need help</a></li>
+            <li><a href="#">Gift 10% off &amp; get 150 gems</a></li>
+            <li><a href="#">BOJ creator club</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Return &amp; refund</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms &amp; conditions</a></li>
+            <li><a href="#">Modern slavery act</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Follow on Instagram</h4>
+          <p>@beautyofjoseon</p>
+          <div class="journal-grid">
+            <img src="img/container76.png" alt="Instagram highlight 1" />
+            <img src="img/container77.png" alt="Instagram highlight 2" />
+            <img src="img/container78.png" alt="Instagram highlight 3" />
+            <img src="img/container79.png" alt="Instagram highlight 4" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          GOODAI GLOBAL INC.<br />Copyright © 2025. All rights reserved.
+        </p>
+        <nav aria-label="Social media">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 </body>
+
 
 </html>
