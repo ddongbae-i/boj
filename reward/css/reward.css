@@ -6,7 +6,7 @@ body {
 }
 
 .btn {
-display: inline-block;
+    display: inline-block;
 }
 
 .tit {
@@ -76,7 +76,7 @@ display: inline-block;
     gap: 20px
 }
 
- em {
+em {
     display: block;
     margin-bottom: 12px;
     font-weight: 500;
@@ -102,36 +102,43 @@ span {
 
 
 
-.how_it_work{
+.how_it_work {
     width: 100%;
     height: 1080px;
     background: url(../img/Howitwork_bg.png) center/cover no-repeat;
 }
+
 .how_it_work .list {
     display: flex;
-      justify-content: center;
+    justify-content: center;
     min-height: 340px;
 
-  /* 2. 배경색을 반투명하게 설정 (backdrop-filter를 보기 위해 필수) */
-  background-color: rgba(255, 255, 255, 0.8); /* 예: 흰색 30% 투명도 */
-  
-  /* 3. 백그라운드 블러 효과 적용 */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari 지원 */
+    /* 2. 배경색을 반투명하게 설정 (backdrop-filter를 보기 위해 필수) */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* 예: 흰색 30% 투명도 */
+
+    /* 3. 백그라운드 블러 효과 적용 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari 지원 */
 
 }
-.how_it_work .list ul{
-      display: flex;
-      align-items: center;
-      gap: 40px;
-}
-.how_it_work .list ul>li{
+
+.how_it_work .list ul {
     display: flex;
-flex-direction : column;
+    align-items: center;
+    gap: 40px;
 }
 
-.how_it_work .list ul>li img{
-height: 90px;
-object-fit: contain;
-margin-bottom: 24px;
+.how_it_work .list ul>li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.how_it_work .list ul>li img {
+    /* height: 90px; */
+    /* object-fit: contain; */
+    margin-bottom: 24px;
+    background: #ccc;
 }
