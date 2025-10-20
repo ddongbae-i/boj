@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap');
 
 :root {
     font-size: 16px;
@@ -10,7 +11,7 @@
     --txt_main: #1c1c1c;
     --txt_sub_44: #444;
     --txt_sub_77: #777;
-    --white_ff:#fff;
+    --white_ff: #fff;
     --grey_aa: #aaa;
     --gray_de: #dedede;
     --gray_c7: #c7c7c7;
@@ -63,6 +64,54 @@ header {
     left: 0;
 }
 
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
 
+header .logo {
+    display: block;
+    width: 350px;
+    height: 40px;
+}
 
+header .logo h1 {
+    margin-top: 4px;
+    font-family: "Scheherazade New", serif;
+    font-size: 36px;
+    font-weight: 400;
+}
 
+nav ul.gnb {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+nav ul.gnb> li> a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+ul.sub {
+    display: none;
+}
+
+.nav_right {
+    width: 350px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav_right button, .nav_right a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: var(--centella);
+}
