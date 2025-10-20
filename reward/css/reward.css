@@ -46,56 +46,92 @@ display: inline-block;
     text-align: center;
 }
 
-.vip_tiers .table {
+.list {
     margin: 160px auto;
     width: 76vw;
     min-height: 1200px;
     text-align: center;
-    background-color: var(--gray_de);
+    background-color: var(--white_f0);
     border: 40px solid transparent;
     border-image: url('../img/corner.png') 40 fill stretch;
 }
 
-.vip_tiers .table>ul {
+.vip_tiers .list>ul {
     display: flex;
     width: 90%;
     margin: 80px auto;
-    background-color: var(--white_f0);
+    background-color: var(--gray_de);
     justify-content: space-around;
     padding-bottom: 40px
 }
 
-.vip_tiers .table>ul>li {
+.vip_tiers .list>ul>li {
     flex: 1;
     padding: 20px;
 }
 
-.vip_tiers .table>ul>li>ul {
+.vip_tiers .list>ul>li>ul {
     display: flex;
     flex-direction: column;
     gap: 20px
 }
 
-.vip_tiers .table>ul>li>ul em {
+ em {
     display: block;
     margin-bottom: 12px;
     font-weight: 500;
     font-size: 1.5rem;
 }
 
-.vip_tiers .table>ul>li>ul p {
+p {
     font-weight: 500;
 }
 
-.vip_tiers .table>ul>li>ul span {
+span {
     font-size: 1rem;
 }
 
 
-.vip_tiers .table>ul>li>ul>li:nth-child(1) {
+.vip_tiers .list>ul>li>ul>li:nth-child(1) {
     height: 80px;
     line-height: 400%;
     background-color: aqua;
 }
 
-.vip_tiers .table>ul>li>ul>li:nth-child(2) {}
+.vip_tiers .list>ul>li>ul>li:nth-child(2) {}
+
+
+
+.how_it_work{
+    width: 100%;
+    height: 1080px;
+    background: url(../img/Howitwork_bg.png) center/cover no-repeat;
+}
+.how_it_work .list {
+    display: flex;
+      justify-content: center;
+    min-height: 340px;
+
+  /* 2. 배경색을 반투명하게 설정 (backdrop-filter를 보기 위해 필수) */
+  background-color: rgba(255, 255, 255, 0.8); /* 예: 흰색 30% 투명도 */
+  
+  /* 3. 백그라운드 블러 효과 적용 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari 지원 */
+
+}
+.how_it_work .list ul{
+      display: flex;
+      align-items: center;
+      gap: 40px;
+}
+.how_it_work .list ul>li{
+    display: flex;
+flex-direction : column;
+}
+
+.how_it_work .list ul>li img{
+height: 90px;
+object-fit: contain;
+margin-bottom: 24px;
+}
