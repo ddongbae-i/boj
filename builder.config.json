@@ -1,6 +1,0 @@
-{
-  "command": "builder.config.json",
-  "serverUrl": "http://localhost:300",
-  "authenticateProxy": false,
-  "commitMode": "commits"
-}
