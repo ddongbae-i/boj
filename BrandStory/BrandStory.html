@@ -5,108 +5,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brand Story</title>
+
+  <!-- CSS -->
+
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/BSstyle.css">
   <link rel="stylesheet" href="./css/vars.css">
-  <link rel="stylesheet" href="./css/media.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/reset.css">
 </head>
 
 <body>
   <main class="brand-story-1920">
-    <!-- GNB -->
 
-    <!-- Hero Section -->
-    <section class="section-1" style="
-  background: url('./img/section-10.png') center / cover no-repeat;
-">
-      <div class="inner">
-        <header class="hero">
-          <div class="line"></div>
-          <p class="est-2014-seoul">EST · 2014 · SEOUL</p>
-        </header>
-
-        <div class="tit">
-          <h1 class="kor-title">조선미녀</h1>
-          <h2 class="beauty-of-joseon2">BEAUTY OF JOSEON</h2>
+    <!-- ✅ GNB -->
+    <header class="gnb">
+      <div class="frame-1430103150">
+        <div class="logo">
+          <h1 class="beauty-of-joseon">BEAUTY OF JOSEON</h1>
         </div>
 
-        <p class="txt">
+        <nav class="nav-center">
+          <a href="#" class="brand">Brand</a>
+          <a href="#" class="shop">Shop</a>
+          <a href="#" class="skin-examination">Skin Examination</a>
+          <a href="#" class="membership">Membership</a>
+        </nav>
+
+        <div class="nav-right">
+          <img src="./img/frame-14301031150.svg" alt="Search">
+          <img src="./img/user0.svg" alt="User">
+          <img src="./img/heart0.svg" alt="Wishlist">
+          <img src="./img/frame-14301031160.svg" alt="Cart">
+        </div>
+      </div>
+    </header>
+
+
+    <!-- ✅ Section 1 : Hero -->
+    <section class="section-1" style="background: url('./img/section-10.png') center / cover no-repeat;">
+      <div class="inner">
+
+        <!-- 이건 header 아님! 그냥 타이틀 박스 -->
+        <div class="hero">
+          <div class="line"></div>
+          <p class="est-2014-seoul">EST · 2014 · SEOUL</p>
+        </div>
+
+        <div class="tit">
+          <h2 class="div">조선미녀</h2>
+          <p class="beauty-of-joseon2">BEAUTY OF JOSEON</p>
+        </div>
+
+        <p class="traditional-korean-beauty-wisdom-refined-for-modern-skin">
           Traditional Korean beauty wisdom refined for modern skin
         </p>
 
-        <figure class="img">
-          <img class="line-img" src="./img/line-img0.png" alt="장식용 라인" />
-        </figure>
-
-        <nav class="scroll">
-          <button class="scroll2">Scroll</button>
-        </nav>
+        <div class="img">
+          <img src="./img/line-img0.png" alt="Decorative Line" class="line-img">
+        </div>
       </div>
     </section>
 
 
+    <!-- ✅ Section 2 : Our Story -->
     <section class="section-2">
-      <div class="inner">
-        <header class="story-header">
-          <div class="story-title">
-            <span class="line"></span>
-            <h2>Our Story</h2>
-            <span class="line"></span>
-          </div>
-          <p class="subtitle">
-            Bridging five centuries of Korean beauty wisdom with modern skincare innovation
-          </p>
-        </header>
+      <div class="inner2">
 
-        <div class="card-list">
-          <!-- 카드 1 -->
-          <article class="card">
-            <div class="card-image">
-              <img src="./img/con-img0.png" alt="Royal Beauty Rituals" />
+        <!-- Title -->
+        <div class="con-tit">
+          <div class="tit2">
+            <span class="line2"></span>
+            <h2 class="our-story tit">Our Story</h2>
+            <span class="line2"></span>
+          </div>
+          <p class="bridging-five-centuries">
+            Bridging five centuries of Korean beauty wisdom
+            with modern skincare innovation
+          </p>
+        </div>
+
+        <!-- Card List -->
+        <div class="cardlist">
+
+          <!-- Card 01 -->
+          <article class="card-01">
+            <div class="card-img">
+              <span class="line3"></span>
+              <img src="./img/con-img0.png" alt="Royal Beauty Rituals" class="con-img">
+              <span class="line4"></span>
             </div>
-            <div class="card-text">
-              <div class="num">01</div>
-              <h3>Royal Beauty Rituals</h3>
-              <p>
-                For centuries, Korean royal courts preserved ancient beauty secrets using the finest natural
-                ingredients.
-                These time-honored formulations were passed down through generations of court ladies.
+
+            <div class="card-txt">
+              <div class="num"><span class="_01">01</span></div>
+              <h3 class="tit3">Royal Beauty Rituals</h3>
+              <p class="txt2">
+                For centuries, Korean royal courts preserved ancient
+                beauty secrets using the finest natural ingredients.
+                These time-honored formulations were passed down
+                through generations of court ladies.
               </p>
-              <p class="note">Traditional wisdom dating back 500 years</p>
+              <p class="ps">Traditional wisdom dating back 500 years</p>
             </div>
           </article>
 
-          <!-- 카드 2 -->
-          <article class="card reverse">
-            <div class="card-image">
-              <img src="./img/con-img1.png" alt="Modern Science Meets Tradition" />
-            </div>
-            <div class="card-text">
-              <div class="num">02</div>
-              <h3>Modern Science Meets Tradition</h3>
-              <p>
-                We honor this legacy by combining traditional Korean botanicals with contemporary skincare science,
-                creating products that deliver proven results while respecting ancestral knowledge.
+          <!-- Card 02 -->
+          <article class="card-02">
+            <div class="card-txt2">
+              <div class="num2"><span class="_02">02</span></div>
+              <h3 class="tit4">Modern Science Meets Tradition</h3>
+              <p class="txt3">
+                We honor this legacy by combining traditional Korean botanicals
+                with contemporary skincare science,
+                creating products that deliver proven results
+                while respecting ancestral knowledge.
               </p>
-              <p class="note">Scientifically validated traditional ingredients</p>
+              <p class="ps2">Scientifically validated traditional ingredients</p>
+            </div>
+
+            <div class="card-img">
+              <img src="./img/con-img1.png" alt="Modern Science Meets Tradition" class="con-img2">
+              <span class="line3"></span>
+              <span class="line4"></span>
             </div>
           </article>
         </div>
 
-        <footer class="story-footer">
-          <p>
-            Every product tells a story of timeless beauty,<br />
+        <!-- Bottom -->
+        <div class="con-bottom">
+          <p class="txt4">
+            Every product tells a story of timeless beauty,<br>
             where ancient wisdom meets modern excellence.
           </p>
-          <div class="bottom-line"></div>
-        </footer>
+          <div class="line5"></div>
+        </div>
+
       </div>
     </section>
 
-
-
   </main>
-
 
 </body>
 

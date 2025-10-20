@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-size: 16px;
+    font-weight: 300;
+    --bg_blck: #0f0f0f;
+    --bg_white: #fefefe;
+    --bg_footer: #202020;
+    --txt_main: #1c1c1c;
+    --txt_sub_44: #444;
+    --txt_sub_77: #777;
+    --white_ff:#fff;
+    --grey_aa: #aaa;
+    --gray_de: #dedede;
+    --gray_c7: #c7c7c7;
+    --img_bg: #f7f7f7;
+    --white_f0: #f0f0f0;
+    --ginseng: #C1843A;
+    --rice: #BEAF9A;
+    --greentea: #4B6D2F;
+    --redbean: #712116;
+    --propulis: #E6A11C;
+    --greenplum: #74822B;
+    --centella: #5F6B3D;
+    --mugwort: #1B4805;
+    --tit_font: "Cormorant", serif;
+    --txt_font: "Public Sans", sans-serif;
+}
+
+body {
+    background: var(--bg_white);
+    font-size: 1rem;
+    color: var(--txt_main);
+    font-family: var(--txt_font);
+}
+
+.inner {
+    max-width: 1700px;
+    margin-inline: auto;
+}
+
+.tit {
+    font-family: var(--tit_font);
+    font-size: 3rem;
+    line-height: 120%;
+    font-weight: 500;
+}
+
+.btn {
+    width: 120px;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+header {
+    width: 100%;
+    height: 124px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+
