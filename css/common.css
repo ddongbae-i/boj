@@ -65,6 +65,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    display: none; 
+    /* dn 지우기 */
 }
 
 header .inner {
