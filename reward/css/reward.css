@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vip_tiers .table {
+    margin: 160px auto;
+    width: 76vw;
+height: 1200px;
+background-color: var(--gray_de);
+border: 40px solid transparent;
+border-image: url('../img/corner.png') 40 fill stretch;
+}
