@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/BSmedia.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="./css/vars.css">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="./css/vars.css">
   <link rel="stylesheet" href="./css/brandstory.css">
+  <link rel="stylesheet" href="./css/BSmedia.css">
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/brandstory.js"></script>
 
   <script src="https://kit.fontawesome.com/1b41f4f82b.js" crossorigin="anonymous"></script>
@@ -45,7 +48,7 @@
 
     <!-- section_2 -->
     <section class="section_2">
-      <div class="inner2">
+      <div class="inner">
         <div class="con-tit">
           <div class="tit2">
             <div class="line2"></div>
@@ -141,49 +144,50 @@
 
     <!-- Section 3 -->
     <section id="ingredients" class="section_3">
-      <div class="inner3">
-        <div class="tit2">
-          <div class="line2"></div>
-          <h2 class="tit">Key Ingredients</h2>
-          <div class="line2"></div>
-          <p class="sub-text">From the royal courts of Joseon to today
+      <div class="inner">
+        <div class="con-tit">
+          <div class="tit2">
+            <div class="line2"></div>
+            <h2 class="tit">Key Ingredients</h2>
+            <div class="line2"></div>
+          </div>
+          <h3 class="sub-text">From the royal courts of Joseon to today
             — nature’s finest ingredients reborn for modern
-            skin.</p>
+            skin.</h3>
+
         </div>
 
+        <div class="slide swiper">
+          <div class="card_stack swiper-wrapper">
+            <article class="card theme-ginseng swiper-slide">
+              <figure class="img2"><img src="./img/img1.png" alt="Ginseng"></figure>
+              <div class="txt-card">
+                <h3 class="ing-name">Ginseng <span class="ing-latin">Panax ginseng</span></h3>
+                <p class="txt-1">Revered as the king of herbs, Korean ginseng revitalizes dull skin with powerful
+                  phytonutrients.</p>
+              </div>
+            </article>
 
 
+            <article class="card theme-centella swiper-slide">
+              <figure class="img2"><img src="./img/img2.png" alt="Centella"></figure>
+              <div class="txt-card">
+                <h3 class="ing-name">Centella Asiatica <span class="ing-latin">Gotu Kola</span></h3>
+                <p class="txt-1">Centella soothes sensitivity and reinforces the skin barrier with calm, restorative
+                  strength.</p>
+              </div>
+            </article>
 
 
-        <div class="card-stack">
-          <article class="card theme-ginseng active">
-            <figure class="img2"><img src="./img/img1.png" alt="Ginseng"></figure>
-            <div class="txt-card">
-              <h3 class="ing-name">Ginseng <span class="ing-latin">Panax ginseng</span></h3>
-              <p class="txt-1">Revered as the king of herbs, Korean ginseng revitalizes dull skin with powerful
-                phytonutrients.</p>
-            </div>
-          </article>
-
-
-          <article class="card theme-centella">
-            <figure class="img2"><img src="./img/img2.png" alt="Centella"></figure>
-            <div class="txt-card">
-              <h3 class="ing-name">Centella Asiatica <span class="ing-latin">Gotu Kola</span></h3>
-              <p class="txt-1">Centella soothes sensitivity and reinforces the skin barrier with calm, restorative
-                strength.</p>
-            </div>
-          </article>
-
-
-          <article class="card theme-rice">
-            <figure class="img2"><img src="./img/img4.png" alt="Rice"></figure>
-            <div class="txt-card">
-              <h3 class="ing-name">Rice <span class="ing-latin">Oryza Sativa</span></h3>
-              <p class="txt-1">A time-honored symbol of purity — Rice brightens and smooths the skin for a luminous
-                complexion.</p>
-            </div>
-          </article>
+            <article class="card theme-rice swiper-slide">
+              <figure class="img2"><img src="./img/img4.png" alt="Rice"></figure>
+              <div class="txt-card">
+                <h3 class="ing-name">Rice <span class="ing-latin">Oryza Sativa</span></h3>
+                <p class="txt-1">A time-honored symbol of purity — Rice brightens and smooths the skin for a luminous
+                  complexion.</p>
+              </div>
+            </article>
+          </div>
         </div>
 
 

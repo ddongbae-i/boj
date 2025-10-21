@@ -1,4 +1,15 @@
-const cards = document.querySelectorAll('.card');
+document.addEventListener('DOMContentLoaded', () => {
+    let articleCard = new Swiper(".section_3 .slide", {
+        effect: "cards",
+        grabCursor: true,
+        direction: "vertical",
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+})
+/* const cards = document.querySelectorAll('.card');
 let current = 0;
 
 
@@ -34,4 +45,4 @@ stack.addEventListener('mouseup', (e) => {
 });
 
 
-updateCards();
+updateCards(); */

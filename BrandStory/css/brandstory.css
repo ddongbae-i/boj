@@ -47,7 +47,7 @@ section {
     overflow: hidden;
 }
 
-.inner {
+.section_1 .inner {
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -200,6 +200,9 @@ p.tit {
     align-self: stretch;
     flex-shrink: 0;
     position: relative;
+    background: #ccc;
+    margin-bottom: 80px;
+    text-align: center;
 }
 
 .tit2 {
@@ -221,12 +224,12 @@ p.tit {
     position: relative;
 }
 
-.section-2 .tit2 .line2 h2 .tit {
+/* .section-2 .tit2 .line2 h2 .tit {
     color: #1c1c1c;
     text-align: center;
     font-size: 60px;
     align-self: stretch;
-}
+} */
 
 .bridging-five-centuries-of-korean-beauty-wisdom-wi {
     color: #1c1c1c;
@@ -631,9 +634,28 @@ p.tit {
 /* Section 3 */
 .section_3 {
     z-index: 3;
+    background: red;
 }
 
-.card.prev {
+.section_3 .slide {
+    background: #8b7355;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.section_3 .slide article {
+    display: flex;
+    background: #fff;
+}
+
+.section_3 .slide article figure {
+    width: 50%;
+}
+
+.card_stack {}
+
+/* .card.prev {
     opacity: 0.8;
     transform: translateX(-55%) translateY(30px) scale(0.96);
     z-index: 2;
@@ -662,7 +684,7 @@ p.tit {
 .card.active .img2 img {
     transform: scale(1.05);
 }
-
+ */
 
 .txt-card {
     padding: 30px 60px;
