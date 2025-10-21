@@ -282,12 +282,80 @@ main {
 .influencer .wish {
   all: unset;
   cursor: pointer;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.influencer .wish .icon_heart {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.influencer .wish .icon_heart:nth-of-type(2) {
+  display: none;
+}
+
+.influencer .wish.active .icon_heart:nth-of-type(1) {
+  display: none;
+}
+
+.influencer .wish.active .icon_heart:nth-of-type(2) {
+  display: block;
 }
 
 .influencer .card figure.media {
   margin: 0;
 }
+
+/* 360도 한 바퀴 */
+@keyframes spin-360 {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/* 트리거 클래스: 붙는 순간 한 번만 회전 */
+.influencer .card.do-spin {
+  animation: spin-360 2000ms ease-out both;
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* 카드들 flip 실행*/
+/* @keyframes flip-left-lite {
+  0% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(800px) rotateY(-12deg);
+  }
+
+  100% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+.influencer .card.do-flip {
+  animation: flip-left-lite 600ms ease both;
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.influencer .card[data-aos] {
+  opacity: 1;
+  transform: none;
+} */
+
+
 
 .membership {
   width: 100%;
