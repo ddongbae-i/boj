@@ -5,23 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEAUTY OF JOSEON</title>
-    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./main.js">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="../js/common.js" defer></script>
+    <script src="./main.js"></script>
+    
 
 </head>
 
 <body>
-    <!-- <header>
+    <header>
         <div class="inner">
-            <a href="" class="logo">
-                <h1>BEAUTY OF JOSEON</h1>
-            </a>
+            <h1 class="logo"><a href="">BEAUTY OF JOSEON</a></h1>
             <nav>
+                <!-- <div class="bg">
+                    <ul>
+                        <li><a href="#">sss</a></li>
+                        <li><a href="#">fssagag</a></li>
+                    </ul>
+                </div> -->
                 <ul class="gnb">
-                    <li class="active">
+                    <li class="">
                         <a href="">Brand</a>
                         <div class="sub_wrap">
                             <ul class="sub">
@@ -31,7 +36,7 @@
                                 <li><a href="">Find a Retailer</a></li>
                             </ul>
                             <div class="sub_img">
-                                <img src="" alt="brand_img">
+                                <img src="../asset/img/prac.png" alt="brand_img">
                             </div>
                         </div>
 
@@ -70,22 +75,49 @@
                 </ul>
             </nav>
             <div class="nav_right">
-                <button type="button" class="serch">
-                    <img src="./asset/img/icon_search.svg" alt="search">
-                    <div class="search_area"></div>
+                <button type="button" class="search">
+                    <img src="../asset/img/icon_search.svg" alt="search">
                 </button>
                 <a href="" class="user">
-                    <img src="./asset/img/icon_user.svg" alt="user">
+                    <img src="../asset/img/icon_user.svg" alt="user">
                 </a>
                 <button type="button" class="bag">
-                    <img src="./asset/img/icon_bag.svg" alt="bag">
+                    <img src="../asset/img/icon_bag.svg" alt="bag">
                 </button>
-                <button type="button" class="ham_menu">
-                    <img src="./asset/img/icon_ham.svg" alt="ham_menu">
-                </button>
+                <a href="" class="ham_menu">
+                    <img src="../asset/img/icon_ham.svg" alt="ham_menu">
+                </a>
+            </div>
+            <div class="search_tab">
+                <button type="button" class="close"><img src="../asset/img/icon_x.svg" alt="x"></button>
+                <form>
+                    <div class="search_area">
+                        <button type="submit"><img src="../asset/img/icon_search.svg" alt=""></button>
+                        <input type="search" placeholder="Search" aria-label="키워드">
+                    </div>
+                </form>
+                <div class="keyword_wrap">
+                    <a href="">Sunscreen</a>
+                    <a href="">Cleanser</a>
+                    <a href="">Exfoliator</a>
+                    <a href="">Toner</a>
+                    <a href="">Essence</a>
+                    <a href="">Serum</a>
+                    <a href="">Moisturizer</a>
+                    <a href="">Mask</a>
+                    <a href="">Green Plum</a>
+                    <a href="">Plum Flower</a>
+                    <a href="">Plum Water</a>
+                    <a href="">Rice</a>
+                    <a href="">Alpha-Aebutin</a>
+                    <a href="">Ginseng</a>
+                    <a href="">Black Sesame</a>
+                    <a href="">Amino Acids</a>
+                    <a href="">Green Plum & Plum Flower</a>
+                </div>
             </div>
         </div>
-    </header> -->
+    </header>
     <main>
         <section class="main">
             <div class="mainVisual">
@@ -158,56 +190,427 @@
         <section class="influencer">
             <div class="inner">
                 <div class="card_left">
-                    <div class="card_1">
-                        <img src="./img/influencer/card1.png" alt="card_1">
+                    <!-- card 1 -->
+                    <div class="card card_1" data-aos="flip-left">
+                        <figure class="media">
+                            <img src="./img/influencer/card1.png" alt="card_1">
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Revive Eye Serum</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Ginseng</p>
+                                <p>Retinal</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_2">
-                        <img src="./img/influencer/card2.png" alt="card_2">
+                    <!-- card 2 -->
+                    <div class="card card_2" data-aos="flip-left">
+                        <figure class="media">
+                            <img src="./img/influencer/card2.png" alt="card_2">
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Revive Serum</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Ginseng</p>
+                                <p>Snail Mucin</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_3">
-                        <video src="./img/influencer/card3.mp4"></video>
+                    <!-- card 3 (video) -->
+                    <div class="card card_3" data-aos="flip-left">
+                        <figure class="media">
+                            <video src="./img/influencer/card3.mp4" muted autoplay loop playsinline></video>
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Ground Rice and Honey Glow Mask</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Rice Wine Complex</p>
+                                <p>Rice Hull Powder</p>
+                                <p>Honey</p>
+                                <p>Kaolin Clay</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_4">
-                        <img src="./img/influencer/card4.png" alt="card_4">
+                    <!-- card 4 -->
+                    <div class="card card_4" data-aos="flip-left">
+                        <figure class="media">
+                            <img src="./img/influencer/card4.png" alt="card_4">
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Daily Tinted Fluid Sunscreen</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>SPF50+ PA++++</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_5">
-                        <img src="./img/influencer/card5.png" alt="card_5">
+                    <!-- card 5 -->
+                    <div class="card card_5" data-aos="flip-left">
+                        <figure class="media">
+                            <img src="./img/influencer/card5.png" alt="card_5">
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Ground Rice and Honey Glow Mask</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Rice Wine Complex</p>
+                                <p>Rice Hull Powder</p>
+                                <p>Honey</p>
+                                <p>Kaolin Clay</p>
+                            </div>
+                        </div>
                     </div>
                 </div><!-- //.card_left -->
                 <div class="card_right">
-                    <div class="card_6">
-                        <video src="./img/influencer/card6.mp4"></video>
+                    <!-- card 6-->
+                    <div class="card card_6" data-aos="flip-left">
+                        <figure class="media">
+                            <video src="./img/influencer/card6.mp4" muted autoplay loop playsinline></video>
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Red Bean Refreshing Pore Mask</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Red Bean Extract</p>
+                                <p>Kaolin Clay</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_7">
-                        <img src="./img/influencer/card7.png" alt="card_7">
+                    <!-- card 7 -->
+                    <div class="card card_7" data-aos="flip-left">
+                        <figure class="media">
+                            <img src="./img/influencer/card7.png" alt="card_7">
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Low pH Rice Face and Body Cleansing Bar</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Rice Bran Extract</p>
+                                <p>Balack Sesame</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_8">
-                        <img src="./img/influencer/card8.png" alt="card_8">
+                    <!-- card 8 -->
+                    <div class="card card_8" data-aos="flip-left">
+                        <figure class="media">
+                            <img src="./img/influencer/card8.png" alt="card_8">
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Ginseng Cleansing Oi</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Ginseng</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_9">
-                        <img src="./img/influencer/card9.png" alt="card_9">
+                    <!-- card 9 -->
+                    <div class="card card_9" data-aos="flip-left">
+                        <figure class="media">
+                            <img src="./img/influencer/card9.png" alt="card_9">
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Ginseng Essence Water</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Ginseng</p>
+                                <p>Hydrating</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card_10">
-                        <img src="./img/influencer/card10.png" alt="card_10">
+                    <!-- card 10 -->
+                    <div class="card card_10" data-aos="flip-left">
+                        <figure class="media">
+                            <img src="./img/influencer/card10.png" alt="card_10">
+                        </figure>
+                        <div class="black">
+                            <div class="black_top">
+                                <h4 class="name">Revive Under Eye Patch</h4>
+                                <button type="button" class="wish" data-id="card_10" aria-pressed="false"
+                                    aria-label="Add to wishlist">
+                                    <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
+                                    <img class="icon_heart" src="../asset/img/icon_heart_hover.svg" alt="icon_heart">
+                                </button>
+                            </div>
+                            <div class="black_center">
+                                <p>Ginseng</p>
+                                <p>Retinal</p>
+                            </div>
+                        </div>
                     </div>
                 </div><!-- //.card_right -->
             </div><!-- //.inner -->
         </section><!-- //.influencer -->
         <section class="membership">
-            <video src="./img/membership/green_test_02.mp4"></video>
+            <video src="./img/membership/green_test_02.mp4" muted autoplay></video>
             <div class="login_box">
-                    <div class="txt">
-                        <p>Login is required</p>
+                <div class="txt_box">
+                    <div class="txt">Login is required</div>
+                </div>
+                <div class="btu_box">
+                    <div class="btu">
+                        <div class="login"><a href="#">Log in</a></div>
+                        <div class="joinNow"><a href="#">Join Now</a></div>
                     </div>
-                    <div class="btu_box">
-                        <div class="btu">
-                            <div class="login">Log in</div>
-                            <div class="joinNow">Join Now</div>
-                        </div>
-                    </div>
+                </div>
             </div><!-- //.login_box -->
         </section><!-- //.membership -->
+        <section class="hanbang">
+            <div class="inner">
+                <div class="txt_left">
+                    <ul class="txt1">
+                        <button>
+                            <div class="tit">GINSENG</div>
+                            <div class="progress">
+                                <div class="playbar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="txt">This centuries-old, beloved herbal ingredient is
+                                rich in saponins that provide long-lasting hydration.</div>
+                        </button>
+                    </ul><!-- //.txt1 -->
+                    <ul class="txt2">
+                        <button>
+                            <div class="tit">RICE</div>
+                            <div class="progress">
+                                <div class="playbar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="txt">This precious ingredient is packed with essential nutrients
+                                to nourish skin, improve texture, and boost glow.</div>
+                        </button>
+                    </ul><!-- //.txt2 -->
+                    <ul class="txt3">
+                        <button>
+                            <div class="tit">GREEN TEA</div>
+                            <div class="progress">
+                                <div class="playbar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="txt">This centuries-old, beloved herbal ingredient is
+                                rich in saponins that provide long-lasting hydration.</div>
+                        </button>
+                    </ul><!-- //.txt3 -->
+                    <ul class="txt4">
+                        <button>
+                            <div class="tit">RED BEAN</div>
+                            <div class="progress">
+                                <div class="playbar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="txt">This precious ingredient is packed with essential nutrients
+                                to nourish skin, improve texture, and boost glow.</div>
+                        </button>
+                    </ul><!-- //.txt4 -->
+                </div><!-- //.txt_left -->
+                <div class="img_box">
+                    <div class="img1">
+                        <a href="#"><img src="./img/hanbang/GINSENG.png" alt="txt1"></a>
+                        <ul class="imgTxt">
+                            <li class="txt_box1">
+                                <img src="./img/hanbang/txt_box1.png" alt="txt_box1">
+                            </li>
+                            <li class="txt_box2">
+                                <img src="./img/hanbang/txt_box2.png" alt="txt_box2">
+                            </li>
+                            <li class="txt_box3">
+                                <img src="./img/hanbang/txt_box3.png" alt="txt_box3">
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="img2">
+                        <a href="#"><img src="" alt="txt2"></a>
+                        <ul class="imgTxt"></ul>
+                    </div>
+                    <div class="img3">
+                        <a href="#"><img src="" alt="txt3"></a>
+                        <ul class="imgTxt"></ul>
+                    </div>
+                    <div class="img4">
+                        <a href="#"><img src="" alt="txt4"></a>
+                        <ul class="imgTxt"></ul>
+                    </div>
+                    <div class="img5">
+                        <a href="#"><img src="" alt="txt5"></a>
+                        <ul class="imgTxt"></ul>
+                    </div>
+                    <div class="img6">
+                        <a href="#"><img src="" alt="txt6"></a>
+                        <ul class="imgTxt"></ul>
+                    </div>
+                    <div class="img7">
+                        <a href="#"><img src="" alt="txt7"></a>
+                        <ul class="imgTxt"></ul>
+                    </div>
+                    <div class="img8">
+                        <a href="#"><img src="" alt="txt8"></a>
+                        <ul class="imgTxt"></ul>
+                    </div> -->
+                </div><!-- //.img_box -->
+                <div class="txt_right">
+                    <ul class="txt5">
+                        <button>
+                            <div class="tit">PROPOLIS</div>
+                            <div class="progress">
+                                <div class="playbar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="txt">This centuries-old, beloved herbal ingredient is
+                                rich in saponins that provide long-lasting hydration.</div>
+                        </button>
+                    </ul><!-- //.txt5 -->
+                    <ul class="txt6">
+                        <button>
+                            <div class="tit">GREEN PLUM</div>
+                            <div class="progress">
+                                <div class="playbar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="txt">This precious ingredient is packed with essential nutrients
+                                to nourish skin, improve texture, and boost glow.</div>
+                        </button>
+                    </ul><!-- //.txt6 -->
+                    <ul class="txt7">
+                        <button>
+                            <div class="tit">CENTELLA</div>
+                            <div class="progress">
+                                <div class="playbar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="txt">This centuries-old, beloved herbal ingredient is
+                                rich in saponins that provide long-lasting hydration.</div>
+                        </button>
+                    </ul><!-- //.txt7 -->
+                    <ul class="txt8">
+                        <button>
+                            <div class="tit">MUGWORT</div>
+                            <div class="progress">
+                                <div class="playbar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="txt">This precious ingredient is packed with essential nutrients
+                                to nourish skin, improve texture, and boost glow.</div>
+                        </button>
+                    </ul><!-- //.txt8 -->
+                </div><!-- //.txt_right -->
+            </div><!-- //.inner -->
+        </section><!-- //.hanbang -->
     </main>
+    <footer>
+        <div class="inner">
+            <h2 class="logo"><a href="">BEAUTY OF JOSEON</a></h2>
+            <div class="f_center">
+                <section class="f_join">
+                    <h3 class="f_tit">Join Our Community</h3>
+                    <p>Get on the list for K-beauty tips, exclusive deals,
+                        and more surprises from us.</p>
+                    <form>
+                        <div class="f_join_box">
+                            <input type="email" placeholder="Email">
+                            <button type="submit">SIGN UP NOW</button>
+                        </div>
+                    </form>
+                    <span>By signing up, you agree to receive email marketing</span>
+                </section>
+                <div class="f_center_right">
+                    <nav class="f_nav">
+                        <div class="f_nav_top">
+                            <h3 class="f_tit">Menu</h3>
+                            <button type="button" class="btn_down"><img src="../asset/img/icon_btn_down.svg"
+                                    alt="openbutton"></button>
+                        </div>
+                        <ul>
+                            <li><a href="">Need Help</a></li>
+                            <li><a href="">Gift 10% Off & Get 150 Gems</a></li>
+                            <li><a href="">BOJ Creator Club</a></li>
+                            <li><a href="">Shipping</a></li>
+                            <li><a href="">Return & Refund</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms and conditions</a></li>
+                            <li><a href="">Modern Slavery Act</a></li>
+                        </ul>
+
+                    </nav>
+                    <aside class="boj_insta">
+                        <h3 class="f_tit">Follow on Instagram</h3>
+                        <p>@beautyofjoseon</p>
+                        <ul class="insta_area">
+                            <li><a href=""><img src="../asset/img/insta1.jpg" alt="insta_img1"></a></li>
+                            <li><a href=""><img src="../asset/img/insta2.jpg" alt="insta_img2"></a></li>
+                            <li><a href=""><img src="../asset/img/insta3.jpg" alt="insta_img3"></a></li>
+                            <li><a href=""><img src="../asset/img/insta4.jpg" alt="insta_img4"></a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+            <div class="f_bottom">
+                <div class="copy">
+                    <p>GOODAI GLOBAL INC.</p>
+                    <p>Copyright © 2025. All rights Reserved</p>
+                </div>
+                <div class="f_sns">
+                    <a href=""><img src="../asset/img/icon_instargram.svg" alt="instagram"></a>
+                    <a href=""><img src="../asset/img/icon_tiktok.svg" alt="tiktok"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
