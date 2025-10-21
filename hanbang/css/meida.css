@@ -1,0 +1,23 @@
+@charset "utf-8";
+@media screen and (max-width:1024px) {
+    .main {
+        height: 657px;
+    }
+
+    .main_tit .line {
+        width: 400px;
+        height: 36px;
+    }
+
+    .main .main_tit h2 {
+        font-size: 2rem;
+    }
+
+    .main .main_tit p {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:360px) {}
