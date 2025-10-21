@@ -18,6 +18,12 @@ const footerMenu = document.querySelector('.f_nav ul')
 
 footerBtn.addEventListener('click', function () {
     footerMenu.classList.toggle('down')
-    footerBtn.style.
+    if (footerMenu.classList.contains('down')) {
+        footerBtn.style.transform = 'rotate(180deg)';
+    } else {
+        footerBtn.style.transform = 'rotate(0deg)';
+    }
+
+    footerBtn.style.transition = 'transform 0.3s ease';
 })
 

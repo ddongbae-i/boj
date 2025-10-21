@@ -37,10 +37,10 @@ body {
 }
 
 .inner {
-    padding-inline: 110px;
+    width: 100%;
     margin-inline: auto;
-    max-width: 1700px;
-    box-sizing: border-box;
+    width: min(100%, calc(1700px + 110px * 2));
+    padding-inline: 110px;
 }
 
 .tit {
