@@ -1,3 +1,5 @@
+//header
+
 //search
 const searchBtn = document.querySelector('.nav_right .search');
 const searchTab = document.querySelector('.search_tab');
