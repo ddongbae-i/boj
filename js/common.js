@@ -25,11 +25,11 @@ closeBtn.addEventListener('click', () => {
 
 //footer menu btn
 
-const footerBtn = document.querySelector('.f_nav button')
-const footerMenu = document.querySelector('.f_nav ul')
+const footerBtn = document.querySelector('.f_nav button');
+const footerMenu = document.querySelector('.f_nav ul');
 
 footerBtn.addEventListener('click', function () {
-    footerMenu.classList.toggle('down')
+    footerMenu.classList.toggle('down');
     if (footerMenu.classList.contains('down')) {
         footerBtn.style.transform = 'rotate(180deg)';
     } else {
@@ -39,12 +39,18 @@ footerBtn.addEventListener('click', function () {
     footerBtn.style.transition = 'transform 0.3s ease';
 })
 
-const bottomnav = document.querySelector('.ham_bottom');
+const bottomNav = document.querySelector('.ham_bottom');
 const nav = document.querySelector('nav');
-bottomnav.addEventListener('mouseenter', () => {
+bottomNav.addEventListener('mouseenter', () => {
     nav.classList.add('on');
 });
-bottomnav.addEventListener('mouseleave', () => {
+bottomNav.addEventListener('mouseleave', () => {
     nav.classList.remove('on');
 });
+
+const hammenuBtn = document.querySelector('.ham_menu');
+const header=document.querySelector('header')
+hammenuBtn.addEventListener('click', () => {
+    header.classList.toggle('on');
+})
 
