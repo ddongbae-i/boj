@@ -100,9 +100,9 @@
 
     }
 
-        footer .f_center_right .f_nav {
-            width: 100%;
-        }
+    footer .f_center_right .f_nav {
+        width: 100%;
+    }
 
     .f_nav .f_nav_top {
         width: 100%;
@@ -119,15 +119,15 @@
         display: none;
     }
 
-        .f_nav ul.down {
-            display: block;
-            display: flex;
-                flex-direction: column;
-                gap: 16px;
-                color: var(--bg_white);
-                margin-top: 12px;
+    .f_nav ul.down {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        color: var(--bg_white);
+        margin-top: 12px;
 
-        }
+    }
 
     .f_bottom {
         flex-direction: column;

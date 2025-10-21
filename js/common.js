@@ -18,5 +18,6 @@ const footerMenu = document.querySelector('.f_nav ul')
 
 footerBtn.addEventListener('click', function () {
     footerMenu.classList.toggle('down')
+    footerBtn.style.
 })
 
