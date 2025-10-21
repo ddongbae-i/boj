@@ -1,4 +1,14 @@
 //header
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY) {
+        header.style.top = '124px';
+    } else {
+        header.style.top = '0';
+    }
+
+    lastScrollY = currentScrollY
+})
 
 //search
 const searchBtn = document.querySelector('.nav_right .search');
