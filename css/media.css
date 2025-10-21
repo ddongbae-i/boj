@@ -2,6 +2,10 @@
 
 @media screen and (max-width:1600px) {
 
+    header.on .inner {
+        padding-inline: 56px;
+    }
+
     header.on .logo {
         display: none;
     }
@@ -10,28 +14,37 @@
         padding-left: 0;
     }
 
-    header.on .nav_right {}
+    header.on .sub{
+        padding-inline: 56px;
+    }
+
+        header.on .ham_bottom :nth-child(2) {
+            display: flex;
+        }
 
 
-    header.on nav ul.gnb>li:hover .sub_wrap {}
+    header.on nav ul .sub_wrap {
+        display: flex;
+    }
 
-    header.on nav ul.gnb>li:hover .sub_img {
-        width: 310px;
-        height: 310px;
+    header.on .ham_bottom {
+        display: block;
+        left: 56px;
     }
 
     header .inner .gnb {
         display: none;
     }
 
+    
     header.on .inner .gnb {
         display: flex;
     }
 
+
     .nav_right .ham_menu {
         display: block;
         position: relative;
-        background: #ccc;
     }
 
     .nav_right .ham_menu img {
@@ -62,6 +75,14 @@
     .nav_right {
         width: none;
     }
+
+        header.on nav ul.gnb>li .sub_img {
+            width: 310px;
+            height: 310px;
+            padding-top: 30px;
+            padding-right: 56px;
+            margin-left: auto;
+        }
 
     footer .f_center {
         display: block;
