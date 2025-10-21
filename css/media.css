@@ -20,8 +20,8 @@
 
 @media screen and (max-width:1024px) {
     .inner {
+        width: min(100%, calc(1700px + 56px * 2));
         padding-inline: 56px;
-        max-width: 912px;
     }
 
     footer .inner .logo {
@@ -38,7 +38,7 @@
 @media screen and (max-width:768px) {
     .inner {
         padding-inline: 42px;
-        max-width: 684px;
+        width: min(100%, calc(1700px + 42px * 2))
     }
 
     footer .inner .logo {
@@ -57,6 +57,7 @@
 @media screen and (max-width:640px) {
     .inner {
         padding-inline: 20px;
+            width: min(100%, calc(1700px + 20px * 2))
 
     }
 
@@ -100,9 +101,9 @@
 
     }
 
-    footer .f_center_right .f_nav {
-        width: 100%;
-    }
+        footer .f_center_right .f_nav {
+            width: 100%;
+        }
 
     .f_nav .f_nav_top {
         width: 100%;
@@ -119,15 +120,15 @@
         display: none;
     }
 
-    .f_nav ul.down {
-        display: block;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        color: var(--bg_white);
-        margin-top: 12px;
+        .f_nav ul.down {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            color: var(--bg_white );
+            margin-top: 12px;
 
-    }
+        }
 
     .f_bottom {
         flex-direction: column;
