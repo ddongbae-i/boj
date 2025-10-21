@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="./css/hanbang.css">
     <link rel="stylesheet" href="./css/meida_hb.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <script src="../js/common.js" defer></script>
 </head>
 
@@ -126,7 +127,7 @@
             <div class="main_tit">
                 <div class="line"><img src="img/line.png" alt=""></div>
                 <h2>Our Hanbang Ingredients</h2>
-                <p>Get to know the time-honored ingredients behind our brand,<br>
+                <p data-aos="fade-up">Get to know the time-honored ingredients behind our brand,<br>
                     passed down for centuries from the Joseon Dynasty.<br>
                     Bringing timeless beauty in perfect harmony with nature.</p>
             </div>
@@ -155,11 +156,11 @@
     </section> -->
 
         <section class="sub_main">
-            <h2>Do you know Hanbang?</h2>
+            <h2 data-aos="fade-up">Do you know Hanbang?</h2>
             <div class="sub_main_img">
-                <img src="img/cream_img.png" alt="cream"/>
+                <img src="img/cream_img.png" alt="cream" />
             </div>
-            <p>Get to know the time-honored ingredients behind our brand,
+            <p data-aos="fade-up">Get to know the time-honored ingredients behind our brand,
                 passed down for centuries from the Joseon Dynasty.
             </p>
         </section><!--//.sub_main -->
@@ -443,6 +444,13 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // 애니메이션 시간(ms)
+            once: false    
+        });
+    </script>
 </body>
 
 </html>

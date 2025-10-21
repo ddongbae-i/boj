@@ -157,7 +157,7 @@ header {
     font-size: 1.25rem;
     padding-right: 110px;
     line-height: 1.5;
-/*     background: #ccc; */
+    /*     background: #ccc; */
 }
 
 /*_________________________banner1 */
@@ -346,7 +346,12 @@ header {
     border: 1px solid var(--grey_de);
     padding: 14px 0;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.add_btn:hover {
+    background-color: var(--bg_black);
+    color: var(--tit_font);
 }
 
 .add_btn img {
@@ -354,6 +359,11 @@ header {
     height: 30px;
     background: transparent;
     margin-top: 10px;
+    color: var(--white_ff);
+}
+
+.add_btn img:hover {
+    content: url('../img/icon_bag_w.png');
 }
 
 .info {
