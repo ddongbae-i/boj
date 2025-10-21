@@ -37,6 +37,7 @@ body {
 }
 
 .inner {
+    padding-inline: 110px;
     max-width: 1700px;
     margin-inline: auto;
 }
@@ -72,7 +73,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    /* display: none; */
     /* dn 지우기 */
 }
 
@@ -292,16 +293,25 @@ footer .f_join p {
     border-radius: 40px;
     background: rgba(255,255,255,0.1);
     margin-block: 24px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+.f_join form input[type="email"] {
+    width: 100%;
+    font-size: 1rem;
+    color: var(--grey_de);
+}
+
+.f_join form button {
+    width: 100%;
 }
 
 .f_join form .f_join_box {
-    width: 400px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    margin-inline: auto;
+    align-items: center;
+    padding-inline: 20px;
 }
 
 footer .f_join span {
