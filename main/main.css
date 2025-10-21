@@ -69,6 +69,18 @@ main {
   position: relative;
 }
 
+.bestSeller .product .card {
+  transition: opacity .25s ease;
+}
+
+.bestSeller .product:hover .card {
+  opacity: .4;
+}
+
+.bestSeller .product .card:hover {
+  opacity: 1;
+}
+
 .bestSeller .inner .product .card img {
   width: 425px;
   height: 430px;
@@ -154,11 +166,8 @@ main {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* 줄바꿈 허용 → 2열로 흘러감 */
   gap: 5px;
-  /* 카드 간격 */
   align-items: flex-start;
-  /* 서로 다른 높이 허용 */
   position: relative;
 }
 
@@ -242,7 +251,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .influencer .inner .card_right .card_8 {
@@ -370,8 +379,8 @@ main {
 }
 
 .hanbang .inner {
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -419,24 +428,33 @@ main {
   font-size: 1.125rem;
 }
 
-/* (필요 시) playbar/bar 자리잡기 */
-.hanbang .inner .txt_left .playbar,
-.hanbang .inner .txt_right .playbar {
-  height: 1px;
-  background: var(--gray_de);
-  border-radius: 999px;
-  margin: 10px 0 8px;
+.hanbang .inner .progress {
   position: relative;
-  overflow: hidden;
+  height: 16px;
+  margin: 10px 0 8px;
 }
 
-.hanbang .inner .txt_left .bar,
-.hanbang .inner .txt_right .bar {
-  height: 100%;
-  width: 0%;
-  /* 활성화 시 JS로 폭 늘리면 됨 */
-  background: #a87b2f;
-  border-radius: inherit;
+.hanbang .inner .progress .bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--gray_de);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.hanbang .inner .progress .playbar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10%;
+  height: 6px;
+  background: var(--ginseng);
+  border-radius: 999px;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .hanbang .inner .img_box {
@@ -465,7 +483,6 @@ main {
   display: block;
 }
 
-/* (선택) 원형 보조 텍스트 배치 */
 .hanbang .inner .img_box .imgTxt {
   position: absolute;
   inset: 0;
