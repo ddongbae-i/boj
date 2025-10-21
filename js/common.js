@@ -39,3 +39,12 @@ footerBtn.addEventListener('click', function () {
     footerBtn.style.transition = 'transform 0.3s ease';
 })
 
+const bottomnav = document.querySelector('.ham_bottom');
+const nav = document.querySelector('nav');
+bottomnav.addEventListener('mouseenter', () => {
+    nav.classList.add('on');
+});
+bottomnav.addEventListener('mouseleave', () => {
+    nav.classList.remove('on');
+});
+
