@@ -1,19 +1,23 @@
-  @media (max-width: 1024px) {
-      .story-card {
-          flex-direction: column !important;
-      }
+@media (max-width: 1200px) {
 
-      .story-card img,
-      .story-card .text {
-          width: 100%;
-      }
+    .section_2 .story-card,
+    .section_2 .story-card.reversed {
+        flex-direction: column;
+    }
 
-      .ingredient-card {
-          flex-direction: column;
-          height: auto;
-      }
+    .section_3 .card-stack {
+        height: auto;
+    }
 
-      .ingredient-card .image {
-          height: 300px;
-      }
-  }
+    .section_3 .ingredient-card {
+        position: relative;
+        transform: none !important;
+        opacity: 1 !important;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .section_3 .ingredient-card .image {
+        height: 300px;
+    }
+}
