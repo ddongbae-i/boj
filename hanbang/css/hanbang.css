@@ -362,7 +362,7 @@ header {
     color: var(--white_ff);
 }
 
-.add_btn img:hover {
+.add_btn:hover img {
     content: url('../img/icon_bag_w.png');
 }
 
