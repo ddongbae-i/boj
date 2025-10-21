@@ -1,215 +1,88 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Public Sans", sans-serif;
-    color: #1c1c1c;
-    overflow-x: hidden;
-}
+ @charset "UTF-8";
 
-main.brand-story {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+ :root {
+     --bg-cream: #f7f4ef;
+     --text-main: #1c1c1c;
+     --text-dim: #505050;
+     --line: #1c1c1c;
+ }
 
-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 160px 0;
-    box-sizing: border-box;
-}
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     height: 100%;
+     overflow-x: hidden;
+     background: #fff;
+     font-family: 'Pretendard', sans-serif;
+     color: var(--text-main);
+ }
 
-/* SECTION 1 */
-.hero-section {
-    background: url('./img/section-10.png') center/cover no-repeat;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+ main {
+     width: 1920px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
 
-.hero-section .line {
-    width: 2px;
-    height: 100px;
-    background: linear-gradient(180deg, rgba(28, 28, 28, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    margin-bottom: 20px;
-}
+ /* ===== Section 1 (Hero) ===== */
+ .section_1 {
+     width: 100%;
+     background: var(--bg-cream) url('/BrandStory/img/section-10.png') center top no-repeat;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+ }
 
-.hero-section h2 {
-    font-size: 60px;
-    font-family: "CheongdoL-Light", sans-serif;
-    font-weight: 300;
-}
+ .section_1 .inner {
+     width: 100%;
+     max-width: 1920px;
+     text-align: center;
+     padding-bottom: 160px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 1000px;
+ }
 
-.hero-section h3 {
-    font-size: 24px;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
+ .section_1 .hero-line {
+     width: 2px;
+     height: 120px;
+     background: linear-gradient(180deg, rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0));
+     margin-bottom: 20px;
+ }
 
-.hero-section p {
-    font-size: 20px;
-    max-width: 700px;
-    line-height: 1.6;
-}
+ .section_1 .est {
+     font-size: 18px;
+     letter-spacing: 0.25em;
+     color: var(--text-dim);
+     margin-bottom: 20px;
+ }
 
-/* SECTION 2 */
-.story-section {
-    background: #fff;
-}
+ .section_1 .kor {
+     font-size: 60px;
+     font-weight: 400;
+     line-height: 1.2;
+     margin-bottom: 8px;
+ }
 
-.story-section h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 56px;
-    text-align: center;
-    margin-bottom: 20px;
-}
+ .section_1 .eng {
+     font-size: 28px;
+     font-weight: 300;
+     letter-spacing: 0.15em;
+     margin-bottom: 24px;
+ }
 
-.story-section p.subtitle {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 100px;
-    max-width: 800px;
-}
+ .section_1 .tit {
+     font-size: 30px;
+     color: var(--text-dim);
+     margin-bottom: 40px;
+ }
 
-.story-cards {
-    width: 90%;
-    max-width: 1600px;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-.story-card {
-    display: flex;
-    gap: 60px;
-    align-items: center;
-}
-
-.story-card:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.story-card img {
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.story-card .text {
-    width: 50%;
-}
-
-.story-card .text h3 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.story-card .text p {
-    font-size: 20px;
-    line-height: 1.7;
-}
-
-/* SECTION 3 */
-#ingredients {
-    background: #fbfaf8;
-}
-
-#ingredients h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 56px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#ingredients p.subtitle {
-    text-align: center;
-    max-width: 800px;
-    font-size: 20px;
-    margin-bottom: 80px;
-}
-
-.card-stack {
-    position: relative;
-    width: 90%;
-    max-width: 1400px;
-    height: 550px;
-}
-
-.ingredient-card {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(0.9);
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    opacity: 0;
-    transition: all 0.8s ease;
-}
-
-.ingredient-card.active {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-    z-index: 3;
-}
-
-.ingredient-card.prev {
-    opacity: 0.7;
-    transform: translateX(-52%) scale(0.96);
-    z-index: 2;
-}
-
-.ingredient-card.next {
-    opacity: 0.5;
-    transform: translateX(-54%) scale(0.93);
-    z-index: 1;
-}
-
-.ingredient-card .text {
-    flex: 1;
-    padding: 60px;
-    text-align: left;
-}
-
-.ingredient-card .text h3 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.ingredient-card .text span {
-    font-size: 16px;
-    color: #888;
-}
-
-.ingredient-card .text p {
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-.ingredient-card .image {
-    flex: 1;
-    height: 100%;
-}
-
-.ingredient-card .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0 20px 20px 0;
-}
+ .section_1 .ornament {
+     display: block;
+     margin-bottom: 80px;
+ }
