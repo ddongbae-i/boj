@@ -623,3 +623,297 @@ p.tit {
     height: 1px;
     position: relative;
 }
+
+/* ====== Section 3 : Key Ingredients ====== */
+.section_3 {
+    background: #fefefe;
+    padding: 150px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-012 {
+    width: 100%;
+    max-width: 1920px;
+}
+
+.inner3 {
+    width: 1700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Title */
+.key-ingredients {
+    color: #1c1c1c;
+    text-align: center;
+    font-family: var(--cormorant-m-title48px3rem-font-family, "Cormorant-Medium", sans-serif);
+    font-size: var(--cormorant-m-title48px3rem-font-size, 48px);
+    line-height: var(--cormorant-m-title48px3rem-line-height, 120%);
+    font-weight: var(--cormorant-m-title48px3rem-font-weight, 500);
+    width: 100%;
+}
+
+/* List wrapper */
+.cardlist-ingredients {
+    width: 1700px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Card grid (906 + 80 + 1fr = 1700) */
+.card {
+    width: 1700px;
+    display: grid;
+    grid-template-columns: 906px 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.card.is-reversed {
+    grid-template-columns: 1fr 906px;
+}
+
+.card.is-reversed .img2 {
+    order: 2;
+}
+
+.card.is-reversed .txt-card {
+    order: 1;
+}
+
+/* Image box */
+.img2 {
+    width: 906px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text column */
+.txt-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tit5 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.accent-line {
+    width: 48px;
+    height: 3px;
+    border-radius: 9999px;
+    display: block;
+}
+
+/* Headings */
+.ing-name {
+    color: #1c1c1c;
+    font-family: var(--publicsans-l-banner40px25rem-font-family, "PublicSans-Light", sans-serif);
+    font-size: var(--publicsans-l-banner40px25rem-font-size, 40px);
+    line-height: var(--publicsans-l-banner40px25rem-line-height, 130%);
+    font-weight: var(--publicsans-l-banner40px25rem-font-weight, 300);
+}
+
+.ing-latin {
+    color: #1c1c1c;
+    font-family: var(--publicsans-r400-18px1125rem-font-family, "PublicSans-Regular", sans-serif);
+    font-size: var(--publicsans-r400-18px1125rem-font-size, 18px);
+    line-height: var(--publicsans-r400-18px1125rem-line-height, 140%);
+}
+
+.key-ingredient {
+    font-family: var(--publicsans-l-18px1125rem-font-family, "PublicSans-Light", sans-serif);
+    font-size: var(--publicsans-l-18px1125rem-font-size, 18px);
+    line-height: var(--publicsans-l-18px1125rem-line-height, 140%);
+}
+
+/* Body copy */
+.txt-1 {
+    color: #1c1c1c;
+    font-family: var(--publicsans-l-banner24px15rem-font-family, "PublicSans-Light", sans-serif);
+    font-size: var(--publicsans-l-banner24px15rem-font-size, 24px);
+    line-height: var(--publicsans-l-banner24px15rem-line-height, 130%);
+}
+
+/* Benefits */
+.benefits {
+    color: #1c1c1c;
+    font-family: var(--publicsans-l-banner24px15rem-font-family, "PublicSans-Light", sans-serif);
+    font-size: var(--publicsans-l-banner24px15rem-font-size, 24px);
+    line-height: var(--publicsans-l-banner24px15rem-line-height, 130%);
+    margin: 0 0 8px;
+}
+
+.txt5 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.txt5 li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.txt5 .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    display: inline-block;
+}
+
+/* Footnote + carousel */
+.frame-1430103152 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ps3 {
+    color: #1c1c1c;
+    font-family: var(--publicsans-r400-18px1125rem-font-family, "PublicSans-Regular", sans-serif);
+    font-size: var(--publicsans-r400-18px1125rem-font-size, 18px);
+    line-height: var(--publicsans-r400-18px1125rem-line-height, 140%);
+    padding-top: 20px;
+    border-top: 0.8px solid rgba(0, 0, 0, .1);
+}
+
+.ingredient-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 714px;
+    height: 48px;
+}
+
+.button {
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    border: 1px solid #d1d5dc;
+    background: transparent;
+    display: grid;
+    place-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #1c1c1c;
+    stroke-width: 2;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 144px;
+    height: 8px;
+}
+
+.dots i {
+    display: block;
+    border-radius: 9999px;
+}
+
+.dot-active {
+    flex: 1;
+    height: 8px;
+}
+
+.dot-passive {
+    width: 8px;
+    height: 8px;
+    background: #d1d5db;
+    border-radius: 9999px;
+}
+
+
+.card {
+    --accent: #C1843A;
+    --accent-weak: #d1d5db;
+}
+
+/* default fallback */
+.card .accent-line {
+    background: linear-gradient(90deg, var(--accent) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.card .key-ingredient {
+    color: var(--accent);
+}
+
+.card .txt5 .dot {
+    background: var(--accent);
+}
+
+.card .dot-active {
+    background: var(--accent);
+}
+
+/* 01 Ginseng */
+.theme-ginseng {
+    --accent: #C1843A;
+}
+
+/* 02 Centella */
+.theme-centella {
+    --accent: #5F6B3D;
+}
+
+/* 03 Red Bean */
+.theme-redbean {
+    --accent: #8B5A3C;
+}
+
+/* 04 Rice */
+.theme-rice {
+    --accent: #C7B68D;
+}
+
+/* 05 Green Plum */
+.theme-plum {
+    --accent: #8D9C55;
+}
+
+/* 06 Propolis */
+.theme-propolis {
+    --accent: #E4A12C;
+}
+
+/* 07 Mugwort */
+.theme-mugwort {
+    --accent: #6A7C53;
+}
+
+/* 08 Green Tea */
+.theme-greentea {
+    --accent: #7AA77B;
+}
