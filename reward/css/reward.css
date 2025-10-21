@@ -127,23 +127,21 @@ span {
     /* Safari 지원 */
 
 }
-
-.how_it_work .list ul {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    padding-top: 30px;
+.how_it_work .list ul{
+      display: flex;
+      align-items: center;
+      gap: 40px;
 }
 
 .how_it_work .list ul>li {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 240px;
+flex-direction : column;
 }
 
-.how_it_work .list ul>li img {
-    margin-bottom: 24px;
+.how_it_work .list ul>li img{
+height: 90px;
+object-fit: contain;
+margin-bottom: 24px;
 }
 .redeem_for_products, .ways_to_earn{
         width: 100%;
