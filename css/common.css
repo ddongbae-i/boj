@@ -71,9 +71,9 @@ header .logo {
 header {
     width: 100%;
     height: 124px;
-    /* position: fixed;
+    position: fixed;
     top: 0;
-    left: 0; */
+    left: 0;
     /* display: none; */
     /* dn 지우기 */
 }
@@ -95,17 +95,29 @@ nav {
     height: 100%;
 }
 
-/* nav .bg {
+nav:hover .ham_bottom {
+    display: block;
+} 
+
+.ham_bottom {
     position: fixed;
-    bottom: 30px;
-    left: 100px;
+    left: 110px;
+    bottom: 60px;
+    z-index: 5;
+    width: 100%;
+    max-width: 500px;
     display: none;
-    z-index: 10;
+    padding-top: 56px;
+    border-top: 1px solid var(--grey_aa);
 }
 
-nav:hover .bg {
-    display: block;
-} */
+.ham_bottom ul li a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1.25rem;
+}
 
 nav ul.gnb {
     width: 100%;
@@ -117,6 +129,14 @@ nav ul.gnb {
 
 nav ul.gnb>li {
     height: 100%;
+}
+
+nav ul.gnb:hover > li {
+    color: var(--txt_sub_77);
+}
+
+nav ul.gnb>li:hover {
+    opacity: 1;
 }
 
 nav ul.gnb>li>a {
@@ -132,31 +152,40 @@ nav .sub_wrap {
     left: 0;
     top: 100%;
     width: 100%;
-    height: 500px;
-    background: #ccc;
-    /* background: var(--bg_white); */
+    height: 100vh;
+    background: var(--bg_white);
     display: none;
-    /* display: flex; */
+    border-top: 1px solid #000;
 }
 
 nav ul.gnb>li:hover .sub_wrap {
-    /* display: block; */
     display: flex;
 }
 
 nav .sub_wrap .sub {
     width: 50%;
+    color: var(--txt_main);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 110px 0;
+}
+
+nav .sub_wrap .sub li a {
+    display: block;
+    padding: 10px 0;
 }
 
 nav .sub_wrap .sub_img {
     width: 50%;
     height: 100%;
+    padding: none;
 }
 
 nav .sub_wrap .sub_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    padding: 0;
 }
 
 .nav_right {
@@ -173,6 +202,12 @@ nav .sub_wrap .sub_img img {
     height: 30px;
 }
 
+.gg {
+    height: 124px;
+    width: 100%;
+    background: var(--bg_white);
+}
+
 .search_tab {
     position: fixed;
     top: 0;
@@ -180,7 +215,7 @@ nav .sub_wrap .sub_img img {
     width: 100%;
     background: var(--bg_white);
     height: 512px;
-    padding: 30px;
+    padding: 30px 110px;
     display: none;
 }
 
@@ -195,8 +230,7 @@ nav .sub_wrap .sub_img img {
 
 .search_tab form {
     margin-top: 36px;
-    margin-left: 80px;
-    width: 1700px;
+
     padding-bottom: 20px;
     border-bottom: 1px solid var(--txt_main);
 }
@@ -253,7 +287,7 @@ footer .inner {
 
 footer .inner .logo {
     font-family: "Scheherazade New", serif;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 400;
     margin: 0;
     padding: 0;
