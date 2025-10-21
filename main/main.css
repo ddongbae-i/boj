@@ -310,7 +310,7 @@ main {
   margin: 0;
 }
 
-/* 360도 한 바퀴 */
+/* 360도 한 바퀴 애니메이션*/
 @keyframes spin-360 {
   from {
     transform: rotateY(0deg);
