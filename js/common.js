@@ -10,6 +10,30 @@ window.addEventListener('scroll', () => {
     lastScrollY = currentScrollY
 })
 
+//header
+
+const hammenuBtn = document.querySelector('.ham_menu');
+const header = document.querySelector('header')
+hammenuBtn.addEventListener('click', () => {
+    header.classList.toggle('on');
+})
+
+const mainMenus = document.querySelectorAll('nav ul.gnb>li>a');
+function handleResize() {
+    if (window.innerWidth <= 1024) {
+        mainMenus.forEach((menu) => {
+            menu.removeAttribute("href");
+        })
+        // 1024 이하일 때 동작
+    } else {
+
+        // 1024 초과일 때 동작
+    }
+}
+window.addEventListener("DOMContentLoaded", handleResize);
+window.addEventListener("resize", handleResize);
+
+
 //search
 const searchBtn = document.querySelector('.nav_right .search');
 const searchTab = document.querySelector('.search_tab');
@@ -22,6 +46,8 @@ searchBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     searchTab.classList.remove('open');
 })
+
+
 
 //footer menu btn
 
@@ -48,9 +74,5 @@ bottomNav.addEventListener('mouseleave', () => {
     nav.classList.remove('on');
 });
 
-const hammenuBtn = document.querySelector('.ham_menu');
-const header=document.querySelector('header')
-hammenuBtn.addEventListener('click', () => {
-    header.classList.toggle('on');
-})
+
 
