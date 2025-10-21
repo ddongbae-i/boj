@@ -9,7 +9,7 @@
     --txt_main: #1c1c1c;
     --txt_sub_44: #444;
     --txt_sub_77: #777;
-    --white_ff: #fff; 
+    --white_ff: #fff;
     --grey_aa: #aaa;
     --grey_de: #dedede;
     --grey_c7: #c7c7c7;
@@ -38,8 +38,9 @@ body {
 
 .inner {
     padding-inline: 110px;
-    max-width: 1700px;
     margin-inline: auto;
+    max-width: 1700px;
+    box-sizing: border-box;
 }
 
 .tit {
@@ -70,10 +71,10 @@ header .logo {
 header {
     width: 100%;
     height: 124px;
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    left: 0;
-    display: none;
+    left: 0; */
+    /* display: none; */
     /* dn 지우기 */
 }
 
@@ -274,7 +275,7 @@ footer .f_center {
 }
 
 footer .f_join .f_tit {
-    font-weight: 300; 
+    font-weight: 300;
     margin-left: 10px;
 }
 
@@ -288,9 +289,9 @@ footer .f_join p {
 .f_join form {
     width: 100%;
     max-width: 450px;
-    height: 70px; 
+    height: 70px;
     border-radius: 40px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     margin-block: 24px 16px;
 }
 
@@ -336,7 +337,7 @@ footer .f_join span {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    color: var(--bg_white );
+    color: var(--bg_white);
     margin-top: 12px;
 }
 
@@ -349,7 +350,7 @@ footer .f_join span {
     color: var(--txt_sub_77);
 }
 
-.boj_insta .insta_area{
+.boj_insta .insta_area {
     width: 268px;
     height: 266px;
     display: flex;
@@ -358,7 +359,7 @@ footer .f_join span {
     margin-top: 24px;
 }
 
-.boj_insta .insta_area img{
+.boj_insta .insta_area img {
     width: 127px;
 }
 
