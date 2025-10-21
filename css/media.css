@@ -14,14 +14,14 @@
         padding-left: 0;
     }
 
-    header.on .ham_bottom:nth-child(2) {
+    header.on .ham_bottom :nth-child(2) {
         display: block;
     }
 
-    header.on nav ul.gnb >li:nth-child(1) .sub_wrap {
+    header.on nav ul.gnb>li:nth-child(1) .sub_wrap {
         display: flex;
     }
-    
+
     header.on .ham_bottom {
         display: block;
     }
@@ -65,14 +65,14 @@
 
 @media screen and (max-width:1300px) {
 
-        header.on .sub {
+    header.on .sub {
         padding-inline: 56px;
     }
 
-        .ham_bottom{
+    .ham_bottom {
 
-            left: 56px;
-        }
+        left: 56px;
+    }
 
 
     header.on nav ul.gnb>li .sub_img {
