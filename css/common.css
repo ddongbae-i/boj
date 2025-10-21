@@ -1,6 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 
 :root {
     font-size: 16px;
@@ -55,9 +54,16 @@ body {
     font-size: 1rem;
     font-weight: 400;
     border: 1px solid var(--txt_main);
+    text-align: center;
 }
 
 /* 가운데 정렬하기 */
+
+header .logo {
+    font-family: "Scheherazade New", serif;
+    font-size: 36px;
+    font-weight: 400;
+}
 
 header {
     width: 100%;
@@ -65,7 +71,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    display: none; 
+    display: none;
     /* dn 지우기 */
 }
 
@@ -80,12 +86,6 @@ header .logo {
     display: block;
     width: 350px;
     height: 51px;
-}
-
-header h1.logo {
-    font-family: "Scheherazade New", serif;
-    font-size: 36px;
-    font-weight: 400;
 }
 
 nav {
@@ -202,10 +202,10 @@ nav .sub_wrap .sub_img img {
     display: flex;
     align-items: center;
     border: none;
-    width: 100%;   
+    width: 100%;
 }
 
-.search_tab form .search_are button {
+.search_tab form .search_area button {
     padding: 0;
 }
 
@@ -233,4 +233,98 @@ nav .sub_wrap .sub_img img {
 
 .nav_right .ham_menu {
     display: none;
+}
+
+footer {
+    width: 100%;
+    background: var(--bg_footer);
+    color: var(--white_ff);
+    font-size: 1.125rem;
+}
+
+footer .inner {
+    width: 100%;
+    padding-block: 65px;
+}
+
+footer .inner .logo {
+    font-family: "Scheherazade New", serif;
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+footer .f_center {
+    margin-block: 20px 100px;
+}
+
+footer .f_tit {
+    font-weight: 400;
+}
+
+footer .f_center {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .f_join .f_tit {
+    font-weight: 300; 
+    margin-left: 10px;
+}
+
+footer .f_join p {
+    color: var(--grey_aa);
+    margin-left: 10px;
+    width: 400px;
+    font-weight: 300;
+}
+
+footer .f_join span {
+    color: var(--txt_sub_77);
+    margin-left: 10px;
+    margin-top: 16px;
+}
+
+.f_join form {
+    width: 100%;
+    max-width: 450px;
+    height: 70px; 
+    border-radius: 40px;
+    background: rgba(255,255,255,0.1);
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f_join form .f_join_box {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+
+.f_center_right {
+    width: 653px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boj_insta {
+    font-size: 1rem;
+}
+
+.boj_insta .insta_area{
+    width: 268px;
+    height: 266px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.boj_insta .insta_area img{
+    width: 127px;
+
 }

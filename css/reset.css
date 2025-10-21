@@ -220,9 +220,12 @@ input[type="search"] {
     /* 글자 색도 상속 */
 }
 
-input[type="search"] {
+input[type="search"], input[type="email"] {
     -webkit-appearance: none;
     appearance: none;
+    background: transparent;
+        border: none;
+        outline: none;
 }
 
 /* 기본 X 버튼 숨기기 */
@@ -230,4 +233,8 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
     display: none;
+}
+
+button {
+    font: inherit;
 }
