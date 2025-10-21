@@ -9,7 +9,7 @@
     --txt_main: #1c1c1c;
     --txt_sub_44: #444;
     --txt_sub_77: #777;
-    --white_ff: #fff;
+    --white_ff: #fff; 
     --grey_aa: #aaa;
     --grey_de: #dedede;
     --grey_c7: #c7c7c7;
@@ -240,6 +240,7 @@ footer {
     background: var(--bg_footer);
     color: var(--white_ff);
     font-size: 1.125rem;
+    font-weight: 300;
 }
 
 footer .inner {
@@ -262,6 +263,7 @@ footer .f_center {
 
 footer .f_tit {
     font-weight: 400;
+    font-size: 1.5rem;
 }
 
 footer .f_center {
@@ -312,8 +314,21 @@ footer .f_join span {
     justify-content: space-between;
 }
 
+.f_nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--bg_white );
+    margin-top: 12px;
+}
+
 .boj_insta {
     font-size: 1rem;
+}
+
+.boj_insta p {
+    margin-top: 8px;
+    color: var(--txt_sub_77);
 }
 
 .boj_insta .insta_area{
@@ -322,6 +337,7 @@ footer .f_join span {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    margin-top: 24px;
 }
 
 .boj_insta .insta_area img{
@@ -331,4 +347,14 @@ footer .f_join span {
 
 .f_bottom {
     border-top: 1px solid var(--grey_aa);
+    padding-top: 51px;
+    color: var(--txt_sub_77);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.f_sns {
+    display: flex;
+    gap: 20px;
 }
