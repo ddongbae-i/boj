@@ -1,19 +1,18 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 
 :root {
     font-size: 16px;
-    font-weight: 300;
-    --bg_blck: #0f0f0f;
+    --bg_black: #0f0f0f;
     --bg_white: #fefefe;
     --bg_footer: #202020;
     --txt_main: #1c1c1c;
     --txt_sub_44: #444;
     --txt_sub_77: #777;
-    --white_ff:#fff;
+    --white_ff: #fff;
     --grey_aa: #aaa;
-    --gray_de: #dedede;
-    --gray_c7: #c7c7c7;
+    --grey_de: #dedede;
+    --grey_c7: #c7c7c7;
     --img_bg: #f7f7f7;
     --white_f0: #f0f0f0;
     --ginseng: #C1843A;
@@ -29,15 +28,19 @@
 }
 
 body {
-    background: var(--bg_white);
+    /* background: var(--rice); */
     font-size: 1rem;
     color: var(--txt_main);
     font-family: var(--txt_font);
+    line-height: 1.4;
+    font-weight: 300;
 }
 
 .inner {
-    max-width: 1700px;
+    width: 100%;
     margin-inline: auto;
+    width: min(100%, calc(1700px + 110px * 2));
+    padding-inline: 110px;
 }
 
 .tit {
@@ -52,17 +55,324 @@ body {
     height: 45px;
     font-size: 1rem;
     font-weight: 400;
+    border: 1px solid var(--txt_main);
+    text-align: center;
+    line-height: 45px;
 }
 
+/* 가운데 정렬하기 */
+
+header .logo {
+    font-family: "Scheherazade New", serif;
+    font-size: 36px;
+    font-weight: 400;
+}
 
 header {
     width: 100%;
     height: 124px;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    /* display: none; */
+    /* dn 지우기 */
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .logo {
+    display: block;
+    width: 350px;
+    height: 51px;
+}
+
+nav {
+    height: 100%;
+}
+
+/* nav .bg {
+    position: fixed;
+    bottom: 30px;
+    left: 100px;
+    display: none;
+    z-index: 10;
+}
+
+nav:hover .bg {
+    display: block;
+} */
+
+nav ul.gnb {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    font-size: 1.25rem;
+}
+
+nav ul.gnb>li {
+    height: 100%;
+}
+
+nav ul.gnb>li>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    padding-inline: 35px;
+}
+
+nav .sub_wrap {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 500px;
+    background: #ccc;
+    /* background: var(--bg_white); */
+    display: none;
+    /* display: flex; */
+}
+
+nav ul.gnb>li:hover .sub_wrap {
+    /* display: block; */
+    display: flex;
+}
+
+nav .sub_wrap .sub {
+    width: 50%;
+}
+
+nav .sub_wrap .sub_img {
+    width: 50%;
+    height: 100%;
+}
+
+nav .sub_wrap .sub_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav_right {
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
+}
+
+.nav_right button,
+.nav_right a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.search_tab {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    background: var(--bg_white);
+    height: 512px;
+    padding: 30px;
+    display: none;
 }
 
+.search_tab.open {
+    display: block;
+}
 
+.search_tab button.close {
+    display: block;
+    margin-left: auto;
+}
 
+.search_tab form {
+    margin-top: 36px;
+    margin-left: 80px;
+    width: 1700px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--txt_main);
+}
 
+.search_tab form .search_area {
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 100%;
+}
+
+.search_tab form .search_area button {
+    padding: 0;
+}
+
+.search_tab input[type="search"] {
+    width: 1600px;
+    margin-left: 8px;
+    font-size: 1.25rem;
+}
+
+.search_tab .keyword_wrap {
+    width: 970px;
+    margin-top: 60px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.search_tab .keyword_wrap a {
+    padding: 10px 26px;
+    border: 1px solid var(--grey_aa);
+    border-radius: 26px;
+}
+
+.nav_right .ham_menu {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    background: var(--bg_footer);
+    color: var(--white_ff);
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+footer .inner {
+    width: 100%;
+    padding-block: 65px;
+}
+
+footer .inner .logo {
+    font-family: "Scheherazade New", serif;
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+footer .f_center {
+    margin-block: 20px 100px;
+}
+
+footer .f_tit {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+footer .f_center {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .f_join .f_tit {
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+footer .f_join p {
+    color: var(--grey_aa);
+    margin-left: 10px;
+    width: 400px;
+    font-weight: 300;
+}
+
+.f_join form {
+    width: 100%;
+    max-width: 450px;
+    height: 70px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-block: 24px 16px;
+}
+
+.f_join form input[type="email"] {
+    width: 100%;
+    font-size: 1rem;
+    color: var(--grey_de);
+}
+
+.f_join form button {
+    white-space: nowrap;
+}
+
+.f_join form .f_join_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+}
+
+footer .f_join span {
+    color: var(--txt_sub_77);
+    margin-left: 10px;
+}
+
+.f_center_right {
+    width: 653px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f_nav_top {
+    width: 100%;
+}
+
+.f_nav_top button {
+    display: none;
+}
+
+.f_nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--bg_white);
+    margin-top: 12px;
+}
+
+.boj_insta {
+    font-size: 1rem;
+}
+
+.boj_insta p {
+    margin-top: 8px;
+    color: var(--txt_sub_77);
+}
+
+.boj_insta .insta_area {
+    width: 268px;
+    height: 266px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.boj_insta .insta_area img {
+    width: 127px;
+}
+
+.f_bottom {
+    border-top: 1px solid var(--grey_aa);
+    padding-top: 51px;
+    color: var(--txt_sub_77);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.f_sns {
+    display: flex;
+    gap: 20px;
+}
