@@ -1,6 +1,4 @@
 @charset "utf-8";
-@media screen and (max-width:1024px) {}
-
 @media screen and (max-width:1024px) {
     .main {
         width: 100%;
@@ -8,7 +6,6 @@
     }
 
     .main_tit {
-        background: yellow;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -17,7 +14,6 @@
     .main_tit .line {
         width: 400px;
         height: 36px;
-        background: #ccc;
     }
 
     .main_tit .line img {
@@ -40,21 +36,31 @@
         justify-content: flex-end;
         gap: 32px;
         padding-bottom: 56px;
+        
     }
 
     .sub_main h2 {
         order: 2;
         font-size: 2rem;
-        text-align: center;
         margin: 0 auto 8px;
-
     }
 
     .sub_main p {
+        width: 450px;
         order: 3;
         font-size: 1rem;
         text-align: center;
         margin: 0 auto;
+    }
+
+    .sub_main .sub_main_img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  /*       top: 0;
+        right: 0;
+        transform: translateX(-5%); */
     }
 
     .sub_main .sub_main_img img {
@@ -62,6 +68,11 @@
         height: 350px;
         margin-bottom: 24px;
     }
+
+
+
+
+    
 }
 
 @media screen and (max-width:768px) {}

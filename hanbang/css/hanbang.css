@@ -125,11 +125,12 @@ header {
 }
 
 .sub_main h2 {
+    width: 600px;
     font-family: var(--tit_font);
     /* flex: 1; */
     text-align: left;
     font-size: 3rem;
-    margin-left: 80px;
+    padding-left: 110px;
     font-weight: 400;
 }
 
@@ -146,16 +147,17 @@ header {
     height: 100%;
     object-fit: contain;
     transform: rotate(-20deg);
+    /*    background: rebeccapurple; */
 }
 
 .sub_main p {
-    width: 700px;
+    width: 655px;
     /* flex: 1; */
     text-align: right;
     font-size: 1.25rem;
-    margin-right: 80px;
+    padding-right: 110px;
     line-height: 1.5;
-    background: orange;
+    /*     background: #ccc; */
 }
 
 /*_________________________banner1 */
@@ -344,7 +346,12 @@ header {
     border: 1px solid var(--grey_de);
     padding: 14px 0;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.add_btn:hover {
+    background-color: var(--bg_black);
+    color: var(--tit_font);
 }
 
 .add_btn img {
@@ -352,6 +359,11 @@ header {
     height: 30px;
     background: transparent;
     margin-top: 10px;
+    color: var(--white_ff);
+}
+
+.add_btn:hover img {
+    content: url('../img/icon_bag_w.png');
 }
 
 .info {
@@ -376,7 +388,7 @@ header {
     margin: 12px 2px 2px 2px;
     padding: 4px 8px;
     font-size: 0.875rem;
-    border: 1px solid var(--txt_sub_77);
+    border: 1px solid var(--grey_c7);
     border-radius: 2px;
     cursor: pointer;
 }
@@ -394,25 +406,25 @@ header {
 }
 
 .detail {
-    width: 118px;
+    width: 130px;
     height: 20px;
     display: flex;
     align-items: center;
     gap: 5px;
     color: var(--txt_sub_44);
     font-size: 1rem;
-    margin: 24px 0 0 320px;
+    margin-top: 30px;
     border-bottom: 1px solid var(--grey_c7);
 }
 
-.detail img {
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    display: block;
-    margin-top: 10px;
-    background: transparent;
+.pick_select {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+    color: var(--txt_sub_44);
+    cursor: pointer;
 }
+
 
 .star {
     margin-top: 24px;
@@ -460,6 +472,14 @@ header {
     color: var(--txt_main);
 }
 
+.banner2 .txt_box a:hover {
+    background-color: var(--txt_main);
+    /* 배경색 채우기 */
+    color: #fff;
+    /* 글자 색 흰색 */
+    transition: all 0.3s ease;
+}
+
 /*_________________________community */
 
 .community {
@@ -467,13 +487,11 @@ header {
     height: 930px;
     display: flex;
     align-items: center;
-    background: #ccc;
     justify-content: space-between;
-    /*     justify-content: center; */
 }
 
 .community .left {
-    width: 48%;
+    width: 45%;
 }
 
 /* 왼쪽 이미지 */
@@ -488,9 +506,6 @@ header {
 .community .right {
     width: 50%;
     height: 555px;
-    /* padding-right: 110px; */
-    background: pink;
-    /*    margin-right: 110px; */
 }
 
 .community .right h2 {
@@ -509,8 +524,6 @@ header {
     width: 90%;
     display: flex;
     justify-content: space-between;
-    background: yellow;
-
 }
 
 /* 각 박스 */

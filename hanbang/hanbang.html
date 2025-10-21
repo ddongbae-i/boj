@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="./css/hanbang.css">
     <link rel="stylesheet" href="./css/meida_hb.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <script src="../js/common.js" defer></script>
 </head>
 
@@ -126,7 +127,7 @@
             <div class="main_tit">
                 <div class="line"><img src="img/line.png" alt=""></div>
                 <h2>Our Hanbang Ingredients</h2>
-                <p>Get to know the time-honored ingredients behind our brand,<br>
+                <p data-aos="fade-up">Get to know the time-honored ingredients behind our brand,<br>
                     passed down for centuries from the Joseon Dynasty.<br>
                     Bringing timeless beauty in perfect harmony with nature.</p>
             </div>
@@ -155,11 +156,11 @@
     </section> -->
 
         <section class="sub_main">
-            <h2>Do you know Hanbang?</h2>
+            <h2 data-aos="fade-up">Do you know Hanbang?</h2>
             <div class="sub_main_img">
                 <img src="img/cream_img.png" alt="cream" />
             </div>
-            <p>Get to know the time-honored ingredients behind our brand,
+            <p data-aos="fade-up">Get to know the time-honored ingredients behind our brand,
                 passed down for centuries from the Joseon Dynasty.
             </p>
         </section><!--//.sub_main -->
@@ -216,10 +217,8 @@
                         <img src="img/heart.png" alt="찜하기 아이콘">
                     </div>
                     <img src="img/product1.png" alt="Revive Under Eye Patch">
-                    <button class="add_btn">
-                        <img src="img/icon_bag.svg" alt="장바구니 아이콘">
-                        ADD TO BAG</button>
-
+                    <a href="#" class="add_btn">
+                        <img src="img/icon_bag.svg" alt="장바구니 아이콘">ADD TO BAG</a>
                     <div class="info">
                         <h3>Revive Under Eye Patch: Ginseng + Retinal</h3>
                         <p>Firming Under Eye Patches</p>
@@ -238,7 +237,8 @@
                 <!-- 2 -->
                 <div class="product_card">
                     <img src="img/product2.png" alt="Revive Under Eye Patch">
-                    <button class="add_btn">ADD TO BAG</button>
+                    <a href="#" class="add_btn">
+                        <img src="img/icon_bag.svg" alt="장바구니 아이콘">ADD TO BAG</a>
                     <div class="info">
                         <h3>Revive Under Eye Patch: Ginseng + Retinal</h3>
                         <p>Awakening Eye Cream</p>
@@ -249,8 +249,12 @@
                         </div>
                         <div class="bottom_txt">
                             <div class="price">$20.00</div>
-                            <div class="detail">30ml - 1Pack
-                                <img src="img/down.png" alt="down">
+                            <div class="detail">
+                                <select class="pick_select">
+                                    <option value="30ml-1pack">30ml - 1Pack</option>
+                                    <option value="50ml-1pack">50ml - 1Pack</option>
+                                    <option value="30ml-2pack">30ml - 2Pack</option>
+                                </select>
                             </div>
                         </div>
                         <div class="star">★ 0.0 (0)</div>
@@ -259,7 +263,8 @@
                 <!-- 3 -->
                 <div class="product_card">
                     <img src="img/product3.png" alt="Revive Under Eye Patch">
-                    <button class="add_btn">ADD TO BAG</button>
+                    <a href="#" class="add_btn">
+                        <img src="img/icon_bag.svg" alt="장바구니 아이콘">ADD TO BAG</a>
                     <div class="info">
                         <h3>Ginseng Essence Water</h3>
                         <p>Barrier-Boosting Hydrating Essence</p>
@@ -270,9 +275,7 @@
                         </div>
                         <div class="bottom_txt">
                             <div class="price">$20.00</div>
-                            <div class="detail">30ml - 1Pack
-                                <img src="img/down.png" alt="down">
-                            </div>
+                            <div class="detail">30ml - 1Pack</div>
                         </div>
                         <div class="star">★ 0.0 (0)</div>
                     </div>
@@ -280,7 +283,8 @@
                 <!-- 4 -->
                 <div class="product_card">
                     <img src="img/product4.png" alt="Revive Under Eye Patch">
-                    <button class="add_btn">ADD TO BAG</button>
+                    <a href="#" class="add_btn">
+                        <img src="img/icon_bag.svg" alt="장바구니 아이콘">ADD TO BAG</a>
                     <div class="info">
                         <h3>Ginseng Cleansing Oil</h3>
                         <p>Comfotably Lightweight Cleansing Oil</p>
@@ -291,9 +295,7 @@
                         </div>
                         <div class="bottom_txt">
                             <div class="price">$20.00</div>
-                            <div class="detail">30ml - 1Pack
-                                <img src="img/down.png" alt="down">
-                            </div>
+                            <div class="detail">30ml - 1Pack</div>
                         </div>
                         <div class="star">★ 0.0 (0)</div>
                     </div>
@@ -301,7 +303,8 @@
                 <!-- 5 -->
                 <div class="product_card">
                     <img src="img/product5.png" alt="Revive Under Eye Patch">
-                    <button class="add_btn">ADD TO BAG</button>
+                    <a href="#" class="add_btn">
+                        <img src="img/icon_bag.svg" alt="장바구니 아이콘">ADD TO BAG</a>
                     <div class="info">
                         <h3>Revive Serum : Ginseng + Snail Mucin</h3>
                         <p>Firming Snail Mucin Serum</p>
@@ -312,8 +315,12 @@
                         </div>
                         <div class="bottom_txt">
                             <div class="price">$20.00</div>
-                            <div class="detail">30ml - 1Pack
-                                <img src="img/down.png" alt="down">
+                            <div class="detail">
+                                <select class="pick_select">
+                                    <option value="30ml-1pack">30ml - 1Pack</option>
+                                    <option value="50ml-1pack">50ml - 1Pack</option>
+                                    <option value="30ml-2pack">30ml - 2Pack</option>
+                                </select>
                             </div>
                         </div>
                         <div class="star">★ 0.0 (0)</div>
@@ -322,7 +329,8 @@
                 <!-- 6 -->
                 <div class="product_card">
                     <img src="img/product6.png" alt="Revive Under Eye Patch">
-                    <button class="add_btn">ADD TO BAG</button>
+                    <a href="#" class="add_btn">
+                        <img src="img/icon_bag.svg" alt="장바구니 아이콘">ADD TO BAG</a>
                     <div class="info">
                         <h3>Slow Aging Trio</h3>
                         <p>Anti-Aging Skincare Set</p>
@@ -333,8 +341,12 @@
                         </div>
                         <div class="bottom_txt">
                             <div class="price">$20.00</div>
-                            <div class="detail">30ml - 1Pack
-                                <img src="img/down.png" alt="down">
+                            <div class="detail">
+                                <select class="pick_select">
+                                    <option value="30ml-1pack">30ml - 1Pack</option>
+                                    <option value="50ml-1pack">50ml - 1Pack</option>
+                                    <option value="30ml-2pack">30ml - 2Pack</option>
+                                </select>
                             </div>
                         </div>
                         <div class="star">★ 0.0 (0)</div>
@@ -356,7 +368,7 @@
                 <img src="img/hand_img.png" alt="제품을 바르는 손 이미지">
             </div>
             <div class="right">
-                <h2>BEAUTY OF JOSEON DISCOVER</h2>
+                <h2 class="tit">BEAUTY OF JOSEON DISCOVER</h2>
                 <p>Inspired By Hanbang.<br>
                     Connected by Community.</p>
                 <div class="link_box">
@@ -432,6 +444,13 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // 애니메이션 시간(ms)
+            once: false    
+        });
+    </script>
 </body>
 
 </html>
