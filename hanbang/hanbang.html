@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanbang</title>
-    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="./css/hanbang.css">
+    <link rel="stylesheet" href="./css/meida_hb.css">
+    <script src="../js/common.js" defer></script>
 </head>
 
 <body>
     <!-- //.header-->
-
     <section class="main">
+        <!--         <video autoplay muted loop playsinline>
+            <source src="img/test.mp4" type="video/mp4">
+        </video> -->
         <div class="main_tit">
             <div class="line"><img src="img/line.png" alt=""></div>
             <h2>Our Hanbang Ingredients</h2>
@@ -21,15 +26,12 @@
                 passed down for centuries from the Joseon Dynasty.<br>
                 Bringing timeless beauty in perfect harmony with nature.</p>
         </div>
-        <div class="main_img">
-            <!--       <img src="img/main_img.png" alt="Hanbok illustration">  -->
-        </div>
     </section> <!-- //.main -->
 
     <section class="sub_main">
         <h2>Do you know Hanbang?</h2>
         <div class="sub_main_img">
-            <img src="img/Cream_img.png" alt="Cream" />
+            <img src="img/cream_img.png" alt="cream" />
         </div>
         <p>Get to know the time-honored ingredients behind our brand,<br>
             passed down for centuries from the Joseon Dynasty.
@@ -64,7 +66,7 @@
             </div>
         </div>
     </section><!--//.banner1 -->
-    <section class="product"> 
+    <section class="product">
         <div class="product_filter">
             <ul>
                 <li class="active">Ginseng</li>
@@ -84,8 +86,14 @@
                 <div class="badge new">
                     <p>NEW</p>
                 </div>
+                <div class="heart">
+                    <img src="img/heart.png" alt="찜하기 아이콘">
+                </div>
                 <img src="img/product1.png" alt="Revive Under Eye Patch">
-                <button class="add_btn">ADD TO BAG</button>
+                <button class="add_btn">
+                    <img src="img/icon_bag.svg" alt="장바구니 아이콘">
+                    ADD TO BAG</button>
+
                 <div class="info">
                     <h3>Revive Under Eye Patch: Ginseng + Retinal</h3>
                     <p>Firming Under Eye Patches</p>
@@ -108,7 +116,7 @@
                 <button class="add_btn">ADD TO BAG</button>
                 <div class="info">
                     <h3>Revive Under Eye Patch: Ginseng + Retinal</h3>
-                    <p>Firming Under Eye Patches</p>
+                    <p>Awakening Eye Cream</p>
                     <div class="tags">
                         <span>Moisturizing</span>
                         <span>Firming</span>
@@ -126,11 +134,11 @@
 
             <!-- 3 -->
             <div class="product_card">
-                <img src="img/product2.png" alt="Revive Under Eye Patch">
+                <img src="img/product3.png" alt="Revive Under Eye Patch">
                 <button class="add_btn">ADD TO BAG</button>
                 <div class="info">
-                    <h3>Revive Under Eye Patch: Ginseng + Retinal</h3>
-                    <p>Firming Under Eye Patches</p>
+                    <h3>Ginseng Essence Water</h3>
+                    <p>Barrier-Boosting Hydrating Essence</p>
                     <div class="tags">
                         <span>Moisturizing</span>
                         <span>Firming</span>
@@ -148,11 +156,11 @@
 
             <!-- 4 -->
             <div class="product_card">
-                <img src="img/product2.png" alt="Revive Under Eye Patch">
+                <img src="img/product4.png" alt="Revive Under Eye Patch">
                 <button class="add_btn">ADD TO BAG</button>
                 <div class="info">
-                    <h3>Revive Under Eye Patch: Ginseng + Retinal</h3>
-                    <p>Firming Under Eye Patches</p>
+                    <h3>Ginseng Cleansing Oil</h3>
+                    <p>Comfotably Lightweight Cleansing Oil</p>
                     <div class="tags">
                         <span>Moisturizing</span>
                         <span>Firming</span>
@@ -170,11 +178,11 @@
 
             <!-- 5 -->
             <div class="product_card">
-                <img src="img/product2.png" alt="Revive Under Eye Patch">
+                <img src="img/product5.png" alt="Revive Under Eye Patch">
                 <button class="add_btn">ADD TO BAG</button>
                 <div class="info">
-                    <h3>Revive Under Eye Patch: Ginseng + Retinal</h3>
-                    <p>Firming Under Eye Patches</p>
+                    <h3>Revive Serum : Ginseng + Snail Mucin</h3>
+                    <p>Firming Snail Mucin Serum</p>
                     <div class="tags">
                         <span>Moisturizing</span>
                         <span>Firming</span>
@@ -192,11 +200,11 @@
 
             <!-- 6 -->
             <div class="product_card">
-                <img src="img/product2.png" alt="Revive Under Eye Patch">
+                <img src="img/product6.png" alt="Revive Under Eye Patch">
                 <button class="add_btn">ADD TO BAG</button>
                 <div class="info">
-                    <h3>Revive Under Eye Patch: Ginseng + Retinal</h3>
-                    <p>Firming Under Eye Patches</p>
+                    <h3>Slow Aging Trio</h3>
+                    <p>Anti-Aging Skincare Set</p>
                     <div class="tags">
                         <span>Moisturizing</span>
                         <span>Firming</span>
@@ -221,28 +229,88 @@
             <a href="#">Start Skin Test</a>
         </div>
     </section><!-- //.banner2 -->
-    
-<section class="community">
-    <div class="left">
-        <img src="img/hand_img.png" alt="제품을 바르는 손 이미지">
-    </div>
-    <div class="right">
-        <h2>BEAUTY OF JOSEON DISCOVER</h2>
-        <p>Inspired By Hanbang.<br>
-           Connected by Community.</p>
 
-        <div class="link_box">
-            <div class="box">
-                <img src="img/blog_img.png" alt="블로그 이미지">
-                <a href="#">Go to blog page ></a>
-            </div>
-            <div class="box">
-                <img src="img/local_img.png" alt="매장 위치 이미지">
-                <a href="#">Go find the location ></a>
+    <section class="community">
+        <div class="left">
+            <img src="img/hand_img.png" alt="제품을 바르는 손 이미지">
+        </div>
+        <div class="right">
+            <h2>BEAUTY OF JOSEON DISCOVER</h2>
+            <p>Inspired By Hanbang.<br>
+                Connected by Community.</p>
+
+            <div class="link_box">
+                <div class="box">
+                    <img src="img/blog_img.png" alt="블로그 이미지">
+                    <a href="#">Go to blog page ></a>
+                </div>
+                <div class="box">
+                    <img src="img/local_img.png" alt="매장 위치 이미지">
+                    <a href="#">Go find the location ></a>
+                </div>
             </div>
         </div>
-    </div>
-</section><!-- //.community -->
+    </section><!-- //.community -->
+
+    <footer>
+        <div class="inner">
+            <h2 class="logo"><a href="">BEAUTY OF JOSEON</a></h2>
+            <div class="f_center">
+                <section class="f_join">
+                    <h3 class="f_tit">Join Our Community</h3>
+                    <p>Get on the list for K-beauty tips, exclusive deals,
+                        and more surprises from us.</p>
+                    <form>
+                        <div class="f_join_box">
+                            <input type="email" placeholder="Email">
+                            <button type="submit">SIGN UP NOW</button>
+                        </div>
+                    </form>
+                    <span>By signing up, you agree to receive email marketing</span>
+                </section>
+                <div class="f_center_right">
+                    <nav class="f_nav">
+                        <div class="f_nav_top">
+                            <h3 class="f_tit">Menu</h3>
+                            <button type="button" class="btn_down"><img src="../asset/img/icon_btn_down.svg"
+                                    alt="openbutton"></button>
+                        </div>
+                        <ul>
+                            <li><a href="">Need Help</a></li>
+                            <li><a href="">Gift 10% Off & Get 150 Gems</a></li>
+                            <li><a href="">BOJ Creator Club</a></li>
+                            <li><a href="">Shipping</a></li>
+                            <li><a href="">Return & Refund</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms and conditions</a></li>
+                            <li><a href="">Modern Slavery Act</a></li>
+                        </ul>
+
+                    </nav>
+                    <aside class="boj_insta">
+                        <h3 class="f_tit">Follow on Instagram</h3>
+                        <p>@beautyofjoseon</p>
+                        <ul class="insta_area">
+                            <li><a href=""><img src="../asset/img/insta1.jpg" alt="insta_img1"></a></li>
+                            <li><a href=""><img src="../asset/img/insta2.jpg" alt="insta_img2"></a></li>
+                            <li><a href=""><img src="../asset/img/insta3.jpg" alt="insta_img3"></a></li>
+                            <li><a href=""><img src="../asset/img/insta4.jpg" alt="insta_img4"></a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+            <div class="f_bottom">
+                <div class="copy">
+                    <p>GOODAI GLOBAL INC.</p>
+                    <p>Copyright © 2025. All rights Reserved</p>
+                </div>
+                <div class="f_sns">
+                    <a href=""><img src="../asset/img/icon_instargram.svg" alt="instagram"></a>
+                    <a href=""><img src="../asset/img/icon_tiktok.svg" alt="tiktok"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

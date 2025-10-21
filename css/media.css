@@ -1,0 +1,143 @@
+@charset "uft-8";
+
+@media screen and (max-width:1300px) {
+
+    footer .f_center {
+        display: block;
+    }
+
+    .f_center_right {
+        margin-top: 45px;
+        width: 100%;
+    }
+
+    .f_join form {
+        width: 100%;
+        max-width: none;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .inner {
+        width: min(100%, calc(1700px + 56px * 2));
+        padding-inline: 56px;
+    }
+
+    footer .inner .logo {
+        font-size: 3.75rem;
+    }
+
+    footer .f_center {
+        margin-block: 20px 80px;
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+    .inner {
+        padding-inline: 42px;
+        width: min(100%, calc(1700px + 42px * 2))
+    }
+
+    footer .inner .logo {
+        font-size: 3.75rem;
+    }
+
+    footer .f_tit {
+        font-size: 1rem;
+    }
+
+    .f_sns {
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .inner {
+        padding-inline: 20px;
+            width: min(100%, calc(1700px + 20px * 2))
+
+    }
+
+    footer {
+        font-size: 0.875rem;
+    }
+
+    footer .inner .logo {
+        font-size: 2rem;
+    }
+
+
+    footer .f_join p {
+        width: 100%;
+    }
+
+    .f_join form {
+        height: 50px;
+        font-size: 0.875rem;
+    }
+
+    .f_join form input[type="email"] {
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    .boj_insta {
+        display: none;
+    }
+
+    footer .f_center {
+        margin-block: 20px 60px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .inner {
+        max-width: 320px;
+
+    }
+
+        footer .f_center_right .f_nav {
+            width: 100%;
+        }
+
+    .f_nav .f_nav_top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .f_nav_top button {
+        display: block;
+    }
+
+    .f_nav ul {
+        display: none;
+    }
+
+        .f_nav ul.down {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            color: var(--bg_white );
+            margin-top: 12px;
+
+        }
+
+    .f_bottom {
+        flex-direction: column;
+        gap: 8px;
+        align-items: start;
+    }
+
+    .f_sns {
+        order: -1;
+        gap: 8px;
+    }
+}

@@ -16,7 +16,7 @@ main {
 .main .mainVisual video {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -67,6 +67,18 @@ main {
   width: 425px;
   height: 430px;
   position: relative;
+}
+
+.bestSeller .product .card {
+  transition: opacity .25s ease;
+}
+
+.bestSeller .product:hover .card {
+  opacity: .4;
+}
+
+.bestSeller .product .card:hover {
+  opacity: 1;
 }
 
 .bestSeller .inner .product .card img {
@@ -134,17 +146,23 @@ main {
 }
 
 .influencer {
+  --card: clamp(180px, 21.9vw, 421px);
+  /* 카드 한 변 */
+  --gap: clamp(4px, 0.5vw, 5px);
+  /* 카드 간격 */
   width: 100%;
-  height: 1473px;
   padding-top: 100px;
+  padding-bottom: 100px;
   background: var(--bg_black);
 }
 
 .influencer .inner {
-  width: 100%;
-  height: 1273px;
+  padding-inline: 0;
+  max-width: 1700px;
+  margin: 0 auto;
+  height: auto;
   display: flex;
-  gap: 5px;
+  gap: var(--gap);
   align-items: flex-start;
   justify-content: center;
 }
@@ -154,11 +172,8 @@ main {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* 줄바꿈 허용 → 2열로 흘러감 */
   gap: 5px;
-  /* 카드 간격 */
   align-items: flex-start;
-  /* 서로 다른 높이 허용 */
   position: relative;
 }
 
@@ -242,7 +257,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .influencer .inner .card_right .card_8 {
@@ -271,15 +286,238 @@ main {
 }
 
 .membership {
-  width: 1920px;
-  height: 1080px;
+  width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .membership video {
   position: absolute;
+  width: 100%;
   left: 0px;
   top: 0px;
   aspect-ratio: 16/9;
+}
+
+.membership .login_box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 303px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 820px;
+}
+
+.membership .login_box .txt_box {
+  padding: 10px;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 45px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.membership .login_box .txt_box .txt {
+  color: var(--txt_main);
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 140%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.membership .login_box .btu_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.membership .login_box .btu_box .btu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.membership .login_box .btu_box .login {
+  width: 120px;
+  border: solid .5px var(--txt_main);
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  font-size: 1rem;
+}
+
+.membership .login_box .btu_box .joinNow {
+  width: 120px;
+  border: solid .5px var(--txt_main);
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  font-size: 1rem;
+}
+
+.hanbang {
+  width: 100%;
+  height: 973px;
+  background: var(--img_bg);
+  display: flex; 
+}
+
+.hanbang .inner {
+  padding-inline: 0;
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.hanbang .inner .txt_left,
+.hanbang .inner .txt_right {
+  width: 528px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.hanbang .inner .txt_left ul,
+.hanbang .inner .txt_right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 18px;
+}
+
+.hanbang .inner .txt_left ul>button,
+.hanbang .inner .txt_right ul>button {
+  all: unset;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.hanbang .inner .txt_left .tit,
+.hanbang .inner .txt_right .tit {
+  font-family: var(--tit_font);
+  font-size: 2.5rem;
+  color: var(--txt_sub_77);
+  line-height: 140%;
+  letter-spacing: .02em;
+  margin-bottom: 6px;
+}
+
+.hanbang .inner .txt_left .txt,
+.hanbang .inner .txt_right .txt {
+  color: var(--txt_sub_77);
+  line-height: 140%;
+  font-size: 1.125rem;
+}
+
+.hanbang .inner .progress {
+  position: relative;
+  height: 16px;
+  margin: 10px 0 8px;
+}
+
+.hanbang .inner .progress .bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--gray_de);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.hanbang .inner .progress .playbar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10%;
+  height: 6px;
+  background: var(--ginseng);
+  border-radius: 999px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.hanbang .inner .img_box {
+  width: 644px;
+  height: 753px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hanbang .inner .img_box .img1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hanbang .inner .img_box .img1 img {
+  width: 566px;
+  height: 848px;
+  max-height: 100%;
+  width: auto;
+  display: block;
+}
+
+.hanbang .inner .img_box .imgTxt {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box1 {
+  width: 206px;
+  height: 206px;
+  position: absolute;
+  right: 3%;
+  top: 0%;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box2 {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 10%;
+  top: 28%;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box3 {
+  width: 198px;
+  height: 198px;
+  position: absolute;
+  right: 12%;
+  bottom: 0;
 }
