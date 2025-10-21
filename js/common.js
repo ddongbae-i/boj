@@ -1,3 +1,15 @@
+//header
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY) {
+        header.style.top = '124px';
+    } else {
+        header.style.top = '0';
+    }
+
+    lastScrollY = currentScrollY
+})
+
 //search
 const searchBtn = document.querySelector('.nav_right .search');
 const searchTab = document.querySelector('.search_tab');
@@ -26,4 +38,13 @@ footerBtn.addEventListener('click', function () {
 
     footerBtn.style.transition = 'transform 0.3s ease';
 })
+
+const bottomnav = document.querySelector('.ham_bottom');
+const nav = document.querySelector('nav');
+bottomnav.addEventListener('mouseenter', () => {
+    nav.classList.add('on');
+});
+bottomnav.addEventListener('mouseleave', () => {
+    nav.classList.remove('on');
+});
 
