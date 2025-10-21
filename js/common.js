@@ -10,3 +10,13 @@ searchBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     searchTab.classList.remove('open');
 })
+
+//footer menu btn
+
+const footerBtn = document.querySelector('.f_nav button')
+const footerMenu = document.querySelector('.f_nav ul')
+
+footerBtn.addEventListener('click', function () {
+    footerMenu.classList.toggle('down')
+})
+

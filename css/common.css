@@ -73,7 +73,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    /* display: none; */
+    display: none;
     /* dn 지우기 */
 }
 
@@ -285,7 +285,6 @@ footer .f_join p {
     font-weight: 300;
 }
 
-
 .f_join form {
     width: 100%;
     max-width: 450px;
@@ -302,7 +301,7 @@ footer .f_join p {
 }
 
 .f_join form button {
-    width: 100%;
+    white-space: nowrap;
 }
 
 .f_join form .f_join_box {
@@ -323,6 +322,14 @@ footer .f_join span {
     width: 653px;
     display: flex;
     justify-content: space-between;
+}
+
+.f_nav_top {
+    width: 100%;
+}
+
+.f_nav_top button {
+    display: none;
 }
 
 .f_nav ul {
@@ -353,7 +360,6 @@ footer .f_join span {
 
 .boj_insta .insta_area img{
     width: 127px;
-
 }
 
 .f_bottom {
