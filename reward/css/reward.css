@@ -99,16 +99,11 @@ span {
     font-size: 1rem;
 }
 
-
 .vip_tiers .list>ul>li>ul>li:nth-child(1) {
     height: 80px;
     line-height: 400%;
     background-color: aqua;
 }
-
-.vip_tiers .list>ul>li>ul>li:nth-child(2) {}
-
-
 
 .how_it_work {
     width: 100%;
@@ -120,7 +115,6 @@ span {
     display: flex;
     justify-content: center;
     min-height: 340px;
-
     /* 2. 배경색을 반투명하게 설정 (backdrop-filter를 보기 위해 필수) */
     background-color: rgba(255, 255, 255, 0.8);
     /* 예: 흰색 30% 투명도 */
@@ -129,7 +123,6 @@ span {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     /* Safari 지원 */
-
 }
 
 .how_it_work .list ul {
@@ -149,8 +142,7 @@ span {
     margin-bottom: 24px;
 }
 
-.redeem_for_products,
-.ways_to_earn {
+.redeem_for_products,.ways_to_earn {
     width: 100%;
     color: var(--white_f0);
     display: flex;
@@ -160,15 +152,9 @@ span {
     height: 1300px;
 }
 
-.artlcle_g {
-    /*    width: 80%; */
-}
-
 .card_tit {
     margin-bottom: 120px;
 }
-
-
 
 .bottom {
     width: 100%;
@@ -183,12 +169,6 @@ span {
     background: url(../reward/img/img_Earn_Friend.png) no-repeat;
 }
 
-/* .bottom .img {
-    width: 100%;
-    height: 80px;
-    background-image: url(../img/img_Earn_Birthday.png);
-} */
-
 .arrow::before {
     content: "";
     display: inline-block;
@@ -200,10 +180,6 @@ span {
     background-size: 100% 100%;
     margin-right: 8px;
 }
-
-
-
-
 
 .artlcle_g {
     display: flex;
@@ -220,7 +196,6 @@ span {
     height: 180px;
     gap: 16px;
 }
-
 
 .artlcle_g .box {
     background: var(--bg_footer) url(../img/img_Earn_Birthday.png) no-repeat calc(100% - 20px) calc(100% - 20px);
@@ -262,14 +237,18 @@ span {
     background-image: url(../img/img_Redeem_Convert.png);
 }
 
-
-
 .ways_to_earn {
     background: url(../img/Earn_bg.png) center/cover no-repeat;
 }
 
 .ways_to_earn .box1 {
     background-image: url(../img/img_Earn_Friend.png);
+}
+
+.ways_to_earn .box1 .arrow::before {
+    background-image: url(../img/reward_check.svg);
+    width: 20px;
+    height: 14px;
 }
 
 .ways_to_earn .box2 {
@@ -296,56 +275,13 @@ span {
     background-image: url(../img/img_Earn_Friend.png);
 }
 
-/* .redeem_for_products .article_top {
-    height: 240px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
 
-.redeem_for_products .article_bottom {
-    width: 80%;
-    height: 240px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-
-
-.ways_to_earn .box1 .arrow::before {
-    background-image: url(../img/reward_check.svg);
-    width: 20px;
-    height: 14px;
-}
-
-.ways_to_earn .article_top {
-    height: 220px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.ways_to_earn .article_center {
-    height: 180px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.ways_to_earn .article_bottom {
-    height: 180px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
- */
+ 
 .friend {
     width: 100%;
-    /*   height: 400px; */
+    height: 400px;
+    background-color: var(--bg_footer);
+    color: var(--white_f0);
 }
 
 .FAQ {
