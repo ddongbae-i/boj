@@ -1,11 +1,54 @@
 @charset "uft-8";
 
 @media screen and (max-width:1600px) {
+
+    header.on .logo {
+        display: none;
+    }
+
+    header.on .inner .gnb>li:nth-child(1) a {
+        padding-left: 0;
+    }
+
+    header.on .nav_right {}
+
+
+    header.on nav ul.gnb>li:hover .sub_wrap {}
+
+    header.on nav ul.gnb>li:hover .sub_img {
+        width: 310px;
+        height: 310px;
+    }
+
     header .inner .gnb {
         display: none;
     }
 
+    header.on .inner .gnb {
+        display: flex;
+    }
+
     .nav_right .ham_menu {
+        display: block;
+        position: relative;
+        background: #ccc;
+    }
+
+    .nav_right .ham_menu img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .nav_right .ham_menu img:nth-child(2) {
+        display: none;
+    }
+
+    header.on .nav_right .ham_menu img:nth-child(1) {
+        display: none;
+    }
+
+    header.on .nav_right .ham_menu img:nth-child(2) {
         display: block;
     }
 
