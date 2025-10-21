@@ -1,0 +1,75 @@
+@charset "uft-8";
+
+@media screen and (max-width:1300px) {
+
+    footer .f_center {
+        display: block;
+    }
+
+    .f_center_right {
+        margin-top: 45px;
+        width: 100%;
+    }
+
+    .f_join form {
+        width: 100%;
+        max-width: none;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .inner {
+        padding-inline: 56px;
+        max-width: 912px;
+    }
+
+    footer .inner .logo {
+        font-size: 3.75rem;
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+    .inner {
+        padding-inline: 42px;
+    }
+
+    footer .inner .logo {
+        font-size: 3.75rem;
+    }
+
+    footer .f_tit {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width:640px) {
+    footer {
+        font-size: 0.875rem;
+    }
+
+    footer .inner .logo {
+        font-size: 2rem;
+    }
+
+    .inner {
+        padding-inline: 20px;
+    }
+    footer .f_join p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    .boj_insta {
+        display: none;
+    }
+}
+
+@media screen and (max-width:540px) {
+    
+}
