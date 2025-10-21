@@ -55,6 +55,7 @@ body {
     font-weight: 400;
     border: 1px solid var(--txt_main);
     text-align: center;
+    line-height: 45px;
 }
 
 /* 가운데 정렬하기 */
