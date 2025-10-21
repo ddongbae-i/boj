@@ -1,120 +1,19 @@
-@media (max-width: 1024px) {
-    .k_tit {
-        color: #1c1c1c;
-        text-align: center;
-        font-family: var(--logo60px-font-family, "CheongdoL-Light", sans-serif);
-        font-size: 50px;
-    }
+  @media (max-width: 1024px) {
+      .story-card {
+          flex-direction: column !important;
+      }
 
-    p.tit {
-        font-size: 1.5rem;
-    }
+      .story-card img,
+      .story-card .text {
+          width: 100%;
+      }
 
+      .ingredient-card {
+          flex-direction: column;
+          height: auto;
+      }
 
-    .inner {
-        width: 90%;
-        max-width: 912px;
-        margin: 0 auto;
-    }
-
-
-    .our-story {
-        font-size: 44px;
-    }
-
-    .bridging-five-centuries-of-korean-beauty-wisdom-wi {
-        font-size: 22px;
-    }
-
-    .royal-beauty-rituals,
-    .modern-science-meets-tradition {
-        font-size: 28px;
-    }
-
-    .for-centuries-korean-royal-courts-preserved-ancie,
-    .for-centuries-korean-royal-courts-preserved-ancie2 {
-        font-size: 18px;
-    }
-
-    .traditional-wisdom-dating-back-500-years,
-    .scientifically-validated-traditional-ingredients {
-        font-size: 16px;
-    }
-
-    .every-product-tells-a-story-of-timeless-beauty-where-ancient-wisdom-meets-modern-excellence-where-ancient-wisdom-meets-modern-excellence {
-        font-size: 22px;
-    }
-
-    .cardlist {
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-shrink: 0;
-        width: 912px;
-        position: relative;
-    }
-
-    .card-01,
-    .card-02 {
-        width: 912px;
-        gap: 40px;
-        align-items: center;
-    }
-
-    /* 카드 이미지 교체 오류 수정 */
-
-    .card-img img {
-        width: 420px;
-        height: 400px;
-        object-fit: cover;
-        content: url('/BrandStory/img/3card_img2.png');
-    }
-
-    .card-img2 img {
-        width: 420px;
-        height: 400px;
-        object-fit: cover;
-        content: url('/BrandStory/img/4card_img2.png');
-
-    }
-
-    .con-img2 {
-        width: 420px;
-        height: 400px;
-        object-fit: cover;
-        content: url('/BrandStory/img/4card_img2.png');
-    }
-
-
-    .card-img img,
-    .card-img2 img {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    .card-img,
-    .card-img2 {
-        max-width: 420px;
-        height: auto;
-    }
-
-    .card-txt,
-    .card-txt2 {
-        max-width: 420px;
-    }
-
-    .section-2 {
-        height: auto !important;
-        padding: 80px 0;
-    }
-
-
-}
-
-
-
-
-@media (max-width: 1024px) {}
+      .ingredient-card .image {
+          height: 300px;
+      }
+  }
