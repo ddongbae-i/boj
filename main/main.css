@@ -146,17 +146,23 @@ main {
 }
 
 .influencer {
+  --card: clamp(180px, 21.9vw, 421px);
+  /* 카드 한 변 */
+  --gap: clamp(4px, 0.5vw, 5px);
+  /* 카드 간격 */
   width: 100%;
-  height: 1473px;
   padding-top: 100px;
+  padding-bottom: 100px;
   background: var(--bg_black);
 }
 
 .influencer .inner {
-  width: 100%;
-  height: 1273px;
+  padding-inline: 0;
+  max-width: 1700px;
+  margin: 0 auto;
+  height: auto;
   display: flex;
-  gap: 5px;
+  gap: var(--gap);
   align-items: flex-start;
   justify-content: center;
 }
@@ -376,15 +382,18 @@ main {
   width: 100%;
   height: 973px;
   background: var(--img_bg);
+  display: flex; 
 }
 
 .hanbang .inner {
+  padding-inline: 0;
+  max-width: 1700px;
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 64px;
+  align-items: center;
+  gap: 0;
   position: relative;
 }
 
@@ -493,7 +502,7 @@ main {
   width: 206px;
   height: 206px;
   position: absolute;
-  right: 0%;
+  right: 3%;
   top: 0%;
 }
 
