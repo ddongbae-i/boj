@@ -3,7 +3,7 @@
 @media screen and (max-width:1600px) {
 
     header.on .inner {
-        padding-inline: 56px;
+        padding-inline: 110px;
     }
 
     header.on .logo {
@@ -14,21 +14,16 @@
         padding-left: 0;
     }
 
-    header.on .sub {
-        padding-inline: 56px;
-    }
-
     header.on .ham_bottom:nth-child(2) {
-        display: flex;
+        display: block;
     }
 
-    header.on nav ul.gnb >li:nth-child(1)  .sub_wrap {
+    header.on nav ul.gnb >li:nth-child(1) .sub_wrap {
         display: flex;
     }
-
+    
     header.on .ham_bottom {
         display: block;
-        left: 56px;
     }
 
     header .inner .gnb {
@@ -39,7 +34,6 @@
     header.on .inner .gnb {
         display: flex;
     }
-
 
     .nav_right .ham_menu {
         display: block;
@@ -71,9 +65,15 @@
 
 @media screen and (max-width:1300px) {
 
-    .nav_right {
-        width: none;
+        header.on .sub {
+        padding-inline: 56px;
     }
+
+        .ham_bottom{
+
+            left: 56px;
+        }
+
 
     header.on nav ul.gnb>li .sub_img {
         width: 310px;
