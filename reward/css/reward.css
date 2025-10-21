@@ -6,7 +6,7 @@ body {
 }
 
 .inner {
-    width: 1328px;
+    width: 80vw;
 }
 
 .btn {
@@ -117,8 +117,6 @@ span {
     min-height: 340px;
     /* 2. 배경색을 반투명하게 설정 (backdrop-filter를 보기 위해 필수) */
     background-color: rgba(255, 255, 255, 0.8);
-    /* 예: 흰색 30% 투명도 */
-
     /* 3. 백그라운드 블러 효과 적용 */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -142,14 +140,17 @@ span {
     margin-bottom: 24px;
 }
 
-.redeem_for_products,.ways_to_earn {
+.redeem_for_products,
+.ways_to_earn {
     width: 100%;
     color: var(--white_f0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 1300px;
+    min-height: 1300px;
+    padding-bottom: 160px;
+    padding: 160px 0;
 }
 
 .card_tit {
@@ -164,11 +165,6 @@ span {
     justify-content: space-between;
 }
 
-.bottom img {
-    height: 80px;
-    background: url(../reward/img/img_Earn_Friend.png) no-repeat;
-}
-
 .arrow::before {
     content: "";
     display: inline-block;
@@ -181,29 +177,42 @@ span {
     margin-right: 8px;
 }
 
+.dis {
+    opacity: 20%;
+}
+
 .artlcle_g {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.artlcle_g .article_top {
+/* .artlcle_g .article_top {
     height: 240px;
 }
-
+ */
 .artlcle_g>div {
     display: flex;
-    height: 180px;
     gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .artlcle_g .box {
     background: var(--bg_footer) url(../img/img_Earn_Birthday.png) no-repeat calc(100% - 20px) calc(100% - 20px);
     flex: 1;
-    height: 100%;
+    height: 180px;
+    min-width: 340px;
+    max-width: 600px;
     position: relative;
     padding: 20px;
     background-size: auto 70px;
+    border-top: 4px solid var(--txt_sub_44);
+/* flex-basis: calc(50% - 8px); */
+}
+
+.article_top{
+
 }
 
 .redeem_for_products {
@@ -262,7 +271,7 @@ span {
 
 .ways_to_earn .box4 {
     background-image: url(../img/img_Earn_Friend.png);
-        background-size: auto 60px;
+    background-size: auto 60px;
 }
 
 .ways_to_earn .box5 {

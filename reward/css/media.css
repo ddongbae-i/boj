@@ -1,0 +1,17 @@
+@charset "uft-8";
+
+@media screen and (max-width:1024px) {
+.inner {
+    width: 90vw;
+}
+}
+
+@media screen and (max-width:768px) {
+.inner {
+    width: 100vw;
+}
+}
+
+@media screen and (max-width:480px) {
+
+}
