@@ -11,7 +11,7 @@
     --txt_sub_77: #777;
     --white_ff: #fff;
     --grey_aa: #aaa;
-    --gray_de: #dedede;
+    --grey_de: #dedede;
     --grey_c7: #c7c7c7;
     --img_bg: #f7f7f7;
     --white_f0: #f0f0f0;
@@ -281,11 +281,6 @@ footer .f_join p {
     font-weight: 300;
 }
 
-footer .f_join span {
-    color: var(--txt_sub_77);
-    margin-left: 10px;
-    margin-top: 16px;
-}
 
 .f_join form {
     width: 100%;
@@ -293,7 +288,7 @@ footer .f_join span {
     height: 70px; 
     border-radius: 40px;
     background: rgba(255,255,255,0.1);
-    margin-top: 24px;
+    margin-block: 24px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -304,6 +299,11 @@ footer .f_join span {
     display: flex;
     justify-content: space-between;
     margin-inline: auto;
+}
+
+footer .f_join span {
+    color: var(--txt_sub_77);
+    margin-left: 10px;
 }
 
 .f_center_right {
@@ -327,4 +327,8 @@ footer .f_join span {
 .boj_insta .insta_area img{
     width: 127px;
 
+}
+
+.f_bottom {
+    border-top: 1px solid var(--grey_aa);
 }
