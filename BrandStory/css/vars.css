@@ -1,6 +1,8 @@
-/* Figma Styles of your File */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap');
+
 :root {
-  /* Colors */
   --darkolive1b2116: #1b2116;
   --btncheckf2: #f3f2f2;
   --footerbg: #202020;

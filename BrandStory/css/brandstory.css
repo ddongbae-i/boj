@@ -1,6 +1,13 @@
-.brand-story-1920,
-.brand-story-1920 * {
-    box-sizing: border-box;
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+section {
+    height: auto;
 }
 
 .brand-story-1920 {
@@ -228,7 +235,7 @@
     position: relative;
 }
 
-.div {
+.k_tit {
     color: #1c1c1c;
     text-align: center;
     font-family: var(--logo60px-font-family, "CheongdoL-Light", sans-serif);
@@ -263,16 +270,8 @@
     position: relative;
 }
 
-.traditional-korean-beauty-wisdom-refined-for-modern-skin {
-    color: #1c1c1c;
-    text-align: center;
-    font-family: var(--cormorant-m-title30px1875rem-font-family,
-            "Cormorant-Medium",
-            sans-serif);
-    font-size: var(--cormorant-m-title30px1875rem-font-size, 30px);
-    line-height: var(--cormorant-m-title30px1875rem-line-height, 120%);
-    font-weight: var(--cormorant-m-title30px1875rem-font-weight, 500);
-    position: relative;
+p.tit {
+    font-size: 2rem;
 }
 
 .img {
@@ -320,15 +319,15 @@
 
 .section-2 {
     background: #fefefe;
-    padding: 100px 0px 100px 0px;
+    padding: 150px 0px 150px 0px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 1920px;
-    height: 1748px;
+    width: 100%;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
@@ -374,16 +373,10 @@
     position: relative;
 }
 
-.our-story {
+.section-2 .tit2 .line2 h2 .tit {
     color: #1c1c1c;
     text-align: center;
-    font-family: var(--cormorant-m-title48px3rem-font-family,
-            "Cormorant-Medium",
-            sans-serif);
-    font-size: var(--cormorant-m-title48px3rem-font-size, 48px);
-    line-height: var(--cormorant-m-title48px3rem-line-height, 120%);
-    font-weight: var(--cormorant-m-title48px3rem-font-weight, 500);
-    position: relative;
+    font-size: 60px;
     align-self: stretch;
 }
 
@@ -497,12 +490,10 @@
 }
 
 .container {
-    background: linear-gradient(180deg,
-            rgba(181, 144, 22, 1) 0%,
-            rgba(0, 0, 0, 0) 100%);
-    flex-shrink: 0;
+    background: linear-gradient(90deg, rgba(181, 144, 22, 1) 0%, rgba(0, 0, 0, 0) 100%);
     width: 64px;
     height: 1px;
+    flex-shrink: 0;
     position: relative;
 }
 
@@ -613,22 +604,31 @@
     position: relative;
 }
 
+
 .num2 {
     padding: 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 24px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-shrink: 0;
     width: 360px;
     height: 20px;
     position: relative;
 }
 
+.num2 .container {
+    background: linear-gradient(90deg, rgba(181, 144, 22, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 64px;
+    height: 1px;
+    flex-shrink: 0;
+    position: relative;
+}
+
 ._02 {
     color: #b59016;
-    text-align: left;
+    text-align: right;
     font-family: var(--num20px-font-family, "PublicSans-Medium", sans-serif);
     font-size: var(--num20px-font-size, 20px);
     line-height: var(--num20px-line-height, 16.8px);
@@ -636,6 +636,7 @@
     font-weight: var(--num20px-font-weight, 500);
     text-transform: uppercase;
     position: relative;
+
 }
 
 .tit4 {
@@ -775,111 +776,125 @@
     position: relative;
 }
 
+
+
+/* section-3 */
 .section-3 {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 1920px;
     position: relative;
+    width: 100%;
+    height: auto;
+    background: #f8f8f8;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
+}
+
+.card-012,
+.card-08,
+.card-022,
+.card-03,
+.card-04,
+.card-05,
+.card-06,
+.card-07 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f8f8;
 }
 
 .card-012 {
-    background: #f8f8f8;
-    padding: 100px 0px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 1920px;
+    opacity: 1;
     position: relative;
-    overflow: hidden;
+    z-index: 10;
 }
 
 .inner3 {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    width: 1700px;
-    position: relative;
-}
-
-.key-ingredients {
-    color: #1c1c1c;
-    text-align: center;
-    font-family: var(--cormorant-m-title48px3rem-font-family,
-            "Cormorant-Medium",
-            sans-serif);
-    font-size: var(--cormorant-m-title48px3rem-font-size, 48px);
-    line-height: var(--cormorant-m-title48px3rem-line-height, 120%);
-    font-weight: var(--cormorant-m-title48px3rem-font-weight, 500);
-    position: relative;
-    align-self: stretch;
+    align-items: center;
+    gap: 60px;
 }
 
 .card {
-    display: flex;
-    flex-direction: row;
-    gap: 80px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
     width: 1700px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
 }
 
 .img2 {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 906px;
-    height: 600px;
-    position: relative;
+    width: 60%;
+    height: auto;
     object-fit: cover;
 }
 
 .txt-card {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+    text-align: left;
 }
 
-.tit5 {
+.ingredient-carousel {
+    position: absolute;
+    left: 50%;
+    margin-top: 40px;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+}
+
+.button {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    cursor: pointer;
+}
+
+
+.button:hover {
+    background: #eee;
+}
+
+
+.section-3 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .top {
     display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
+    flex-direction: column;
+    /* ✅ 세로 정렬 */
+    align-items: flex-start;
+    /* 왼쪽 정렬 */
     justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+    gap: 6px;
+    /* Key Ingredient와 Ginseng 간격 */
+    width: 100%;
 }
 
 .container2 {
@@ -903,6 +918,8 @@
     line-height: var(--publicsans-l-18px1125rem-line-height, 140%);
     font-weight: var(--publicsans-l-18px1125rem-font-weight, 300);
     position: relative;
+    display: contents;
+    align-items: center;
 }
 
 .frame-1430103151 {
@@ -942,13 +959,11 @@
 
 .txt-1 {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+    text-align: left;
+    width: 100%;
 }
 
 .revered-for-centuries-as-the-king-of-herbs-korean {
@@ -1194,20 +1209,7 @@
     overflow: visible;
 }
 
-.card-08 {
-    background: #f8f8f8;
-    padding: 100px 0px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 1920px;
-    position: relative;
-    overflow: hidden;
-}
+
 
 .container4 {
     background: linear-gradient(90deg,
@@ -1339,20 +1341,6 @@
     overflow: visible;
 }
 
-.card-022 {
-    background: #f8f8f8;
-    padding: 100px 0px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 1920px;
-    position: relative;
-    overflow: hidden;
-}
 
 .container5 {
     background: linear-gradient(90deg,
@@ -1468,21 +1456,6 @@
     height: 24px;
     position: relative;
     overflow: visible;
-}
-
-.card-03 {
-    background: #f8f8f8;
-    padding: 100px 0px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 1920px;
-    position: relative;
-    overflow: hidden;
 }
 
 .container6 {
@@ -1601,21 +1574,6 @@
     overflow: visible;
 }
 
-.card-04 {
-    background: #f8f8f8;
-    padding: 100px 0px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 1920px;
-    position: relative;
-    overflow: hidden;
-}
-
 .container7 {
     background: linear-gradient(90deg,
             rgba(116, 130, 43, 1) 0%,
@@ -1732,20 +1690,7 @@
     overflow: visible;
 }
 
-.card-05 {
-    background: #f8f8f8;
-    padding: 100px 0px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 1920px;
-    position: relative;
-    overflow: hidden;
-}
+
 
 .container8 {
     background: linear-gradient(90deg,
@@ -1863,20 +1808,6 @@
     overflow: visible;
 }
 
-.card-06 {
-    background: #f8f8f8;
-    padding: 100px 0px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 1920px;
-    position: relative;
-    overflow: hidden;
-}
 
 .container9 {
     background: linear-gradient(90deg,
@@ -1994,21 +1925,6 @@
     overflow: visible;
 }
 
-.card-07 {
-    background: #f8f8f8;
-    padding: 100px 0px 100px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 1920px;
-    position: relative;
-    overflow: hidden;
-}
-
 .container10 {
     background: linear-gradient(90deg,
             rgba(75, 109, 47, 1) 0%,
@@ -2124,6 +2040,29 @@
     position: relative;
     overflow: visible;
 }
+
+.card-012,
+.card-08,
+.card-022,
+.card-03,
+.card-04,
+.card-05,
+.card-06,
+.card-07 {
+    flex: 0 0 100%;
+    /* 카드 하나가 한 화면에 차지 */
+    scroll-snap-align: start;
+    /* 한 장씩 고정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 
 .section-4 {
     background: var(--bg-blackof, #0f0f0f);
@@ -3358,13 +3297,13 @@
 }
 
 .img3 {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 0px;
     align-items: center;
     justify-content: center;
     align-self: stretch;
-    flex-shrink: 0;
     position: relative;
 }
 
@@ -3649,6 +3588,7 @@
     justify-content: flex-start;
     flex-shrink: 0;
     position: relative;
+    width: 200px;
 }
 
 .line13 {
@@ -3663,7 +3603,7 @@
 
 .newsletter {
     color: rgba(255, 255, 255, 0.6);
-    text-align: left;
+    text-align: center;
     font-family: var(--num18px-font-family, "PublicSans-Medium", sans-serif);
     font-size: var(--num18px-font-size, 18px);
     line-height: var(--num18px-line-height, 16.8px);
@@ -3786,7 +3726,7 @@
 
 .button11 {
     background: #ffffff;
-    border-radius: 33554400px;
+    border-radius: 500px;
     padding: 15px 40px 15px 40px;
     display: flex;
     flex-direction: row;
@@ -3795,6 +3735,7 @@
     justify-content: center;
     flex-shrink: 0;
     position: relative;
+    width: 227px;
 }
 
 .join-our-newsletter {
@@ -4336,8 +4277,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 1920px;
-    height: 803px;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
