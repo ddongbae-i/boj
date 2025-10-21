@@ -6,24 +6,76 @@
     <title>Tailored for You - BEAUTY OF JOSEON</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="./css/skintest.css">
+    <link rel="stylesheet" href="./css/main01.css">
+    <script src="./js/quiz.js" defer></script>
 </head>
 <body>
-    <header></header>
-    <section class="skintest">
+     <!-- <header class="gnb">
         <div class="inner">
+            <h1 class="logo">BEAUTY OF JOSEON</h1>
+            <nav class="nav" aria-label="Global">
+                <a href="#" class="nav-link">Shop</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Ingredients</a>
+            </nav>
+        </div>
+    </header> -->
+
+    <main>
+        <section id="home" class="page">
+        <div class="home-inner">
             <div class="tit">
                 <h2>Start Your Personalized Ingredient Test</h2>
                 <p>Answer 10 quick questions to identify your skin type and get traditional ingredient picks.</p>
             </div>
         <div class="label-group">
-            <div class="btn01 label">Takes 2–3 minutes</div>
-            <div class="btn02 label">10 Questions</div>
-            <div class="btn03 label">Works on Desktop/Mobile</div>
+            <div class="label">10 Questions</div>
+            <div class="label">Takes 2–3 minutes</div>
+            <div class="label">Works on Desktop/Mobile</div>
         </div>
-        <button class="test-start-btn"><a href="skintest.html"></a> Start Test</button>
-    </div>
+            <button id="test-start-btn" type="button" class="btn primary">Start Test</button>
+        </div>
+        </section>
+        
+        <section id="quiz" class="page" hidden>
+            <div class="inner">
+                <div class="card" role="group" aria-labelledby="question">
+                    <div class="card-head">
+                        <div class="progress" id="progress" aria-live="polite">1 / 10</div>
+                        <div class="bar">
+                            <div class="bar-fill" id="barFill" style="width:10%"></div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="question" class="question">Question</h2>
+                    <div class="options" id="options" role="radiogroup" aria-labelledby="question"></div>
+                    
+                    <div class="actions">
+                        <button class="btn secondary" type="button" id="prevBtn" aria-label="prev_question">Back</button>
+                        <button class="btn primary" type="button" id="nextBtn" aria-label="next_question">Next</button>
+                </div>
+                </div>
+      </div>
     </section>
-    <footer></footer>
+
+    <section id="result" class="page" hidden>
+      <div class="inner">
+        <div class="card result-card">
+          <h2>결과</h2>
+          <p class="result-type" id="resultType">유형</p>
+          <p class="result-desc" id="resultDesc">설명</p>
+          <div class="result-actions">
+            <button class="btn secondary" type="button" id="retryBtn">다시 테스트</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- <footer>
+    <div class="inner">
+      <small>© 2025 Beauty of Joseon</small>
+    </div>
+  </footer> -->
 </body>
 </html>

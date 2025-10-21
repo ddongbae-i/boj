@@ -39,9 +39,9 @@ align-items: center; justify-content: center;}
 .label {
   width: 230px; height: 50px; display: flex; align-items: center; justify-content: center;text-align: center; border: 1px solid #000; font-family: var(--txt_font); background: transparent; box-sizing: border-box;}
 
-.test-start-btn {width: 184px; height: 60px; border: 1px solid #000; font-family: var(--txt_font);
+#test-start-btn {width: 184px; height: 60px; border: 1px solid #000; font-family: var(--txt_font);
   background: transparent; cursor: pointer; transition: .3s;}
-.test-start-btn:hover {background: #000; color: #fff;}
+#test-start-btn:hover {background: #000; color: #fff;}
 
 /* 반응형 */
 @media (max-width: 1024px) {
