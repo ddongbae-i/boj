@@ -41,9 +41,11 @@ body {
     margin-bottom: 80px;
 
 }
-.btn:first-child{
-margin-right: 24px;
+
+.btn:first-child {
+    margin-right: 24px;
 }
+
 .vip_tiers .tit {
     text-align: center;
 }
@@ -143,45 +145,115 @@ span {
 .how_it_work .list ul>li img {
     margin-bottom: 24px;
 }
+.redeem_for_products, .ways_to_earn{
+        width: 100%;
+    
+        color: var(--white_f0);
+        display: flex; 
+    flex-direction: column;
+        justify-content: center;
+         align-items: center;
+             height: 1300px;
+    }
+.artlcle_g{
+    width: 80%;
+}
+.card_tit{
+    margin-bottom: 120px;
+}
+.box {
+    background-color: var(--bg_footer);
+    flex: 1;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+
+}
+.bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom img{
+    /* width: 100%; */
+    height: 80px;
+    /* background-image: url(../reward/img/img_Earn_Friend.png) no-repeat; */
+    /* background-position : bottom right; */
+}
+.bottom .img{
+width: 100%;
+    height: 80px;
+        background-image: url(../img/img_Earn_Birthday.png); /* no-repeat */
+    /* background-position : bottom right; */
+}
+
+.arrow::before {
+    content: "";
+    display: inline-block;
+    /* 공간 차지하도록 */
+    width: 14px;
+    height: 14px;
+    /* 아이콘 크기 지정 */
+    background-image: url(../img/reward_arrow.svg);
+    background-size: 100% 100%;
+    margin-right: 8px;
+}
 
 .redeem_for_products {
-    width: 100%;
-    height: 1080px;
     background: url(../img/Redeem_bg.png) center/cover no-repeat;
 }
 
-.redeem_for_products .article_top{
-width: 100%;
-display: flex;
-align-items: flex-start;
-gap: 20px;
+.redeem_for_products .article_top {
+    height: 240px;
+        margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.redeem_for_products .article_bottom {
+    width: 80%;
+    height: 240px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .ways_to_earn {
-    width: 100%;
-    height: 1080px;
     background: url(../img/Earn_bg.png) center/cover no-repeat;
 }
-.box{
-    background-color: aqua;
-    flex: 1;
+
+.ways_to_earn .box1 .arrow::before{
+    background-image: url(../img/reward_check.svg);
+    width: 20px;
+    height: 14px;
 }
 
-.ways_to_earn .article_top{
-width: 100%;
-display: flex;
-align-items: flex-start;
-gap: 20px;
+.ways_to_earn .article_top {
+    height: 220px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
 }
-.ways_to_earn .article_top .box1{
 
+.ways_to_earn .article_center {
+        height: 180px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
 }
-.ways_to_earn .article_top .box2{
 
+.ways_to_earn .article_bottom {
+        height: 180px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
-.ways_to_earn .article_top .box3{
 
-}
 .friend {
     width: 100%;
     height: 400px;
