@@ -5,6 +5,10 @@ body {
     line-height: 1.4;
 }
 
+.inner {
+    width: 1328px;
+}
+
 .btn {
     display: inline-block;
 }
@@ -127,46 +131,45 @@ span {
     /* Safari 지원 */
 
 }
-.how_it_work .list ul{
-      display: flex;
-      align-items: center;
-      gap: 40px;
+
+.how_it_work .list ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .how_it_work .list ul>li {
     display: flex;
-flex-direction : column;
+    flex-direction: column;
 }
 
-.how_it_work .list ul>li img{
-height: 90px;
-object-fit: contain;
-margin-bottom: 24px;
+.how_it_work .list ul>li img {
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 24px;
 }
-.redeem_for_products, .ways_to_earn{
-        width: 100%;
-    
-        color: var(--white_f0);
-        display: flex; 
+
+.redeem_for_products,
+.ways_to_earn {
+    width: 100%;
+    color: var(--white_f0);
+    display: flex;
     flex-direction: column;
-        justify-content: center;
-         align-items: center;
-             height: 1300px;
-    }
-.artlcle_g{
-    width: 80%;
+    justify-content: center;
+    align-items: center;
+    height: 1300px;
 }
-.card_tit{
+
+.artlcle_g {
+    /*    width: 80%; */
+}
+
+.card_tit {
     margin-bottom: 120px;
 }
-.box {
-    background-color: var(--bg_footer);
-    flex: 1;
-    height: 100%;
-    position: relative;
-    padding: 20px;
 
-}
+
+
 .bottom {
     width: 100%;
     position: absolute;
@@ -174,18 +177,17 @@ margin-bottom: 24px;
     display: flex;
     justify-content: space-between;
 }
-.bottom img{
-    /* width: 100%; */
+
+.bottom img {
     height: 80px;
-    /* background-image: url(../reward/img/img_Earn_Friend.png) no-repeat; */
-    /* background-position : bottom right; */
+    background: url(../reward/img/img_Earn_Friend.png) no-repeat;
 }
-.bottom .img{
-width: 100%;
+
+/* .bottom .img {
+    width: 100%;
     height: 80px;
-        background-image: url(../img/img_Earn_Birthday.png); /* no-repeat */
-    /* background-position : bottom right; */
-}
+    background-image: url(../img/img_Earn_Birthday.png);
+} */
 
 .arrow::before {
     content: "";
@@ -199,13 +201,104 @@ width: 100%;
     margin-right: 8px;
 }
 
+
+
+
+
+.artlcle_g {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.artlcle_g .article_top {
+    height: 240px;
+}
+
+.artlcle_g>div {
+    display: flex;
+    height: 180px;
+    gap: 16px;
+}
+
+
+.artlcle_g .box {
+    background: var(--bg_footer) url(../img/img_Earn_Birthday.png) no-repeat calc(100% - 20px) calc(100% - 20px);
+    flex: 1;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+}
+
 .redeem_for_products {
     background: url(../img/Redeem_bg.png) center/cover no-repeat;
 }
 
-.redeem_for_products .article_top {
+.redeem_for_products .box1 {
+    background-image: url(../img/img_Redeem_Convert.png);
+}
+
+.redeem_for_products .box2 {
+    background-image: url(../img/img_Redeem_Convert.png);
+}
+
+.redeem_for_products .box3 {
+    background-image: url(../img/img_Redeem_Convert.png);
+}
+
+.redeem_for_products .box4 {
+    background-image: url(../img/img_Redeem_Convert.png);
+}
+
+.redeem_for_products .box5 {
+    background-image: url(../img/img_Redeem_Convert.png);
+}
+
+.redeem_for_products .box6 {
+    background-image: url(../img/img_Redeem_Convert.png);
+}
+
+.redeem_for_products .box7 {
+    background-image: url(../img/img_Redeem_Convert.png);
+}
+
+
+
+.ways_to_earn {
+    background: url(../img/Earn_bg.png) center/cover no-repeat;
+}
+
+.ways_to_earn .box1 {
+    background-image: url(../img/img_Earn_Friend.png);
+}
+
+.ways_to_earn .box2 {
+    background-image: url(../img/img_Earn_Friend.png);
+}
+
+.ways_to_earn .box3 {
+    background-image: url(../img/img_Earn_Friend.png);
+}
+
+.ways_to_earn .box4 {
+    background-image: url(../img/img_Earn_Friend.png);
+}
+
+.ways_to_earn .box5 {
+    background-image: url(../img/img_Earn_Friend.png);
+}
+
+.ways_to_earn .box6 {
+    background-image: url(../img/img_Earn_Friend.png);
+}
+
+.ways_to_earn .box7 {
+    background-image: url(../img/img_Earn_Friend.png);
+}
+
+/* .redeem_for_products .article_top {
     height: 240px;
-        margin-bottom: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -219,11 +312,9 @@ width: 100%;
     gap: 20px;
 }
 
-.ways_to_earn {
-    background: url(../img/Earn_bg.png) center/cover no-repeat;
-}
 
-.ways_to_earn .box1 .arrow::before{
+
+.ways_to_earn .box1 .arrow::before {
     background-image: url(../img/reward_check.svg);
     width: 20px;
     height: 14px;
@@ -238,7 +329,7 @@ width: 100%;
 }
 
 .ways_to_earn .article_center {
-        height: 180px;
+    height: 180px;
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -246,15 +337,15 @@ width: 100%;
 }
 
 .ways_to_earn .article_bottom {
-        height: 180px;
+    height: 180px;
     display: flex;
     align-items: flex-start;
     gap: 20px;
 }
-
+ */
 .friend {
     width: 100%;
-    height: 400px;
+    /*   height: 400px; */
 }
 
 .FAQ {
