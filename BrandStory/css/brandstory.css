@@ -1,731 +1,88 @@
- @charset "UTF-8";
+@charset "UTF-8";
 
- :root {
-     --bg-cream: #f7f4ef;
-     --text-main: #1c1c1c;
-     --text-dim: #505050;
-     --line: #1c1c1c;
- }
-
- html,
- body {
-     margin: 0;
-     padding: 0;
-     width: 100%;
-     height: 100%;
-     overflow-x: hidden;
-     background: #fff;
-     font-family: 'Pretendard', sans-serif;
-     color: var(--text-main);
- }
-
- main {
-     width: 1920px;
-     margin: 0 auto;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
- }
-
- /* ===== Section 1 (Hero) ===== */
- .section_1 {
-     width: 100%;
-     background: var(--bg-cream) url('/BrandStory/img/section-10.png') center top no-repeat;
-     background-size: cover;
-     display: flex;
-     justify-content: center;
-     align-items: flex-end;
- }
-
- .section_1 .inner {
-     width: 100%;
-     max-width: 1920px;
-     text-align: center;
-     padding-bottom: 160px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding-top: 1000px;
- }
-
- .section_1 .hero-line {
-     width: 2px;
-     height: 120px;
-     background: linear-gradient(180deg, rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0));
-     margin-bottom: 20px;
- }
-
-.section_1 .inner {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 1700px;
-    height: 800px;
-    position: relative;
+:root {
+    --bg-cream: #f7f4ef;
+    --text-main: #1c1c1c;
+    --text-dim: #505050;
+    --line: #1c1c1c;
 }
 
- .section_1 .kor {
-     font-size: 60px;
-     font-weight: 400;
-     line-height: 1.2;
-     margin-bottom: 8px;
- }
-
- .section_1 .eng {
-     font-size: 28px;
-     font-weight: 300;
-     letter-spacing: 0.15em;
-     margin-bottom: 24px;
- }
-
- .section_1 .tit {
-     font-size: 30px;
-     color: var(--text-dim);
-     margin-bottom: 40px;
- }
-
-.tit {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.k_tit {
-    color: #1c1c1c;
-    text-align: center;
-    font-family: var(--logo60px-font-family, "CheongdoL-Light", sans-serif);
-    font-size: var(--logo60px-font-size, 60px);
-    line-height: var(--logo60px-line-height, 120%);
-    letter-spacing: var(--logo60px-letter-spacing, 0.02em);
-    font-weight: var(--logo60px-font-weight, 300);
-    position: relative;
-}
-
-.beauty-of-joseon2 {
-    color: #1c1c1c;
-    text-align: center;
-    font-family: "Manrope-Light", sans-serif;
-    font-size: 24px;
-    line-height: 130%;
-    letter-spacing: 0.02em;
-    font-weight: 300;
-    position: relative;
-    align-self: stretch;
-}
-
-.txt {
-    padding: 0px 37px 0px 37px;
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-p.tit {
-    font-size: 2rem;
-}
-
-.img {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.line-img {
-    flex-shrink: 0;
-    width: 600px;
-    height: 60px;
-    position: relative;
-    object-fit: cover;
-}
-
-
-
-
-/* .section_2 */
-.section_2 {
-    background: #fefefe;
-    padding: 150px 0px 150px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.inner2 {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 1700px;
-    position: relative;
-}
-
-.con-tit {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-    background: #ccc;
-    margin-bottom: 80px;
-    text-align: center;
-}
-
-.tit2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.line2 {
-    background: #1c1c1c;
-    flex-shrink: 0;
-    width: 48px;
-    height: 1px;
-    position: relative;
-}
-
-/* .section-2 .tit2 .line2 h2 .tit {
-    color: #1c1c1c;
-    text-align: center;
-    font-size: 60px;
-    align-self: stretch;
-} */
-
-.bridging-five-centuries-of-korean-beauty-wisdom-wi {
-    color: #1c1c1c;
-    text-align: center;
-    font-family: var(--publicsans-l-banner24px15rem-font-family,
-            "PublicSans-Light",
-            sans-serif);
-    font-size: var(--publicsans-l-banner24px15rem-font-size, 24px);
-    line-height: var(--publicsans-l-banner24px15rem-line-height, 130%);
-    font-weight: var(--publicsans-l-banner24px15rem-font-weight, 300);
-    position: relative;
-    align-self: stretch;
-}
-
-.cardlist {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 1700px;
-    position: relative;
-}
-
-.card-01 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.card-img {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 810px;
-    height: 477px;
-    position: relative;
-    box-shadow: var(--2-box-shadow, 0px 25px 50px -12px rgba(0, 0, 0, 0.25));
-}
-
-.line3 {
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.1);
-    border-width: 0.8px 0px 0px 0.8px;
-    padding: 0.8px 0px 0px 0.8px;
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    left: -16px;
-    top: -16px;
-}
-
-.con-img {
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 480px;
-    position: relative;
-    overflow: hidden;
-    object-fit: cover;
-}
-
-.line4 {
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.1);
-    border-width: 0.8px 0px 0px 0.8px;
-    padding: 0.8px 0px 0px 0.8px;
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    right: -48px;
-    bottom: -48px;
-    transform-origin: 0 0;
-    transform: rotate(-180deg) scale(1, 1);
-}
-
-.card-txt {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 810px;
-    position: relative;
-}
-
-.num {
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 360px;
-    height: 20px;
-    position: relative;
-}
-
-.container {
-    background: linear-gradient(90deg, rgba(181, 144, 22, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    width: 64px;
-    height: 1px;
-    flex-shrink: 0;
-    position: relative;
-}
-
-._01 {
-    color: #b59016;
-    text-align: left;
-    font-family: var(--num20px-font-family, "PublicSans-Medium", sans-serif);
-    font-size: var(--num20px-font-size, 20px);
-    line-height: var(--num20px-line-height, 16.8px);
-    letter-spacing: var(--num20px-letter-spacing, 2.8px);
-    font-weight: var(--num20px-font-weight, 500);
-    text-transform: uppercase;
-    position: relative;
-}
-
-.tit3 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.royal-beauty-rituals {
-    color: #1c1c1c;
-    text-align: left;
-    font-family: var(--publicsans-l-banner40px25rem-font-family,
-            "PublicSans-Light",
-            sans-serif);
-    font-size: var(--publicsans-l-banner40px25rem-font-size, 40px);
-    line-height: var(--publicsans-l-banner40px25rem-line-height, 130%);
-    font-weight: var(--publicsans-l-banner40px25rem-font-weight, 300);
-    position: relative;
-}
-
-.txt2 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.for-centuries-korean-royal-courts-preserved-ancie {
-    color: #1c1c1c;
-    text-align: left;
-    font-family: var(--publicsans-l-banner24px15rem-font-family,
-            "PublicSans-Light",
-            sans-serif);
-    font-size: var(--publicsans-l-banner24px15rem-font-size, 24px);
-    line-height: var(--publicsans-l-banner24px15rem-line-height, 130%);
-    font-weight: var(--publicsans-l-banner24px15rem-font-weight, 300);
-    position: relative;
-    width: 810px;
-}
-
-.ps {
-    border-style: solid;
-    border-color: #b59016;
-    border-width: 0px 0px 0px 1px;
-    padding: 0px 0px 0px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    height: 20px;
-    position: relative;
-}
-
-.traditional-wisdom-dating-back-500-years {
-    color: #8b7355;
-    text-align: left;
-    font-family: var(--publicsans-l-18px1125rem-font-family,
-            "PublicSans-Light",
-            sans-serif);
-    font-size: var(--publicsans-l-18px1125rem-font-size, 18px);
-    line-height: var(--publicsans-l-18px1125rem-line-height, 140%);
-    font-weight: var(--publicsans-l-18px1125rem-font-weight, 300);
-    position: relative;
-}
-
-.card-02 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.card-txt2 {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: flex-end;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    width: 810px;
-    position: relative;
-}
-
-
-.num2 {
-    padding: 0px;
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 24px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 360px;
-    height: 20px;
-    position: relative;
-}
-
-.num2 .container {
-    background: linear-gradient(90deg, rgba(181, 144, 22, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    width: 64px;
-    height: 1px;
-    flex-shrink: 0;
-    position: relative;
-}
-
-._02 {
-    color: #b59016;
-    text-align: right;
-    font-family: var(--num20px-font-family, "PublicSans-Medium", sans-serif);
-    font-size: var(--num20px-font-size, 20px);
-    line-height: var(--num20px-line-height, 16.8px);
-    letter-spacing: var(--num20px-letter-spacing, 2.8px);
-    font-weight: var(--num20px-font-weight, 500);
-    text-transform: uppercase;
-    position: relative;
-
-}
-
-.tit4 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-end;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.modern-science-meets-tradition {
-    color: #1c1c1c;
-    text-align: right;
-    font-family: var(--publicsans-l-banner40px25rem-font-family,
-            "PublicSans-Light",
-            sans-serif);
-    font-size: var(--publicsans-l-banner40px25rem-font-size, 40px);
-    line-height: var(--publicsans-l-banner40px25rem-line-height, 130%);
-    font-weight: var(--publicsans-l-banner40px25rem-font-weight, 300);
-    position: relative;
-}
-
-.txt3 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-end;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.for-centuries-korean-royal-courts-preserved-ancie2 {
-    color: #1c1c1c;
-    text-align: right;
-    font-family: var(--publicsans-l-banner24px15rem-font-family,
-            "PublicSans-Light",
-            sans-serif);
-    font-size: var(--publicsans-l-banner24px15rem-font-size, 24px);
-    line-height: var(--publicsans-l-banner24px15rem-line-height, 130%);
-    font-weight: var(--publicsans-l-banner24px15rem-font-weight, 300);
-    position: relative;
-}
-
-.ps2 {
-    border-style: solid;
-    border-color: #b59016;
-    border-width: 0px 1px 0px 0px;
-    padding: 0px 20px 0px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    height: 20px;
-    position: relative;
-}
-
-.scientifically-validated-traditional-ingredients {
-    color: #8b7355;
-    text-align: right;
-    font-family: var(--publicsans-l-18px1125rem-font-family,
-            "PublicSans-Light",
-            sans-serif);
-    font-size: var(--publicsans-l-18px1125rem-font-size, 18px);
-    line-height: var(--publicsans-l-18px1125rem-line-height, 140%);
-    font-weight: var(--publicsans-l-18px1125rem-font-weight, 300);
-    position: relative;
-}
-
-.con-img2 {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    object-fit: cover;
-}
-
-.con-bottom {
-    border-style: solid;
-    border-color: rgba(28, 28, 28, 0.1);
-    border-width: 1px 0px 0px 0px;
-    padding: 80px 0px 0px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 1700px;
-    position: relative;
-}
-
-.txt-box {
-    padding: 0px 347px 0px 347px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.txt4 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.every-product-tells-a-story-of-timeless-beauty-where-ancient-wisdom-meets-modern-excellence-where-ancient-wisdom-meets-modern-excellence {
-    color: #1c1c1c;
-    text-align: center;
-    font-family: var(--publicsans-l-banner24px15rem-font-family,
-            "PublicSans-Light",
-            sans-serif);
-    font-size: var(--publicsans-l-banner24px15rem-font-size, 24px);
-    line-height: var(--publicsans-l-banner24px15rem-line-height, 130%);
-    font-weight: var(--publicsans-l-banner24px15rem-font-weight, 300);
-    position: relative;
-}
-
-.line5 {
-    background: #1c1c1c;
-    flex-shrink: 0;
-    width: 80px;
-    height: 1px;
-    position: relative;
-}
-
-
-
-
-
-/* Section 3 */
-.section_3 {
-    z-index: 3;
-    background: red;
-}
-
-.section_3 .slide {
-    background: #8b7355;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.section_3 .slide article {
-    display: flex;
-    background: #fff;
-}
-
-.section_3 .slide article figure {
-    width: 50%;
-}
-
-.card_stack {}
-
-/* .card.prev {
-    opacity: 0.8;
-    transform: translateX(-55%) translateY(30px) scale(0.96);
-    z-index: 2;
-}
-
-.card.next {
-    opacity: 0.6;
-    transform: translateX(-60%) translateY(60px) scale(0.92);
-    z-index: 1;
-}
-
-
-.img2 {
-    width: 100%;
-    height: 70%;
-    overflow: hidden;
-}
-
-.img2 img {
+html,
+body {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s ease;
+    overflow-x: hidden;
+    background: #fff;
+    font-family: 'Pretendard', sans-serif;
+    color: var(--text-main);
 }
 
-.card.active .img2 img {
-    transform: scale(1.05);
-}
- */
-
-.txt-card {
-    padding: 30px 60px;
-    background: linear-gradient(90deg, #ffffff 0%, #fffdf9 100%);
-    text-align: left;
+main {
+    width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.ing-name {
-    font-size: 32px;
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 500;
-    color: #1c1c1c;
-}
-
-.ing-latin {
-    font-size: 16px;
-    color: #888;
-    margin-left: 6px;
-}
-
-.txt-1 {
-    font-size: 20px;
-    line-height: 1.7;
-    color: #333;
-    margin-top: 12px;
-    max-width: 90%;
-}
-
-
-.hanbang-btn-wrap {
+/* ===== Section 1 (Hero) ===== */
+.section_1 {
+    width: 100%;
+    background: var(--bg-cream) url('/BrandStory/img/section-10.png') center top no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 
-.hanbang-btn {
-    border: 1px solid #1c1c1c;
-    padding: 16px 46px;
-    border-radius: 100px;
-    color: #1c1c1c;
-    font-family: 'Public Sans', sans-serif;
+.section_1 .inner {
+    width: 100%;
+    max-width: 1920px;
+    text-align: center;
+    padding-bottom: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1000px;
+}
+
+.section_1 .hero-line {
+    width: 2px;
+    height: 120px;
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0));
+    margin-bottom: 20px;
+}
+
+.section_1 .est {
     font-size: 18px;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    margin-bottom: 20px;
 }
 
-.hanbang-btn:hover {
-    background: #1c1c1c;
-    color: #fff;
+.section_1 .kor {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.section_1 .eng {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+}
+
+.section_1 .tit {
+    font-size: 30px;
+    color: var(--text-dim);
+    margin-bottom: 40px;
+}
+
+.section_1 .ornament {
+    display: block;
+    margin-bottom: 80px;
 }
