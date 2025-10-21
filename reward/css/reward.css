@@ -24,7 +24,7 @@ body {
     height: 44px;
     background: url(/hanbang/img/line.png) no-repeat;
     margin: auto;
-
+background-size: cover;
 }
 
 .main_visual {
@@ -149,6 +149,7 @@ span {
     margin-bottom: 24px;
 }
 
+
 .redeem_for_products,
 .ways_to_earn {
     width: 100%;
@@ -160,6 +161,55 @@ span {
     min-height: 1300px;
     padding: 160px 0;
 }
+/* .card_tit h2{
+    display: block;
+} */
+
+.toggle_flex{
+    display: none; 
+}
+
+.toggle_flex .on{
+    flex: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 166px;
+    max-width: 500px;
+    height: 53px;
+    line-height: 100%;
+    text-align: center;
+    border: 20px solid transparent;
+    border-image: url('../img/toggle_redeem_02.png') 20 fill stretch;
+}
+.toggle_flex .off{
+       flex: 9;
+           display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 148px;
+    max-width: 500px;
+    height: 53px;
+    line-height: 100%;
+    border: 20px solid transparent;
+    border-image: url('../img/toggle_redeem_01.png') 20 fill stretch;
+    color: var(--txt_sub_77);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .redeem_for_products .line {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
@@ -200,13 +250,9 @@ span {
 .artlcle_g {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
-/* .artlcle_g .article_top {
-    height: 240px;
-}
- */
 .artlcle_g>div {
     display: flex;
     gap: 16px;
@@ -218,15 +264,21 @@ span {
     background: var(--bg_footer) url(../img/img_Earn_Birthday.png) no-repeat calc(100% - 20px) calc(100% - 20px);
     flex: 1;
     height: 180px;
-    min-width: 340px;
-    max-width: 700px;
+    min-width: 300px;
+    max-width: 750px;
     position: relative;
-    padding: 20px;
+    padding: 16px;
     background-size: auto 70px;
     border-top: 4px solid var(--txt_sub_44);
-    /* flex-basis: calc(50% - 8px); */
 }
 
+.box_g{
+       flex: 1;
+display: flex;
+    gap: 16px;
+    justify-content: center;
+        flex-wrap: wrap;
+}
 .redeem_for_products {
     background: url(../img/Redeem_bg.png) center/cover no-repeat;
 }

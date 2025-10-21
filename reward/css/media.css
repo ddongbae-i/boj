@@ -1,17 +1,35 @@
 @charset "uft-8";
 
 @media screen and (max-width:1024px) {
-.inner {
-    width: 90vw;
-}
+    .inner {
+        width: 90vw;
+        padding-inline: 0px;
+    }
 }
 
 @media screen and (max-width:768px) {
-.inner {
-    width: 100vw;
-}
+    .inner {
+        width: 90vw;
+    }
+
+    .line {
+        height: 33px;
+        width: 369px;
+    }
 }
 
-@media screen and (max-width:480px) {
-
+@media screen and (max-width:684px) {
+/* 토글 만들어야 함 */
+.card_tit h2{
+    display: none;
+}
+.toggle_flex{
+    margin-top: 30px;
+    font-size: 20px;
+    display: flex;
+        justify-content: center;
+    }
+    .card_tit {
+    margin-bottom: 60px;
+}
 }
