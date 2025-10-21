@@ -282,7 +282,28 @@ main {
 .influencer .wish {
   all: unset;
   cursor: pointer;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.influencer .wish .icon_heart {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.influencer .wish .icon_heart:nth-of-type(2) {
+  display: none;
+}
+
+.influencer .wish.active .icon_heart:nth-of-type(1) {
+  display: none;
+}
+
+.influencer .wish.active .icon_heart:nth-of-type(2) {
+  display: block;
 }
 
 .influencer .card figure.media {
