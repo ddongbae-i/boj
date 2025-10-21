@@ -271,7 +271,7 @@ main {
 }
 
 .membership {
-  width: 1920px;
+  width: 100%;
   height: 1080px;
   position: relative;
   overflow: hidden;
@@ -279,6 +279,7 @@ main {
 
 .membership video {
   position: absolute;
+  width: 100%;
   left: 0px;
   top: 0px;
   aspect-ratio: 16/9;
@@ -360,4 +361,10 @@ main {
   flex-shrink: 0;
   position: relative;
   font-size: 1rem;
+}
+
+.hanbang{
+  width: 100%;
+  height: 973px;
+  background: var(--img_bg);
 }
