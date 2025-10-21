@@ -25,6 +25,8 @@ header {
     margin-top: 85px;
 }
 
+
+
 .main .main_tit h2 {
     width: 100%;
     text-align: center;
@@ -48,7 +50,7 @@ header {
     height: 775px;
 }
 
- /* scroll 애니메이션  */
+/* scroll 애니메이션  */
 .scroll {
     position: absolute;
     left: 50%;
@@ -105,7 +107,7 @@ header {
     height: 1020px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
 }
 
@@ -124,7 +126,7 @@ header {
 
 .sub_main h2 {
     font-family: var(--tit_font);
-    flex: 1;
+    /* flex: 1; */
     text-align: left;
     font-size: 3rem;
     margin-left: 80px;
@@ -147,8 +149,8 @@ header {
 }
 
 .sub_main p {
-    width: 10px;
-    flex: 1;
+    width: 700px;
+    /* flex: 1; */
     text-align: right;
     font-size: 1.25rem;
     margin-right: 80px;
@@ -330,7 +332,7 @@ header {
 }
 
 .add_btn {
-    width: 540px;
+    width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -465,17 +467,18 @@ header {
     height: 930px;
     display: flex;
     align-items: center;
-
+    background: #ccc;
+    justify-content: space-between;
     /*     justify-content: center; */
 }
 
 .community .left {
-    width: 100%;
+    width: 48%;
 }
 
 /* 왼쪽 이미지 */
 .community .left img {
-    width: 920px;
+    width: 100%;
     height: 730px;
     object-fit: cover;
     margin-right: 95px;
@@ -483,9 +486,11 @@ header {
 
 /* 오른쪽 텍스트 영역 */
 .community .right {
-    width: 100%;
+    width: 50%;
     height: 555px;
-    margin-right: 110px;
+    /* padding-right: 110px; */
+    background: pink;
+    /*    margin-right: 110px; */
 }
 
 .community .right h2 {
@@ -501,19 +506,22 @@ header {
 
 /* 이미지 + 링크 영역 */
 .link_box {
+    width: 90%;
     display: flex;
-    gap: 35px;
+    justify-content: space-between;
+    background: yellow;
+
 }
 
 /* 각 박스 */
 .link_box .box {
-    width: 100%;
+    width: clamp(200px, 30vw, 380px);
     height: 342px;
 }
 
 /* 내부 이미지 스타일 */
 .link_box .box img {
-    width: 380px;
+    width: 100%;
     height: 340px;
     /*     height: auto; */
     margin-bottom: 10px;
