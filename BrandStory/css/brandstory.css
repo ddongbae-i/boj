@@ -630,171 +630,85 @@ p.tit {
 
 /* Section 3 */
 .section_3 {
-    background: #f8f8f8;
-    padding: 180px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 3;
+}
+
+.card.prev {
+    opacity: 0.8;
+    transform: translateX(-55%) translateY(30px) scale(0.96);
+    z-index: 2;
+}
+
+.card.next {
+    opacity: 0.6;
+    transform: translateX(-60%) translateY(60px) scale(0.92);
+    z-index: 1;
+}
+
+
+.img2 {
     width: 100%;
+    height: 70%;
+    overflow: hidden;
 }
 
-.section_3 .inner3 {
-    width: 1600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 120px;
-}
-
-.section_3 .section-head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 24px;
-    margin-bottom: 100px;
-}
-
-
-
-
-.section_3 .sub-text {
-    font-family: 'Public Sans', sans-serif;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: #1c1c1c;
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-
-.section_3 .cardlist-ingredients {
-    display: flex;
-    flex-direction: column;
-    gap: 200px;
-    width: 1700px;
-}
-
-.section_3 .card {
-    display: grid;
-    grid-template-columns: 900px 1fr;
-    align-items: center;
-    gap: 80px;
-}
-
-.section_3 .card.is-reversed {
-    grid-template-columns: 1fr 900px;
-}
-
-.section_3 .img2 img {
-    width: 90%;
+.img2 img {
+    width: 100%;
     height: 100%;
-    border-radius: 0px;
     object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    filter: brightness(0.97) contrast(1.05) saturate(0.9);
+    transition: transform 0.8s ease;
 }
 
-.section_3 .txt-card {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    width: 100%;
-    max-width: 700px;
+.card.active .img2 img {
+    transform: scale(1.05);
 }
 
-.section_3 .tit5 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+
+.txt-card {
+    padding: 30px 60px;
+    background: linear-gradient(90deg, #ffffff 0%, #fffdf9 100%);
+    text-align: left;
 }
 
-.section_3 .accent-line {
-    width: 48px;
-    height: 3px;
-    border-radius: 50px;
-    background: linear-gradient(90deg, var(--accent, #c1843a), transparent);
-}
-
-.section_3 .key-ingredient {
+.ing-name {
+    font-size: 32px;
     font-family: 'Public Sans', sans-serif;
-    font-size: 18px;
-    color: var(--accent, #c1843a);
-}
-
-.section_3 .ing-name {
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 300;
-    font-size: 40px;
+    font-weight: 500;
     color: #1c1c1c;
 }
 
-.section_3 .ing-latin {
-    color: #777;
-    font-size: 18px;
+.ing-latin {
+    font-size: 16px;
+    color: #888;
+    margin-left: 6px;
 }
 
-.section_3 .txt-1 {
-    font-family: 'Public Sans', sans-serif;
-    font-size: 22px;
-    color: #333;
+.txt-1 {
+    font-size: 20px;
     line-height: 1.7;
+    color: #333;
+    margin-top: 12px;
+    max-width: 90%;
 }
 
-.section_3 .txt5 {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-family: 'Public Sans', sans-serif;
-    font-size: 18px;
-}
 
-.section_3 .dot {
-    width: 6px;
-    height: 6px;
-    background: var(--accent, #c1843a);
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-/* CTA Button */
-.section_3 .hanbang-btn-wrap {
-    margin-top: 100px;
+.hanbang-btn-wrap {
     display: flex;
     justify-content: center;
 }
 
-.section_3 .hanbang-btn {
-    background: #000;
-    color: #fff;
-    border: none;
+.hanbang-btn {
+    border: 1px solid #1c1c1c;
+    padding: 16px 46px;
+    border-radius: 100px;
+    color: #1c1c1c;
     font-family: 'Public Sans', sans-serif;
     font-size: 18px;
-    letter-spacing: 0.6px;
-    padding: 18px 52px;
-    border-radius: 50px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.section_3 .hanbang-btn:hover {
-    background: #333;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.section_3 .theme-ginseng {
-    --accent: #c1843a;
-}
-
-.section_3 .theme-centella {
-    --accent: #5f6b3d;
-}
-
-.section_3 .theme-rice {
-    --accent: #c7b68d;
+.hanbang-btn:hover {
+    background: #1c1c1c;
+    color: #fff;
 }
