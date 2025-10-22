@@ -311,22 +311,90 @@ main {
 }
 
 /* 360도 한 바퀴 애니메이션*/
-@keyframes spin-360 {
-  from {
+/* 전체 사이클: 느리게 보고 싶으면 늘려 (예: 40s → 60s) */
+.influencer {
+  --cycle: 40s;
+}
+
+/* 약간의 원근감을 주면 회전이 자연스러움 */
+.influencer>.inner {
+  perspective: 1000px;
+}
+
+/* 카드 자체와 내부 콘텐츠가 한 덩어리로 회전 */
+.influencer .card {
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  backface-visibility: visible;
+  animation: spinYTogether var(--cycle) linear infinite both;
+  will-change: transform;
+}
+
+/* 카드 전체가 0→180도 도는 동안, 하나의 면처럼 보이게 */
+@keyframes spinYTogether {
+  0% {
     transform: rotateY(0deg);
   }
 
-  to {
-    transform: rotateY(360deg);
+  8% {
+    transform: rotateY(180deg);
+  }
+
+  10%,
+  100% {
+    transform: rotateY(180deg);
   }
 }
-/* 트리거 클래스: 붙는 순간 한 번만 회전 */
-.influencer .card.do-spin {
-  animation: spin-360 2000ms ease-out both;
-  will-change: transform;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
+
+/* 카드별 순차 딜레이 */
+.influencer .card_1 {
+  animation-delay: 0s;
 }
+
+.influencer .card_2 {
+  animation-delay: calc(var(--cycle) * 0.10);
+}
+
+.influencer .card_3 {
+  animation-delay: calc(var(--cycle) * 0.20);
+}
+
+.influencer .card_4 {
+  animation-delay: calc(var(--cycle) * 0.30);
+}
+
+.influencer .card_5 {
+  animation-delay: calc(var(--cycle) * 0.40);
+}
+
+.influencer .card_6 {
+  animation-delay: calc(var(--cycle) * 0.50);
+}
+
+.influencer .card_7 {
+  animation-delay: calc(var(--cycle) * 0.60);
+}
+
+.influencer .card_8 {
+  animation-delay: calc(var(--cycle) * 0.70);
+}
+
+.influencer .card_9 {
+  animation-delay: calc(var(--cycle) * 0.80);
+}
+
+.influencer .card_10 {
+  animation-delay: calc(var(--cycle) * 0.90);
+}
+
+/* 모션 줄임 설정 시 애니메이션 비활성화 */
+@media (prefers-reduced-motion: reduce) {
+  .influencer .card {
+    animation: none !important;
+  }
+}
+
+
 
 /* 카드들 flip 실행*/
 /* @keyframes flip-left-lite {
