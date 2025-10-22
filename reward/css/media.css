@@ -6,20 +6,26 @@
         padding-inline: 0px;
     }
 }
-
+.FAQ {
+    background-size: 130% auto;
+}
 
 
 /* 선생님께 도움요청... !! ㅠㅠㅠ */
 @media screen and (max-width:952px) {
     .how_it_work {
-        height: auto;
+      /*   height: auto; */
     }
+
     .how_it_work .list {
         margin-bottom: 15vh;
     }
+
     /* 선생님께 도움요청... !! ㅠㅠㅠ */
 
-
+.FAQ {
+    background-size: 150% auto;
+}
 
 
 
@@ -67,4 +73,14 @@
     .ways_to_earn.active {
         display: block;
     }
+
+    .FAQ {
+    background-size: 180% auto;
+}
+}
+
+@media screen and (max-width:480px) {
+    .FAQ {
+    background-size: 200% auto;
+}
 }
