@@ -1,62 +1,308 @@
-@media (max-width: 1024px) {
-    .section_2_inner {
-        width: 90%;
-        gap: 100px;
-    }
-
-    .section_2_card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .section_2_card--reverse {
-        flex-direction: column;
-    }
-
-    .section_2_card_text {
-        align-items: center;
-    }
-}
-
+/* Responsive */
 @media (max-width: 1400px) {
-    .section_3_inner {
-        width: 90%;
+    .inner {
+        padding: 0 60px;
     }
 
-    .section_3_content {
+    .story-card,
+    .ingredient-card,
+    .content-block {
         flex-direction: column;
-        align-items: center;
     }
 
-    .section_3_img {
+    .card-img,
+    .ingredient-img,
+    .book-image {
         width: 100%;
-        height: auto;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
-    .section_3_text {
-        align-items: center;
-        text-align: center;
+    .philosophy-cards {
+        flex-direction: column;
+        max-width: 480px;
+        margin: 0 auto 80px;
+    }
+
+    .philosophy-card.center {
+        transform: none;
+    }
+
+    .philosophy-card:hover {
+        transform: translateY(-10px);
     }
 }
 
-
-@media (max-width:1024px) {
-    .section_4_inner {
-        width: 90%
+@media (max-width: 768px) {
+    .gnb .container {
+        padding: 0 20px;
     }
 
-    .section_4_cards {
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-center {
+        position: fixed;
+        top: 124px;
+        left: 0;
+        right: 0;
+        background: var(--bg-cream);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 20px;
+        display: none;
+    }
+
+    .nav-center.active {
+        display: flex;
+    }
+
+    .nav-center a {
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-menu-btn {
+        display: block !important;
+    }
+
+    .inner {
+        padding: 0 20px;
+    }
+
+    .section-1 .inner {
+        padding: 800px 20px 100px;
+    }
+
+    .kor {
+        font-size: 40px;
+    }
+
+    .eng {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .ornament {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .section-2,
+    .section-3,
+    .section-4,
+    .section-5,
+    .section-6,
+    .section-7 {
+        padding: 80px 0;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .section-title p {
+        font-size: 18px;
+    }
+
+    .card-text h3,
+    .ingredient-text h3 {
+        font-size: 28px;
+    }
+
+    .card-text p,
+    .ingredient-text .description {
+        font-size: 18px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-text {
+        text-align: center;
+    }
+
+    .timeline-item.reverse .timeline-text {
+        text-align: center;
+    }
+
+    .timeline-line {
+        left: 20px;
+    }
+
+    .newsletter-features {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .gallery-row {
         flex-direction: column;
         align-items: center;
-        gap: 40px
     }
 
-    .section_4_card {
+    .gallery-item {
         width: 100%;
-        max-width: 480px
+        max-width: 400px;
     }
 
-    .section_4_card.center {
-        transform: none
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer .logo {
+        font-size: 48px;
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .philosophy-bottom p {
+        font-size: 18px;
+    }
+
+    .section-7 h2 {
+        font-size: 36px;
+    }
+}
+
+/* Additional animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button,
+.card-img,
+.timeline-icon,
+.philosophy-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+    background: var(--accent-gold);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--accent-gold);
+    color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-gold);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9a7612;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.text-gold {
+    color: var(--accent-gold);
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mb-4 {
+    margin-bottom: 40px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mt-4 {
+    margin-top: 40px;
+}
+
+/* Print styles */
+@media print {
+
+    .gnb,
+    .nav-right,
+    .carousel-controls,
+    .newsletter-form,
+    .footer-form {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .section-4,
+    .section-7 {
+        background: white;
+        color: black;
     }
 }
