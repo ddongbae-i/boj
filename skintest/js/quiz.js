@@ -57,8 +57,24 @@ const AXES = ['Hydration','Sebum','Sensitivity','Elasticity','Tone']; // 5축
 const POP_AVG = [60, 55, 50, 58, 57]; // 인구 평균(예시)
 
 const QUESTIONS = [
-  { q:'세안 후 피부 당김이 느껴지나요?', opts:['항상','가끔','거의 없음','전혀 없음'], axis:0, weights:[100,70,40,20] },
-  { q:'T존의 번들거림이 어느 정도인가요?', opts:['매우 심함','약간 있음','거의 없음','없음'], axis:1, weights:[100,70,30,10] },
+  { q:'Q1. How does your skin feel after cleansing?',
+    opts: ['A. Feels tight and dry',        // -> Dry,
+          'B. Comfortable/normal',
+          'C. Slightly oily',
+          'D. Very oily/shiny',            // -> Oily
+    ],
+    axis: 0, // O vs D 
+    weights: [100, 70, 40, 20]
+  },
+  { q:'Q2. How easily does your skin get irritated (redness, stinging)?',
+    opts: ['A. Very easily and often',      // Sensitive,
+           'B. Sometimes',
+           'C. Rarely',
+           'D. Almost never',               // Resistant
+    ],
+    axis: 1, // R vs S
+    weights: [100, 70, 30, 10]
+  },
   { q:'알레르기/자극 반응이 자주 있나요?', opts:['자주 있음','가끔','드묾','없음'], axis:2, weights:[100,70,40,10] },
   { q:'탄력 저하(늘어짐)를 느끼나요?', opts:['매우','보통','약간','없음'], axis:3, weights:[100,70,40,10], invert:true },
   { q:'피부 톤이 고르지 않나요?', opts:['매우 불균일','약간','거의 균일','매우 균일'], axis:4, weights:[100,70,40,10], invert:true },
