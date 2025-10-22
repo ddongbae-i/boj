@@ -117,16 +117,7 @@ input[type="radio"]:checked + .option .bullet {border-color: var(--bg_black); bo
     background: #fff;
 }
 
-.product_card .heart {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-}
-
-.product_card .heart img {
+.product_card {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -149,8 +140,8 @@ input[type="radio"]:checked + .option .bullet {border-color: var(--bg_black); bo
 }
 
 .add_btn img {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 23px;
     background: transparent;
     margin-top: 10px;
 }
@@ -171,6 +162,7 @@ input[type="radio"]:checked + .option .bullet {border-color: var(--bg_black); bo
     font-size: 0.875rem;
     margin-bottom: 10px;
 }
+.info span {color: var(--txt_sub_77); font-size: 0.875rem; margin-bottom: 10px;}
 
 .tags span {
     display: inline-block;
@@ -181,29 +173,3 @@ input[type="radio"]:checked + .option .bullet {border-color: var(--bg_black); bo
     border-radius: 2px;
     cursor: pointer;
 }
-
-.bottom_txt {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.price {
-    font-weight: 400;
-    font-size: 1.25rem;
-    margin-top: 24px;
-}
-
-.detail {
-    width: 118px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--txt_sub_44);
-    font-size: 1rem;
-    margin: 24px 0 0 320px;
-    border-bottom: 1px solid var(--grey_c7);
-}
-
-.detail img {width: 12px; height: 6px; display: block; margin-top: 10px; background: transparent;}

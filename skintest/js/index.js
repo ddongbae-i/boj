@@ -13,7 +13,7 @@ function show(id){
     el.classList.toggle('is-active', active);
   });
   // focus management
-  if (id === 'quiz') document.getElementById('question')?.focus();
+  if (id === 'quiz') { var q=document.getElementById('question'); if(q) q.focus(); }
 }
 function go(id){
   location.hash = '#' + id;
@@ -22,12 +22,12 @@ function go(id){
 
 // Header/Buttons
 window.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('startBtn')?.addEventListener('click', ()=>go('quiz'));
-  document.getElementById('homeBtn')?.addEventListener('click', ()=>go('home'));
-  document.getElementById('resetBtn')?.addEventListener('click', ()=>location.reload());
+  (function(el){ if(el) el.addEventListener('click', function(){ go('quiz'); }); })(document.getElementById('startBtn'));
+  (function(el){ if(el) el.addEventListener('click', function(){ go('home'); }); })(document.getElementById('homeBtn'));
+  (function(el){ if(el) el.addEventListener('click', function(){ location.reload(); }); })(document.getElementById('resetBtn'));
 
   // Hash routing
-  const target = location.hash?.replace('#','') || 'home';
+  const target = (location.hash ? location.hash.replace('#','') : '') || 'home';
   show(pages.includes(target) ? target : 'home');
 
   initQuiz();
@@ -139,7 +139,7 @@ function initQuiz(){
       });
       btn.addEventListener('keydown', (e)=>{
         const k=e.key; const count=choices.length;
-        let cur = (selectedIdx[i]??0);
+        let cur = ((selectedIdx[i]!==undefined && selectedIdx[i]!==null) ? selectedIdx[i] : 0);
         if (k==='ArrowLeft'||k==='ArrowUp'){
           e.preventDefault(); cur=(cur-1+count)%count; selectedIdx[i]=cur; renderOptions(); updateNext(); focusCurrent();
         }else if(k==='ArrowRight'||k==='ArrowDown'){
@@ -153,7 +153,7 @@ function initQuiz(){
     });
   }
   function focusCurrent(){
-    const idx = selectedIdx[i]??0;
+    const idx = ((selectedIdx[i]!==undefined && selectedIdx[i]!==null) ? selectedIdx[i] : 0);
     const buttons = el.options.querySelectorAll('button[role="radio"]');
     if (buttons[idx]) buttons[idx].focus();
   }
@@ -332,13 +332,13 @@ function renderResult(){
 
 // 해시 라우팅 부분은 그대로 사용
 window.addEventListener('hashchange', ()=>{
-  const target = location.hash?.replace('#','') || 'home';
+  const target = (location.hash ? location.hash.replace('#','') : '') || 'home';
   show(pages.includes(target) ? target : 'home');
   if (target==='result') renderResult();
 });
 
 window.addEventListener('hashchange', ()=>{
-  const target = location.hash?.replace('#','') || 'home';
+  const target = (location.hash ? location.hash.replace('#','') : '') || 'home';
   show(pages.includes(target) ? target : 'home');
   if (target==='result') renderResult();
 });
@@ -463,11 +463,11 @@ function boj_renderProducts(products, prefs){
   grid.innerHTML = '';
   const best = products.slice(0, 6);
   best.forEach(({ p, score, pos, neg })=>{
-    const img = (p.images && p.images[0]?.src) ? p.images[0].src : '';
+    const img = (p.images && p.images[0] && p.images[0].src) ? p.images[0].src : '';
     const title = p.title || 'Product';
     const url = `https://beautyofjoseon.com/products/${p.handle}`;
-    const price = (p.variants && p.variants[0]?.price) ? `$${p.variants[0].price}` : '';
-    const detail = (p.variants && p.variants[0]?.title && p.variants[0].title!=='Default Title') ? p.variants[0].title : '';
+    const price = (p.variants && p.variants[0] && p.variants[0].price) ? `$${p.variants[0].price}` : '';
+    const detail = (p.variants && p.variants[0] && p.variants[0].title && p.variants[0].title!=='Default Title') ? p.variants[0].title : '';
 
     const wrap = document.createElement('div');
     wrap.className = 'product_card';
@@ -524,14 +524,14 @@ async function runBojMatching(){
 /* 9) Hook: when entering #result, after renderResult() */
 (function(){
   const origHandler = (e)=>{
-    const target = location.hash?.replace('#','') || 'home';
+    const target = (location.hash ? location.hash.replace('#','') : '') || 'home';
     if (target==='result') { try{ runBojMatching(); }catch(e){} }
   };
   // Attach one more listener; it's fine alongside existing ones.
   window.addEventListener('hashchange', origHandler);
   // If the page loads directly on #result, run once
   window.addEventListener('DOMContentLoaded', ()=>{
-    const target = location.hash?.replace('#','') || 'home';
+    const target = (location.hash ? location.hash.replace('#','') : '') || 'home';
     if (target==='result') { try{ runBojMatching(); }catch(e){} }
   });
 })();
