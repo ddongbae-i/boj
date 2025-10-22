@@ -48,7 +48,8 @@ body {
 
 .main_visual .right {
     flex: 3;
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     justify-content: center;
 }
@@ -74,7 +75,8 @@ body {
 }
 
 .vip_tiers .list>ul {
-    display: flex;
+    /* display: flex; */
+    display: none;
     width: 90%;
     margin: 80px auto;
     background-color: var(--gray_de);
@@ -115,27 +117,15 @@ span {
 }
 
 
-
-
-
-
-
 /* 선생님께 도움요청... !! ㅠㅠㅠ */
 .how_it_work {
     width: 100%;
-    height: 100vh;
+    height: 1080px;
     background-image: url(../img/Howitwork_bg.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
-
-/* 선생님께 도움요청... !! ㅠㅠㅠ */
-
-
-
-
-
 
 
 .how_it_work .list {
@@ -312,19 +302,23 @@ span {
 }
 
 .redeem_for_products .box1 {
-    background-image: url(../img/img_Earn_Join.png);
+    background-image: url(../img/img_Redeem_01.png);
+        background-size: auto 55px;
 }
 
 .redeem_for_products .box2 {
-    background-image: url(../img/img_Earn_Order.png);
+    background-image: url(../img/img_Redeem_02.png);
+background-size: auto 60px;
 }
 
 .redeem_for_products .box3 {
-    background-image: url(../img/img_Earn_Review.png);
+    background-image: url(../img/img_Redeem_03.png);
+        background-size: auto 50px;
 }
 
 .redeem_for_products .box4 {
-    background-image: url(../img/img_Earn_Friend.png);
+    background-image: url(../img/img_Redeem_04.png);
+        background-size: auto 80px;
 }
 
 .redeem_for_products .box5 {
@@ -406,13 +400,15 @@ span {
     list-style: none;
     padding: 20px 40px 60px 40px;
     margin: auto;
-    width: 90vw;
 }
 
 .FAQ ul li {
     border-bottom: 1px solid var(--txt_sub_44);
 }
 
+.accordion-content span{
+    color: var(--txt_sub_44);
+}
 .accordion-list {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
