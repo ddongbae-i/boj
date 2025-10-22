@@ -24,6 +24,12 @@
 
 @media screen and (max-width:1280px) {
 
+    body.menu-open,
+html.menu-open {
+    overflow: hidden;
+    height: 100%;
+}
+
     header.on {
         background: var(--bg_white);
     }
@@ -36,6 +42,10 @@
     header.on .inner {
         padding-inline: 56px;
     }
+
+      header.on {
+      /* 메뉴 내용이 길면 내부 스크롤 */
+  }
 
     header.on .logo {
         display: none;
@@ -163,7 +173,6 @@
     }
 
     header.on {
-        background: yellow;
         height: 100vh;
     }
 
@@ -171,6 +180,7 @@
 
     header.on .inner nav {
         width: 100%;
+        margin-top: 124px;
         /*     position: fixed;
         top: 0;
         left: 0;
@@ -209,10 +219,6 @@
         height: 50px;
     }
 
-
-
-
-
     .nav_right .search,
     .nav_right .bag {
         display: none;
@@ -224,9 +230,8 @@
     }
 
     header.on .gnb>li {
-        background: #ccc;
         height: 50px;
-
+        cursor: pointer;
     }
 
     header.on .gnb>li>a {
@@ -247,6 +252,37 @@
 
     .sub_wrap .sub_img {
         display: none;
+    }
+
+    .ham_menu img:nth-child(2){
+        position: fixed;
+        top: 47px;
+        right: 30px;
+        left: auto;
+        z-index: 10;
+    }
+
+    header.on .search_tab .keyword_wrap  {
+        display: none;
+    }
+
+    header.on .search_tab button.close {
+        display: none;
+    }
+
+    header.on .search_tab  {
+        height: 124px;
+        margin-top: auto;
+        padding-bottom: 0;
+    }
+
+    .search_tab form .search_area button {
+        width: 24px;
+        height: 24px;
+    }
+
+    .search_tab input[type="search"]{
+        font-size: 1rem;
     }
 
     footer .inner .logo {
