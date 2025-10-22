@@ -29,7 +29,6 @@ main {
 }
 
 .bestSeller .inner {
-  width: 1700px;
   height: 860px;
   position: absolute;
   left: 50%;
@@ -90,6 +89,43 @@ main {
   top: 50%;
 }
 
+
+/* .bestSeller .swiper */
+.bestSeller .swiper {
+  width: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.bestSeller .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  /* spaceBetween 대신 보정용 */
+  transition-timing-function: linear !important;
+  /* continuous 느낌 */
+}
+
+.bestSeller .swiper-slide {
+  flex: 0 0 auto;
+  width: auto;
+  /* 카드 너비를 기존 .card(425px)를 따르게 함 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  /* 호버/클릭 활성화 */
+}
+
+.bestSeller .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  /* 이미지 자체는 이벤트를 차단해 부모 카드에 이벤트가 들어가게 함 */
+}
+
 .banner_1 {
   width: 100%;
   height: 1857px;
@@ -146,7 +182,6 @@ main {
 }
 
 .influencer {
-  /* 반응형 고정값 기반 */
   --card: 421px;
   --gap: 5px;
   width: 100%;
@@ -169,7 +204,7 @@ main {
 .influencer .card_right {
   width: calc(var(--card) * 2 + var(--gap));
   height: calc(var(--card) * 3 + var(--gap) * 2);
-  /* 절대배치 카드까지 감싸도록 높이 확보 */
+  /* 절대배치 카드까지 감싸도록 */
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -182,54 +217,54 @@ main {
   height: var(--card);
   position: relative;
   border-radius: 10px;
-  overflow: hidden;
   background: var(--img_bg);
+  overflow: hidden;
+  display: block;
+  pointer-events: auto;
 }
 
+/* 세로형 카드(3,6)는 두 칸 높이 */
 .influencer .card_3,
 .influencer .card_6 {
   height: calc(var(--card) * 2 + var(--gap));
 }
 
-.influencer .card>.media,
-.influencer .card>img,
-.influencer .card>video {
-  width: 100%;
-  height: 100%;
-  display: block;
+/* front/back 레이어: 기본은 front만 보이게 */
+.influencer .card .front,
+.influencer .card .back {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
 }
 
-.influencer .card>.media img,
-.influencer .card>.media video {
+.influencer .card .front {
+  z-index: 1;
+}
+
+.influencer .card .back {
+  z-index: 0;
+  display: none;
+}
+
+/* 회전 미사용: back 숨김 */
+
+/* 미디어 공통 */
+.influencer .card .media {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.influencer .card .media img,
+.influencer .card .media video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.influencer .card>img,
-.influencer .card>video {
-  object-fit: cover;
-}
-
-.influencer .card_left .card_5 {
-  position: absolute;
-  right: 0;
-  top: calc(var(--card) * 2 + var(--gap) * 2);
-  /* card_2(1칸) + gap + card_4(1칸) + gap */
-  width: var(--card);
-  height: var(--card);
-}
-
-.influencer .card_right .card_8 {
-  position: absolute;
-  right: 0;
-  top: calc(var(--card) + var(--gap));
-  /* card_7 아래 줄 시작 위치 */
-  width: var(--card);
-  height: var(--card);
-}
-
+/* 오버레이 공통 */
 .influencer .card .black {
   position: absolute;
   inset: 0;
@@ -244,7 +279,6 @@ main {
   pointer-events: none;
   transition: opacity .25s ease;
   z-index: 2;
-  transform: rotateY(180deg);
 }
 
 .influencer .card:hover .black {
@@ -280,6 +314,7 @@ main {
   font-weight: 500;
 }
 
+/* 위시 아이콘(두 장 방식) */
 .influencer .wish {
   all: unset;
   cursor: pointer;
@@ -307,121 +342,37 @@ main {
   display: block;
 }
 
-.influencer .card figure.media {
-  margin: 0;
+/* 레이아웃 특수 카드 위치(기존과 동일) */
+.influencer .card_left .card_5 {
+  position: absolute;
+  right: 0;
+  top: calc(var(--card) * 2 + var(--gap) * 2);
+  width: var(--card);
+  height: var(--card);
 }
 
-/* 360도 한 바퀴 애니메이션*/
-/* 전체 사이클: 느리게 보고 싶으면 늘려 (예: 40s → 60s) */
-.influencer {
-  --cycle: 40s;
-}
-
-/* 약간의 원근감을 주면 회전이 자연스러움 */
-.influencer>.inner {
-  perspective: 1000px;
-}
-
-/* 카드 자체와 내부 콘텐츠가 한 덩어리로 회전 */
-.influencer .card {
-  transform-style: preserve-3d;
-  transform-origin: center center;
-  backface-visibility: visible;
-  animation: spinYTogether var(--cycle) linear infinite both;
-  will-change: transform;
-}
-
-/* 카드 전체가 0→180도 도는 동안, 하나의 면처럼 보이게 */
-@keyframes spinYTogether {
-  0% {
-    transform: rotateY(0deg);
-  }
-
-  8% {
-    transform: rotateY(180deg);
-  }
-
-  10%,
-  100% {
-    transform: rotateY(180deg);
-  }
-}
-
-/* 카드별 순차 딜레이 */
-.influencer .card_1 {
-  animation-delay: 0s;
-}
-
-.influencer .card_2 {
-  animation-delay: calc(var(--cycle) * 0.10);
-}
-
-.influencer .card_3 {
-  animation-delay: calc(var(--cycle) * 0.20);
-}
-
-.influencer .card_4 {
-  animation-delay: calc(var(--cycle) * 0.30);
-}
-
-.influencer .card_5 {
-  animation-delay: calc(var(--cycle) * 0.40);
-}
-
-.influencer .card_6 {
-  animation-delay: calc(var(--cycle) * 0.50);
-}
-
-.influencer .card_7 {
-  animation-delay: calc(var(--cycle) * 0.60);
-}
-
-.influencer .card_8 {
-  animation-delay: calc(var(--cycle) * 0.70);
-}
-
-.influencer .card_9 {
-  animation-delay: calc(var(--cycle) * 0.80);
-}
-
-.influencer .card_10 {
-  animation-delay: calc(var(--cycle) * 0.90);
-}
-
-/* 모션 줄임 설정 시 애니메이션 비활성화 */
-@media (prefers-reduced-motion: reduce) {
-  .influencer .card {
-    animation: none !important;
-  }
+.influencer .card_right .card_8 {
+  position: absolute;
+  right: 0;
+  top: calc(var(--card) + var(--gap));
+  width: var(--card);
+  height: var(--card);
 }
 
 
-
-/* 카드들 flip 실행*/
-/* @keyframes flip-left-lite {
-  0% {
-    transform: perspective(800px) rotateY(0deg);
-  }
-
-  50% {
-    transform: perspective(800px) rotateY(-12deg);
-  }
-
-  100% {
-    transform: perspective(800px) rotateY(0deg);
-  }
+/* 카드회전 */
+/* .influencer .inner .card .front {
+  background: red;
 }
 
-.influencer .card.do-flip {
-  animation: flip-left-lite 600ms ease both;
-  will-change: transform;
-  transform-style: preserve-3d;
+.influencer .inner .card .back {
+  background: pink;
+  transform: rotateY(180deg);
+
+}
+
+.hidden {
   backface-visibility: hidden;
-}
-
-.influencer .card[data-aos] {
-  opacity: 1;
-  transform: none;
 } */
 
 
@@ -448,6 +399,11 @@ main {
 .membership .btn_box {
   display: flex;
   gap: 12px;
+}
+
+.membership .btn_box .btn {
+  background: var(--txt_main);
+  color: var(--white_ff);
 }
 
 .hanbang {
@@ -631,6 +587,11 @@ main {
   border-color: var(--white_ff);
 }
 
+.banner_2 .txt_box .btn:hover {
+  background: var(--white_ff);
+  color: var(--txt_main);
+}
+
 .blog {
   width: 100%;
   height: 1886px;
@@ -643,6 +604,8 @@ main {
 
 .blog .inner .product {
   margin-top: 40px;
+  display: flex;
+  gap: 140px;
 }
 
 .blog .inner .product .allstory {
@@ -657,6 +620,63 @@ main {
 
 .blog .inner .product .allstory .txt_box {
   margin-top: 87px;
+  display: grid;
+  row-gap: 42px;
+  justify-items: center;
+  text-align: center;
 }
 
-.blog .inner .product .allstory .txt_box {}
+.blog .inner .product .allstory .txt_box .tit {
+  font-size: 40px;
+  text-align: center;
+}
+
+.blog .inner .product .allstory .txt_box .txt {
+  width: 630px;
+  text-align: center;
+}
+
+.blog .inner .product .allstory .txt_box .btn {
+  margin: 20px auto 0;
+}
+
+.blog .inner .product .allstory .txt_box .btn:hover {
+  background: var(--txt_main);
+  color: var(--white_ff);
+}
+
+.blog .inner .product .cards {
+  width: 830px;
+  display: grid;
+  grid-template-columns: repeat(2, 395px);
+  /* 2열 고정 */
+  column-gap: 40px;
+  row-gap: 100px;
+  width: 830px;
+}
+
+.blog .inner .product .card {
+  width: 395px;
+}
+
+.blog .inner .product .card img {
+  width: 100%;
+  height: 344px;
+  object-fit: cover;
+}
+
+.blog .inner .product .card .txt_box {
+  margin-top: 12px;
+  gap: 16px;
+}
+
+.blog .inner .product .card .txt_box .date {
+  font-size: 14px;
+  color: var(--txt_sub_77);
+}
+
+.blog .inner .product .card .txt_box .txt {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
