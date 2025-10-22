@@ -2,14 +2,14 @@
 
 @media screen and (max-width:1500px) {
     .how_it_work {
-        height: 1000px;
+        /* height: 1000px; */
     }
 
 }
 
 @media screen and (max-width:1300px) {
     .how_it_work {
-        height: 950px;
+        /* height: 950px; */
     }
 }
 
@@ -27,7 +27,7 @@
     }
 
     .how_it_work {
-        height: 850px;
+        /* height: 850px; */
     }
 }
 
@@ -36,11 +36,11 @@
 /* 선생님께 도움요청... !! ㅠㅠㅠ */
 @media screen and (max-width:952px) {
     .how_it_work {
-        height: 1200px;
+        /* height: 1200px; */
     }
 
     .how_it_work .list {
-        margin-bottom: 15vh;
+        /* margin-bottom: 15vh; */
     }
 
     .how_it_work .list ul {
@@ -63,7 +63,7 @@
     }
 
     .how_it_work {
-        height: 1150px;
+        /* height: 1150px; */
     }
 
 }
@@ -114,7 +114,7 @@
 
 @media screen and (max-width:480px) {
     .how_it_work {
-        height: 1100px;
+        /* height: 1100px; */
     }
 
     .FAQ {
