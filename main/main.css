@@ -445,10 +445,9 @@ main {
   margin-bottom: 20px;
 }
 
-.membership .membership .btn_box {
+.membership .btn_box {
   display: flex;
   gap: 12px;
-
 }
 
 .hanbang {
