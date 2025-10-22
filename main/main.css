@@ -452,7 +452,7 @@ main {
   gap: 12px;
 }
 
-.membership .btn_box .btn {
+.membership .btn_box .btn:hover {
   background: var(--txt_main);
   color: var(--white_ff);
 }
