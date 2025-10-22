@@ -213,3 +213,4 @@ setInterval(() => {
     currentIngredient = (currentIngredient + 1) % ingredientData.length;
     updateIngredient(currentIngredient);
 }, 5000);
+

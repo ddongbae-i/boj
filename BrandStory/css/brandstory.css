@@ -552,7 +552,7 @@ html {
   width: 64px;
   height: 64px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.308);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -568,11 +568,11 @@ html {
 
   0%,
   100% {
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.411);
   }
 
   50% {
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.726);
   }
 }
 
@@ -637,7 +637,8 @@ html {
 }
 
 .philosophy-card .quote {
-  font-size: 18px;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
@@ -1100,6 +1101,7 @@ blockquote {
 }
 
 .slider-item .korean-quote {
+  font-family: 'Noto Serif KR', serif;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 16px;
@@ -1185,6 +1187,7 @@ blockquote {
 .section-8 {
   background: var(--bg-dark);
   padding: 100px 0;
+  overflow: hidden;
 }
 
 .gallery {
