@@ -1,3 +1,65 @@
+// 베스트셀러 스와이프 (top / bottom 각각 초기화)
+const bestTop = new Swiper('.bestSeller .product .slide_wrap:nth-of-type(1)', {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  speed: 9000,
+  freeMode: { enabled: true, momentum: false },
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // 변경: 마우스 호버시 자동 일시정지
+    reverseDirection: false
+  },
+  loopAdditionalSlides: 5,
+  allowTouchMove: false
+});
+
+const bestBottom = new Swiper('.bestSeller .product .slide_wrap:nth-of-type(2)', {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  speed: 9000,
+  freeMode: { enabled: true, momentum: false },
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // 변경: 마우스 호버시 자동 일시정지
+    reverseDirection: true
+  },
+  loopAdditionalSlides: 5,
+  allowTouchMove: false
+});
+
+// DOM 준비 후 autoplay 시작 (확실히 실행시키기 위해)
+document.addEventListener('DOMContentLoaded', () => {
+  // autoplay 확실히 시작
+  if (bestTop && bestTop.autoplay) bestTop.autoplay.start();
+  if (bestBottom && bestBottom.autoplay) bestBottom.autoplay.start();
+
+  // 각 swiper 엘리먼트에 pointer 이벤트 바인딩
+  const bindHover = (swiper) => {
+    if (!swiper || !swiper.el || !swiper.autoplay) return;
+    const el = swiper.el;
+    // 디버깅: console.log로 이벤트 감지 확인 가능
+    el.addEventListener('pointerenter', () => {
+      // console.log('hover enter', el);
+      swiper.autoplay.stop();
+    });
+    el.addEventListener('pointerleave', () => {
+      // console.log('hover leave', el);
+      swiper.autoplay.start();
+    });
+  };
+
+  bindHover(bestTop);
+  bindHover(bestBottom);
+});
+
+
+
+
+// 인플루언서 호버+하트
 document.addEventListener('DOMContentLoaded', () => {
   const KEY = 'wish:list';
   const store = JSON.parse(localStorage.getItem(KEY) || '{}');
@@ -36,92 +98,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// 카드 360도 회전
-document.addEventListener('DOMContentLoaded', () => {
-  const prefersReduced = window.matchMedia &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReduced) return;
-
-  // .influencer 섹션의 모든 카드 대상 (DOM 순서대로)
-  const cards = Array.from(document.querySelectorAll('.influencer .card'));
-  if (!cards.length) return;
-
-  const DURATION = 800; // CSS 애니메이션 시간과 동일(ms)
-  const GAP = 400;      // 다음 카드로 넘어가기 전 텀(ms)
-  const STEP = DURATION + GAP;
-
-  let i = 0;
-
-  const spinOnce = (el) => {
-    // 재트리거: 제거 -> 강제리플로우 -> 추가
-    el.classList.remove('do-spin');
-    void el.offsetWidth; // 강제 리플로우
-    el.classList.add('do-spin');
-
-    // 끝나면 클래스 제거(다음에 또 돌릴 수 있게)
-    setTimeout(() => el.classList.remove('do-spin'), DURATION);
-  };
-
-  // 뷰포트 안에 있을 때만 돌리기(선택)
-  let running = true;
-  const root = document.querySelector('.influencer');
-  if (root && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      running = entries.some(e => e.isIntersecting);
-    }, { threshold: 0.1 });
-    io.observe(root);
-  }
-
-  // 첫 시작
-  spinOnce(cards[i]);
-
-  // 순차 루프
-  setInterval(() => {
-    if (!running) return;
-    i = (i + 1) % cards.length;
-    spinOnce(cards[i]);
-  }, STEP);
-});
-
-
-// 카드 순차 플립 루프
-// document.addEventListener('DOMContentLoaded', () => {
-//     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-//     if (!reduce) {
-//         let cards = Array.from(document.querySelectorAll('.influencer .card[data-aos="flip-left"]'));
-//         if (!cards.length) cards = Array.from(document.querySelectorAll('.influencer .card'));
-//         if (cards.length) {
-//             const DURATION = 600; // CSS와 동일
-//             const GAP = 400;
-//             const STEP = DURATION + GAP;
-//             let i = 0;
-
-//             const flipOnce = (el) => {
-//                 el.classList.remove('do-flip');
-//                 void el.offsetWidth; // 강제 리플로우
-//                 el.classList.add('do-flip');
-//                 setTimeout(() => el.classList.remove('do-flip'), DURATION);
-//             };
-
-//             // (옵션) 화면 안에 있을 때만
-//             let running = true;
-//             const influencer = document.querySelector('.influencer');
-//             if (influencer && 'IntersectionObserver' in window) {
-//                 const io = new IntersectionObserver((entries) => {
-//                     running = entries.some(e => e.isIntersecting);
-//                 }, { threshold: 0.1 });
-//                 io.observe(influencer);
-//             }
-
-//             // 첫 장 시작
-//             setTimeout(() => flipOnce(cards[i]), 0);
-
-//             // 순차 루프
-//             setInterval(() => {
-//                 if (!running) return;
-//                 i = (i + 1) % cards.length;
-//                 flipOnce(cards[i]);
-//             }, STEP);
-//         }
-//     }
-// });
+// 카드 회전

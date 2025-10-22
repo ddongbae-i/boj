@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEAUTY OF JOSEON</title>
-    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="./main.css">
     <script src="../js/common.js" defer></script>
-    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script> -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"> <!-- moved before common.css -->
+    <link rel="stylesheet" href="../css/common.css">
+     <link rel="stylesheet" href="./main.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./main.js" defer></script>
 
 
 </head>
@@ -127,40 +134,74 @@
         <section class="bestSeller">
             <div class="inner">
                 <div class="product">
-                    <div class="top">
-                        <div class="card">
-                            <img class="img1" src="./img/product/product1.png" alt="product1">
-                        </div>
-                        <div class="card">
-                            <img class="img2" src="./img/product/product2.png" alt="product2">
-                        </div>
-                        <div class="card">
-                            <img class="img3" src="./img/product/product3.png" alt="product3">
-                        </div>
-                        <div class="card">
-                            <img class="img4" src="./img/product/product4.png" alt="product4">
-                        </div>
-                        <div class="card">
-                            <img class="img5" src="./img/product/product5.png" alt="product5">
-                        </div>
-                    </div><!-- //.top -->
-                    <div class="bottom">
-                        <div class="card">
-                            <img class="img6" src="./img/product/product6.png" alt="product6">
-                        </div>
-                        <div class="card">
-                            <img class="img7" src="./img/product/product7.png" alt="product7">
-                        </div>
-                        <div class="card">
-                            <img class="img8" src="./img/product/product8.png" alt="product8">
-                        </div>
-                        <div class="card">
-                            <img class="img9" src="./img/product/product9.png" alt="product9">
-                        </div>
-                        <div class="card">
-                            <img class="img10" src="./img/product/product10.png" alt="product10">
-                        </div>
-                    </div><!-- //.bottom -->
+                    <div class="swiper slide_wrap">
+                        <div class="top swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <img class="img1" src="./img/product/product1.png" alt="product1">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img2" src="./img/product/product2.png" alt="product2">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img3" src="./img/product/product3.png" alt="product3">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img4" src="./img/product/product4.png" alt="product4">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img5" src="./img/product/product5.png" alt="product5">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img6" src="./img/product/product6.png" alt="product6">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img7" src="./img/product/product7.png" alt="product7">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img8" src="./img/product/product8.png" alt="product8">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img9" src="./img/product/product9.png" alt="product9">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img10" src="./img/product/product10.png" alt="product10">
+                            </div>
+                        </div><!-- //.top -->
+                    </div><!-- //.swiper-->
+                    <div class="swiper slide_wrap">
+                        <div class="bottom swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <img class="img6" src="./img/product/product6.png" alt="product6">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img7" src="./img/product/product7.png" alt="product7">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img8" src="./img/product/product8.png" alt="product8">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img9" src="./img/product/product9.png" alt="product9">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img10" src="./img/product/product10.png" alt="product10">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img1" src="./img/product/product1.png" alt="product1">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img2" src="./img/product/product2.png" alt="product2">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img3" src="./img/product/product3.png" alt="product3">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img4" src="./img/product/product4.png" alt="product4">
+                            </div>
+                            <div class="card swiper-slide">
+                                <img class="img5" src="./img/product/product5.png" alt="product5">
+                            </div>
+                        </div><!-- //.bottom -->
+                    </div><!-- //.swiper -->
                 </div><!-- //.product -->
             </div><!-- //.inner -->
         </section>
@@ -244,8 +285,8 @@
                                     <h4 class="name">Revive Serum</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -264,8 +305,8 @@
                                     <h4 class="name">Revive Serum</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -287,8 +328,8 @@
                                     <h4 class="name">Ground Rice and Honey Glow Mask</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -309,8 +350,8 @@
                                     <h4 class="name">Ground Rice and Honey Glow Mask</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -334,8 +375,8 @@
                                     <h4 class="name">Daily Tinted Fluid Sunscreen</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -353,8 +394,8 @@
                                     <h4 class="name">Daily Tinted Fluid Sunscreen</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -375,8 +416,8 @@
                                     <h4 class="name">Ground Rice and Honey Glow Mask</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -397,8 +438,8 @@
                                     <h4 class="name">Ground Rice and Honey Glow Mask</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -424,8 +465,8 @@
                                     <h4 class="name">Red Bean Refreshing Pore Mask</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -444,8 +485,8 @@
                                     <h4 class="name">Red Bean Refreshing Pore Mask</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -467,8 +508,8 @@
                                     <h4 class="name">Low pH Rice Face and Body Cleansing Bar</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -487,8 +528,8 @@
                                     <h4 class="name">Low pH Rice Face and Body Cleansing Bar</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -510,8 +551,8 @@
                                     <h4 class="name">Ginseng Cleansing Oi</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -529,8 +570,8 @@
                                     <h4 class="name">Ginseng Cleansing Oi</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -551,8 +592,8 @@
                                     <h4 class="name">Ginseng Essence Water</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -571,8 +612,8 @@
                                     <h4 class="name">Ginseng Essence Water</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -594,8 +635,8 @@
                                     <h4 class="name">Revive Under Eye Patch</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -614,8 +655,8 @@
                                     <h4 class="name">Revive Under Eye Patch</h4>
                                     <button type="button" class="wish" data-id="card_10" aria-pressed="false"
                                         aria-label="Add to wishlist">
-                                        <img class="icon_heart" src="../asset/img/icon_heart.svg" alt="icon_heart">
-                                        <img class="icon_heart" src="../asset/img/icon_heart_hover.svg"
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart.svg" alt="icon_heart">
+                                        <img class="icon_heart" src="../asset/img/mini_icon_heart_hover.svg"
                                             alt="icon_heart">
                                     </button>
                                 </div>
@@ -806,35 +847,47 @@
                         </div>
                     </div><!-- //.allstory -->
                     <div class="cards">
-                        <div class="card_2">
-                            <img src="./img/blog/img2.png" alt="img2">
-                            <div class="date">October 02, 2025</div>
-                            <div class="txt">7 BOJ Sunscreen Facts Everyone Should Know</div>
+                        <div class="card card_2">
+                            <a href="#"><img src="./img/blog/img2.png" alt="img2"></a>
+                            <div class="txt_box">
+                                <div class="date">October 02, 2025</div>
+                                <div class="txt">7 BOJ Sunscreen Facts Everyone Should Know</div>
+                            </div>
                         </div>
-                        <div class="card_3">
-                            <img src="./img/blog/img3.png" alt="img3">
-                            <div class="date">September 25, 2025</div>
-                            <div class="txt">Hanbang Skincare Secrets: How to Exfoliate Without Irritation</div>
+                        <div class="card card_3">
+                            <a href="#"><img src="./img/blog/img3.png" alt="img3"></a>
+                            <div class="txt_box">
+                                <div class="date">September 25, 2025</div>
+                                <div class="txt">Hanbang Skincare Secrets: How to Exfoliate Without Irritation</div>
+                            </div>
                         </div>
-                        <div class="card_4">
-                            <img src="./img/blog/img4.png" alt="img4">
-                            <div class="date">September 18, 2025</div>
-                            <div class="txt">Your Ultimate Hanbang Skin Barrier Routine, Explained</div>
+                        <div class="card card_4">
+                            <a href="#"><img src="./img/blog/img4.png" alt="img4"></a>
+                            <div class="txt_box">
+                                <div class="date">September 18, 2025</div>
+                                <div class="txt">Your Ultimate Hanbang Skin Barrier Routine, Explained</div>
+                            </div>
                         </div>
-                        <div class="card_5">
-                            <img src="./img/blog/img5.png" alt="img5">
-                            <div class="date">September 10, 2025</div>
-                            <div class="txt">Fall Skincare Tips: How to Revive Tired Skin</div>
+                        <div class="card card_5">
+                            <a href="#"><img src="./img/blog/img5.png" alt="img5"></a>
+                            <div class="txt_box">
+                                <div class="date">September 10, 2025</div>
+                                <div class="txt">Fall Skincare Tips: How to Revive Tired Skin</div>
+                            </div>
                         </div>
-                        <div class="card_6">
-                            <img src="./img/blog/img6.png" alt="img6">
-                            <div class="date">July 20, 2025</div>
-                            <div class="txt">How to Upgrade Your Glass Skin Routine With Day Dew Sunscreen</div>
+                        <div class="card card_6">
+                            <a href="#"><img src="./img/blog/img6.png" alt="img6"></a>
+                            <div class="txt_box">
+                                <div class="date">July 20, 2025</div>
+                                <div class="txt">How to Upgrade Your Glass Skin Routine With Day Dew Sunscreen</div>
+                            </div>
                         </div>
-                        <div class="card_7">
-                            <img src="./img/blog/img7.png" alt="img7">
-                            <div class="date">May 22, 2025</div>
-                            <div class="txt">7 Reasons Why Honey is a Must in Your Skincare Routine</div>
+                        <div class="card card_7">
+                            <a href="#"><img src="./img/blog/img7.png" alt="img7"></a>
+                            <div class="txt_box">
+                                <div class="date">May 22, 2025</div>
+                                <div class="txt">7 Reasons Why Honey is a Must in Your Skincare Routine</div>
+                            </div>
                         </div>
                     </div><!-- //.cards -->
                 </div><!-- //.product -->
