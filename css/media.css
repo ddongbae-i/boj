@@ -25,10 +25,10 @@
 @media screen and (max-width:1280px) {
 
     body.menu-open,
-html.menu-open {
-    overflow: hidden;
-    height: 100%;
-}
+    html.menu-open {
+        overflow: hidden;
+        height: 100%;
+    }
 
     header.on {
         background: var(--bg_white);
@@ -43,9 +43,6 @@ html.menu-open {
         padding-inline: 56px;
     }
 
-      header.on {
-      /* 메뉴 내용이 길면 내부 스크롤 */
-  }
 
     header.on .logo {
         display: none;
@@ -103,7 +100,7 @@ html.menu-open {
         display: none;
     }
 
-    header.on .sub {
+    header.on nav .sub_wrap .sub {
         padding-inline: 56px;
     }
 
@@ -176,22 +173,23 @@ html.menu-open {
         height: 100vh;
     }
 
-    header.on .inner {}
+    header.on .inner {
+        padding-inline: 42px;
+    }
 
     header.on .inner nav {
         width: 100%;
-        margin-top: 124px;
-        /*     position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: var(--bg_white); */
+        height: 100%;
+        padding-top: 150px;
     }
 
     header.on nav ul.gnb>li {
         width: 100%;
         height: auto;
+    }
+
+    header.on nav ul.gnb>li>a {
+        padding: 0;
     }
 
     header nav ul.gnb>li:hover .sub_wrap {
@@ -200,6 +198,7 @@ html.menu-open {
 
     header.on nav ul.gnb>li .sub_wrap {
         height: auto;
+        width: 100%;
     }
 
     header.on nav ul.gnb>li.on .sub_wrap,
@@ -211,12 +210,14 @@ html.menu-open {
         display: none;
     }
 
-    header.on .inner .gnb>li:nth-child(1) a {
-        padding-left: 20px;
-    }
-
     header.on .inner .gnb>li a {
         height: 50px;
+    }
+
+    header.on nav .sub_wrap .sub {
+        padding: 0;
+
+        border-bottom: 1px solid var(--grey_aa);
     }
 
     .nav_right .search,
@@ -237,6 +238,16 @@ html.menu-open {
     header.on .gnb>li>a {
         width: 100%;
         height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .gnb>li>a::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url(/asset/img/icon_btn_down_1c.svg);
     }
 
     header.on nav .sub_wrap {
@@ -244,17 +255,26 @@ html.menu-open {
         position: static;
     }
 
+    header.on nav .sub_wrap:nth-child(2) {
+        flex-direction: row;
+    }
+
+    nav .sub_wrap .sub {
+        width: 100%;
+        color: var(--txt_sub_77);
+    }
+
     header.on .ham_bottom {
         left: 50%;
         transform: translateX(-50%);
-        padding-inline: 42px;
+
     }
 
     .sub_wrap .sub_img {
         display: none;
     }
 
-    .ham_menu img:nth-child(2){
+    .ham_menu img:nth-child(2) {
         position: fixed;
         top: 47px;
         right: 30px;
@@ -262,7 +282,7 @@ html.menu-open {
         z-index: 10;
     }
 
-    header.on .search_tab .keyword_wrap  {
+    header.on .search_tab .keyword_wrap {
         display: none;
     }
 
@@ -270,10 +290,11 @@ html.menu-open {
         display: none;
     }
 
-    header.on .search_tab  {
+    header.on .search_tab {
         height: 124px;
         margin-top: auto;
         padding-bottom: 0;
+        padding-inline: 42px;
     }
 
     .search_tab form .search_area button {
@@ -281,7 +302,12 @@ html.menu-open {
         height: 24px;
     }
 
-    .search_tab input[type="search"]{
+    .search_tab form {
+        min-width: 300px;
+        margin-right: 80px;
+    }
+
+    .search_tab input[type="search"] {
         font-size: 1rem;
     }
 

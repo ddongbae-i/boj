@@ -11,7 +11,7 @@ a.btn2 {
 
 }
 
-.btn2:after {
+.btn2::after {
     content: '';
     display: block;
     width: 24px;
