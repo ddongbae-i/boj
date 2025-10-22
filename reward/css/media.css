@@ -1,9 +1,32 @@
 @charset "uft-8";
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1050px) {
     .inner {
         width: 90vw;
         padding-inline: 0px;
+    }
+}
+
+
+
+/* 선생님께 도움요청... !! ㅠㅠㅠ */
+@media screen and (max-width:952px) {
+    .how_it_work {
+        height: auto;
+    }
+    .how_it_work .list {
+        margin-bottom: 15vh;
+    }
+    /* 선생님께 도움요청... !! ㅠㅠㅠ */
+
+
+
+
+
+
+
+    .how_it_work .list ul {
+        flex-direction: column;
     }
 }
 
@@ -19,17 +42,29 @@
 }
 
 @media screen and (max-width:684px) {
-/* 토글 만들어야 함 */
-.card_tit h2{
-    display: none;
-}
-.toggle_flex{
-    margin-top: 30px;
-    font-size: 20px;
-    display: flex;
-        justify-content: center;
+    .card_tit h2 {
+        display: none;
     }
+
+    .toggle_flex {
+        margin-top: 30px;
+        font-size: 20px;
+        display: flex;
+    }
+
     .card_tit {
-    margin-bottom: 60px;
-}
+        margin: auto;
+        margin-bottom: 60px;
+        width: 90vw;
+    }
+
+    .redeem_for_products,
+    .ways_to_earn {
+        display: none;
+    }
+
+    .redeem_for_products.active,
+    .ways_to_earn.active {
+        display: block;
+    }
 }

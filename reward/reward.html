@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../reward/css/reward.css">
     <link rel="stylesheet" href="../reward/css/media.css">
+    <script src="../reward/js/reward.js"></script>
     <!-- <script src="../js/common.js" defer></script> -->
 </head>
 
@@ -131,13 +132,15 @@
                     </ul>
                 </div>
             </section>
-            <section class="redeem_for_products">
+
+
+            <section class="redeem_for_products active">
                 <div class="card_tit tit">
                     <div class="line"></div>
                     <h2>Redeem for Products</h2>
                     <div class="toggle_flex">
                         <div class="on">Redeem for Products</div>
-                        <div class="off">Ways To Earn  </div>
+                        <a href="#" class="off change-page" data-target="section6">Ways To Earn</a>
                     </div>
                 </div>
                 <div class="artlcle_g inner">
@@ -179,10 +182,15 @@
                     </div>
                 </div>
             </section>
+
             <section class="ways_to_earn">
                 <div class="card_tit tit">
                     <div class="line"></div>
                     <h2>Ways To Earn</h2>
+                    <div class="toggle_flex">
+                        <a href="#" class="off change-page" data-target="section5">Redeem for Products</a>
+                        <div class="on">Ways To Earn</div>
+                    </div>
                 </div>
                 <div class="artlcle_g inner">
                     <div class="article_top2">
@@ -229,6 +237,9 @@
                     </div>
                 </div>
             </section>
+
+
+
             <section class="friend">
                 <h2>Give a friend 10% off. Get 150 points.</h2>
                 <em>Refer friends and they’ll get 10% off. Plus, you get 150 bonus points.</em>
@@ -237,11 +248,58 @@
                     <a href="#" class="btn">Join Now</a>
                 </div>
             </section>
+
+            <!-- 토글 만들어야 함 -->
             <section class="FAQ">
                 <div class="tit">
                     <div class="line"></div>
                     <h2>Frequently asked questions</h2>
                 </div>
+                <ul class="accordion-list">
+                    <li>
+                        <em class="accordion-title">What is the BOJ Rewards Program?<span class="toggle-icon">+</span></em>
+                        <div class="accordion-content">
+                            <span>The BOJ Rewards Program is our way of showing appreciation to our valued customers. By
+                                participating, you can earn Gems with every purchase, which can be redeemed for special
+                                discounts, exclusive products, free shipping, and more. As you collect Gems and advance
+                                through tiers, you unlock even greater rewards!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <em class="accordion-title">Can I get Gems from my past orders before signing up?<span class="toggle-icon">+</span></em>
+                        <div class="accordion-content">
+                            <span>Welcome to BOJ Rewards! We're thrilled to have you with us. Please note that Gems are
+                                only credited from the moment you officially join our rewards program. Once enrolled,
+                                you’ll start earning Gems on all future purchases.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <em class="accordion-title">How do I join the rewards program?<span class="toggle-icon">+</span></em>
+                        <div class="accordion-content">
+                            <span>Joining is easy! Simply visit our rewards page on the global mall, locate the 'BOJ
+                                Rewards' section, and complete the sign-up process. As a bonus, you'll receive 150
+                                additional Gems for referring a friend. Invite your friends to enjoy BOJ's exclusive
+                                benefits together!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <em class="accordion-title">What benefits come with tier upgrades?<span class="toggle-icon">+</span></em>
+                        <div class="accordion-content">
+                            <span>Extra Birthday Gems: Celebrate your special day with extra Gems, which increase as you
+                                move up the tiers. Exclusive Merchandise and More: Pearl and Sapphire tier members gain
+                                access to exclusive merchandise. Pearl & Sapphire members also receive an annual special
+                                gift.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <em class="accordion-title">Does my tier expire?<span class="toggle-icon">+</span></em>
+                        <div class="accordion-content">
+                            <span>At the end of 12 months after achieving your current VIP tier, we will review whether the
+                                required spending amount was met over the past year to maintain your status. If not, you
+                                may be moved to a lower VIP tier.</span>
+                        </div>
+                    </li>
+                </ul>
             </section>
         </div><!-- //.warp -->
 

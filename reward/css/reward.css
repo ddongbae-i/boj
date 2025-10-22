@@ -24,7 +24,7 @@ body {
     height: 44px;
     background: url(/hanbang/img/line.png) no-repeat;
     margin: auto;
-background-size: cover;
+    background-size: cover;
 }
 
 .main_visual {
@@ -114,11 +114,28 @@ span {
     background-color: aqua;
 }
 
+
+
+
+
+
+
+/* 선생님께 도움요청... !! ㅠㅠㅠ */
 .how_it_work {
     width: 100%;
-    height: 1080px;
-    background: url(../img/Howitwork_bg.png) center/cover no-repeat;
+    height: 100vh;
+    background-image: url(../img/Howitwork_bg.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
+/* 선생님께 도움요청... !! ㅠㅠㅠ */
+
+
+
+
+
+
 
 .how_it_work .list {
     display: flex;
@@ -161,42 +178,51 @@ span {
     min-height: 1300px;
     padding: 160px 0;
 }
+
 /* .card_tit h2{
     display: block;
 } */
 
-.toggle_flex{
-    display: none; 
+.toggle_flex {
+    display: none;
+    width: 90vw;
 }
 
-.toggle_flex .on{
+.toggle_flex .on {
     flex: 10;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 166px;
     max-width: 500px;
-    height: 53px;
+    height: 54px;
     line-height: 100%;
     text-align: center;
-    border: 20px solid transparent;
-    border-image: url('../img/toggle_redeem_02.png') 20 fill stretch;
+    border: 26px solid transparent;
+    border-image: url('../img/toggle_redeem_02.svg') 25 fill stretch;
 }
-.toggle_flex .off{
-       flex: 9;
-           display: flex;
+
+.toggle_flex .off {
+    flex: 9;
+    display: flex;
     align-items: center;
     justify-content: center;
     min-width: 148px;
     max-width: 500px;
-    height: 53px;
+    height: 54px;
     line-height: 100%;
-    border: 20px solid transparent;
-    border-image: url('../img/toggle_redeem_01.png') 20 fill stretch;
+    border: 26px solid transparent;
+    border-image: url('../img/toggle_redeem_01.svg') 25 fill stretch;
     color: var(--txt_sub_77);
 }
 
+.ways_to_earn .toggle_flex .on {
+    border-image: url('../img/toggle_redeem_04.svg') 25 fill stretch;
+}
 
+.ways_to_earn .toggle_flex .off {
+    border-image: url('../img/toggle_redeem_03.svg') 25 fill stretch;
+}
 
 
 
@@ -272,13 +298,14 @@ span {
     border-top: 4px solid var(--txt_sub_44);
 }
 
-.box_g{
-       flex: 1;
-display: flex;
+.box_g {
+    flex: 1;
+    display: flex;
     gap: 16px;
     justify-content: center;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
+
 .redeem_for_products {
     background: url(../img/Redeem_bg.png) center/cover no-repeat;
 }
@@ -335,7 +362,7 @@ display: flex;
 
 .ways_to_earn .box4 {
     background-image: url(../img/img_Earn_Friend.png);
-    background-size: auto 60px;
+    background-size: auto 50px;
 }
 
 .ways_to_earn .box5 {
@@ -355,7 +382,7 @@ display: flex;
     height: 400px;
     background-color: var(--bg_footer);
     color: var(--white_f0);
-
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -364,6 +391,55 @@ display: flex;
 
 .FAQ {
     width: 100%;
-
     padding: 160px 0;
+    background: url(../img/Earn_bg.png);
+}
+
+.FAQ ul {
+    list-style: none;
+    padding: 20px 40px 60px 40px;
+    margin: auto;
+    width: 90vw;
+}
+
+.FAQ ul li {
+    border-bottom: 1px solid var(--txt_sub_44);
+}
+
+.accordion-list {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* 아코디언 제목 스타일 */
+.accordion-title {
+    padding: 20px 10px 10px 10px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.toggle-icon {
+    font-size: 2rem;
+    transition: transform 0.5s;
+}
+
+/* 아코디언 내용 스타일 */
+.accordion-content {
+    padding: 0 15px 15px 15px;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion-title.active .toggle-icon {
+    content: "—";
+    transform: rotate(180deg);
+}
+
+/* 'active' 클래스가 붙었을 때 내용이 보이도록 설정 */
+.accordion-content.active {
+    display: block;
 }
