@@ -618,7 +618,6 @@ main {
   animation-timing-function: cubic-bezier(.2,.8,.2,1);
 }
 
-/* stagger delays */
 .hanbang .inner .img_box .imgTxt .txt_box1 { animation-delay: 0.50s; }
 .hanbang .inner .img_box .imgTxt .txt_box2 { animation-delay: 1.00s; }
 .hanbang .inner .img_box .imgTxt .txt_box3 { animation-delay: 1.50s; }
