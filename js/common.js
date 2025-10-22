@@ -1,4 +1,7 @@
 //header
+let lastScrollY = 0;
+const header = document.querySelector('header');
+
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY) {
@@ -6,75 +9,85 @@ window.addEventListener('scroll', () => {
     } else {
         header.style.top = '0';
     }
+    lastScrollY = currentScrollY;
+});
 
-    lastScrollY = currentScrollY
-})
-
-//header
-
+// 햄버거 메뉴
 const hammenuBtn = document.querySelector('.ham_menu');
-const header = document.querySelector('header')
 hammenuBtn.addEventListener('click', () => {
     header.classList.toggle('on');
-})
+});
 
+// nav hover
+const mainMenus = document.querySelectorAll('nav ul.gnb > li > a');
+const bottomNav = document.querySelector('.ham_bottom');
+const nav = document.querySelector('nav');
 
-const mainMenus = document.querySelectorAll('nav ul.gnb>li>a');
+// ✅ 한 번에 관리되는 이벤트 함수
+function handleNavEvent(e) {
+    if (e.type === 'mouseenter') nav.classList.add('on');
+    if (e.type === 'mouseleave') nav.classList.remove('on');
+}
+
+// ✅ 이벤트 등록
+['mouseenter', 'mouseleave'].forEach(event =>
+    bottomNav.addEventListener(event, handleNavEvent)
+);
+const lilis = document.querySelectorAll('header nav ul.gnb > li');
 function handleResize() {
-    if (window.innerWidth <= 1280) {
-        // 링크 비활성화
-        mainMenus.forEach((menu) => {
-            menu.removeAttribute("href");
-        });
-        // 1024 이하일 때 동작
-    } else {
+    if (window.innerWidth <= 768) {
+        console.log('resize 768');
+        mainMenus.forEach(menu => menu.removeAttribute('href'));
+        // ✅ 모바일에서는 이벤트 제거
+        ['mouseenter', 'mouseleave'].forEach(event =>
+            bottomNav.removeEventListener(event, handleNavEvent)
+        );
+        lilis.forEach(lili => {
+            // 모바일에서 서브메뉴 토글
+            lili.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('click');
+                lili.classList.toggle('on');
+            });
+        })
 
-        // 1024 초과일 때 동작
+    } else if (window.innerWidth <= 1280) {
+        console.log('resize 1280');
+        mainMenus.forEach(menu => menu.removeAttribute('href'));
+    } else {
+        console.log('resize desktop');
+
+        // ✅ 데스크탑에서는 다시 이벤트 복원
+        ['mouseenter', 'mouseleave'].forEach(event =>
+            bottomNav.addEventListener(event, handleNavEvent)
+        );
     }
 }
-window.addEventListener("DOMContentLoaded", handleResize);
-window.addEventListener("resize", handleResize);
 
+handleResize();
+window.addEventListener('resize', handleResize);
 
-//search
+// search
 const searchBtn = document.querySelector('.nav_right .search');
 const searchTab = document.querySelector('.search_tab');
 const closeBtn = document.querySelector('.search_tab .close');
 
 searchBtn.addEventListener('click', () => {
     searchTab.classList.add('open');
-})
+});
 
 closeBtn.addEventListener('click', () => {
     searchTab.classList.remove('open');
-})
-
-const bottomNav = document.querySelector('.ham_bottom');
-const nav = document.querySelector('nav');
-bottomNav.addEventListener('mouseenter', () => {
-    nav.classList.add('on');
-});
-bottomNav.addEventListener('mouseleave', () => {
-    nav.classList.remove('on');
 });
 
-
-
-
-//footer menu btn
-
+// footer menu btn
 const footerBtn = document.querySelector('.f_nav button');
 const footerMenu = document.querySelector('.f_nav ul');
 
 footerBtn.addEventListener('click', function () {
     footerMenu.classList.toggle('down');
-    if (footerMenu.classList.contains('down')) {
-        footerBtn.style.transform = 'rotate(180deg)';
-    } else {
-        footerBtn.style.transform = 'rotate(0deg)';
-    }
-
+    footerBtn.style.transform = footerMenu.classList.contains('down')
+        ? 'rotate(180deg)'
+        : 'rotate(0deg)';
     footerBtn.style.transition = 'transform 0.3s ease';
-})
-
-
+});
