@@ -18,12 +18,14 @@ hammenuBtn.addEventListener('click', () => {
     header.classList.toggle('on');
 })
 
+
 const mainMenus = document.querySelectorAll('nav ul.gnb>li>a');
 function handleResize() {
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth <= 1280) {
+        // 링크 비활성화
         mainMenus.forEach((menu) => {
             menu.removeAttribute("href");
-        })
+        });
         // 1024 이하일 때 동작
     } else {
 
@@ -47,6 +49,16 @@ closeBtn.addEventListener('click', () => {
     searchTab.classList.remove('open');
 })
 
+const bottomNav = document.querySelector('.ham_bottom');
+const nav = document.querySelector('nav');
+bottomNav.addEventListener('mouseenter', () => {
+    nav.classList.add('on');
+});
+bottomNav.addEventListener('mouseleave', () => {
+    nav.classList.remove('on');
+});
+
+
 
 
 //footer menu btn
@@ -64,15 +76,5 @@ footerBtn.addEventListener('click', function () {
 
     footerBtn.style.transition = 'transform 0.3s ease';
 })
-
-const bottomNav = document.querySelector('.ham_bottom');
-const nav = document.querySelector('nav');
-bottomNav.addEventListener('mouseenter', () => {
-    nav.classList.add('on');
-});
-bottomNav.addEventListener('mouseleave', () => {
-    nav.classList.remove('on');
-});
-
 
 
