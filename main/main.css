@@ -244,6 +244,7 @@ main {
   pointer-events: none;
   transition: opacity .25s ease;
   z-index: 2;
+  transform: rotateY(180deg);
 }
 
 .influencer .card:hover .black {
@@ -536,6 +537,11 @@ main {
   border-radius: 999px;
   transform: translateY(-50%);
   z-index: 2;
+  transition: .2s;
+}
+
+.hanbang .inner .progress:hover .playbar {
+  width: 100%;
 }
 
 .hanbang .inner .img_box {
@@ -645,13 +651,13 @@ main {
   height: 1009px;
 }
 
-.blog .inner .product .allstory img{
+.blog .inner .product .allstory img {
   width: 730px;
   height: 640px;
 }
 
-.blog .inner .product .allstory .txt_box{
+.blog .inner .product .allstory .txt_box {
   margin-top: 87px;
 }
 
-.blog .inner .product .allstory .txt_box
+.blog .inner .product .allstory .txt_box {}
