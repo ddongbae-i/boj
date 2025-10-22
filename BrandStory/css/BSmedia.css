@@ -1,0 +1,19 @@
+@media (max-width: 1024px) {
+    .section_2_inner {
+        width: 90%;
+        gap: 100px;
+    }
+
+    .section_2_card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section_2_card--reverse {
+        flex-direction: column;
+    }
+
+    .section_2_card_text {
+        align-items: center;
+    }
+}
