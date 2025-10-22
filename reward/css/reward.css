@@ -1,5 +1,20 @@
 @charset "utf-8";
 
+em {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+p {
+    font-weight: 500;
+}
+
+span {
+    font-size: 1rem;
+}
+
 body {
     font-size: 1.125rem;
     line-height: 1.4;
@@ -15,7 +30,7 @@ body {
 
 .tit {
     font-size: 2.5rem;
-    margin: 40px 0;
+    margin: 80px 0;
     text-align: center;
 }
 
@@ -65,70 +80,85 @@ body {
 }
 
 .list {
-
-    margin: 160px auto;
+    margin: 120px auto;
     width: 76vw;
-    min-height: 1200px;
     text-align: center;
-    background-color: var(--white_f0);
+    background-color: var(--img_bg);
     border: 40px solid transparent;
     border-image: url('../img/corner.png') 40 fill stretch;
 }
 
-
-
-.vip_tiers .list>ul {
-    /* display: flex; */
-    display: none;
-    width: 90%;
-    margin: 80px auto;
-    background-color: var(--gray_de);
-    justify-content: space-around;
-    padding-bottom: 40px
+.vip_tiers .list {
+padding-bottom: 40px;
 }
 
-.vip_tiers .list>ul>li {
-    flex: 1;
-    padding: 20px;
+.vip_tiers .list>ul {
+    display: flex;
+    width: 90%;
+    margin: 80px 80px 20px 80px;
+    justify-content: space-around;
+
 }
 
 .vip_tiers .list>ul>li>ul {
     display: flex;
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
+    width: 220px;
+    padding: 10px 10px 0 10px;
+}
+.vip_tiers .list>ul>li>ul.on{
+    height: 800px;
+     background-color: var(--grey_de);
+}
+.vip_tiers .list>ul>li>ul>li:nth-child(1) {
+    height: 50px;
+    line-height: 3;
+       font-weight: 500;
+           color: var(--white_f0);
+    opacity: 0;
+}
+.vip_tiers .list>ul>li>ul.on>li:nth-child(1){
+    background-color: var(--mugwort);
+    opacity: 1;
 }
 
-em {
-    display: block;
-    margin-bottom: 12px;
-    font-weight: 500;
-    font-size: 1.5rem;
+.vip_tiers .list>ul>li>ul>li:nth-child(3),
+.vip_tiers .list>ul>li>ul>li:nth-child(4),
+.vip_tiers .list>ul>li>ul>li:nth-child(5),
+.vip_tiers .list>ul>li>ul>li:nth-child(6),
+.vip_tiers .list>ul>li>ul>li:nth-child(7) {
+    border-bottom: 1px solid var(--grey_c7);
+    padding-bottom: 6px;
 }
 
-p {
-    font-weight: 500;
-}
-
-span {
+.vip_tiers p {
     font-size: 1rem;
 }
 
-.vip_tiers .list>ul>li>ul>li:nth-child(1) {
-    height: 80px;
-    line-height: 400%;
-    background-color: aqua;
+.vip_tiers span {
+    color: var(--txt_sub_77);
+    font-size: 0.9rem;
+}
+.vip_tiers small {
+    font-size: 0.9rem;
+    color: var(--txt_sub_77);
 }
 
+.horizontal-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
-/* 선생님께 도움요청... !! ㅠㅠㅠ */
 .how_it_work {
     width: 100%;
-    /* height: 1080px; */
+    min-height: 1080px;
     background-image: url(../img/Howitwork_bg.png);
-    background-color: yellow;
     background-position: center bottom;
     background-repeat: no-repeat;
-    /* background-size: contain; */
     background-size: 100% auto;
 }
 
@@ -136,6 +166,9 @@ span {
     padding: 160px 0;
 }
 
+.how_it_work .tit {
+    margin: 0 0 80px 0;
+}
 
 .how_it_work .list {
     margin-block: 0;
@@ -180,10 +213,6 @@ span {
     padding: 160px 0;
 }
 
-/* .card_tit h2{
-    display: block;
-} */
-
 .toggle_flex {
     display: none;
     width: 90vw;
@@ -224,19 +253,6 @@ span {
 .ways_to_earn .toggle_flex .off {
     border-image: url('../img/toggle_redeem_03.svg') 25 fill stretch;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .redeem_for_products .line {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
@@ -391,9 +407,16 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     flex-direction: column;
 }
 
+.friend h2 {
+    font-size: 2.5rem;
+    font-family: var(--tit_font);
+    font-weight: 500;
+    line-height: 1;
+}
 
 .FAQ {
     width: 100%;

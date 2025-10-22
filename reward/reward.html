@@ -10,17 +10,13 @@
     <link rel="stylesheet" href="../reward/css/reward.css">
     <link rel="stylesheet" href="../reward/css/media.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="../reward/js/reward.js"></script>
+    <script src="../reward/js/reward.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- <script src="../js/common.js" defer></script> -->
 </head>
 
 <body>
-
     <main>
-
-
-
         <div class="warp">
             <section class="main_visual">
                 <div class="bg_img">
@@ -48,12 +44,12 @@
             <section class="vip_tiers">
                 <div class="tit">
                     <div class="line"></div>
-                    <h2>VIP Tiers</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="700">VIP Tiers</h2>
                 </div>
                 <div class="list">
-                    <ul>
-                        <li class="green">
-                            <ul>
+                    <ul class="horizontal-scroll-container">
+                        <li class="green scroll-item item-1">
+                            <ul class="on">
                                 <li>MY TIER</li>
                                 <li><img src="../reward/img/reward_green_mini.png" alt="green norigae"></li>
                                 <li><em>Green</em><span>Sign up</span></li>
@@ -62,7 +58,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="red">
+                        <li class="red scroll-item item-2">
                             <ul>
                                 <li>MY TIER</li>
                                 <li><img src="../reward/img/reward_red_mini.png" alt="red norigae"></li>
@@ -78,7 +74,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="blue">
+                        <li class="blue scroll-item item-3">
                             <ul>
                                 <li>MY TIER</li>
                                 <li><img src="../reward/img/reward_blue_mini.png" alt="blue norigae"></li>
@@ -94,7 +90,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="gold">
+                        <li class="gold scroll-item item-4">
                             <ul>
                                 <li>MY TIER</li>
                                 <li><img src="../reward/img/reward_gold_mini.png" alt="gold norigae"></li>
@@ -120,16 +116,16 @@
             <section class="how_it_work">
                 <div class="tit">
                     <div class="line"></div>
-                    <h2>How it Works</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="700">How it Works</h2>
                 </div>
                 <div class="list">
                     <ul>
-                        <li><img src="../reward/img/Howitwork_1.png" alt="1"><em>Sign Up</em><span>Get 100 points as
+                        <li data-aos="zoom-out" data-aos-delay="100" data-aos-duration="500"><img src="../reward/img/Howitwork_1.png" alt="1"><em>Sign Up</em><span>Get 100 points as
                                 soon as
                                 you join.</span></li>
-                        <li><img src="../reward/img/Howitwork_2.png" alt="2"><em>Earn Points</em><span>Shop more, earn
+                        <li data-aos="zoom-out" data-aos-delay="500" data-aos-duration="500"><img src="../reward/img/Howitwork_2.png" alt="2"><em>Earn Points</em><span>Shop more, earn
                                 more.</span></li>
-                        <li><img src="../reward/img/Howitwork_3.png" alt="3"><em>Redeem Points</em><span>Get full‑sized
+                        <li data-aos="zoom-out" data-aos-delay="900" data-aos-duration="500"><img src="../reward/img/Howitwork_3.png" alt="3"><em>Redeem Points</em><span>Get full‑sized
                                 skincare and exclusive deals.</span></li>
                     </ul>
                 </div>
@@ -139,7 +135,7 @@
             <section class="redeem_for_products active">
                 <div class="card_tit tit">
                     <div class="line"></div>
-                    <h2>Redeem for Products</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="700">Redeem for Products</h2>
                     <div class="toggle_flex">
                         <div class="on">Redeem for Products</div>
                         <a href="#" class="off change-page" data-target="section6">Ways To Earn</a>
@@ -188,7 +184,7 @@
             <section class="ways_to_earn">
                 <div class="card_tit tit">
                     <div class="line"></div>
-                    <h2>Ways To Earn</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="700">Ways To Earn</h2>
                     <div class="toggle_flex">
                         <a href="#" class="off change-page" data-target="section5">Redeem for Products</a>
                         <div class="on">Ways To Earn</div>
@@ -244,7 +240,7 @@
 
             <section class="friend">
                 <h2>Give a friend 10% off. Get 150 points.</h2>
-                <em>Refer friends and they’ll get 10% off. Plus, you get 150 bonus points.</em>
+                <small>Refer friends and they’ll get 10% off. Plus, you get 150 bonus points.</small>
                 <div class="btn_g">
                     <a href="#" class="btn">Sign In</a>
                     <a href="#" class="btn">Join Now</a>
@@ -255,9 +251,9 @@
             <section class="FAQ">
                 <div class="tit">
                     <div class="line"></div>
-                    <h2>Frequently asked questions</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="700">Frequently asked questions</h2>
                 </div>
-                <ul class="accordion-list inner">
+                <ul class="accordion-list inner" data-aos="fade-up" data-aos-duration="1000">
                     <li>
                         <em class="accordion-title">What is the BOJ Rewards Program?<span class="toggle-icon">+</span></em>
                         <div class="accordion-content">

@@ -52,5 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
  AOS.init();
 }); //DOMContentLoaded

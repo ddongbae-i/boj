@@ -1,56 +1,26 @@
 @charset "uft-8";
 
-@media screen and (max-width:1500px) {
-    .how_it_work {
-        /* height: 1000px; */
-    }
-
-}
-
-@media screen and (max-width:1300px) {
-    .how_it_work {
-        /* height: 950px; */
-    }
-}
-
-
-
-
 @media screen and (max-width:1050px) {
     .inner {
         width: 90vw;
         padding-inline: 0px;
     }
 
+
     .FAQ {
         background-size: 130% auto;
     }
-
-    .how_it_work {
-        /* height: 850px; */
-    }
 }
 
-
-
-/* 선생님께 도움요청... !! ㅠㅠㅠ */
 @media screen and (max-width:952px) {
-    .how_it_work {
-        /* height: 1200px; */
-    }
 
-    .how_it_work .list {
-        /* margin-bottom: 15vh; */
-    }
-
-    .how_it_work .list ul {
-        flex-direction: column;
-    }
 
     .FAQ {
         background-size: 150% auto;
     }
-
+        .how_it_work .list ul {
+        flex-direction: column;
+    }
     em {
         font-size: 1.2rem;
     }
@@ -61,11 +31,6 @@
         height: 33px;
         width: 369px;
     }
-
-    .how_it_work {
-        /* height: 1150px; */
-    }
-
 }
 
 @media screen and (max-width:684px) {
@@ -113,9 +78,7 @@
 }
 
 @media screen and (max-width:480px) {
-    .how_it_work {
-        /* height: 1100px; */
-    }
+
 
     .FAQ {
         background-size: 200% auto;
