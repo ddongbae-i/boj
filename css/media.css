@@ -189,7 +189,7 @@
     }
 
     header.on nav ul.gnb>li>a {
-        padding: 0;
+        padding: 20px 0;
     }
 
     header nav ul.gnb>li:hover .sub_wrap {
@@ -199,6 +199,7 @@
     header.on nav ul.gnb>li .sub_wrap {
         height: auto;
         width: 100%;
+        padding-top: 12px;
     }
 
     header.on nav ul.gnb>li.on .sub_wrap,
