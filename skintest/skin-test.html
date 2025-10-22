@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Beauty of Joseon — Korean skincare inspired by timeless Hanbang tradition.">
+    <meta name="keywords" content="beautyofjoseon, boj, cosmetic, brand">
+    <meta name="author" content="boj">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailored for You - BEAUTY OF JOSEON</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="./css/main01.css">
+    <script src="./js/quiz.js" defer></script>
+    <script src="./js/result.js" defer></script>
+</head>
+<body>
+     <!-- <header class="gnb">
+        <div class="inner">
+            <h1 class="logo">BEAUTY OF JOSEON</h1>
+            <nav class="nav" aria-label="Global">
+                <a href="#" class="nav-link">Shop</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Ingredients</a>
+            </nav>
+        </div>
+    </header> -->
+
+    <main>
+    <!-- home -->
+    <section id="home" class="page">
+      <div class="home-inner">
+        <h2 class="home-title">Start Your Personalized Ingredient Test</h2>
+        <p class="home-sub">Answer 10 quick questions to identify your skin type and get traditional ingredient picks.</p>
+        <div class="badges">
+          <span class="badge">10 Questions</span>
+          <span class="badge">5 minutes</span>
+          <span class="badge">Desktop/Mobile</span>
+        </div>
+        <button id="startBtn" class="btn">Start Test</button>
+      </div>
+    </section>
+
+    <!-- quiz -->
+    <section id="quiz" class="page" hidden>
+      <div class="inner">
+        <div class="card" role="group" aria-labelledby="question">
+          <p id="progress" class="progress" aria-live="polite">1 of 10</p>
+          <h2 id="question" tabindex="-1"></h2>
+          <ul id="options" class="options" role="radiogroup" aria-labelledby="question"></ul>
+          <div class="actions">
+            <button id="prevBtn" class="btn secondary" type="button">Back</button>
+            <button id="nextBtn" class="btn" type="button">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- result -->
+    <section id="result" class="page" hidden>
+      <div class="inner">
+        <div class="legend">
+          <span class="key pop"></span> Population average
+          <span>·</span>
+          <span class="key me"></span> My Skin
+        </div>
+
+        <div class="radar-wrap">
+          <div class="radar-box">
+            <svg id="radar5" viewBox="-120 -120 240 240" role="img" aria-label="Pentagon radar"></svg>
+            <ul id="radarTags" class="radar-tags" aria-hidden="true"></ul>
+          </div>
+        </div>
+
+        <div class="center">
+          <div class="dotline"></div>
+          <h3 id="mbti" class="mbti">DRNT</h3>
+          <p id="summary" class="summary">결과 문장</p>
+        </div>
+
+        <h3 class="center" style="margin:14px 0 10px">Recommended products</h3>
+        <section class="products">
+          <div id="productGrid" class="grid-p"></div>
+        </section>
+
+        <div class="result-actions center">
+          <div class="row-ghosts">
+            <button id="homeBtn" class="btn ghost" type="button">HOME</button>
+            <button id="resetBtn" class="btn ghost" type="button">RESET</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+        
+    <footer>
+        <div class="inner">
+            <h2 class="logo"><a href="">BEAUTY OF JOSEON</a></h2>
+            <div class="f_center">
+                <section class="f_join">
+                    <h3 class="f_tit">Join Our Community</h3>
+                    <p>Get on the list for K-beauty tips, exclusive deals,
+                        and more surprises from us.</p>
+                        <form>
+                            <div class="f_join_box">
+                                <input type="email" placeholder="Email">
+                                <button type="submit">SIGN UP NOW</button>
+                            </div>
+                        </form>
+                        <span>By signing up, you agree to receive email marketing</span>
+                </section>
+                <div class="f_center_right">
+                    <nav class="f_nav">
+                        <div class="f_nav_top">
+                            <h3 class="f_tit">Menu</h3>
+                            <button type="button" class="btn_down"><img src="../asset/img/icon_btn_down.svg" alt="openbutton"></button>
+                        </div>
+                        <ul> 
+                            <li><a href="">Need Help</a></li>
+                            <li><a href="">Gift 10% Off & Get 150 Gems</a></li>
+                            <li><a href="">BOJ Creator Club</a></li>
+                            <li><a href="">Shipping</a></li>
+                            <li><a href="">Return & Refund</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms and conditions</a></li>
+                            <li><a href="">Modern Slavery Act</a></li>
+                        </ul>
+                    </nav>
+                    <aside class="boj_insta">
+                        <h3 class="f_tit">Follow on Instagram</h3>
+                        <p>@beautyofjoseon</p>
+                        <ul class="insta_area">
+                            <li><a href=""><img src="../asset/img/insta1.jpg" alt="insta_img1"></a></li>
+                            <li><a href=""><img src="../asset/img/insta2.jpg" alt="insta_img2"></a></li>
+                            <li><a href=""><img src="../asset/img/insta3.jpg" alt="insta_img3"></a></li>
+                            <li><a href=""><img src="../asset/img/insta4.jpg" alt="insta_img4"></a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+            <div class="f_bottom">
+                <div class="copy">
+                    <p>GOODAI GLOBAL INC.</p>
+                    <p>Copyright © 2025. All rights Reserved</p>
+                </div>
+                <div class="f_sns">
+                    <a href=""><img src="/asset/img/icon_instargram.svg" alt="instagram"></a>
+                    <a href=""><img src="/asset/img/icon_tiktok.svg" alt="tiktok"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
