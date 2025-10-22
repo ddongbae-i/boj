@@ -1,4 +1,4 @@
-@charset "uft-8";
+@charset "utf-8";
 
 @media screen and (max-width:1600px) {
 
@@ -9,6 +9,14 @@
 
     nav ul.gnb>li>a {
         padding: 20px;
+    }
+
+    .ham_bottom ul li a {
+        font-size: 1.125rem;
+    }
+
+    .ham_bottom ul li a img {
+        width: 24px;
     }
 
 
@@ -37,7 +45,7 @@
         padding-left: 0;
     }
 
-    header.on .ham_bottom :nth-child(2) {
+    .ham_bottom ul li:nth-child(1) {
         display: block;
     }
 
@@ -102,10 +110,6 @@
         margin-left: auto;
     }
 
-    nav ul.gnb>li:hover .sub_wrap,
-nav.on ul.gnb>li .sub_wrap {
-    display: none;
-}
 
     footer .f_center {
         display: block;
@@ -129,14 +133,6 @@ nav.on ul.gnb>li .sub_wrap {
 
 @media screen and (max-width:1024px) {
 
-    footer .inner .logo {
-        font-size: 3rem;
-    }
-
-    footer .f_center {
-        margin-block: 20px 80px;
-    }
-
     .search_tab {
         padding-inline: 56px;
         height: 620px;
@@ -146,18 +142,68 @@ nav.on ul.gnb>li .sub_wrap {
         width: 500px;
     }
 
+    footer .inner .logo {
+        font-size: 3rem;
+    }
 
-
+    footer .f_center {
+        margin-block: 20px 80px;
+    }
 }
 
-
 @media screen and (max-width:768px) {
+
     .inner {
         padding-inline: 42px;
         width: min(100%, calc(1700px + 42px * 2))
     }
 
-    header.on nav .sub_wrap .sub_img {
+    header.on .ham_bottom ul li:nth-child(2) {
+        display: block;
+    }
+
+    header.on .inner nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg_white);
+    }
+
+    .nav_right .search,
+    .nav_right .bag {
+        display: none;
+    }
+
+        header.on .gnb {
+  
+            flex-direction: column;
+            align-items: start;
+        }
+
+    header.on .gnb>li{
+        background: #ccc;
+        height: 50px;
+
+    }
+
+        header.on .gnb>li>a {
+            width: 100%;
+            height: 100%;
+        }
+
+    header.on nav .sub_wrap {
+        border: none;
+    }
+
+    header.on .ham_bottom{
+        left: 50%;
+        transform: translateX(-50%);
+        padding-inline: 42px;
+    }
+
+    .sub_wrap .sub_img {
         display: none;
     }
 
