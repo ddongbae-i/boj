@@ -364,15 +364,17 @@ main {
   overflow: hidden;
 }
 
-.membership video {
+/* .membership video {
   position: absolute;
   width: 100%;
   left: 0px;
   top: 0px;
   aspect-ratio: 16/9;
-}
+} */
 
-.membership .login_box {
+
+
+/* .membership .login_box {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -393,9 +395,9 @@ main {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-}
+} */
 
-.membership .login_box .txt_box .txt {
+/* .membership .login_box .txt_box .txt {
   color: var(--txt_main);
   text-align: center;
   font-size: 1.125rem;
@@ -404,9 +406,27 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+
+.login_box {
+position: absolute;
+left: 50%;
+bottom: 50px;
+transform: translate(-50%, -50%);
+text-align: center;
 }
 
-.membership .login_box .btu_box {
+.login_box .txt {
+  margin-bottom: 20px;
+}
+
+.membership .btn_box {
+  display: flex;
+  gap: 12px;
+  
+}
+
+/* .membership .login_box .btu_box {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -422,9 +442,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
-.membership .login_box .btu_box .login {
+/* .membership .login_box .btu_box .login {
   width: 120px;
   border: solid .5px var(--txt_main);
   padding: 12px 20px 12px 20px;
@@ -448,7 +468,7 @@ main {
   flex-shrink: 0;
   position: relative;
   font-size: 1rem;
-}
+} */
 
 .hanbang {
   width: 100%;
