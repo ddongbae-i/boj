@@ -56,7 +56,6 @@
     .sub_main h2 {
         padding-left: 0;
         order: 2;
-        font-size: 2rem;
         text-align: center;
     }
 
@@ -189,6 +188,92 @@
     }
 }
 
-@media screen and (max-width:768px) {}
+/*________________________________________________ 768 */
+@media screen and (max-width:768px) {
+    .main {
+        width: 100%;
+        height: 510px;
+    }
 
-@media screen and (max-width:360px) {}
+    .main_tit .line {
+        height: 45px;
+    }
+
+    .main .main_tit p {
+        font-size: 1rem;
+        padding: 20px 0px 0px 42px;
+    }
+
+    .sub_main {
+        height: 700px;
+    }
+
+    .sub_main h2 {
+        margin-bottom: 100px;
+    }
+
+    .sub_main p {
+        display: none;
+    }
+
+    .banner1 {
+        height: 300px;
+    }
+
+    .banner1 .inner {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 240px;
+        justify-content: center;
+        padding: 42px 24px 30px 42px;
+    }
+
+    .banner1_left h2 {
+        font-size: 2.5rem;
+        margin-bottom: 14px;
+    }
+
+    .banner1_left li {
+        margin-bottom: 0;
+    }
+
+    .banner1_right {
+        width: 600px;
+        margin-top: 15px;
+    }
+
+    .product {
+        height: 2050px;
+    }
+
+    .product_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 커뮤니티 */
+    .community .link_box {
+        display: flex;
+        gap: 24px;          /* 항목 간 간격 */
+        flex-wrap: wrap;    /* 화면 좁을 때 다음 줄로 넘김 */
+        justify-content: flex-start;
+    }
+
+    .community .link_box .box {
+        width: auto;
+    }
+
+    .community .link_box .box img {
+        width: clamp(100px, 35vw, 150px); /* 가로 100 ~ 150 사이 */
+        height: 150px;                    /* 세로 고정 150 */
+        object-fit: cover;
+        display: block;
+    }
+}
+
+
+@media screen and (max-width:360px) {
+
+    .product_grid {
+        grid-template-columns: 1fr;
+    }
+}

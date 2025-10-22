@@ -26,8 +26,6 @@ header {
     margin-top: 208px;
 }
 
-
-
 .main .main_tit h2 {
     width: 100%;
     text-align: center;
@@ -264,6 +262,7 @@ header {
     transition: color 0.3s ease;
 }
 
+/*  */
 .product_filter li::after {
     content: "";
     position: absolute;
@@ -272,19 +271,31 @@ header {
     width: 100%;
     height: 2px;
     background-color: var(--txt_main);
-    opacity: 0;
-    transform: translateY(5px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 320ms cubic-bezier(.2,.8,.2,1);
+    /* opacity로 숨기지 않고 스케일로 애니메이션 처리 */
 }
 
 .product_filter li:hover {
     color: var(--txt_main);
 }
 
-.product_filter li:hover::after {
+.product_filter li:hover::after,
+.product_filter li.active::after {
+    transform: scaleX(1);
+}
+
+
+
+.product_filter li.active {
+    color: var(--txt_main);
+    /* 활성 탭 글자 색 */
+}
+
+.product_filter li.active::after {
     opacity: 1;
     transform: translateY(0);
-    /* 제자리로 올라옴 */
 }
 
 .product_filter li.active {
@@ -307,6 +318,11 @@ header {
 .product_card {
     position: relative;
     text-align: center;
+    display: none;
+}
+
+.product_card.ginseng {
+    display: block;
 }
 
 .product_card img {
