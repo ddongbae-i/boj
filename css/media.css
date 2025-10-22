@@ -200,6 +200,7 @@
     header.on .ham_bottom{
         left: 50%;
         transform: translateX(-50%);
+        padding-inline: 42px;
     }
 
     .sub_wrap .sub_img {
