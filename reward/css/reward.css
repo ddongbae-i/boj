@@ -5,18 +5,35 @@ body {
     line-height: 1.4;
 }
 
+.inner {
+    width: 80vw;
+}
+
 .btn {
     display: inline-block;
 }
 
 .tit {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.line {
+    width: 492px;
+    height: 44px;
+    background: url(/hanbang/img/line.png) no-repeat;
+    margin: auto;
+    background-size: cover;
 }
 
 .main_visual {
     display: flex;
     height: 1040px;
+}
+
+.main_visual .txt_g .tit {
+    text-align: left;
 }
 
 .main_visual .left {
@@ -44,10 +61,6 @@ body {
 
 .btn:first-child {
     margin-right: 24px;
-}
-
-.vip_tiers .tit {
-    text-align: center;
 }
 
 .list {
@@ -95,96 +108,154 @@ span {
     font-size: 1rem;
 }
 
-
 .vip_tiers .list>ul>li>ul>li:nth-child(1) {
     height: 80px;
     line-height: 400%;
     background-color: aqua;
 }
 
-.vip_tiers .list>ul>li>ul>li:nth-child(2) {}
 
 
 
+
+
+
+/* 선생님께 도움요청... !! ㅠㅠㅠ */
 .how_it_work {
     width: 100%;
-    height: 1080px;
-    background: url(../img/Howitwork_bg.png) center/cover no-repeat;
+    height: 100vh;
+    background-image: url(../img/Howitwork_bg.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
+
+/* 선생님께 도움요청... !! ㅠㅠㅠ */
+
+
+
+
+
+
 
 .how_it_work .list {
     display: flex;
     justify-content: center;
     min-height: 340px;
-
     /* 2. 배경색을 반투명하게 설정 (backdrop-filter를 보기 위해 필수) */
     background-color: rgba(255, 255, 255, 0.8);
-    /* 예: 흰색 30% 투명도 */
-
     /* 3. 백그라운드 블러 효과 적용 */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     /* Safari 지원 */
-
 }
-.how_it_work .list ul{
-      display: flex;
-      align-items: center;
-      gap: 40px;
+
+.how_it_work .list ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .how_it_work .list ul>li {
     display: flex;
-flex-direction : column;
+    flex-direction: column;
 }
 
-.how_it_work .list ul>li img{
-height: 90px;
-object-fit: contain;
-margin-bottom: 24px;
+.how_it_work .list ul>li img {
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 24px;
 }
-.redeem_for_products, .ways_to_earn{
-        width: 100%;
-    
-        color: var(--white_f0);
-        display: flex; 
+
+
+.redeem_for_products,
+.ways_to_earn {
+    width: 100%;
+    color: var(--white_f0);
+    display: flex;
     flex-direction: column;
-        justify-content: center;
-         align-items: center;
-             height: 1300px;
-    }
-.artlcle_g{
-    width: 80%;
+    justify-content: center;
+    align-items: center;
+    min-height: 1300px;
+    padding: 160px 0;
 }
-.card_tit{
+
+/* .card_tit h2{
+    display: block;
+} */
+
+.toggle_flex {
+    display: none;
+    width: 90vw;
+}
+
+.toggle_flex .on {
+    flex: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 166px;
+    max-width: 500px;
+    height: 54px;
+    line-height: 100%;
+    text-align: center;
+    border: 26px solid transparent;
+    border-image: url('../img/toggle_redeem_02.svg') 25 fill stretch;
+}
+
+.toggle_flex .off {
+    flex: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 148px;
+    max-width: 500px;
+    height: 54px;
+    line-height: 100%;
+    border: 26px solid transparent;
+    border-image: url('../img/toggle_redeem_01.svg') 25 fill stretch;
+    color: var(--txt_sub_77);
+}
+
+.ways_to_earn .toggle_flex .on {
+    border-image: url('../img/toggle_redeem_04.svg') 25 fill stretch;
+}
+
+.ways_to_earn .toggle_flex .off {
+    border-image: url('../img/toggle_redeem_03.svg') 25 fill stretch;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.redeem_for_products .line {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.ways_to_earn .line {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.card_tit {
     margin-bottom: 120px;
 }
-.box {
-    background-color: var(--bg_footer);
-    flex: 1;
-    height: 100%;
-    position: relative;
-    padding: 20px;
 
-}
 .bottom {
     width: 100%;
     position: absolute;
     bottom: 20px;
     display: flex;
     justify-content: space-between;
-}
-.bottom img{
-    /* width: 100%; */
-    height: 80px;
-    /* background-image: url(../reward/img/img_Earn_Friend.png) no-repeat; */
-    /* background-position : bottom right; */
-}
-.bottom .img{
-width: 100%;
-    height: 80px;
-        background-image: url(../img/img_Earn_Birthday.png); /* no-repeat */
-    /* background-position : bottom right; */
 }
 
 .arrow::before {
@@ -199,65 +270,183 @@ width: 100%;
     margin-right: 8px;
 }
 
+.dis {
+    opacity: 20%;
+}
+
+.artlcle_g {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.artlcle_g>div {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artlcle_g .box {
+    background: var(--bg_footer) url(../img/img_Earn_Birthday.png) no-repeat calc(100% - 20px) calc(100% - 20px);
+    flex: 1;
+    height: 180px;
+    min-width: 300px;
+    max-width: 750px;
+    position: relative;
+    padding: 16px;
+    background-size: auto 70px;
+    border-top: 4px solid var(--txt_sub_44);
+}
+
+.box_g {
+    flex: 1;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .redeem_for_products {
     background: url(../img/Redeem_bg.png) center/cover no-repeat;
 }
 
-.redeem_for_products .article_top {
-    height: 240px;
-        margin-bottom: 20px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+.redeem_for_products .box1 {
+    background-image: url(../img/img_Earn_Join.png);
 }
 
-.redeem_for_products .article_bottom {
-    width: 80%;
-    height: 240px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+.redeem_for_products .box2 {
+    background-image: url(../img/img_Earn_Order.png);
+}
+
+.redeem_for_products .box3 {
+    background-image: url(../img/img_Earn_Review.png);
+}
+
+.redeem_for_products .box4 {
+    background-image: url(../img/img_Earn_Friend.png);
+}
+
+.redeem_for_products .box5 {
+    background-image: url(../img/img_Earn_Instagram.png);
+}
+
+.redeem_for_products .box6 {
+    background-image: url(../img/img_Earn_TikTok.png);
+}
+
+.redeem_for_products .box7 {
+    background-image: url(../img/img_Earn_Birthday.png);
 }
 
 .ways_to_earn {
     background: url(../img/Earn_bg.png) center/cover no-repeat;
 }
 
-.ways_to_earn .box1 .arrow::before{
+.ways_to_earn .box1 {
+    background-image: url(../img/img_Earn_Join.png);
+}
+
+.ways_to_earn .box1 .arrow::before {
     background-image: url(../img/reward_check.svg);
     width: 20px;
     height: 14px;
 }
 
-.ways_to_earn .article_top {
-    height: 220px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 20px;
+.ways_to_earn .box2 {
+    background-image: url(../img/img_Earn_Order.png);
 }
 
-.ways_to_earn .article_center {
-        height: 180px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 20px;
+.ways_to_earn .box3 {
+    background-image: url(../img/img_Earn_Review.png);
 }
 
-.ways_to_earn .article_bottom {
-        height: 180px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+.ways_to_earn .box4 {
+    background-image: url(../img/img_Earn_Friend.png);
+    background-size: auto 50px;
+}
+
+.ways_to_earn .box5 {
+    background-image: url(../img/img_Earn_Instagram.png);
+}
+
+.ways_to_earn .box6 {
+    background-image: url(../img/img_Earn_TikTok.png);
+}
+
+.ways_to_earn .box7 {
+    background-image: url(../img/img_Earn_Birthday.png);
 }
 
 .friend {
     width: 100%;
     height: 400px;
+    background-color: var(--bg_footer);
+    color: var(--white_f0);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 
 .FAQ {
     width: 100%;
-    height: 1080px;
+    padding: 160px 0;
+    background-image: url(../img/reward_FAQ_bg.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #f8f8f8;
+}
+
+
+.FAQ ul {
+    list-style: none;
+    padding: 20px 40px 60px 40px;
+    margin: auto;
+    width: 90vw;
+}
+
+.FAQ ul li {
+    border-bottom: 1px solid var(--txt_sub_44);
+}
+
+.accordion-list {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* 아코디언 제목 스타일 */
+.accordion-title {
+    padding: 20px 10px 10px 10px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.toggle-icon {
+    font-size: 2rem;
+    transition: transform 0.5s;
+}
+
+/* 아코디언 내용 스타일 */
+.accordion-content {
+    padding: 0 15px 15px 15px;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion-title.active .toggle-icon {
+    content: "—";
+    transform: rotate(180deg);
+}
+
+/* 'active' 클래스가 붙었을 때 내용이 보이도록 설정 */
+.accordion-content.active {
+    display: block;
 }
