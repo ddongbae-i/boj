@@ -641,7 +641,7 @@ main {
     margin-bottom: 40px
 }
 
-.section_4_button {
+/* .section_4_button {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -652,18 +652,20 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.6);
     background: transparent;
     overflow: hidden;
+} */
+
+
+.section_4_bottom .btn {
+    display: flex;
+    border-color: var(--white_ff);
+    width: 300px;
+    gap: 10px;
+    justify-content: center;
 }
 
-.section_4_button .line {
+.btn .line {
     width: 26px;
     height: 1px;
-    background: rgba(var(--white), .6)
+    background: rgba(var(--white), .6);
+    margin-block: auto;
 }
-
-.section_4_button .text {
-    font-family: 'PublicSans-Light', sans-serif;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 220;
-}
-
