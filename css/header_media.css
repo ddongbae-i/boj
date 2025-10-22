@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+@media screen and (max-width:1600px) {
+
+
+    header .inner .gnb {
+        font-size: 1.125rem
+    }
+
+    nav ul.gnb>li>a {
+        padding: 20px;
+    }
+
+    .ham_bottom ul li a {
+        font-size: 1.125rem;
+    }
+
+    .ham_bottom ul li a img {
+        width: 24px;
+    }
+
+
+}
+
+@media screen and (max-width:1280px) {
+
+    header {
+        background: #f7f7f7;
+        height: 100vh;
+        align-items: flex-start;
+    }
+
+    .inner {
+        width: min(100%, calc(1280px + 56px * 2));
+        padding-inline: 56px;
+    }
+
+    header .inner {
+        padding-inline: 56px;
+        height: 124px;
+    }
+
+    nav ul.gnb>li .sub_wrap {
+        height: calc(100vh - 124px);
+    }
+
+    /* 
+    header.on .logo {
+        display: none;
+    }
+
+    header.on .inner .gnb>li:nth-child(1) a {
+        padding-left: 0;
+    }
+
+    .ham_bottom ul li:nth-child(1) {
+        display: block;
+    }
+
+    header.on nav ul.gnb>li:nth-child(1) .sub_wrap {
+        display: flex;
+    }
+
+    header.on .ham_bottom {
+        display: block;
+    }
+
+    header .inner .gnb {
+        display: none;
+    }
+
+
+    header.on .inner .gnb {
+        display: flex;
+    }
+
+    .nav_right .ham_menu {
+        display: block;
+        position: relative;
+    }
+
+    .nav_right .ham_menu img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .nav_right .ham_menu img:nth-child(2) {
+        display: none;
+    }
+
+    header.on .nav_right .ham_menu img:nth-child(1) {
+        display: none;
+    }
+
+    header.on .nav_right .ham_menu img:nth-child(2) {
+        display: block;
+    }
+
+    .nav_right .user {
+        display: none;
+    }
+
+    header.on nav .sub_wrap .sub {
+        padding-inline: 56px;
+    }
+
+    .ham_bottom {
+        left: 56px;
+    }
+
+
+    header.on nav ul.gnb>li .sub_img {
+        width: 310px;
+        height: 310px;
+        padding-top: 30px;
+        padding-right: 56px;
+        margin-left: auto;
+    }
+
+
+    footer .f_center {
+        display: block;
+    }
+
+    .f_center_right {
+        margin-top: 45px;
+        width: 100%;
+    }
+
+    .f_join form {
+        width: 100%;
+        max-width: none;
+    }
+
+    .search_tab .keyword_wrap {
+        width: 866px;
+    } */
+
+}

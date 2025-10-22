@@ -29,6 +29,7 @@
         overflow: hidden;
         height: 100%;
     }
+    
 
     header.on {
         background: var(--bg_white);
@@ -159,7 +160,7 @@
 }
 
 @media screen and (max-width:768px) {
-
+    
     .inner {
         padding-inline: 42px;
         width: min(100%, calc(1700px + 42px * 2))
@@ -171,6 +172,7 @@
 
     header.on {
         height: 100vh;
+        right: 0;
     }
 
     header.on .inner {
@@ -268,10 +270,11 @@
     header.on .ham_bottom {
         left: 50%;
         transform: translateX(-50%);
-
+        max-width: none;
+        padding-inline: 42px;
     }
 
-    .sub_wrap .sub_img {
+    nav ul.gnb>li .sub_img {
         display: none;
     }
 
