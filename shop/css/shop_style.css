@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 
-.btn2 {
+a.btn2 {
     height: 40px;
     font-size: 1.125rem;
     display: flex;
@@ -12,8 +12,11 @@
 }
 
 .btn2:after {
-    content: url(../img/arrow_up.svg);
-    display: inline-block
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/arrow_up.svg);
 }
 
 .puzzle {
@@ -172,7 +175,7 @@
 }
 
 .p_right .option {
-    display: inline-block;
+    width: 100%;
     position: relative;
     height: 32px;
     font-weight: 300;
@@ -181,8 +184,15 @@
 
 .p_right .option button {
     cursor: pointer;
-    width: 130px;
+    width: 100%;
 
+}
+
+.p_right .option button em {
+    display: flex;
+    width: 100%;
+    padding: 0 10px;
+    justify-content: space-between;
 }
 
 .p_right .option button em::after {
@@ -193,7 +203,7 @@
     position: absolute;
     left: 0;
     top: 33px;
-    background: rgba(255,255,255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     width: 100%;
     display: none;
     border-radius: 0 0 4px 4px;
@@ -203,10 +213,10 @@
     font-size: 1rem;
 }
 
-.p_right .option ul li:first-child{
+.p_right .option ul li:first-child {
     margin-bottom: 8px;
 }
 
-.p_right .option ul.active ul{
+.p_right .option ul.active ul {
     display: block;
 }
