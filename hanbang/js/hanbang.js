@@ -68,3 +68,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+/*________________________sub_main2 */
+document.addEventListener('DOMContentLoaded', () => {
+    const subMain = document.querySelector('.sub_main');
+    const subMain2 = document.querySelector('.sub_main2');
+    if (!subMain || !subMain2) return;
+
+    // 클릭 가능 표시 및 키보드 접근성
+    subMain.style.cursor = 'pointer';
+    if (!subMain.hasAttribute('tabindex')) subMain.setAttribute('tabindex', '0');
+
+    const goToSubMain2 = () => {
+        subMain2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    subMain.addEventListener('click', goToSubMain2);
+    subMain.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            goToSubMain2();
+        }
+    });
+});
