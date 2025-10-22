@@ -50,7 +50,6 @@ html {
 }
 
 
-
 /* Hero Section Enhanced */
 .section-1 {
   width: 100%;
@@ -277,7 +276,7 @@ html {
 }
 
 /* Section 3: Key Ingredients */
-.section-3 {
+/* .section-3 {
   background: #f8f8f8;
   padding: 100px 0;
   overflow: hidden
@@ -287,6 +286,7 @@ html {
   display: flex;
   gap: 80px;
   align-items: center;
+  height: 600px;
 }
 
 .ingredient-img {
@@ -325,7 +325,8 @@ html {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .tag {
@@ -451,6 +452,128 @@ html {
   width: 24px;
   background: #c1843a;
   transition: all 0.3s ease;
+} */
+
+
+.section_3 {
+  background: #fff;
+  color: #1c1c1c;
+  padding: 200px 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section_3_inner {
+  width: 1700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 120px;
+}
+
+.section_3_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.section_3_title_line {
+  width: 40px;
+  height: 1px;
+  background: rgba(28, 28, 28, 0.3);
+}
+
+.section_3_title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.section_3_title p {
+  font-family: 'PublicSans-Light', sans-serif;
+  font-size: 18px;
+  color: rgba(28, 28, 28, 0.6);
+  line-height: 1.7;
+}
+
+.section_3_map_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  width: 1320px;
+}
+
+.section_3_textbox {
+  flex: 1;
+  text-align: left;
+}
+
+.section_3_textbox h3 {
+  font-family: 'Cormorant-Medium', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1c1c1c;
+}
+
+.section_3_textbox p {
+  font-family: 'PublicSans-Light', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(28, 28, 28, 0.7);
+  margin-bottom: 40px;
+}
+
+.section_3_btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid rgba(28, 28, 28, 0.5);
+  color: #1c1c1c;
+  text-decoration: none;
+  font-family: 'PublicSans-Light', sans-serif;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.section_3_btn:hover {
+  background: rgba(28, 28, 28, 0.05);
+  border-color: #1c1c1c;
+}
+
+.section_3_map {
+  flex: 1;
+  text-align: right;
+}
+
+.section_3_map img {
+  width: 600px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .section_3_inner {
+    width: 90%;
+  }
+
+  .section_3_map_block {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .section_3_textbox {
+    text-align: center;
+  }
+
+  .section_3_map img {
+    width: 90%;
+  }
 }
 
 /* Section 4: Our Philosophy */
@@ -710,7 +833,7 @@ html {
 
 /* Section 5: Cultural Heritage */
 .section-5 {
-  background: white;
+  background: linear-gradient(90deg, #fefefe, #fdfefe, #f7f7f7);
   padding: 100px 0;
   overflow: hidden
 }
@@ -834,7 +957,7 @@ html {
 
 /* Section 6 */
 .section-6 {
-  background: linear-gradient(90deg, #fefefe, #fdfefe, #f7f7f7);
+
   padding: 100px 0 300px;
   position: relative;
   padding-bottom: 300px;
@@ -1483,8 +1606,8 @@ html {
 }
 
 .gallery-item {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
