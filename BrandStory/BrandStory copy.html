@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920" />
+  <title>Brand Story | Section 1 (1920px)</title>
+  
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="./vars.css" />
+  <link rel="stylesheet" href="./css/brandstory_style.css" />
+
+</head>
+
+<body>
+  <main>
+    <section class="section_5">
+      <div class="section_5_inner">
+        <div class="section_5_title">
+          <div class="section_5_title_line"></div>
+          <h2>Find Nearby Stores</h2>
+          <div class="section_5_title_line"></div>
+          <p>Discover where you can experience Beauty of Joseon products in person.</p>
+        </div>
+
+        <div class="section_5_map_block">
+          <div class="section_5_textbox">
+            <h3>Experience the Heritage in Person</h3>
+            <p>Visit our partner stores to explore authentic Beauty of Joseon products, curated skincare rituals, and
+              exclusive in-store events that connect modern innovation with timeless Korean beauty.</p>
+            <a href="/storeLocator.html" class="section_5_btn">Open Store Locator</a>
+          </div>
+          <figure class="section_5_map">
+            <img src="/BrandStory/img/store-map.png" alt="Store Locator Map" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .section_5 {
+        background: #fff;
+        color: #1c1c1c;
+        padding: 200px 0;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .section_5_inner {
+        width: 1700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 120px;
+      }
+
+      .section_5_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .section_5_title_line {
+        width: 40px;
+        height: 1px;
+        background: rgba(28, 28, 28, 0.3);
+      }
+
+      .section_5_title h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      .section_5_title p {
+        font-family: 'PublicSans-Light', sans-serif;
+        font-size: 18px;
+        color: rgba(28, 28, 28, 0.6);
+        line-height: 1.7;
+      }
+
+      .section_5_map_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+        width: 1320px;
+      }
+
+      .section_5_textbox {
+        flex: 1;
+        text-align: left;
+      }
+
+      .section_5_textbox h3 {
+        font-family: 'Cormorant-Medium', serif;
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #1c1c1c;
+      }
+
+      .section_5_textbox p {
+        font-family: 'PublicSans-Light', sans-serif;
+        font-size: 18px;
+        line-height: 1.8;
+        color: rgba(28, 28, 28, 0.7);
+        margin-bottom: 40px;
+      }
+
+      .section_5_btn {
+        display: inline-block;
+        padding: 14px 28px;
+        border: 1px solid rgba(28, 28, 28, 0.5);
+        color: #1c1c1c;
+        text-decoration: none;
+        font-family: 'PublicSans-Light', sans-serif;
+        font-size: 16px;
+        transition: 0.3s ease;
+      }
+
+      .section_5_btn:hover {
+        background: rgba(28, 28, 28, 0.05);
+        border-color: #1c1c1c;
+      }
+
+      .section_5_map {
+        flex: 1;
+        text-align: right;
+      }
+
+      .section_5_map img {
+        width: 600px;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 1024px) {
+        .section_5_inner {
+          width: 90%;
+        }
+
+        .section_5_map_block {
+          flex-direction: column;
+          text-align: center;
+          gap: 60px;
+        }
+
+        .section_5_textbox {
+          text-align: center;
+        }
+
+        .section_5_map img {
+          width: 90%;
+        }
+      }
+    </style>
+
+  </main>
+</body>
+
+</html>
