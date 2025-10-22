@@ -1,5 +1,28 @@
 @charset "utf-8";
 
+.skintest_btu {
+  position: fixed;
+  right: 24px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+  z-index: 9999;
+  display: block;
+  width: 80px;
+  height: auto;
+  pointer-events: auto;
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.skintest_btu img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+ opacity: .5;
+}
+
 main {
   width: 100%;
 }
@@ -43,7 +66,7 @@ main {
   gap: 0px;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 2125px;
+  width: 1920px;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -237,10 +260,12 @@ main {
   -webkit-perspective: 1000px;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  transition: transform 1.6s cubic-bezier(.2,.8,.2,1); /* flipMs:1600ms와 일치 */
+  transition: transform 1.6s cubic-bezier(.2, .8, .2, 1);
+  /* flipMs:1600ms와 일치 */
   will-change: transform;
   /* flipped 클래스가 붙으면 카드 전체를 한 번 회전시킴 */
 }
+
 .influencer .card.flipped {
   transform: rotateY(180deg);
 }
@@ -262,6 +287,7 @@ main {
   transform: rotateY(0deg);
   z-index: 2;
 }
+
 .influencer .card .back {
   transform: rotateY(180deg);
   z-index: 1;
