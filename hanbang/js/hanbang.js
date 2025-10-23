@@ -1,35 +1,35 @@
 AOS.init({
-  duration: 1200, // 애니메이션 시간(ms)
-  once: false, // 스크롤 시 한 번만 실행
+    duration: 1200, // 애니메이션 시간(ms)
+    once: false, // 스크롤 시 한 번만 실행
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. 하트 클릭 이벤트
-  const hearts = document.querySelectorAll(".product_card .heart img");
-  hearts.forEach((heart) => {
-    heart.addEventListener("click", (e) => {
-      e.stopPropagation(); // 카드 클릭 이벤트와 겹치지 않도록 방지
-      heart.classList.toggle("liked"); // liked 클래스 토글
+    // 1. 하트 클릭 이벤트
+    const hearts = document.querySelectorAll(".product_card .heart img");
+    hearts.forEach((heart) => {
+        heart.addEventListener("click", (e) => {
+            e.stopPropagation(); // 카드 클릭 이벤트와 겹치지 않도록 방지
+            heart.classList.toggle("liked"); // liked 클래스 토글
 
-      if (heart.classList.contains("liked")) {
-        heart.src = "./img/mini_icon_heart_hover.svg"; // 찜 완료 아이콘
-      } else {
-        heart.src = "./img/heart1.svg"; // 원래 아이콘
-      }
-    });
-    
-  });
+            if (heart.classList.contains("liked")) {
+                heart.src = "./img/mini_icon_heart_hover.svg"; // 찜 완료 아이콘
+            } else {
+                heart.src = "./img/heart1.svg"; // 원래 아이콘
+            }
+        });
 
-  // 2. ADD TO BAG 클릭 이벤트
-  const addBtns = document.querySelectorAll(".product_card .add_btn");
-  addBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault(); // a 태그 기본 링크 막기
-      const productName = btn.closest(".product_card").querySelector("h3").innerText;
-      alert(`${productName}이(가) 장바구니에 추가되었습니다.`);
-      // 실제 장바구니 로직 구현 시 여기에 코드를 추가
     });
-  });
+
+    // 2. ADD TO BAG 클릭 이벤트
+    const addBtns = document.querySelectorAll(".product_card .add_btn");
+    addBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault(); // a 태그 기본 링크 막기
+            const productName = btn.closest(".product_card").querySelector("h3").innerText;
+            alert(`${productName}이(가) 장바구니에 추가되었습니다.`);
+            // 실제 장바구니 로직 구현 시 여기에 코드를 추가
+        });
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 페이지 로드 시 Ginseng 활성화
     filterItems.forEach(item => {
-        if(item.textContent.trim() === "Ginseng") {
+        if (item.textContent.trim() === "Ginseng") {
             item.classList.add("active");
         }
     });
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // 필터 적용
             productCards.forEach(card => {
                 // 예: 카드에 ginseng, rice 등 클래스가 있어야 함
-                if(card.classList.contains(filterText)) {
+                if (card.classList.contains(filterText)) {
                     card.style.display = "block";
                 } else {
                     card.style.display = "none";
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });  */
 
 
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const octs = document.querySelectorAll('.octagon');
     const side = document.getElementById('sideInfo');
     const details = document.getElementById('details');
@@ -109,13 +109,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const show = () => {
             side.textContent = name || defaultSide;
-            if (details) details.innerHTML = desc || defaultDetails;
+            if (details) { details.innerHTML = desc || defaultDetails; }
             o.classList.add('hover');
+            details.classList.add('hover');
         };
         const hide = () => {
             side.textContent = defaultSide;
-            if (details) details.innerHTML = defaultDetails;
+            if (details) { details.innerHTML = defaultDetails; }
             o.classList.remove('hover');
+            details.classList.remove('hover');
         };
 
         o.addEventListener('mouseenter', show);
@@ -137,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const subMainImg = document.querySelector('.sub_main_img');
     const subMain = document.querySelector('.sub_main');
     const subMain2 = document.querySelector('.sub_main2');
-    
+
     if (!subMainImg || !subMain || !subMain2) return;
 
     subMainImg.addEventListener('click', () => {

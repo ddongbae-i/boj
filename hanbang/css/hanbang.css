@@ -203,7 +203,7 @@ header {
     overflow-x: hidden;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-/*     display: none; */
+    /*     display: none; */
 }
 
 
@@ -271,6 +271,7 @@ header {
 }
 
 
+
 /* 이미지: 원본 비율 유지(왜곡/잘림 최소) */
 .octagon img {
     width: 100%;
@@ -280,6 +281,13 @@ header {
     margin: 0 auto;
     pointer-events: none;
     user-select: none;
+    transition: .2s;
+}
+
+.octagon.hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 1;
 }
 
 .center_product {
@@ -384,12 +392,16 @@ header {
     top: 40%;
     color: #333;
     font-size: 1.07rem;
-    opacity: 1;
+    opacity: 0;
     line-height: 1.4;
-    transition: opacity 0.3s;
+    transition: 0.5s;
     text-align: right;
 }
 
+.details.hover {
+    top: 45%;
+    opacity: 1;
+}
 
 /*_________________________banner1 */
 .banner1 {
