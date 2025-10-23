@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="./css/hanbang.css">
     <link rel="stylesheet" href="./css/meida_hb.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 
 <body>
@@ -146,27 +148,11 @@
             </a>
         </section> <!-- //.main -->
 
-        <!--     <section class="sub_main">
-        <video autoplay muted loop playsinline class="bg_video">
-            <source src="img/bg.mp4" type="video/mp4">
-        </video>
-
-        <div class="content">
-            <h2>Do you know Hanbang?</h2>
-            <div class="sub_main_img">
-                <img src="img/cream_img.png" alt="cream" />
-            </div>
-            <p>
-                Get to know the time-honored ingredients behind our brand,<br>
-                passed down for centuries from the Joseon Dynasty.
-            </p>
-        </div>
-    </section> -->
-
         <section class="sub_main">
             <h2 data-aos="fade-up">Do you know Hanbang?</h2>
             <div class="sub_main_img">
                 <img src="img/cream_img.png" alt="cream" />
+                <span class="click_me">Click me!</span>
             </div>
             <p data-aos="fade-up">Get to know the time-honored ingredients behind our brand,<br>
                 passed down for centuries from the Joseon Dynasty.
@@ -174,38 +160,44 @@
         </section><!--//.sub_main -->
 
         <section class="sub_main2">
-            <div class="octa-container">
-                <div class="octa-grid" id="octa-grid">
-                    <!-- 각 세그먼트에 img 태그로 원본 이미지 사용 -->
-                    <div class="octa-segment t1" data-name="Green Tea" data-aos="fade-down" data-aos-delay="1000">
+            <div class="octa_container">
+                <div class="octa_grid">
+                    <div class="octagon t1" data-name="Green Tea" data-aos="fade-down" data-aos-delay="100">
                         <img src="img/1.png" alt="Green Tea">
                     </div>
-                    <div class="octa-segment t2" data-name="Red Bean" data-aos="fade-down-left" data-aos-delay="2000">
+                    <div class="octagon t2" data-name="Red Bean" data-aos="fade-down-left" data-aos-delay="200">
                         <img src="img/2.png" alt="Red Bean">
                     </div>
-                    <div class="octa-segment t3" data-name="Rice" data-aos="fade-up-left" data-aos-delay="3000"><img
-                            src="img/3.png" alt="Rice"></div>
-                    <div class="octa-segment t4" data-name="Propolis"><img src="img/4.png" alt="Propolis">
+                    <div class="octagon t3" data-name="Rice" data-aos="fade-up-left" data-aos-delay="400">
+                        <img src="img/3.png" alt="Rice">
                     </div>
-                    <div class="octa-segment t5" data-name="Mugwort"><img src="img/5.png" alt="Mugwort">
+                    <div class="octagon t4" data-name="Propolis" data-aos="fade-up-left" data-aos-delay="600">
+                        <img src="img/4.png" alt="Propolis">
                     </div>
-                    <div class="octa-segment t6" data-name="Green Plum"><img src="img/6.png" alt="Green Plum"></div>
-                    <div class="octa-segment t7" data-name="Centella Asiatica"><img src="img/7.png" alt="Centella">
+                    <div class="octagon t5" data-name="Mugwort" data-aos="fade-up"
+                        data-aos-anchor-placement="center-bottom" data-aos-delay="800">
+                        <img src="img/5.png" alt="Mugwort">
                     </div>
-                    <div class="octa-segment t8" data-name="Ginseng"><img src="img/8.png" alt="Ginseng">
+                    <div class="octagon t6" data-name="Green Plum" data-aos="fade-up-right" data-aos-delay="1000">
+                        <img src="img/6.png" alt="Green Plum">
+                    </div>
+                    <div class="octagon t7" data-name="Centella Asiatica" data-aos="fade-right" data-aos-delay="1200">
+                        <img src="img/7.png" alt="Centella">
+                    </div>
+                    <div class="octagon t8" data-name="Ginseng" data-aos="fade-right" data-aos-delay="1400">
+                        <img src="img/8.png" alt="Ginseng">
                     </div>
                 </div>
-                <div class="center-product">
+                <div class="center_product">
                     <img src="img/cream_img.png" alt="Dynasty Cream">
                 </div>
-                <div class="side-info" id="sideInfo">Do you know Hanbang?</div>
+                <div class="side_info" id="sideInfo">Do you know Hanbang?</div>
                 <div class="details" id="details">
                     Get to know the time-honored ingredients behind our brand,<br>
                     passed down for centuries from the Joseon Dynasty.
                 </div>
             </div>
         </section>
-
 
         <section class="banner1">
             <div class="banner1 inner">
@@ -556,7 +548,7 @@
                         <div class="star">★ 0.0 (0)</div>
                     </div>
                 </div>
-
+            </div> <!-- .product_grid 닫는 태그 추가 -->
         </section><!-- //.product -->
 
         <section class="banner2">
@@ -570,19 +562,19 @@
         </section><!-- //.banner2 -->
 
         <section class="community">
-            <div class="left">
+            <div class="left" data-aos="zoom-out">
                 <img src="img/hand_img.png" alt="제품을 바르는 손 이미지">
             </div>
             <div class="right">
-                <h2 class="tit">BEAUTY OF JOSEON DISCOVER</h2>
-                <p>Inspired By Hanbang.<br>
+                <h2 class="tit" data-aos="fade-up" data-aos-delay="100">BEAUTY OF JOSEON DISCOVER</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Inspired By Hanbang.<br>
                     Connected by Community.</p>
                 <div class="link_box">
-                    <div class="box">
+                    <div class="box" data-aos="fade-up" data-aos-delay="200">
                         <img src="img/blog_img.png" alt="블로그 이미지">
                         <a href="#">Go to blog page ></a>
                     </div>
-                    <div class="box">
+                    <div class="box" data-aos="fade-up" data-aos-delay="500">
                         <img src="img/local_img.png" alt="매장 위치 이미지">
                         <a href="#">Go find the location ></a>
                     </div>
@@ -650,7 +642,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/hanbang.js" defer></script>
 </body>
 

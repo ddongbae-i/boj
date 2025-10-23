@@ -69,8 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
 /*________________________sub_main2 */
-document.addEventListener('DOMContentLoaded', () => {
+/*  document.addEventListener('DOMContentLoaded', () => {
     const subMain = document.querySelector('.sub_main');
     const subMain2 = document.querySelector('.sub_main2');
     if (!subMain || !subMain2) return;
@@ -89,5 +90,77 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             goToSubMain2();
         }
+    });
+});  */
+
+
+ document.addEventListener('DOMContentLoaded', () => {
+    const octs = document.querySelectorAll('.octagon');
+    const side = document.getElementById('sideInfo');
+    const details = document.getElementById('details');
+    if (!octs.length || !side) return;
+
+    const defaultSide = side.dataset.default || side.textContent;
+    const defaultDetails = details ? (details.dataset.default || details.innerHTML) : '';
+
+    octs.forEach(o => {
+        const name = o.dataset.name || '';
+        const desc = o.dataset.desc || '';
+
+        const show = () => {
+            side.textContent = name || defaultSide;
+            if (details) details.innerHTML = desc || defaultDetails;
+            o.classList.add('hover');
+        };
+        const hide = () => {
+            side.textContent = defaultSide;
+            if (details) details.innerHTML = defaultDetails;
+            o.classList.remove('hover');
+        };
+
+        o.addEventListener('mouseenter', show);
+        o.addEventListener('focus', show);
+        o.addEventListener('mouseleave', hide);
+        o.addEventListener('blur', hide);
+
+        // 모바일용: 한 번 터치하면 표시, 다시 터치하면 해제
+        let tapped = false;
+        o.addEventListener('touchstart', (e) => {
+            tapped = !tapped;
+            if (tapped) show();
+            else hide();
+        }, { passive: true });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const subMainImg = document.querySelector('.sub_main_img');
+    const subMain = document.querySelector('.sub_main');
+    const subMain2 = document.querySelector('.sub_main2');
+    
+    if (!subMainImg || !subMain || !subMain2) return;
+
+    subMainImg.addEventListener('click', () => {
+        gsap.to(subMain, {
+            opacity: 0,
+            duration: 0.5,
+            ease: 'power2.inOut',
+            onComplete: () => {
+                subMain.style.display = 'none';
+
+                // sub_main2 보이기
+                subMain2.classList.add('active');
+                subMain2.style.display = 'flex'; // 필요시
+                gsap.fromTo(subMain2, { opacity: 0, y: 30 }, {
+                    opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+                    onStart: () => {
+                        // AOS에 새로 보이는 요소들을 재계산하라고 알림
+                        if (window.AOS) AOS.refresh(); // 또는 AOS.refreshHard();
+                    }
+                });
+
+                // 스크롤 이동 등...
+            }
+        });
     });
 });

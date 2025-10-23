@@ -10,7 +10,7 @@ header {
 
 .main {
     width: 100%;
-    height: 800px;
+    height: 100vh;
     background: url('../img/main_img4.png') top/cover no-repeat;
 }
 
@@ -23,7 +23,6 @@ header {
 .main_tit .line {
     width: 100%;
     height: 45px;
-    margin-top: 208px;
 }
 
 .main .main_tit h2 {
@@ -32,6 +31,7 @@ header {
     font-weight: 500;
     font-size: 2.5rem;
     font-family: var(--tit_font);
+    margin-top: 208px;
 }
 
 .main .main_tit p {
@@ -44,16 +44,17 @@ header {
     text-align: left;
 }
 
-.main .main_img img {
-    width: 100%;
-    height: 775px;
+.main .line img {
+    width: 400px;
+    height: 45px;
+    margin-top: 208px;
 }
 
 /* scroll 애니메이션  */
 .scroll {
     position: absolute;
     left: 50%;
-    bottom: 20px;
+    bottom: 50px;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -103,7 +104,7 @@ header {
 /* sub_main */
 .sub_main {
     width: 100%;
-    height: 1020px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -138,6 +139,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    position: relative;
 }
 
 .sub_main .sub_main_img img {
@@ -146,6 +149,37 @@ header {
     object-fit: contain;
     transform: rotate(-20deg);
     /*    background: rebeccapurple; */
+}
+
+.click_me {
+    font-family: var(--txt_main);
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+/* 호버 시 효과 추가 */
+.sub_main_img:hover .click_me {
+    animation-play-state: paused;
+    opacity: 0.7;
 }
 
 .sub_main p {
@@ -158,46 +192,50 @@ header {
 }
 
 /*________________________sub_main2 */
+
 .sub_main2 {
-    font-family: var(--tit_font);
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*     display: none; */
+    position: relative;
+    overflow-x: hidden;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+
+/* 활성화 클래스 추가 */
+.sub_main2.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .sub_main2::before {
     content: "";
     position: fixed;
     inset: 0;
-    /* top:0; right:0; bottom:0; left:0; 와 동일 */
-    background-image: url('img/bg_img.png');
-    /* 이미지 경로 확인 */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* top:0; right:0; bottom:0; left:0; 과 동일 */
+    background: url('../img/bg_img.png') center / cover no-repeat;
     opacity: 0.15;
-    /* 투명도 조정 (0.0 ~ 1.0) */
     z-index: 0;
     pointer-events: none;
-    /* 배경이 클릭을 막지 않음 */
 }
 
-.octa-container {
+.octa_container {
     position: relative;
-    width: 520px;
-    height: 520px;
-    margin: 40px auto 0;
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
     display: grid;
     place-items: center;
     z-index: 1;
 }
 
-.octa-grid {
+.octa_grid {
     position: absolute;
     top: 0;
     left: 0;
@@ -215,12 +253,10 @@ header {
     z-index: 1;
 }
 
-.octa-segment {
-    /* background-image 대신 img 태그 사용 */
+.octagon {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #222;
     font-weight: 700;
     font-size: 1.1rem;
     cursor: pointer;
@@ -235,8 +271,9 @@ header {
     overflow: hidden;
 }
 
-/* 세그먼트 내부 이미지: 원본 비율 유지(왜곡/잘림 최소) */
-.octa-segment img {
+
+/* 이미지: 원본 비율 유지(왜곡/잘림 최소) */
+.octagon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -246,26 +283,20 @@ header {
     user-select: none;
 }
 
-.center-product {
+.center_product {
     position: absolute;
-    top: 35%;
+    top: 37%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-8deg);
+    transform: translate(-50%, -50%) rotate(-10deg);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
 }
 
-.center-product img {
-    width: 180px;
-    height: 180px;
-}
-
-.octa-segment.text-mode {
-    text-shadow: none;
-    font-size: 1.14rem;
-    padding: 6px;
+.center_product img {
+    width: 250px;
+    height: 250px;
 }
 
 .t1 {
@@ -281,9 +312,8 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    bottom: 65px;
-    right: 70px;
-    /* bottom/right 오프셋 제거 */
+    bottom: 85px;
+    right: 90px;
 }
 
 .t4 {
@@ -291,8 +321,8 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    bottom: 65px;
-    right: 70px;
+    bottom: 85px;
+    right: 90px;
 }
 
 .t5 {
@@ -300,8 +330,8 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    bottom: 130px;
-    right: 2px;
+    bottom: 175px;
+    right: 4px;
 }
 
 .t6 {
@@ -309,7 +339,7 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    bottom: 130px;
+    bottom: 175px;
     right: 2px;
 }
 
@@ -318,8 +348,8 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    left: 70px;
-    bottom: 65px;
+    left: 90px;
+    bottom: 90px;
 }
 
 .t8 {
@@ -327,13 +357,13 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    left: 70px;
-    bottom: 65px;
+    left: 90px;
+    bottom: 90px;
 }
 
-.side-info {
+.side_info {
     /*    background: red; */
-    width: 400px;
+    width: 600px;
     font-family: var(--tit_font);
     font-weight: 400;
     position: absolute;
@@ -343,15 +373,14 @@ header {
     opacity: 1;
     line-height: 1.2;
     transition: opacity 0.3s;
-    letter-spacing: -1px;
 }
 
 .details {
-    width: 480px;
+    width: 100%;
     /*     background: red; */
     font-family: var(--txt_font);
     position: absolute;
-    left: 600px;
+    left: 700px;
     top: 40%;
     color: #333;
     font-size: 1.07rem;
