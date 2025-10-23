@@ -109,6 +109,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    padding: 0 110px;
 }
 
 /* 배경 이미지 ::before로 넣고 투명도 적용 */
@@ -118,7 +119,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: url(../img/bg_img.png) center/cover no-repeat;
     opacity: 0.2;
 }
@@ -127,20 +128,21 @@ header {
     width: 600px;
     font-family: var(--tit_font);
     /* flex: 1; */
-    text-align: left;
     font-size: 3rem;
-    padding-left: 110px;
     font-weight: 400;
 }
 
 .sub_main .sub_main_img {
-    width: 340px;
-    height: 340px;
+    width: 250px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sub_main .sub_main_img img {
@@ -157,10 +159,8 @@ header {
     left: 50%;
     bottom: -30px;
     transform: translateX(-50%);
-    color: #333;
     font-size: 1rem;
     font-weight: 500;
-    letter-spacing: 1px;
     animation: bounce 1s ease-in-out infinite;
 }
 
@@ -186,9 +186,7 @@ header {
     /* flex: 1; */
     text-align: right;
     font-size: 1.25rem;
-    padding-right: 110px;
     line-height: 1.5;
-    /*     background: #ccc; */
 }
 
 /*________________________sub_main2 */
@@ -205,6 +203,7 @@ header {
     overflow-x: hidden;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+/*     display: none; */
 }
 
 
@@ -361,32 +360,34 @@ header {
     bottom: 90px;
 }
 
+
 .side_info {
     /*    background: red; */
-    width: 600px;
-    font-family: var(--tit_font);
+    width: 650px;
+    font-size: 3rem;
     font-weight: 400;
+    font-family: var(--tit_font);
     position: absolute;
     right: 550px;
     top: 40%;
-    font-size: 2.5rem;
     opacity: 1;
     line-height: 1.2;
     transition: opacity 0.3s;
 }
 
 .details {
-    width: 100%;
+    width: 80%;
     /*     background: red; */
     font-family: var(--txt_font);
     position: absolute;
-    left: 700px;
+    left: 650px;
     top: 40%;
     color: #333;
     font-size: 1.07rem;
     opacity: 1;
     line-height: 1.4;
     transition: opacity 0.3s;
+    text-align: right;
 }
 
 
@@ -834,5 +835,26 @@ header {
     margin-top: 8px;
     font-size: 1.25rem;
     font-weight: 400;
+    display: inline-block;
+    position: relative;
+    color: inherit;
+}
 
+.link_box a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #222;
+    /* 또는 원하는 색상 */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.link_box a:hover::after {
+    transform: scaleX(1);
 }
