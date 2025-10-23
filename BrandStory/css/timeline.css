@@ -1,0 +1,194 @@
+/* 타임라인 - 핀을 절대위치로 고정하여 라인과 정확히 일치 */
+
+:root {
+    --text-main: #1c1c1c;
+    --text-gray: #444444;
+    --bg-white: #fefefe;
+}
+
+.articles {
+    width: 935px;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* 타임라인 라인 - 정확히 중앙에 고정 */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* 타임라인 아이템 - FLEX 유지 */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 80px;
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-item.reverse {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+/* 타임라인 텍스트 박스 - 스크롤 애니메이션 */
+.timeline-text {
+    width: 319px;
+    text-align: right;
+    opacity: 0;
+    flex-shrink: 0;
+}
+
+.timeline-item.reverse .timeline-text {
+    text-align: left;
+}
+
+.timeline-text time {
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    color: #999;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.timeline-text h4 {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 8px 0 16px;
+    color: var(--text-main);
+    font-family: 'Cormorant', serif;
+}
+
+.timeline-text p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* 타임라인 아이콘 (핀) - 절대위치로 라인 중앙에 고정! */
+.timeline-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--bg-white);
+    border: 3px solid var(--text-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant', serif;
+    font-size: 22px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    /* 절대위치로 articles 컨테이너 기준 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 각 타임라인 아이템의 핀 위치 고정 */
+.timeline-item:nth-child(2) .timeline-icon {
+    top: 0;
+}
+
+.timeline-item:nth-child(3) .timeline-icon {
+    top: 80px;
+}
+
+.timeline-item:nth-child(4) .timeline-icon {
+    top: 160px;
+}
+
+.timeline-item:nth-child(5) .timeline-icon {
+    top: 240px;
+}
+
+.timeline-item:nth-child(6) .timeline-icon {
+    top: 320px;
+}
+
+.timeline-icon:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateX(-50%) scale(1.15);
+}
+
+.timeline-icon.modern {
+    background: var(--text-main);
+    color: white;
+}
+
+/* 타임라인 디바이더 */
+.timeline-divider {
+    width: 2px;
+    height: 96px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 50%;
+    top: -96px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* 섹션 5 스타일 */
+.section-5 {
+    background: linear-gradient(90deg, #fefefe, #fdfefe, #f7f7f7);
+    padding: 120px 0;
+    overflow: visible;
+    position: relative;
+}
+
+.section-5 .section-title {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.section-5 .section-title .line {
+    width: 48px;
+    height: 1px;
+    background: var(--text-main);
+    margin: 0 auto 20px;
+}
+
+.section-5 .section-title h2 {
+    font-size: 48px;
+    font-weight: 500;
+    font-family: 'Cormorant', serif;
+    margin-bottom: 20px;
+}
+
+.section-5 .section-title h3 {
+    font-size: 40px;
+    font-weight: 300;
+    font-family: 'Cormorant', serif;
+    margin-bottom: 30px;
+}
+
+.section-5 .section-title p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-gray);
+    max-width: 800px;
+    margin: 0 auto;
+}

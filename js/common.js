@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const header = document.querySelector('header');
 
 //스크롤 위치를 마지막에 어디까지 했는지 기억하는 변수
@@ -95,38 +96,39 @@ lilis.forEach(li => {
 // searchCloseBtn?.addEventListener('click', () => {
 //   searchTab?.classList.remove('open');
 // });
+=======
+//header
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY) {
+        header.style.top = '124px';
+    } else {
+        header.style.top = '0';
+    }
 
+    lastScrollY = currentScrollY
+})
+>>>>>>> df594b35c618189a36baebf51464f66bf186bcb0
+
+//search
 const searchBtn = document.querySelector('.nav_right .search');
 const searchTab = document.querySelector('.search_tab');
-const searchCloseBtn = document.querySelector('.search_tab .close');
+const closeBtn = document.querySelector('.search_tab .close');
 
-// 검색 버튼: 햄버거 열려 있으면 열지 않음
-searchBtn?.addEventListener('click', (e) => {
-  if (header && header.classList.contains('on')) return;
-  searchTab?.classList.add('open');
-});
-searchCloseBtn?.addEventListener('click', () => {
-  searchTab?.classList.remove('open');
-});
+searchBtn.addEventListener('click', () => {
+    searchTab.classList.add('open');
+})
 
-// footer menu btn
-const footerBtn = document.querySelector('.f_nav button');
-const footerMenu = document.querySelector('.f_nav ul');
+closeBtn.addEventListener('click', () => {
+    searchTab.classList.remove('open');
+})
 
-footerBtn?.addEventListener('click', function () {
-  footerMenu.classList.toggle('down');
-  footerBtn.style.transform = footerMenu.classList.contains('down')
-    ? 'rotate(180deg)'
-    : 'rotate(0deg)';
-  footerBtn.style.transition = 'transform 0.3s ease';
-});
+//footer menu btn
 
-/* ===== 모바일 search sync (기존 로직 유지) ===== */
-(function () {
-  const headerEl = document.querySelector('header');
-  const searchTabEl = document.querySelector('.search_tab');
-  const searchBtnEl = document.querySelector('.nav_right .search');
+const footerBtn = document.querySelector('.f_nav button')
+const footerMenu = document.querySelector('.f_nav ul')
 
+<<<<<<< HEAD
   if (!headerEl || !searchTabEl) return;
 
   function syncMobileSearch() {
@@ -193,26 +195,29 @@ footerBtn?.addEventListener('click', function () {
     if (window.innerWidth <= 1280) {
       if (isOpen) lockMenu();
       else unlockMenu();
+=======
+footerBtn.addEventListener('click', function () {
+    footerMenu.classList.toggle('down')
+    if (footerMenu.classList.contains('down')) {
+        footerBtn.style.transform = 'rotate(180deg)';
+>>>>>>> df594b35c618189a36baebf51464f66bf186bcb0
     } else {
-      // 데스크탑에서는 잠금 해제 및 search 강제 닫기
-      unlockMenu();
-      searchTabEl?.classList.remove('open');
+        footerBtn.style.transform = 'rotate(0deg)';
     }
-  }
 
-  // 햄버거 버튼 클릭: header.on 토글하고, 그 결과로 잠금/해제 처리
-  hammenuBtn?.addEventListener('click', (e) => {
-    if (!header) return;
-    header.classList.toggle('on');
-    applyLockByHeader();
-  });
+    footerBtn.style.transition = 'transform 0.3s ease';
+})
 
-  // header 클래스 변화 감지
-  if (header) {
-    const mo = new MutationObserver(applyLockByHeader);
-    mo.observe(header, { attributes: true, attributeFilter: ['class'] });
-  }
+const bottomnav = document.querySelector('.ham_bottom');
+const nav = document.querySelector('nav');
+bottomnav.addEventListener('mouseenter', () => {
+    nav.classList.add('on');
+});
+bottomnav.addEventListener('mouseleave', () => {
+    nav.classList.remove('on');
+});
 
+<<<<<<< HEAD
   // 닫기 버튼들
   const closeButtons = document.querySelectorAll('.ham_close, .menu-close, .nav_close, .search_tab .close, button.close');
   closeButtons.forEach(btn => {
@@ -242,3 +247,5 @@ footerBtn?.addEventListener('click', function () {
 
 })();
 // ...existing code...
+=======
+>>>>>>> df594b35c618189a36baebf51464f66bf186bcb0

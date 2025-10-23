@@ -177,6 +177,10 @@ header {
     width: 542px;
 }
 
+.pro_card.swiper-slide:last-child {
+  margin-right: 400px; /* .inner 패딩값만큼 */
+}
+
 .pro_card {
     display: flex;
     flex-direction: column;
