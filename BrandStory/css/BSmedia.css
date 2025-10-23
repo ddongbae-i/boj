@@ -153,7 +153,6 @@
 
 
 
-
     .philosophy-card .quote {
         font-size: 12px;
         padding-top: 12px;
@@ -166,12 +165,83 @@
         line-height: 1.5;
     }
 
-    .btn {
-        width: 260px;
-        font-size: 12px;
-        padding: 12px 20px;
-        height: 44px;
+
+    .section-4 {
+        background-color: #0f0f0f;
+        color: #fff;
+        padding: 100px 0 120px;
+        text-align: center;
     }
+
+
+    .philosophy-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        width: 100%;
+        position: relative;
+    }
+
+    /* 카드별 위치 지정 (1-왼쪽, 2-오른쪽, 3-중앙) */
+    .philosophy-card {
+        padding: 30px 25px;
+        width: 280px;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .philosophy-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .philosophy-card:nth-child(1) {
+        align-self: flex-start;
+        margin-left: 8%;
+        gap: 10px;
+    }
+
+
+    .philosophy-card:nth-child(2) {
+        align-self: flex-end;
+        margin-right: 8%;
+        gap: 10px;
+    }
+
+
+
+    .philosophy-card:nth-child(3) {
+        align-self: flex-start;
+        margin-left: 10%;
+
+    }
+
+
+    .philosophy-bottom {
+        padding-top: 120px;
+    }
+
+    .philosophy-bottom .btn {
+        margin-top: 24px;
+        width: 260px;
+        font-size: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .philosophy-bottom .btn:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+
+
 
     /* ===== SECTION 5: TIMELINE ===== */
     .section-5 {
@@ -411,7 +481,6 @@
     }
 
     .newsletter-form {
-        max-width: 100%;
         padding: 1px;
         gap: 12px;
     }
@@ -464,12 +533,12 @@
     }
 
     .gallery-item {
-        width: calc(50% - 12.5px);
-        height: 240px;
+        width: 300px;
+        height: 300px;
     }
 
     .gallery-item:nth-child(n+3) {
-        width: calc(50% - 12.5px);
+        width: 300px;
     }
 
     /* ===== FOOTER ===== */
@@ -537,76 +606,5 @@
     .section-7 {
         background: white;
         color: black;
-    }
-}
-
-/* ✅ 1024px 반응형: Our Philosophy 섹션 3단 카드 레이아웃 */
-@media (max-width: 1024px) {
-    .section-4 {
-        background-color: #0f0f0f;
-        color: #fff;
-        padding: 100px 0 120px;
-        text-align: center;
-    }
-
-
-    .philosophy-cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 100px;
-        width: 100%;
-        position: relative;
-    }
-
-    /* 카드별 위치 지정 (1-왼쪽, 2-오른쪽, 3-중앙) */
-    .philosophy-card {
-        padding: 30px 25px;
-        width: 280px;
-        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-
-    .philosophy-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-    }
-
-    .philosophy-card:nth-child(1) {
-        align-self: flex-start;
-        margin-left: 8%;
-    }
-
-    .philosophy-card:nth-child(2) {
-        align-self: flex-end;
-        margin-right: 8%;
-    }
-
-    .philosophy-card:nth-child(3) {
-        align-self: flex-start;
-        margin-left: 18%;
-    }
-
-
-    .philosophy-bottom {
-        padding-top: 120px;
-    }
-
-    .philosophy-bottom .btn {
-        margin-top: 24px;
-        width: 260px;
-        font-size: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background: transparent;
-        color: #fff;
-        transition: all 0.3s ease;
-    }
-
-    .philosophy-bottom .btn:hover {
-        background: rgba(255, 255, 255, 0.15);
     }
 }
