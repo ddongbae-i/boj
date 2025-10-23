@@ -103,6 +103,19 @@ window.addEventListener('load', () => {
   });
 });
 
+//shop
+
+const swiper = new Swiper('.sale_zone .swiper', {
+  slidesPerView: 'auto',     // 카드 폭 고정 + 여러 장 보이기
+  freeMode: { enabled: true, momentum: true },
+  grabCursor: true,
+  navigation: {
+    nextEl: '.sale_zone .swiper-button-next',
+    prevEl: '.sale_zone .swiper-button-prev',
+  },
+  // 필요시 모바일만 더 부드럽게
+  resistanceRatio: 0.85,
+});
 //option
 
 const optionMenu = document.querySelectorAll('.option ul li');

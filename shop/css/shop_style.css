@@ -66,30 +66,42 @@ a.btn2 {
     inset: 0;
 }
 
-.grid{
-  position:absolute; inset:0;
-  display:grid;
-  grid-template-columns: repeat(4, 240px);  /* ✅ 1fr 말고 픽셀 */
-  grid-auto-rows: 240px;                    /* ✅ 픽셀 */
-  gap: 6px;                                 /* 시작값 */
-  padding: 6px;                             /* 시작값 (비디오와 동일) */
-  z-index:2;
-  background: var(--bg_black);
+.grid {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    /* ✅ 1fr 말고 픽셀 */
+    grid-auto-rows: 240px;
+    /* ✅ 픽셀 */
+    gap: 6px;
+    /* 시작값 */
+    padding: 6px;
+    /* 시작값 (비디오와 동일) */
+    z-index: 2;
+    background: var(--bg_black);
 }
 
-.tile{
-  width:240px; height:240px; object-fit:cover;
-  border-radius:4px; will-change:transform;
+.tile {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 4px;
+    will-change: transform;
 }
 
 /* 비디오는 퍼즐과 동일 사이즈로 아래에 깔림 */
-.video{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  object-fit:cover; object-position:center;
-  padding:6px;               /* ✅ grid와 시작값 동일 */
-  box-sizing:border-box;
-  z-index:1;
+.video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 6px;
+    /* ✅ grid와 시작값 동일 */
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 /* 보너스: 서브픽셀 틀어짐 방지(선택) */
@@ -132,13 +144,15 @@ a.btn2 {
     color: var(--white_ff);
     padding-block: 60px;
     display: flex;
+    padding-right: 0;
 }
 
 .sale_zone .inner .txt_area {
-    width: 40%;
+    width: 100%;
 }
 
 .sale_zone .txt {
+    width: 220px;
     margin-top: 12px;
     color: var(--grey_c7);
     width: 100%;
@@ -149,21 +163,47 @@ a.btn2 {
     color: var(--white_ff);
 }
 
-.product_wrap {
+.carousel {
+    position: relative;
+    overflow: hidden;
+    /* 스크롤 숨김 */
+}
+
+.swiper .product_wrap {
     display: flex;
     gap: 37px;
+    padding-right: none;
+}
+
+.pro_card.swiper-slide {
+    width: 542px;
 }
 
 .pro_card {
-    width: 542px;
     display: flex;
     flex-direction: column;
 }
 
 .pro_card .pro_img {
-    width: 100%;
+    width: 542px;
     height: 542px;
     background: var(--shop_bg);
+}
+
+
+
+.carousel .swiper-button-prev,
+.carousel .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: #1d1d1d;
+    color: #fff;
+}
+
+.carousel .swiper-button-prev::after,
+.carousel .swiper-button-next::after {
+    font-size: 18px;
 }
 
 .pro_card .add_btn {
@@ -178,6 +218,8 @@ a.btn2 {
     gap: 8px;
     margin-top: 8px;
 }
+
+
 
 .pro_bottom {
     display: flex;
@@ -267,4 +309,31 @@ a.btn2 {
 
 .p_right .option ul.active ul {
     display: block;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 999px;
+    background: #1d1d1d;
+    color: #fff;
+    opacity: .9;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.nav:hover {
+    opacity: 1;
+}
+
+.nav.prev {
+    left: 8px;
+}
+
+.nav.next {
+    right: 8px;
 }
