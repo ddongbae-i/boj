@@ -111,6 +111,7 @@ nav:hover .ham_bottom {
     display: none;
     padding-top: 56px;
     border-top: 1px solid var(--grey_aa);
+    z-index: 6;
 }
 
 .ham_bottom ul li:nth-child(1), .ham_bottom ul li:nth-child(2) {
@@ -161,7 +162,7 @@ nav ul.gnb>li .sub_wrap {
     height: 100vh;
     background: var(--bg_white);
     display: none;
-    z-index: 10;
+    z-index: 5;
 }
 
 nav ul.gnb>li:hover .sub_wrap,
@@ -218,6 +219,7 @@ nav .sub_wrap .sub_img img {
     height: 512px;
     padding: 30px 110px;
     display: none;
+    z-index: 10;
 }
 
 .search_tab.open {
