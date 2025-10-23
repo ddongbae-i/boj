@@ -53,5 +53,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+    /* 클론코딩 이노그리드 */
+      const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const motionElement = entry.target;
+                
+                if (entry.isIntersecting) {
+                    motionElement.classList.remove('animate');
+                    motionElement.offsetHeight;
+                    motionElement.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.motion').forEach(motion => {
+            observer.observe(motion);
+        });
+
+
+/* GPT */
+const video = document.getElementById('bgVideo');
+video.playbackRate = 0.5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  AOS.init();
 }); //DOMContentLoaded

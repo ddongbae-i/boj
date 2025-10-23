@@ -44,11 +44,46 @@ body {
 
 .main_visual {
     display: flex;
-    height: 1040px;
+    min-height: 1040px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-item {
+    position: absolute;
+    display: block;
+    max-width: none;
+    z-index: -2;
+}
+
+.right-bottom {
+    right: -350px;
+    bottom: -80px;
+}
+
+.left-bottom {
+    left: -350px;
+    bottom: 120px;
+}
+
+.main_visual .txt_g {
+    width: 90%;
+    padding-right: 60px;
+    margin-bottom: 80px;
 }
 
 .main_visual .txt_g .tit {
     text-align: left;
+}
+
+.main_visual .left_text_g .tit {
+    margin: 40px 0 10px 0;
 }
 
 .main_visual .left {
@@ -56,23 +91,39 @@ body {
     text-align: center;
 }
 
-.main_visual .left img {
+.norigae_wrapper {
+    position: relative;
     width: 200px;
-    margin-bottom: 70px;
+    margin: auto;
 }
+
+.norigae_wrapper img {
+    width: 100%;
+    position: relative;
+    z-index: 2; 
+}
+
+.norigae_wrapper::after {
+    content: "";
+    position: absolute;
+    top: 5px;      
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/reward_green.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: brightness(0) blur(20px);
+    opacity: 0.5;
+    z-index: 1; 
+}
+
 
 .main_visual .right {
     flex: 3;
-    /* display: flex; */
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.txt_g {
-    width: 680px;
-    margin-bottom: 80px;
-
 }
 
 .btn:first-child {
@@ -88,37 +139,46 @@ body {
     border-image: url('../img/corner.png') 40 fill stretch;
 }
 
+
+
 .vip_tiers .list {
-padding-bottom: 40px;
+    padding: 40px 0;
 }
 
 .vip_tiers .list>ul {
     display: flex;
     width: 90%;
-    margin: 80px 80px 20px 80px;
+    margin: auto;
     justify-content: space-around;
-
 }
 
+.list>ul>li{
+    margin-right: 24px;
+}
+/* 색상 추가 해야함 */
 .vip_tiers .list>ul>li>ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 220px;
-    padding: 10px 10px 0 10px;
-}
-.vip_tiers .list>ul>li>ul.on{
+    width: 260px;
     height: 800px;
-     background-color: var(--grey_de);
+    padding: 10px 10px 0 10px;
+    background-color: #f2f2f2;
 }
+
+.vip_tiers .list>ul>li>ul.on {
+    background-color: var(--grey_de);
+}
+
 .vip_tiers .list>ul>li>ul>li:nth-child(1) {
     height: 50px;
     line-height: 3;
-       font-weight: 500;
-           color: var(--white_f0);
+    font-weight: 500;
+    color: var(--white_f0);
     opacity: 0;
 }
-.vip_tiers .list>ul>li>ul.on>li:nth-child(1){
+
+.vip_tiers .list>ul>li>ul.on>li:nth-child(1) {
     background-color: var(--mugwort);
     opacity: 1;
 }
@@ -140,9 +200,14 @@ padding-bottom: 40px;
     color: var(--txt_sub_77);
     font-size: 0.9rem;
 }
-.vip_tiers small {
+
+.vip_tiers .list small {
     font-size: 0.9rem;
     color: var(--txt_sub_77);
+    display: block;
+width: 92%;
+  text-align: right;
+  margin-top: 8px;
 }
 
 .horizontal-scroll-container {
@@ -151,19 +216,35 @@ padding-bottom: 40px;
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
+ 
 }
 
-.how_it_work {
+.how_it_work .vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* 컨텐츠 뒤로 보내기 */
+}
+
+.how_it_work .vid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 섹션 전체를 꽉 채움 */
+    display: block;
+}
+
+ .how_it_work {
     width: 100%;
     min-height: 1080px;
-    background-image: url(../img/Howitwork_bg.png);
+ /*    background-image: url(../img/Howitwork_bg.png);
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: 100% auto;
-}
-
-.how_it_work {
-    padding: 160px 0;
+    background-size: 100% auto; */
+       padding: 160px 0;
+       position: relative;
 }
 
 .how_it_work .tit {
@@ -175,12 +256,9 @@ padding-bottom: 40px;
     display: flex;
     justify-content: center;
     min-height: 340px;
-    /* 2. 배경색을 반투명하게 설정 (backdrop-filter를 보기 위해 필수) */
     background-color: rgba(255, 255, 255, 0.8);
-    /* 3. 백그라운드 블러 효과 적용 */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* Safari 지원 */
 }
 
 .how_it_work .list ul {
@@ -199,7 +277,6 @@ padding-bottom: 40px;
     object-fit: contain;
     margin-bottom: 24px;
 }
-
 
 .redeem_for_products,
 .ways_to_earn {
@@ -254,10 +331,7 @@ padding-bottom: 40px;
     border-image: url('../img/toggle_redeem_03.svg') 25 fill stretch;
 }
 
-.redeem_for_products .line {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-}
-
+.redeem_for_products .line,
 .ways_to_earn .line {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
@@ -277,10 +351,8 @@ padding-bottom: 40px;
 .arrow::before {
     content: "";
     display: inline-block;
-    /* 공간 차지하도록 */
-    width: 14px;
+     width: 14px;
     height: 14px;
-    /* 아이콘 크기 지정 */
     background-image: url(../img/reward_arrow.svg);
     background-size: 100% 100%;
     margin-right: 8px;
@@ -324,7 +396,57 @@ padding-bottom: 40px;
 }
 
 .redeem_for_products {
-    background: url(../img/Redeem_bg.png) center/cover no-repeat;
+    position: relative;
+    background: url('../img/Redeem_bg.png') center/cover no-repeat;
+    overflow: hidden;
+}
+
+.redeem_for_products::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/Redeem_bg_blur.png') center/cover no-repeat;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.redeem_for_products.animate::before {
+    animation: fadeInOut 3s ease-out forwards;
+}
+
+.ways_to_earn {
+    position: relative;
+    background: url('../img/Earn_bg.png') center/cover no-repeat;
+    overflow: hidden;
+}
+
+.ways_to_earn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/Earn_bg_blur.png') center/cover no-repeat;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.ways_to_earn.animate::before {
+    animation: fadeInOut 3s ease-out forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .redeem_for_products .box1 {
@@ -357,10 +479,6 @@ padding-bottom: 40px;
 
 .redeem_for_products .box7 {
     background-image: url(../img/img_Earn_Birthday.png);
-}
-
-.ways_to_earn {
-    background: url(../img/Earn_bg.png) center/cover no-repeat;
 }
 
 .ways_to_earn .box1 {
@@ -397,6 +515,52 @@ padding-bottom: 40px;
 .ways_to_earn .box7 {
     background-image: url(../img/img_Earn_Birthday.png);
 }
+.arrow {
+display: inline-block;
+transform-origin: left bottom; /* 왼쪽 아래 기준 */
+transition: transform 0.3s ease; /* 부드럽게 애니메이션 */
+}
+
+.box:hover .arrow {
+transform: scale(1.1); /* 1.1배 확대 */
+}
+
+.box::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: var(--bg_footer);
+z-index: 0; /* 콘텐츠 뒤로 보내기 */
+transition: transform 0.3s ease, opacity 0.3s ease;
+opacity: 0;
+mix-blend-mode: screen; /* 밝게 섞이게 함 */
+  filter: brightness(1.2) contrast(1.1) saturate(1.1); /* 좀 더 선명하고 밝게 */
+
+}
+
+.box:hover::after {
+opacity: 1; /* 살짝 투명도 변경 가능 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .friend {
     width: 100%;
@@ -417,7 +581,9 @@ padding-bottom: 40px;
     font-weight: 500;
     line-height: 1;
 }
-
+.friend .btn{
+    border: 1px solid var(--white_f0);
+}
 .FAQ {
     width: 100%;
     padding: 160px 0;
@@ -427,7 +593,6 @@ padding-bottom: 40px;
     background-size: 100% auto;
     background-color: #f8f8f8;
 }
-
 
 .FAQ ul {
     list-style: none;
@@ -448,7 +613,6 @@ padding-bottom: 40px;
     backdrop-filter: blur(10px);
 }
 
-/* 아코디언 제목 스타일 */
 .accordion-title {
     padding: 20px 10px 10px 10px;
     cursor: pointer;
@@ -464,7 +628,6 @@ padding-bottom: 40px;
     transition: transform 0.5s;
 }
 
-/* 아코디언 내용 스타일 */
 .accordion-content {
     padding: 0 15px 15px 15px;
     display: none;
@@ -476,7 +639,6 @@ padding-bottom: 40px;
     transform: rotate(180deg);
 }
 
-/* 'active' 클래스가 붙었을 때 내용이 보이도록 설정 */
 .accordion-content.active {
     display: block;
 }
