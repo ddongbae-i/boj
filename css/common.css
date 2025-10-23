@@ -65,6 +65,11 @@ body {
 
 /* 가운데 정렬하기 */
 
+header.hovered {
+  background-color: var(--bg_white); /* 원하는 색상 */
+  transition: background-color 0.3s ease;
+}
+
 header .logo {
     font-family: "Scheherazade New", serif;
     font-size: 36px;
@@ -78,8 +83,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    /* display: none; */
-    /* dn 지우기 */
+    z-index: 2;
 }
 
 header .inner {
@@ -208,12 +212,6 @@ nav .sub_wrap .sub_img img {
     display: inline-block;
     width: 30px;
     height: 30px;
-}
-
-.gg {
-    height: 124px;
-    width: 100%;
-    background: var(--bg_white);
 }
 
 .search_tab {

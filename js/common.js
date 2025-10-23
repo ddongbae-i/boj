@@ -1,21 +1,25 @@
-// ...existing code...
-/* common.js 전체 (햄버거 메뉴 스크롤 잠금/복원 로직 정리) */
-'use strict';
-
-// header show/hide on scroll
-let lastScrollY = 0;
 const header = document.querySelector('header');
 
+//스크롤 위치를 마지막에 어디까지 했는지 기억하는 변수
+let lastScrollY = window.scrollY;
+
+//스크롤 할 때마다 실행되는 이벤트
 window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY;
-  if (!header) return;
-  if (currentScrollY > lastScrollY) {
-    header.style.top = '124px';
-  } else {
-    header.style.top = '0';
-  }
-  lastScrollY = currentScrollY;
-});
+    //지금 현재 스크롤 위치 (세로로 얼만큼 내려왔는지) 저장
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY) {
+        //지금 스크롤이 이전보다 더 아래 -> 즉 사용자가 아래로 내림
+        header.style.top = '-100px';
+    } else {
+        //사용자가 위로 올림
+        header.style.top = '0';
+        header.style.backgroundColor = '#fefefef2'
+    }
+
+    //이번 스크롤 위치를 이전 스크롤 위치로 저장
+    lastScrollY = currentScrollY
+})
+
 
 /* ===== 기존 네비/리사이즈/서브메뉴 관련 로직 (기존 코드 유지) ===== */
 const hammenuBtn = document.querySelector('.ham_menu'); // 존재하면 아래에서 사용
@@ -64,6 +68,19 @@ function handleResize() {
 
 handleResize();
 window.addEventListener('resize', handleResize);
+
+
+// header 색깔 변화
+
+lilis.forEach(li => {
+  li.addEventListener('mouseenter', () => {
+    header.classList.add('hovered');
+  });
+  li.addEventListener('mouseleave', () => {
+    header.classList.remove('hovered');
+  });
+});
+
 
 // search
 // const searchBtn = document.querySelector('.nav_right .search');

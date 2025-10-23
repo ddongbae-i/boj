@@ -183,7 +183,6 @@ a.btn2 {
 .pro_card {
     display: flex;
     flex-direction: column;
-    background: #ccc;
     padding-bottom: 100px;
 }
 
@@ -191,22 +190,6 @@ a.btn2 {
     width: 542px;
     height: 542px;
     background: var(--shop_bg);
-}
-
-
-
-.carousel .swiper-button-prev,
-.carousel .swiper-button-next {
-    width: 40px;
-    height: 40px;
-    border-radius: 999px;
-    background: #1d1d1d;
-    color: #fff;
-}
-
-.carousel .swiper-button-prev::after,
-.carousel .swiper-button-next::after {
-    font-size: 18px;
 }
 
 .pro_card .add_btn {

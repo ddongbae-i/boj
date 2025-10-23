@@ -109,7 +109,9 @@
         left: 56px;
     }
 
-
+    .shop_menu {
+        height: 400px;
+    }
     header.on nav ul.gnb>li .sub_img {
         width: 310px;
         height: 310px;
@@ -160,9 +162,10 @@
 }
 
 @media screen and (max-width:768px) {
-    header {
+    header.on {
         position: absolute;
         height: auto;
+
     }
 
     .inner {
@@ -178,11 +181,6 @@
     header.on .ham_bottom ul li:nth-child(2) {
         display: block;
     }
-
-    /*     header.on {
-        height: 100vh;
-        right: 0;
-    } */
 
     header.on .inner {
         padding-inline: 42px;
@@ -282,10 +280,12 @@
     header.on .ham_bottom {
         order: 2;
         position: static;
-        /*     left: 50%;
-        transform: translateX(-50%);
-        max-width: none;
-        padding-inline: 42px; */
+        left: 50%;
+        
+    }
+
+    header.on .ham_bottom ul li {
+        width: 100%;
     }
 
     nav ul.gnb>li .sub_img {
