@@ -1,0 +1,652 @@
+@charset "utf-8";
+
+.skintest_btu {
+    position: fixed;
+    right: 24px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+    z-index: 9999;
+    display: block;
+    width: 80px;
+    height: auto;
+    pointer-events: auto;
+    transition: transform .18s ease, opacity .18s ease;
+}
+
+.skintest_btu img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: auto;
+    opacity: .5;
+}
+
+main {
+    width: 100%;
+}
+
+.main .mainVisual {
+    height: 100dvh;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.main .mainVisual video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bestSeller {
+    background: #000000;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.bestSeller .product {
+    display: flex;
+    flex-direction: column;
+    height: 860px;
+    /*   gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start; */
+    /*   width: 1920px;
+  position: absolute;
+  left: 0px;
+  top: 0px; */
+}
+
+.bestSeller .slide_wrap {
+    width: 100%;
+    height: 430px;
+    position: relative;
+    /* background: #ccc; */
+    /*   overflow: hidden;
+  pointer-events: auto; */
+}
+
+.bestSeller .slide_wrap2 .swiper-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+
+.bestSeller .product .card {
+    width: 425px;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    pointer-events: auto;
+    /* transition: opacity .25s ease; */
+}
+
+.bestSeller .product:hover .card {
+    opacity: .4;
+}
+
+.bestSeller .product .card:hover {
+    opacity: 1;
+}
+
+.bestSeller .product .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*   width: 425px;
+  height: 430px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%; */
+}
+
+/* .bestSeller .top,
+.bestSeller .bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+} */
+
+
+/* .bestSeller .swiper */
+/* .bestSeller .swiper {
+  width: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.bestSeller .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition-timing-function: linear !important;
+}
+
+.bestSeller .swiper-slide {
+  flex: 0 0 auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+
+}
+
+.bestSeller .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+
+} */
+
+.banner_1 {
+    width: 100%;
+    height: 1857px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.banner_1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.gradation_box {
+    background: linear-gradient(180deg,
+            rgba(15, 15, 15, 0) 0%,
+            rgba(15, 15, 15, 1) 100%);
+    width: 100%;
+    height: 1102px;
+    position: absolute;
+    left: 0px;
+    top: 755px;
+}
+
+.banner_1 .txt_box {
+    z-index: 1;
+    padding: 0;
+}
+
+.banner_1 .txt_box .txt_top {
+    z-index: 2;
+    color: var(--white_ff);
+    font-family: var(--txt_font);
+    font-size: 2.5rem;
+    text-align: left;
+    line-height: 140%;
+    left: 110px;
+    top: 180px;
+    position: absolute;
+}
+
+.banner_1 .txt_box .txt_bottom {
+    z-index: 2;
+    color: var(--white_ff);
+    font-family: var(--txt_font);
+    font-size: 2.5rem;
+    text-align: right;
+    line-height: 140%;
+    right: 110px;
+    bottom: 90px;
+    position: absolute;
+}
+
+.influencer {
+    --card: 421px;
+    --gap: 5px;
+    width: 100%;
+    padding: 100px 0;
+    background: var(--bg_black);
+}
+
+.influencer>.inner {
+    padding-inline: 0;
+    max-width: 1700px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    gap: var(--gap);
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.influencer .card_left,
+.influencer .card_right {
+    width: calc(var(--card) * 2 + var(--gap));
+    height: calc(var(--card) * 3 + var(--gap) * 2);
+    /* 절대배치 카드까지 감싸도록 */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    align-items: flex-start;
+}
+
+.influencer .card {
+    width: var(--card);
+    height: var(--card);
+    position: relative;
+    border-radius: 10px;
+    background: var(--img_bg);
+    overflow: hidden;
+    display: block;
+    pointer-events: auto;
+}
+
+/* 세로형 카드(3,6)는 두 칸 높이 */
+.influencer .card_3,
+.influencer .card_6 {
+    height: calc(var(--card) * 2 + var(--gap));
+}
+
+/* 카드 회전 (카드 전체를 한 번만 회전) */
+.influencer .card {
+    position: relative;
+    /* 크기는 기존 선언( var(--card) )을 사용하도록 width/height 제거 */
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 1.6s cubic-bezier(.2, .8, .2, 1);
+    /* flipMs:1600ms와 일치 */
+    will-change: transform;
+    /* flipped 클래스가 붙으면 카드 전체를 한 번 회전시킴 */
+}
+
+.influencer .card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* front/back 레이어 설정 — 위치를 겹치게 하고 back은 뒤집어둠 */
+.influencer .card .front,
+.influencer .card .back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: block;
+}
+
+/* front는 정면, back은 180도로 미리 뒤집어서 카드 전체가 180deg 회전하면 보이도록 */
+.influencer .card .front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.influencer .card .back {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+/* 이미지가 따로 transform을 갖고 있지 않도록 안전장치 */
+.influencer .card img {
+    transform: none !important;
+}
+
+/* 회전 미사용: back 숨김 */
+
+/* 미디어 공통 */
+.influencer .card .media {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.influencer .card .media img,
+.influencer .card .media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 오버레이 공통 */
+.influencer .card .black {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, .45);
+    color: var(--white_ff);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+    z-index: 2;
+}
+
+.influencer .card:hover .black {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.influencer .black_top {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.influencer .black_top .name {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.influencer .black_center {
+    text-align: center;
+    display: grid;
+    gap: 10px;
+}
+
+.influencer .black_center p {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* 위시 아이콘(두 장 방식) */
+.influencer .wish {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.influencer .wish .icon_heart {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.influencer .wish .icon_heart:nth-of-type(2) {
+    display: none;
+}
+
+.influencer .wish.active .icon_heart:nth-of-type(1) {
+    display: none;
+}
+
+.influencer .wish.active .icon_heart:nth-of-type(2) {
+    display: block;
+}
+
+/* 레이아웃 특수 카드 위치(기존과 동일) */
+.influencer .card_left .card_5 {
+    position: absolute;
+    right: 0;
+    top: calc(var(--card) * 2 + var(--gap) * 2);
+    width: var(--card);
+    height: var(--card);
+}
+
+.influencer .card_right .card_8 {
+    position: absolute;
+    right: 0;
+    top: calc(var(--card) + var(--gap));
+    width: var(--card);
+    height: var(--card);
+}
+
+
+/* 카드회전 */
+/* .influencer .inner .card .front {
+  background: red;
+}
+
+.influencer .inner .card .back {
+  background: pink;
+  transform: rotateY(180deg);
+
+}
+
+.hidden {
+  backface-visibility: hidden;
+} */
+
+
+
+.membership {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.membership .login_box {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.membership .login_box .txt {
+    margin-bottom: 20px;
+}
+
+.membership .btn_box {
+    display: flex;
+    gap: 12px;
+}
+
+.membership .btn_box .btn:hover {
+    background: var(--txt_main);
+    color: var(--white_ff);
+}
+
+.hanbang {
+    width: 100%;
+    height: 973px;
+    background: var(--img_bg);
+    display: flex;
+}
+
+.hanbang .inner {
+    padding-inline: 0;
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    position: relative;
+}
+
+.hanbang .inner .txt_left,
+.hanbang .inner .txt_right {
+    width: 528px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.hanbang .inner .txt_left ul,
+.hanbang .inner .txt_right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 18px;
+}
+
+.hanbang .inner .txt_left ul>button,
+.hanbang .inner .txt_right ul>button {
+    all: unset;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.hanbang .inner .txt_left .tit,
+.hanbang .inner .txt_right .tit {
+    font-family: var(--tit_font);
+    font-size: 2.5rem;
+    color: var(--txt_sub_77);
+    line-height: 140%;
+    letter-spacing: .02em;
+    margin-bottom: 6px;
+}
+
+.hanbang .inner .txt_left .txt,
+.hanbang .inner .txt_right .txt {
+    color: var(--txt_sub_77);
+    line-height: 140%;
+    font-size: 1.125rem;
+}
+
+.hanbang .inner .progress {
+    position: relative;
+    height: 16px;
+    margin: 10px 0 8px;
+}
+
+.hanbang .inner .progress .bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--grey_de);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.hanbang .inner .progress .playbar {
+    width: 0;
+    transition: none;
+    /* JS가 직접 width 설정하므로 transition 없음 또는 JS에서 제어 */
+    background: var(--ginseng);
+    height: 6px;
+    border-radius: 999px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.hanbang .inner .img_box {
+    width: 644px;
+    height: 753px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hanbang .inner .img_box .img1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hanbang .inner .img_box .img1 img {
+    width: 503px;
+    height: 756px;
+    max-height: 100%;
+    width: auto;
+    display: block;
+}
+
+.hanbang .inner .img_box .imgTxt {
+    /* 항상 레이어로 존재하되 보이지 않게 유지 */
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+/* 활성화 되었을 때만 보여주고 내부 박스 애니메이션 실행 */
+.hanbang .inner .img_box .imgTxt.active {
+    opacity: 1;
+}
+
+/* txt_box 기본 상태 (애니메이션은 .imgTxt.active에 붙은 규칙으로 실행) */
+.hanbang .inner .img_box .imgTxt .txt_box1,
+.hanbang .inner .img_box .imgTxt .txt_box2,
+.hanbang .inner .img_box .imgTxt .txt_box3 {
+    opacity: 0;
+    transform: translateY(12px);
+    animation-name: hanbang-fadeup;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.2, .8, .2, 1);
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box1 {
+    animation-delay: 0.50s;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box2 {
+    animation-delay: 1.00s;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box3 {
+    animation-delay: 1.50s;
+}
+
+@keyframes hanbang-fadeup {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hanbang-box-appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.99);
+        filter: blur(4px) saturate(.9);
+    }
+
+    60% {
+        opacity: 0.85;
+        transform: translateY(4px) scale(1.002);
+        filter: blur(1px) saturate(1.02);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0) saturate(1);
+    }
+}
