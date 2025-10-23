@@ -24,6 +24,7 @@ a.btn2 {
     width: 100%;
     min-height: 100vh;
     background: var(--bg_black);
+    overflow: hidden;
 }
 
 .puzzle .inner {
@@ -182,6 +183,8 @@ a.btn2 {
 .pro_card {
     display: flex;
     flex-direction: column;
+    background: #ccc;
+    padding-bottom: 100px;
 }
 
 .pro_card .pro_img {
@@ -295,12 +298,13 @@ a.btn2 {
     top: 33px;
     background: rgba(255, 255, 255, 0.8);
     width: 100%;
-    display: none;
+    /* display: none; */
     border-radius: 0 0 4px 4px;
     border-bottom: 0;
     padding: 10px;
     color: var(--txt_sub_44);
     font-size: 1rem;
+    z-index: 100;
 }
 
 .p_right .option ul li:first-child {
