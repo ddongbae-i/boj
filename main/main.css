@@ -610,18 +610,40 @@ main {
 }
 
 
+/* 1️⃣ 애니메이션 정의 */
+@keyframes fill-bar {
+  0% { width: 0%; }
+  25% { width: 25%; }
+  50% { width: 50%; }
+  75% { width: 75%; }
+  100% { width: 100%; }
+}
+
+/* 2️⃣ 기본 스타일 */
 .hanbang .inner .progress .playbar {
   position: absolute;
   left: 0;
   top: 50%;
-  width: 10%;
   height: 6px;
   border-radius: 999px;
   transform: translateY(-50%);
   z-index: 2;
-  transition: .2s;
   display: none;
-  transition: width 1.5s ease-in-out;
+  width: 0%;
+}
+
+/* 3️⃣ 상태별 실행 */
+.hanbang .inner .txt1.on .progress .playbar,
+.hanbang .inner .txt2.on .progress .playbar,
+.hanbang .inner .txt3.on .progress .playbar, 
+.hanbang .inner .txt4.on .progress .playbar,
+.hanbang .inner .txt5.on .progress .playbar,
+.hanbang .inner .txt6.on .progress .playbar,
+.hanbang .inner .txt7.on .progress .playbar,
+.hanbang .inner .txt8.on .progress .playbar {
+  display: block;
+  background: var(--ginseng);
+  animation: fill-bar 4s linear forwards;
 }
 
 
@@ -674,9 +696,6 @@ main {
   width: 100%;
 }
 
-/* .hanbang .inner .txt1.on .progress .playbar {
-  width: 100%;
-} */
 
 
 .hanbang .inner .img_box {
@@ -689,21 +708,30 @@ main {
   overflow: hidden;
 }
 
-.hanbang .inner .img_box .img1 {
-  width: 100%;
-  height: 100%;
-  display: flex;
+
+.hanbang .inner .img_box img {
+  width: 644px;
+  height: 753px;
+}
+
+.hanbang .inner .img_box .img1,
+.hanbang .inner .img_box .img2,
+.hanbang .inner .img_box .img3,
+.hanbang .inner .img_box .img4,
+.hanbang .inner .img_box .img5,
+.hanbang .inner .img_box .img6,
+.hanbang .inner .img_box .img7,
+.hanbang .inner .img_box .img8 {
+  width: 644px;
+  height: 753px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
   align-items: center;
   justify-content: center;
 }
 
-.hanbang .inner .img_box img {
-  width: 503px;
-  height: 756px;
-  max-height: 100%;
-  width: auto;
-  display: block;
-}
 
 .hanbang .inner .img_box .imgTxt {
   position: absolute;
@@ -711,7 +739,12 @@ main {
   pointer-events: none;
 }
 
-.hanbang .inner .img_box .imgTxt .txt_box1 {
+.hanbang .inner .img_box .img1 .imgTxt .txt_box1 img,
+.hanbang .inner .img_box .img3 .imgTxt .txt_box1 img,
+.hanbang .inner .img_box .img4 .imgTxt .txt_box1 img,
+.hanbang .inner .img_box .img5 .imgTxt .txt_box1 img,
+.hanbang .inner .img_box .img6 .imgTxt .txt_box1 img,
+.hanbang .inner .img_box .img8 .imgTxt .txt_box1 img {
   width: 190px;
   height: 190px;
   position: absolute;
@@ -719,7 +752,23 @@ main {
   top: 0%;
 }
 
-.hanbang .inner .img_box .imgTxt .txt_box2 {
+.hanbang .inner .img_box .img2 .imgTxt .txt_box1 img {
+  width: 190px;
+  height: 190px;
+  position: absolute;
+  right: 8%;
+  bottom: 15%;
+}
+
+.hanbang .inner .img_box .img7 .imgTxt .txt_box1 img {
+  width: 190px;
+  height: 190px;
+  position: absolute;
+  right: 8%;
+  bottom: 8%;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box2 img {
   width: 120px;
   height: 120px;
   position: absolute;
@@ -727,7 +776,7 @@ main {
   top: 28%;
 }
 
-.hanbang .inner .img_box .imgTxt .txt_box3 {
+.hanbang .inner .img_box .imgTxt .txt_box3 img {
   width: 170px;
   height: 170px;
   position: absolute;
@@ -735,10 +784,11 @@ main {
   bottom: 0;
 }
 
+
 /* txt_box1/2/3 서서히 나타나게 (fade up) */
-.hanbang .inner .img_box .imgTxt .txt_box1,
-.hanbang .inner .img_box .imgTxt .txt_box2,
-.hanbang .inner .img_box .imgTxt .txt_box3 {
+.hanbang .inner .img_box .imgTxt .txt_box1 img,
+.hanbang .inner .img_box .imgTxt .txt_box2 img,
+.hanbang .inner .img_box .imgTxt .txt_box3 img {
   opacity: 0;
   transform: translateY(12px);
   animation-name: hanbang-fadeup;
@@ -747,16 +797,16 @@ main {
   animation-timing-function: cubic-bezier(.2, .8, .2, 1);
 }
 
-.hanbang .inner .img_box .imgTxt .txt_box1 {
-  animation-delay: 0.50s;
-}
-
-.hanbang .inner .img_box .imgTxt .txt_box2 {
+.hanbang .inner .img_box .imgTxt .txt_box1 img{
   animation-delay: 1.00s;
 }
 
-.hanbang .inner .img_box .imgTxt .txt_box3 {
-  animation-delay: 1.50s;
+.hanbang .inner .img_box .imgTxt .txt_box2 img{
+  animation-delay: 2.0s;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box3 img{
+  animation-delay: 3.00s;
 }
 
 @keyframes hanbang-fadeup {
@@ -771,23 +821,48 @@ main {
   }
 }
 
-
-/* img_box on */
-
-.hanbang .inner .img_box {
-  display: none;
+/* 1️⃣ 애니메이션 정의 */
+@keyframes hanbang-fadeup-soft {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }
 
-/* .hanbang .inner .txt1.on~.hanbang .inner.img_box .img1,
-.hanbang .inner .txt2.on~.hanbang .inner.img_box .img2,
-.hanbang .inner .txt3.on~.hanbang .inner.img_box .img3,
-.hanbang .inner .txt4.on~.hanbang .inner.img_box .img4,
-.hanbang .inner .txt5.on~.hanbang .inner.img_box .img5,
-.hanbang .inner .txt6.on~.hanbang .inner.img_box .img6,
-.hanbang .inner .txt7.on~.hanbang .inner.img_box .img7,
-.hanbang .inner .txt8.on~.hanbang .inner.img_box .img8 {
-  display: block;
-} */
+/* 2️⃣ 애니메이션 적용 */
+.hanbang .inner .img_box .imgTxt .txt_box1 img,
+.hanbang .inner .img_box .imgTxt .txt_box2 img,
+.hanbang .inner .img_box .imgTxt .txt_box3 img {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  animation-name: hanbang-fadeup-soft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  filter: blur(4px);
+}
+
+/* 3️⃣ 순차적 등장 (delay 조정) */
+.hanbang .inner .img_box .imgTxt .txt_box1 img {
+  animation-delay: 0.5s;
+}
+.hanbang .inner .img_box .imgTxt .txt_box2 img {
+  animation-delay: 1.0s;
+}
+.hanbang .inner .img_box .imgTxt .txt_box3 img {
+  animation-delay: 1.5s;
+}
+
 
 
 

@@ -164,9 +164,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
- /* -------------------------------
-      한방 ON 상황
-  ------------------------------- */
+/* -------------------------------
+     한방 ON 상황
+ ------------------------------- */
 
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -192,36 +192,115 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 
 
- /* -------------------------------
-      한방 이미지 ON 상황
+/* -------------------------------
+     한방 이미지 ON 상황
 ------------------------------- */
+
 document.addEventListener("DOMContentLoaded", () => {
   const txtBoxes = document.querySelectorAll(".hanbang .txt_left ul, .hanbang .txt_right ul");
-  const imgBoxes = document.querySelectorAll(".hanbang .inner .img_box img, .hanbang .inner .img_box>div .imgTxt li");
-  let currentIndex = 0;
+  const imgGroups = document.querySelectorAll(".hanbang .img_box > div");
   const total = txtBoxes.length;
+  let currentIndex = 0;
 
-  function updateState(index) {
-    // 모든 txt 요소에서 .on 제거
+  function updateText(index) {
     txtBoxes.forEach(txt => txt.classList.remove("on"));
-    // 현재 txt에 .on 추가
-    txtBoxes[index].classList.add("on");
-
-    // 모든 이미지 숨김
-    imgBoxes.forEach(img => img.style.display = "none");
-    // 현재 이미지 보이기
-    if (imgBoxes[index]) {
-      imgBoxes[index].style.display = "block";
+    if (txtBoxes[index]) {
+      txtBoxes[index].classList.add("on");
     }
   }
 
-  // 최초 1회 실행
-  updateState(currentIndex);
+  function updateImage(index) {
+    imgGroups.forEach(img => img.style.display = "none");
+    if (imgGroups[index]) {
+      imgGroups[index].style.display = "block";
+    }
+  }
 
-  // 자동 순환
+  // 최초 실행
+  updateText(currentIndex);
+  updateImage(currentIndex);
+
+  // 공통 타이머
   setInterval(() => {
     currentIndex = (currentIndex + 1) % total;
-    updateState(currentIndex);
-  }, 4000); // 4초마다 전환
+    updateText(currentIndex);
+    updateImage(currentIndex);
+  }, 4000); // 4초 간격
 });
 
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const txtBoxes = document.querySelectorAll(".hanbang .txt_left ul, .hanbang .txt_right ul");
+//   const imgBoxes = document.querySelectorAll(".hanbang .inner .img_box img");
+//   let currentIndex = 0;
+//   const total = txtBoxes.length;
+
+//   function updateState(index) {
+//     // 모든 txt 요소에서 .on 제거
+//     txtBoxes.forEach(txt => txt.classList.remove("on"));
+//     // 현재 txt에 .on 추가
+//     txtBoxes[index].classList.add("on");
+
+//     // 모든 이미지 숨김
+//     imgBoxes.forEach(img => img.style.display = "none");
+//     // 현재 이미지 보이기
+//     if (imgBoxes[index]) {
+//       imgBoxes[index].style.display = "block";
+//     }
+//   }
+
+//   // 최초 1회 실행
+//   updateState(currentIndex);
+
+//   // 자동 순환
+//   setInterval(() => {
+//     currentIndex = (currentIndex + 1) % total;
+//     updateState(currentIndex);
+//   }, 4000); // 4초마다 전환
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   // 1) 텍스트는 li 기준으로 선택
+//   const txtItems = document.querySelectorAll(".hanbang .txt_left li, .hanbang .txt_right li");
+//   // 2) 이미지 묶음(.group) 컨테이너로 구성: 각 그룹 안에 여러 img/.imgTxt가 들어있음
+//   const imgGroups = document.querySelectorAll(".hanbang .inner .img_box .group");
+//   let currentIndex = 0;
+//   const total = Math.min(txtItems.length, imgGroups.length);
+
+//   function retriggerAnimations(groupEl) {
+//     // 그룹 내 자식들의 애니메이션을 다시 시작시키기 위해 클래스 리셋
+//     const animated = groupEl.querySelectorAll(".stagger"); // 자식들에 .stagger 같은 공통 클래스 부여해둠
+//     animated.forEach(el => {
+//       el.classList.remove("play");
+//       // 리플로우 강제
+//       void el.offsetWidth;
+//       el.classList.add("play");
+//     });
+//   }
+
+//   function updateState(index) {
+//     // txt on 토글
+//     txtItems.forEach(t => t.classList.remove("on"));
+//     txtItems[index].classList.add("on");
+
+//     // 모든 그룹 비활성화
+//     imgGroups.forEach(g => g.classList.remove("is-active"));
+
+//     // 현재 그룹 활성화
+//     const active = imgGroups[index];
+//     if (active) {
+//       active.classList.add("is-active");
+//       retriggerAnimations(active);
+//     }
+//   }
+
+//   // 최초 1회
+//   updateState(currentIndex);
+
+//   // 자동 순환
+//   setInterval(() => {
+//     currentIndex = (currentIndex + 1) % total;
+//     updateState(currentIndex);
+//   }, 4000);
+// });
