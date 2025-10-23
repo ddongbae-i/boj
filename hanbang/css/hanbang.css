@@ -167,7 +167,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-/*     display: none; */ 
+    /*     display: none; */
 }
 
 .sub_main2::before {
@@ -332,13 +332,14 @@ header {
 }
 
 .side-info {
-    font-weight: 600;
+    /*    background: red; */
+    width: 400px;
+    font-family: var(--tit_font);
+    font-weight: 400;
     position: absolute;
-    left: -260px;
+    right: 550px;
     top: 40%;
-    width: 240px;
-    color: #221;
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     opacity: 1;
     line-height: 1.2;
     transition: opacity 0.3s;
@@ -346,17 +347,18 @@ header {
 }
 
 .details {
+    width: 480px;
+    /*     background: red; */
+    font-family: var(--txt_font);
     position: absolute;
-    right: -230px;
-    top: 46%;
-    width: 175px;
+    left: 600px;
+    top: 40%;
     color: #333;
     font-size: 1.07rem;
     opacity: 1;
     line-height: 1.4;
     transition: opacity 0.3s;
 }
-
 
 
 /*_________________________banner1 */
@@ -378,7 +380,6 @@ header {
     align-items: flex-start;
     padding: 44px 0 64px 110px;
     box-sizing: border-box;
-
 }
 
 .banner1_left {
