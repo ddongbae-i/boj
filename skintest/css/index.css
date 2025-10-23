@@ -117,34 +117,9 @@ input[type="radio"]:checked + .option .bullet {border-color: var(--bg_black); bo
     background: #fff;
 }
 
-.product_card {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.add_btn {
-    width: 540px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--txt_sub_44);
-    border: 1px solid var(--grey_de);
-    padding: 14px 0;
-    cursor: pointer;
-
-}
-
-.add_btn img {
-    width: 26px;
-    height: 23px;
-    background: transparent;
-    margin-top: 10px;
-}
+.product_card {width: 100%; height: auto; object-fit: contain;}
+.add_btn {width: 540px; height: 50px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 1rem; font-weight: 400; color: var(--txt_sub_44); border: 1px solid var(--grey_de); padding: 14px 0; cursor: pointer;}
+.add_btn img {width: 26px; height: 23px; background: transparent; margin-top: 10px; border: 1px solid red;}
 
 .info {
     margin-top: 20px;
