@@ -69,15 +69,6 @@ searchBtn.addEventListener('click', () => {
     searchCloseBtn.classList.add('close');
 })
 
-// 검색 버튼: 햄버거 열려 있으면 열지 않음
-searchBtn?.addEventListener('click', (e) => {
-  if (header && header.classList.contains('on')) return;
-  searchTab?.classList.add('open');
-});
-searchCloseBtn?.addEventListener('click', () => {
-  searchTab?.classList.remove('open');
-});
-
 const footerBtn = document.querySelector('.f_nav button');
 const footerMenu = document.querySelector('.f_nav ul');
 
