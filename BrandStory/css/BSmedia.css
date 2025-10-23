@@ -268,7 +268,7 @@
     }
 
     .timeline-divider {
-        left: 20px;
+        display: none;
     }
 
     .timeline-line {
@@ -286,6 +286,10 @@
     .timeline-text {
         width: 100%;
         text-align: left;
+    }
+
+    .timeline-text:nth-child(1) {
+        text-align: right
     }
 
     .timeline-item.reverse .timeline-text {
@@ -483,16 +487,19 @@
     .newsletter-form {
         padding: 1px;
         gap: 12px;
+        height: 60px;
+        max-width: 500px;
     }
 
     .newsletter-form input {
-        padding: 16px 0;
+        padding: 16px 24px;
         font-size: 13px;
     }
 
     .newsletter-form button {
         padding: 11px 24px;
         font-size: 12px;
+        margin-right: 10px;
     }
 
     .disclaimer {

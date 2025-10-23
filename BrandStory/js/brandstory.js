@@ -140,3 +140,46 @@ if (legacySection && legacyHeader) {
     });
 }
 
+
+// 1024px 이하일 때만 Our Philosophy 카드 페이드업 애니메이션
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.philosophy-card');
+
+    function is1024() {
+        return window.innerWidth <= 1024;
+    }
+
+    function initPhilosophyAnimation() {
+        if (!is1024()) return; // 1024px 이하일 때만 실행
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        cards.forEach((card, i) => {
+            gsap.set(card, { opacity: 0, y: 60 });
+
+            gsap.to(card, {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                delay: i * 0.2,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    toggleActions: 'play none none reverse',
+                },
+            });
+        });
+    }
+
+    initPhilosophyAnimation();
+
+    // 화면 크기 변경 시 다시 체크 (데스크탑에서 중복 실행 방지)
+    window.addEventListener('resize', () => {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        initPhilosophyAnimation();
+    });
+});
+
+
