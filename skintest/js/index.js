@@ -342,3 +342,682 @@ window.addEventListener('hashchange', ()=>{
   show(pages.includes(target) ? target : 'home');
   if (target==='result') renderResult();
 });
+
+
+
+// ------------------------------
+// 0) Config
+// ------------------------------
+
+
+  'product1.png','product2.png','product3.png','product4.png','product5.png','product6.png';
+
+// Skin MBTI -> ingredient preferences map
+// You can adjust this mapping to fit your own skin test results.
+const SKIN_MBTI_MAP = {
+  "DRPT": {
+    "good": [
+      "Ceramide",
+      "Panthenol",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Beta-Glucan",
+      "Occlusive Creams",
+      "Vitamin C",
+      "Exfoliating Acids (low %)",
+      "Niacinamide",
+      "Arbutin",
+      "Tranexamic Acid"
+    ],
+    "bad": [
+      "Harsh Foaming Surfactants"
+    ]
+  },
+  "DRPW": {
+    "good": [
+      "Ceramide",
+      "Panthenol",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Beta-Glucan",
+      "Occlusive Creams",
+      "Vitamin C",
+      "Exfoliating Acids (low %)",
+      "Niacinamide",
+      "Arbutin",
+      "Tranexamic Acid"
+    ],
+    "bad": [
+      "Harsh Foaming Surfactants"
+    ]
+  },
+  "DRNT": {
+    "good": [
+      "Ceramide",
+      "Panthenol",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Beta-Glucan",
+      "Occlusive Creams",
+      "Vitamin C",
+      "Exfoliating Acids (low %)",
+      "Barrier Support",
+      "Antioxidants"
+    ],
+    "bad": [
+      "Harsh Foaming Surfactants"
+    ]
+  },
+  "DRNW": {
+    "good": [
+      "Ceramide",
+      "Panthenol",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Beta-Glucan",
+      "Occlusive Creams",
+      "Vitamin C",
+      "Exfoliating Acids (low %)",
+      "Barrier Support",
+      "Retinol",
+      "Retinal"
+    ],
+    "bad": [
+      "Harsh Foaming Surfactants"
+    ]
+  },
+  "DSPT": {
+    "good": [
+      "Ceramide",
+      "Panthenol",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Beta-Glucan",
+      "Occlusive Creams",
+      "Centella",
+      "Madecassoside",
+      "Allantoin",
+      "Mugwort",
+      "Green Tea"
+    ],
+    "bad": [
+      "Harsh Foaming Surfactants",
+      "Alcohol Denat",
+      "Fragrance",
+      "Essential Oil",
+      "Limonene",
+      "Linalool",
+      "High % AHA",
+      "High % BHA"
+    ]
+  },
+  "DSPW": {
+    "good": [
+      "Ceramide",
+      "Panthenol",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Beta-Glucan",
+      "Occlusive Creams",
+      "Centella",
+      "Madecassoside",
+      "Allantoin",
+      "Mugwort",
+      "Green Tea"
+    ],
+    "bad": [
+      "Harsh Foaming Surfactants",
+      "Alcohol Denat",
+      "Fragrance",
+      "Essential Oil",
+      "Limonene",
+      "Linalool",
+      "High % AHA",
+      "High % BHA"
+    ]
+  },
+  "DSNT": {
+    "good": [
+      "Ceramide",
+      "Panthenol",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Beta-Glucan",
+      "Occlusive Creams",
+      "Centella",
+      "Madecassoside",
+      "Allantoin",
+      "Mugwort",
+      "Green Tea"
+    ],
+    "bad": [
+      "Harsh Foaming Surfactants",
+      "Alcohol Denat",
+      "Fragrance",
+      "Essential Oil",
+      "Limonene",
+      "Linalool",
+      "High % AHA",
+      "High % BHA"
+    ]
+  },
+  "DSNW": {
+    "good": [
+      "Ceramide",
+      "Panthenol",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Beta-Glucan",
+      "Occlusive Creams",
+      "Centella",
+      "Madecassoside",
+      "Allantoin",
+      "Mugwort",
+      "Green Tea"
+    ],
+    "bad": [
+      "Harsh Foaming Surfactants",
+      "Alcohol Denat",
+      "Fragrance",
+      "Essential Oil",
+      "Limonene",
+      "Linalool",
+      "High % AHA",
+      "High % BHA"
+    ]
+  },
+  "ORPT": {
+    "good": [
+      "Niacinamide",
+      "Lightweight Humectants",
+      "Green Tea",
+      "Zinc PCA",
+      "Tea Tree",
+      "Salicylic Acid",
+      "Vitamin C",
+      "Exfoliating Acids (low %)",
+      "Arbutin",
+      "Tranexamic Acid",
+      "Rice Extract",
+      "Licorice"
+    ],
+    "bad": [
+      "Coconut Oil",
+      "Isopropyl Myristate",
+      "Lanolin",
+      "Heavy Oils",
+      "Heavy Creams"
+    ]
+  },
+  "ORPW": {
+    "good": [
+      "Niacinamide",
+      "Lightweight Humectants",
+      "Green Tea",
+      "Zinc PCA",
+      "Tea Tree",
+      "Salicylic Acid",
+      "Vitamin C",
+      "Exfoliating Acids (low %)",
+      "Arbutin",
+      "Tranexamic Acid",
+      "Rice Extract",
+      "Licorice"
+    ],
+    "bad": [
+      "Coconut Oil",
+      "Isopropyl Myristate",
+      "Lanolin",
+      "Heavy Oils",
+      "Heavy Creams"
+    ]
+  },
+  "ORNT": {
+    "good": [
+      "Niacinamide",
+      "Lightweight Humectants",
+      "Green Tea",
+      "Zinc PCA",
+      "Tea Tree",
+      "Salicylic Acid",
+      "Vitamin C",
+      "Exfoliating Acids (low %)",
+      "Barrier Support",
+      "Antioxidants"
+    ],
+    "bad": [
+      "Coconut Oil",
+      "Isopropyl Myristate",
+      "Lanolin",
+      "Heavy Oils",
+      "Heavy Creams"
+    ]
+  },
+  "ORNW": {
+    "good": [
+      "Niacinamide",
+      "Lightweight Humectants",
+      "Green Tea",
+      "Zinc PCA",
+      "Tea Tree",
+      "Salicylic Acid",
+      "Vitamin C",
+      "Exfoliating Acids (low %)",
+      "Barrier Support",
+      "Retinol",
+      "Retinal",
+      "Peptide"
+    ],
+    "bad": [
+      "Coconut Oil",
+      "Isopropyl Myristate",
+      "Lanolin",
+      "Heavy Oils",
+      "Heavy Creams"
+    ]
+  },
+  "OSPT": {
+    "good": [
+      "Niacinamide",
+      "Lightweight Humectants",
+      "Green Tea",
+      "Zinc PCA",
+      "Tea Tree",
+      "Salicylic Acid",
+      "Centella",
+      "Madecassoside",
+      "Allantoin",
+      "Mugwort",
+      "Bisabolol",
+      "Low-pH Cleanser"
+    ],
+    "bad": [
+      "Coconut Oil",
+      "Isopropyl Myristate",
+      "Lanolin",
+      "Heavy Oils",
+      "Heavy Creams",
+      "Alcohol Denat",
+      "Fragrance",
+      "Essential Oil",
+      "Limonene",
+      "Linalool"
+    ]
+  },
+  "OSPW": {
+    "good": [
+      "Niacinamide",
+      "Lightweight Humectants",
+      "Green Tea",
+      "Zinc PCA",
+      "Tea Tree",
+      "Salicylic Acid",
+      "Centella",
+      "Madecassoside",
+      "Allantoin",
+      "Mugwort",
+      "Bisabolol",
+      "Low-pH Cleanser"
+    ],
+    "bad": [
+      "Coconut Oil",
+      "Isopropyl Myristate",
+      "Lanolin",
+      "Heavy Oils",
+      "Heavy Creams",
+      "Alcohol Denat",
+      "Fragrance",
+      "Essential Oil",
+      "Limonene",
+      "Linalool"
+    ]
+  },
+  "OSNT": {
+    "good": [
+      "Niacinamide",
+      "Lightweight Humectants",
+      "Green Tea",
+      "Zinc PCA",
+      "Tea Tree",
+      "Salicylic Acid",
+      "Centella",
+      "Madecassoside",
+      "Allantoin",
+      "Mugwort",
+      "Bisabolol",
+      "Low-pH Cleanser"
+    ],
+    "bad": [
+      "Coconut Oil",
+      "Isopropyl Myristate",
+      "Lanolin",
+      "Heavy Oils",
+      "Heavy Creams",
+      "Alcohol Denat",
+      "Fragrance",
+      "Essential Oil",
+      "Limonene",
+      "Linalool"
+    ]
+  },
+  "OSNW": {
+    "good": [
+      "Niacinamide",
+      "Lightweight Humectants",
+      "Green Tea",
+      "Zinc PCA",
+      "Tea Tree",
+      "Salicylic Acid",
+      "Centella",
+      "Madecassoside",
+      "Allantoin",
+      "Mugwort",
+      "Bisabolol",
+      "Low-pH Cleanser"
+    ],
+    "bad": [
+      "Coconut Oil",
+      "Isopropyl Myristate",
+      "Lanolin",
+      "Heavy Oils",
+      "Heavy Creams",
+      "Alcohol Denat",
+      "Fragrance",
+      "Essential Oil",
+      "Limonene",
+      "Linalool"
+    ]
+  }
+};
+
+// If test result not present, use this default
+const DEFAULT_SKIN_MBTI = 'ISFP';
+
+// ------------------------------
+// 1) Utilities
+// ------------------------------
+
+function stripHTML(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html || '';
+  return tmp.textContent || tmp.innerText || '';
+}
+
+function firstSentence(text, fallback='') {
+  if (!text) return fallback;
+  const t = text.replace(/\s+/g,' ').trim();
+  const match = t.match(/(.+?[.!?])(\s|$)/);
+  return (match ? match[1] : t).slice(0, 120);
+}
+// [ADDED] --- Keyword-based subtext generator (single-line) ---
+const SUBTEXT_MAX = 80;
+
+const KNOWN_KEYWORDS = [
+  "Ceramide",
+  "Panthenol",
+  "Glycerin",
+  "Hyaluronic Acid",
+  "Squalane",
+  "Beta-Glucan",
+  "Centella",
+  "Madecassoside",
+  "Allantoin",
+  "Mugwort",
+  "Green Tea",
+  "Bisabolol",
+  "Niacinamide",
+  "Arbutin",
+  "Tranexamic Acid",
+  "Vitamin C",
+  "Rice Extract",
+  "Licorice",
+  "Zinc PCA",
+  "Tea Tree",
+  "Salicylic Acid",
+  "Retinol",
+  "Retinal",
+  "Peptide",
+  "Adenosine",
+  "Sunscreen",
+  "SPF",
+  "Antioxidants",
+  "Low-pH Cleanser",
+  "Occlusive Creams",
+  "Lightweight Humectants",
+  "Barrier Support",
+  "Exfoliating Acids"
+];
+
+function cleanOneLine(s='') {
+  return s.replace(/\s+/g,' ').replace(/[\u200B-\u200D\uFEFF]/g,'').trim();
+}
+
+function dedupeKeepOrder(arr) {
+  const seen = new Set(); const out = [];
+  for (const x of arr) { const k = String(x).trim(); if (!k || seen.has(k.toLowerCase())) continue; seen.add(k.toLowerCase()); out.push(k); }
+  return out;
+}
+
+function extractKeywordsFromText(text='') {
+  const t = stripHTML(text).toLowerCase();
+  const hits = [];
+  for (const kw of KNOWN_KEYWORDS) {
+    const re = new RegExp('\\b' + kw.replace(/\s+/g, '\\s+') + '\\b', 'i');
+    if (re.test(t)) hits.push(kw);
+  }
+  return dedupeKeepOrder(hits).slice(0,4);
+}
+
+function extractKeywordsFromTags(tags) {
+  if (!tags) return [];
+  const raw = Array.isArray(tags) ? tags : String(tags).split(',');
+  const cleaned = raw.map(s=>s.replace(/[_-]/g,' ').trim())
+                     .filter(Boolean)
+                     .filter(s => !/beauty of joseon|boj|skincare|skin care|k-beauty/i.test(s));
+  return dedupeKeepOrder(cleaned).slice(0,4);
+}
+
+function makeSubtext(product) {
+  // priority: tags -> body keywords -> product_type -> fallback first sentence
+  const fromTags = extractKeywordsFromTags(product?.tags);
+  const fromBody = extractKeywordsFromText(product?.body_html || '');
+  let phrase = '';
+  if (fromTags.length) {
+    phrase = fromTags.join(', ');
+  } else if (fromBody.length) {
+    phrase = fromBody.join(', ');
+  } else if (product?.product_type) {
+    phrase = product.product_type;
+  } else {
+    phrase = firstSentence(stripHTML(product?.body_html||''), '').replace(/^Beauty of Joseon\s*[-–]*\s*/i,'');
+  }
+  phrase = cleanOneLine(phrase);
+  if (phrase.length > SUBTEXT_MAX) phrase = phrase.slice(0, SUBTEXT_MAX-1) + '…';
+  return phrase;
+}
+// [ADDED] --- end ---
+
+function pickRepresentative(arr=[], max=2) {
+  // pick up to max unique items preserving order
+  const out = [];
+  for (const x of arr) {
+    if (!x || out.includes(x)) continue;
+    out.push(x);
+    if (out.length >= max) break;
+  }
+  return out;
+}
+
+function computeMatchScore(productInciSet, goodList, badList) {
+  // naive scoring: +15 for each good match, -20 for each bad match. Clamp 0..100.
+  let score = 70;
+  const goodHits = goodList.filter(g => productInciSet.has(g.toLowerCase())).length;
+  const badHits  = badList.filter(b => productInciSet.has(b.toLowerCase())).length;
+  score += goodHits * 15;
+  score -= badHits * 20;
+  return Math.max(0, Math.min(100, score));
+}
+
+function extractIngredientsFromBody(bodyHTML) {
+  // Try common patterns in Shopify descriptions
+  const text = stripHTML(bodyHTML).replace(/\r?\n/g,' ').trim();
+  // look for "Ingredients:" or similar
+  const m = text.match(/ingredients?\s*[:\-]\s*(.+)$/i);
+  if (!m) return [];
+  // split by commas
+  return m[1].split(/,|\uFF0C/).map(s => s.trim()).filter(Boolean);
+}
+
+function toSetLower(arr) {
+  return new Set(arr.map(s => s.toLowerCase()));
+}
+
+function preload(src) {
+  if (!src) return;
+  const img = new Image();
+  img.src = src;
+}
+
+// ------------------------------
+// 2) Core: Fetch products from BOJ
+// ------------------------------
+
+/* ========================= [ADDED] Product tags + MBTI score + wishlist toggle (1+ items show) ========================= */
+
+(function(){
+  // 제품별 표시할 태그(좋은 2개, 나쁜 2개)
+  const PRODUCT_TAGS = {
+    "Dynasty Cream": {
+      good: ["Rice Bran Water", "Ginseng Root Extract"],
+      bad:  ["Fragrance", "Essential Oil"]
+    },
+    "Glow Replenishing Rice Milk": {
+      good: ["Rice Extract", "Niacinamide"],
+      bad:  ["Fragrance", "Essential Oil"]
+    },
+    "Ginseng Essence Water": {
+      good: ["Ginseng Extract", "Panthenol"],
+      bad:  ["Alcohol Denat", "Fragrance"]
+    },
+    "Revive Serum: Ginseng + Snail Mucin": {
+      good: ["Ginseng Extract", "Snail Mucin"],
+      bad:  ["Fragrance", "Essential Oil"]
+    },
+    "Ginseng Cleansing Oil": {
+      good: ["Soybean Oil", "Ginseng Seed Oil"],
+      bad:  ["Isopropyl Myristate", "Fragrance"]
+    },
+    "Day Dew Sunscreen": {
+      good: ["Hyaluronic Acid", "Niacinamide"],
+      bad:  ["Octocrylene", "Homosalate"]
+    }
+  };
+
+  // 1개 이상이면 표시, 0개면 숨김
+  function setSpanTextOrHide(span, items, joiner=", "){
+    const arr = Array.isArray(items)
+      ? items.filter(v => typeof v === "string" && v.trim().length > 0)
+      : [];
+
+    if (arr.length >= 1){
+      span.textContent = arr.join(joiner);
+      span.style.display = "";
+    } else {
+      span.textContent = "";
+      span.style.display = "none";
+    }
+  }
+
+  // 각 span에 “하나의 항목”만 배치
+  function setSingleOrHide(span, value){
+    if (value && String(value).trim().length){
+      setSpanTextOrHide(span, [String(value).trim()]);
+    } else {
+      setSpanTextOrHide(span, []); // 숨김
+    }
+  }
+
+  function computeMbtiScoreForCard(mbtiStr){
+    const s = String(mbtiStr||"").trim().toUpperCase();
+    let score = 78;
+    if (!s || s.length<4) return 78;
+
+    score += (s[0] === "D") ? 10 : -8; // D(건성) 가산, O(지성) 감산
+    score += (s[1] === "S") ? 5 : 2;   // S(민감) 가산, R(저자극) 소가산
+    score += (s[3] === "W") ? 3 : 0;   // W(주름 경향) 소가산
+
+    if (score < 50) score = 50;
+    if (score > 98) score = 98;
+    return Math.round(score);
+  }
+
+  function fillProducts(){
+    const cards = document.querySelectorAll(".product_card");
+    if (!cards.length) return;
+
+    const mbtiEl = document.getElementById("mbti");
+    const mbtiText = mbtiEl ? mbtiEl.textContent : "";
+
+    cards.forEach(card => {
+      const nameEl = card.querySelector(".info h3");
+      const spans = card.querySelectorAll(".tags span");
+      const scoreEl = card.querySelector(".info .score");
+      const name = nameEl ? nameEl.textContent.trim() : "";
+
+      // 1) tags: 각 span에 하나씩(중복 없음)
+      const map = PRODUCT_TAGS[name];
+      if (map && spans.length){
+        // 기대 순서: 0=good[0], 1=good[1], 2=bad[0], 3=bad[1]
+        if (spans[0]) setSpanTextOrHide(spans[0], [map.good?.[0]].filter(Boolean));
+        if (spans[1]) setSpanTextOrHide(spans[1], [map.good?.[1]].filter(Boolean));
+        if (spans[2]) setSpanTextOrHide(spans[2], [map.bad?.[0]].filter(Boolean));
+        if (spans[3]) setSpanTextOrHide(spans[3], [map.bad?.[1]].filter(Boolean));
+      }
+
+      // 2) score
+      const sc = computeMbtiScoreForCard(mbtiText);
+      if (scoreEl){
+        scoreEl.textContent = `Score : ${String(sc).padStart(2,"0")} / 100`;
+      }
+    });
+  }
+
+  function initWishlistToggle(){
+    document.querySelectorAll(".product_card .add_btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("is-liked");
+        const pressed = btn.classList.contains("is-liked");
+        btn.setAttribute("aria-pressed", pressed ? "true" : "false");
+
+        const heart = btn.querySelector("img.heart");
+        if (heart && heart.src){
+          if (/icon_heart_stroke\.svg$/i.test(heart.src)){
+            heart.src = heart.src.replace(/icon_heart_stroke\.svg$/i, "icon_heart_fill.svg");
+          } else {
+            heart.src = heart.src.replace(/icon_heart_fill\.svg$/i, "icon_heart_stroke.svg");
+          }
+        }
+      });
+    });
+  }
+
+  // DOM 준비/탭 전환 시 갱신
+  window.addEventListener("DOMContentLoaded", () => {
+    fillProducts();
+    initWishlistToggle();
+  });
+  window.addEventListener("hashchange", () => {
+    const target = (location.hash ? location.hash.replace("#","") : "") || "home";
+    if (target === "result") fillProducts();
+  });
+})();
+
+/* ========================= [ADDED END] ========================= */

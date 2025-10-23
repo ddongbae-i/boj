@@ -88,56 +88,59 @@ input[type="radio"]:checked + .option .bullet {border-color: var(--bg_black); bo
 .center {font-family: var(--txt_font); font-size: 1.125rem; font-weight: 300; text-align: center;}
 
 
-
-
 /* Products */
 .product-tit {padding-top: 100px; font-family: var(--tit_font); font-size: 2.5rem; font-weight: 500; text-align: center;}
-.product {position: relative; width: 100%; height: 2600px; color: #fff; padding: 50px;}
-.product_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px 37px;
-    /*세로 , 열 폭  */
+.product {position: relative; width: 100%; height: 2000px; color: #fff; padding: 50px;}
+.product_grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 80px 37px; /*세로 , 열 폭  */}
+
+.product_card {position: relative; text-align: center;}
+.product_card .product_img {width: 100%; height: auto; margin-bottom: 8px; background: var(--img_bg);}
+.product_card .tags {display: flex; flex-wrap: wrap; gap: 6px;}
+.tags span {display: inline-block; margin: 12px 2px 2px 2px; padding: 4px 8px; font-size: 0.875rem; border: 1px solid var(--txt_sub_77); border-radius: 2px; cursor: pointer;}
+
+/* .product_card .tags span {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 999px;       /* pill 형태 */
+  border: 1px solid currentColor; /* 각 태그 색상과 동일한 보더 */
+  background-clip: padding-box;
 }
 
-.product_card {
-    position: relative;
-    text-align: center;
+/* 1: 좋음1 (그린) */
+.product_card .tags span:nth-child(1) {
+  color: #16a34a;               /* emerald-600 */
+  background-color: #16a34a1a;  /* 10% 투명 배경 */
 }
 
-.product_card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 8px;
-    background: var(--img_bg);
+/* 2: 좋음2 (티얼) */
+.product_card .tags span:nth-child(2) {
+  color: #0ea5a4;               /* teal-600 */
+  background-color: #0ea5a41a;
 }
 
-.badge.new {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 0.75rem;
-    padding: 4px 8px;
-    border-radius: 2px;
-    border: 1px solid var(--greentea);
-    color: var(--greentea);
-    background: #fff;
+/* 3: 나쁨1 (레드) */
+.product_card .tags span:nth-child(3) {
+  color: #dc2626;               /* red-600 */
+  background-color: #dc26261a;
 }
 
-.product_card {width: 100%; height: auto; object-fit: contain;}
-.product_card img {width: 100%; height: auto; margin-bottom: 8px; background: var(--img_bg);}
-.add_btn {width: 577px; height: 50px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 1rem; font-weight: 400; color: var(--txt_sub_44); border: 1px solid var(--grey_de); padding: 14px 0; cursor: pointer;}
-.add_btn img {width: 25px; height: 22px; background: transparent; margin-top: 10px;}
+/* 4: 나쁨2 (앰버/오렌지) */
+.product_card .tags span:nth-child(4) {
+  color: #f59e0b;               /* amber-500 */
+  background-color: #f59e0b1a;
+}
 
-.info {margin-top: 20px; color: var(--txt_main); text-align: left;}
-.info h3 {height: 50px; font-size: 1.125rem;}
-.info p {color: var(--txt_sub_77); font-size: 0.875rem; margin-bottom: 10px;}
+/* 숨김 처리(값이 없을 때 JS가 display:none 지정하면 그대로 따름) */
+.product_card .tags span[style*="display: none"] {
+  display: none !important;
+} */
+
+.info {height: 100px; margin-top: 20px; color: var(--txt_main); text-align: left;}
+.info h3 {height: 30px; font-size: 1.125rem;}
+.info p {color: var(--txt_sub_77); font-size: 0.875rem; margin-bottom: 20px;}
 .info span {color: var(--txt_sub_77); font-size: 0.875rem; margin-bottom: 10px;}
-.tags span {display: inline-block;
-    margin: 12px 2px 2px 2px;
-    padding: 4px 8px;
-    font-size: 0.875rem;
-    border: 1px solid var(--txt_sub_77);
-    border-radius: 2px;
-    cursor: pointer;
-}
+
+.product_card .add_btn {width: 577px; height: 50px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 1rem; font-weight: 400; color: var(--txt_sub_44); border: 1px solid var(--grey_de); padding: 14px 0; cursor: pointer;}
+.product_card .add_btn img {width: 25px; height: 22px; background: transparent;}
