@@ -148,7 +148,7 @@ footerBtn?.addEventListener('click', function () {
     scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
     document.documentElement.classList.add('menu-open');
     document.body.classList.add('menu-open');
-    document.body.style.position = 'fixed';
+    /*     document.body.style.position = 'fixed'; */
     document.body.style.top = `-${scrollY}px`;
     document.body.style.left = '0';
     document.body.style.width = '100%';
@@ -222,4 +222,4 @@ footerBtn?.addEventListener('click', function () {
   });
 
 })();
- // ...existing code...
+// ...existing code...
