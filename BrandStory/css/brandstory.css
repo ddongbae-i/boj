@@ -833,7 +833,7 @@ html {
 
 /* Section 5: Cultural Heritage */
 .section-5 {
-  background: linear-gradient(90deg, #fefefe, #fdfefe, #f7f7f7);
+  background: url(../img/image-6890.png) bottom center no-repeat, linear-gradient(90deg, #fefefe, #fdfefe, #f7f7f7);
   padding: 100px 0;
   overflow: hidden
 }
@@ -877,11 +877,27 @@ html {
   padding-top: 80px;
 }
 
+
+
+.articles {
+  width: 935px;
+  display: flex;
+  flex-direction: column;
+  /* background: #ccc; */
+  margin-inline: auto;
+  position: relative;
+  background: #ccc;
+  padding-top: 100px;
+}
+
 .timeline-divider {
-  width: 96px;
-  height: 1px;
-  background: linear-gradient(180deg, transparent, var(--text-main), transparent);
-  margin: 0 auto 80px;
+  width: 1px;
+  height: 96px;
+  background: #000;
+  /*   background: linear-gradient(180deg, transparent, var(--text-main), transparent); */
+  position: absolute;
+  left: 50%;
+  top: 0;
 }
 
 .timeline-item {
@@ -890,10 +906,12 @@ html {
   justify-content: center;
   gap: 80px;
   margin-bottom: 80px;
+  align-self: flex-start;
 }
 
 .timeline-item.reverse {
-  flex-direction: row-reverse;
+  align-self: flex-end;
+  /* flex-direction: row-reverse; */
 }
 
 .timeline-text {
