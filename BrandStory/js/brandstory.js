@@ -88,3 +88,6 @@ window.addEventListener('load', function () {
 window.addEventListener('resize', () => {
     ScrollTrigger.getAll().forEach(trigger => trigger.refresh());
 });
+
+
+
