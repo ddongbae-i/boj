@@ -74,111 +74,69 @@ window.addEventListener('load', function () {
     console.log('✅ Interaction-only timeline complete!');
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const rows = document.querySelectorAll('.gallery-row');
-    rows.forEach((row, i) => {
-        const originalItems = row.innerHTML;
-        row.innerHTML = originalItems + originalItems + originalItems;
 
-        gsap.to(row, {
-            xPercent: -33,
-            duration: 20 + i * 5,
-            repeat: -1,
-            ease: 'none',
-        });
+const rows = document.querySelectorAll('.gallery-row');
+rows.forEach((row, i) => {
+    const originalItems = row.innerHTML;
+    row.innerHTML = originalItems + originalItems + originalItems;
 
-        gsap.from(row, {
-            opacity: 0,
-            y: 40,
-            duration: 1.2,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: row,
-                start: 'top 85%',
-            },
-        });
+    gsap.to(row, {
+        xPercent: -33,
+        duration: 20 + i * 5,
+        repeat: -1,
+        ease: 'none',
+    });
+
+    gsap.from(row, {
+        opacity: 0,
+        y: 40,
+        duration: 1.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: row,
+            start: 'top 85%',
+        },
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const legacySection = document.querySelector('.legacy-section');
-    const legacyHeader = document.querySelector('.legacy-header');
+const legacySection = document.querySelector('.legacy-section');
+const legacyHeader = document.querySelector('.legacy-header');
 
-    if (legacySection && legacyHeader) {
-        legacyHeader.addEventListener('click', function (e) {
-            if (window.innerWidth <= 1024) {
-                e.stopPropagation();
-                const active = legacySection.classList.toggle('active');
+if (legacySection && legacyHeader) {
+    legacyHeader.addEventListener('click', function (e) {
+        if (window.innerWidth <= 1024) {
+            e.stopPropagation();
+            const active = legacySection.classList.toggle('active');
 
-                if (active) {
-                    gsap.fromTo(
-                        legacySection,
-                        { height: 0, opacity: 0 },
-                        { height: 'auto', opacity: 1, duration: 0.6, ease: 'power2.out' }
-                    );
-                } else {
-                    gsap.to(legacySection, {
-                        height: 0,
-                        opacity: 0,
-                        duration: 0.5,
-                        ease: 'power2.inOut',
-                    });
-                }
+            if (active) {
+                gsap.fromTo(
+                    legacySection,
+                    { height: 0, opacity: 0 },
+                    { height: 'auto', opacity: 1, duration: 0.6, ease: 'power2.out' }
+                );
+            } else {
+                gsap.to(legacySection, {
+                    height: 0,
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: 'power2.inOut',
+                });
             }
-        });
-
-        window.addEventListener('resize', function () {
-            if (window.innerWidth > 1024) {
-                legacySection.classList.remove('active');
-                gsap.set(legacySection, { height: 'auto', opacity: 1 });
-            }
-        });
-
-        document.addEventListener('click', function (e) {
-            if (window.innerWidth <= 1024 && !e.target.closest('.legacy-section')) {
-                legacySection.classList.remove('active');
-                gsap.to(legacySection, { height: 0, opacity: 0, duration: 0.4 });
-            }
-        });
-    }
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.philosophy-card');
-
-    function is1024() {
-        return window.innerWidth <= 1024;
-    }
-
-    function initPhilosophyAnimation() {
-        if (!is1024()) return; // 1024px 이하일 때만 실행
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        cards.forEach((card, i) => {
-            gsap.set(card, { opacity: 0, y: 60 });
-
-            gsap.to(card, {
-                opacity: 1,
-                y: 0,
-                duration: 1.2,
-                delay: i * 0.2,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse',
-                },
-            });
-        });
-    }
-
-    initPhilosophyAnimation();
-
-    // 화면 크기 변경 시 다시 체크 (데스크탑에서 중복 실행 방지)
-    window.addEventListener('resize', () => {
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-        initPhilosophyAnimation();
+        }
     });
-});
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 1024) {
+            legacySection.classList.remove('active');
+            gsap.set(legacySection, { height: 'auto', opacity: 1 });
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (window.innerWidth <= 1024 && !e.target.closest('.legacy-section')) {
+            legacySection.classList.remove('active');
+            gsap.to(legacySection, { height: 0, opacity: 0, duration: 0.4 });
+        }
+    });
+}
+
