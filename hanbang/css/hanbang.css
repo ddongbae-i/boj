@@ -3,9 +3,8 @@
 header {
     width: 100%;
     height: 124px;
-    background: rgba(255, 255, 255, 0.8);
+    background: transparent;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10;
 }
 
 .main {
@@ -23,8 +22,10 @@ header {
 .main_tit .line {
     width: 100%;
     height: 45px;
-    margin-top: 208px;
+    margin-top: 85px;
 }
+
+
 
 .main .main_tit h2 {
     width: 100%;
@@ -53,7 +54,7 @@ header {
 .scroll {
     position: absolute;
     left: 50%;
-    bottom: 20px;
+    bottom: 60px;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -63,8 +64,8 @@ header {
 .scroll span {
     display: block;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-left: 2px solid #fff;
     border-bottom: 2px solid #fff;
     transform: rotate(-45deg);
@@ -120,6 +121,7 @@ header {
     height: 100%;
     background: url(../img/bg_img.png) center/cover no-repeat;
     opacity: 0.2;
+    z-index: 0;
 }
 
 .sub_main h2 {
@@ -149,6 +151,7 @@ header {
 }
 
 .sub_main p {
+    width: 655px;
     /* flex: 1; */
     text-align: right;
     font-size: 1.25rem;
@@ -372,7 +375,6 @@ header {
     background: url('../img/banner01.png') right center/cover no-repeat;
 }
 
-
 .banner1 .inner {
     width: 100%;
     height: 300px;
@@ -413,7 +415,6 @@ header {
 }
 
 .banner1_right {
-    width: 700px;
     display: flex;
     align-items: center;
     font-size: 1.125rem;
@@ -467,7 +468,6 @@ header {
     transition: color 0.3s ease;
 }
 
-/*  */
 .product_filter li::after {
     content: "";
     position: absolute;
@@ -476,41 +476,19 @@ header {
     width: 100%;
     height: 2px;
     background-color: var(--txt_main);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 320ms cubic-bezier(.2, .8, .2, 1);
-    /* opacity로 숨기지 않고 스케일로 애니메이션 처리 */
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .product_filter li:hover {
     color: var(--txt_main);
 }
 
-.product_filter li:hover::after,
-.product_filter li.active::after {
-    transform: scaleX(1);
-}
-
-
-
-.product_filter li.active {
-    color: var(--txt_main);
-    /* 활성 탭 글자 색 */
-}
-
-.product_filter li.active::after {
+.product_filter li:hover::after {
     opacity: 1;
     transform: translateY(0);
-}
-
-.product_filter li.active {
-    color: var(--txt_main);
-    /* 활성 탭 글자 색 */
-}
-
-.product_filter li.active::after {
-    opacity: 1;
-    transform: translateY(0);
+    /* 제자리로 올라옴 */
 }
 
 .product_grid {
@@ -523,11 +501,6 @@ header {
 .product_card {
     position: relative;
     text-align: center;
-    display: none;
-}
-
-.product_card.ginseng {
-    display: block;
 }
 
 .product_card img {
@@ -562,8 +535,6 @@ header {
     width: 100%;
     height: auto;
     object-fit: contain;
-    transition: 3s;
-    /*  확인 */
 }
 
 .add_btn {
@@ -602,7 +573,6 @@ header {
 .info {
     margin-top: 20px;
     color: var(--txt_main);
-    font-weight: 400;
     text-align: left;
 }
 
@@ -657,8 +627,8 @@ header {
     font-size: 1rem;
     color: var(--txt_sub_44);
     cursor: pointer;
-    background: transparent;
 }
+
 
 .star {
     margin-top: 24px;
@@ -669,46 +639,20 @@ header {
 /*_________________________ banner2*/
 .banner2 {
     position: relative;
-    /* 자식 요소를 겹치게 하기 위해 필요 */
     width: 100%;
     height: 515px;
+    background: url('../img/banner2.png') center/cover no-repeat;
     display: flex;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
-}
-
-.banner2_img {
-    position: absolute;
-    /* 텍스트 뒤로 보내기 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* 이미지 비율 유지하면서 영역 채우기 */
-    z-index: 0;
-    /* txt_box 뒤에 위치 */
-    transition: transform 3s cubic-bezier(.2, .8, .2, 1);
-}
-
-.banner2:hover .banner2_img,
-.banner2:focus-within .banner2_img {
-    transform: scale(1.02);
+    justify-content: center;
 }
 
 .banner2 .txt_box {
-    position: relative;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    width: 90%;
-    max-width: 680px;
+    background: rgba(255, 255, 255, 0.85);
+    width: 680px;
     height: 240px;
-    padding: 20px;
     text-align: center;
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 43px;
 }
 
 .banner2 .txt_box h2 {

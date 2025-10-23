@@ -140,10 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return idClass || null;
   };
 
-  const applyState = (btn, on) => {
-    btn.classList.toggle('active', on);
-    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-  };
+//             const flipOnce = (el) => {
+//                 el.classList.remove('do-flip');
+//                 void el.offsetWidth; // 강제 리플로우
+//                 el.classList.add('do-flip');
+//                 setTimeout(() => el.classList.remove('do-flip'), DURATION);
+//             };
 
   document.querySelectorAll('.influencer .wish').forEach((btn) => {
     const id = getId(btn);
