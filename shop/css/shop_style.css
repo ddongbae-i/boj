@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+
+a.btn2 {
+    height: 40px;
+    font-size: 1.125rem;
+    display: flex;
+    color: #fff;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.btn2:after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/arrow_up.svg);
+}
+
+.puzzle {
+    background: var(--bg_black);
+    width: 100%;
+    height: 100vh;
+}
+
+.puzzle .inner {
+    display: flex;
+}
+
+.puzzle_wrap {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-block: 110px;
+}
+
+.puzzle_wrap img {
+    width: 240px;
+    height: 240px;
+}
+
+.puzzle_right {
+    width: 450px;
+    height: 280px;
+    text-align: center;
+    margin-block: auto;
+}
+
+.puzzle .tit {
+    width: 450px;
+    line-height: 1.2;
+    margin-inline: auto;
+}
+
+.puzzle .txt_area {
+    color: var(--white_ff);
+}
+
+.puzzle .txt_area .txt {
+    width: 450px;
+    line-height: 1.4;
+    font-size: 1.125rem;
+    margin-inline: auto;
+    margin-top: 12px;
+    color: var(--grey_c7);
+}
+
+.puzzle .btn_box {
+    display: flex;
+    gap: 12px;
+    color: var(--white_ff);
+    margin-top: 60px;
+    justify-content: center;
+}
+
+.puzzle .btn {
+    border-color: var(--white_ff);
+}
+
+.sale_zone .inner {
+    background: var(--bg_black);
+    color: var(--white_ff);
+    padding-block: 60px;
+    display: flex;
+}
+
+.sale_zone .txt_area {
+    width: 500px;
+}
+
+.sale_zone .txt {
+    margin-top: 12px;
+    color: var(--grey_c7);
+    width: 220px;
+    line-height: 140%;
+}
+
+.sale_zone .btn2 {
+    color: var(--white_ff);
+}
+
+.product_wrap {
+    display: flex;
+    gap: 37px;
+}
+
+.pro_card {
+    width: 542px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pro_card .pro_img {
+    width: 100%;
+    height: 542px;
+    background: var(--shop_bg);
+}
+
+.pro_card .add_btn {
+    width: 100%;
+    height: 50px;
+    background: var(--white_f0);
+    color: var(--txt_main);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.pro_bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pro_tit {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin-top: 16px;
+}
+
+.pro_bottom {
+    margin-top: 27px;
+    font-size: 1.5rem;
+}
+
+.pro_bottom .p_left em {
+    color: var(--propulis);
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.pro_bottom .price {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.pro_bottom s {
+    margin-left: 4px;
+    font-size: 1rem;
+    color: var(--grey_aa);
+}
+
+.p_right {
+    width: 130px;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--grey_de);
+    margin-right: 24px;
+    border-bottom: 1px solid var(--grey_de);
+}
+
+.p_right .option {
+    width: 100%;
+    position: relative;
+    height: 32px;
+    font-weight: 300;
+    color: var(--grey_de);
+}
+
+.p_right .option button {
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.p_right .option button em {
+    display: flex;
+    width: 100%;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+
+.p_right .option button em::after {
+    content: url(../img/icon_shop_down_w.svg);
+}
+
+.p_right .option ul {
+    position: absolute;
+    left: 0;
+    top: 33px;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: none;
+    border-radius: 0 0 4px 4px;
+    border-bottom: 0;
+    padding: 10px;
+    color: var(--txt_sub_44);
+    font-size: 1rem;
+}
+
+.p_right .option ul li:first-child {
+    margin-bottom: 8px;
+}
+
+.p_right .option ul.active ul {
+    display: block;
+}
