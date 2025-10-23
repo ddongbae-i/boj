@@ -164,3 +164,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+ /* -------------------------------
+      한방 ON 상황
+  ------------------------------- */
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const buttons = document.querySelectorAll(".txt_left ul button, .txt_right ul button");
+//   const txtBoxes = document.querySelectorAll(".txt_left ul, .txt_right ul");
+//   const imgBoxes = document.querySelectorAll(".img_box > div");
+
+//   buttons.forEach((button, index) => {
+//     button.addEventListener("click", function () {
+//       // 모든 텍스트 영역에서 .on 제거
+//       txtBoxes.forEach(box => box.classList.remove("on"));
+
+//       // 클릭한 텍스트 박스에 .on 추가
+//       txtBoxes[index].classList.add("on");
+
+//       // 모든 이미지 숨기기
+//       imgBoxes.forEach(img => img.style.display = "none");
+
+//       // 해당 이미지 보이기
+//       imgBoxes[index].style.display = "block";
+//     });
+//   });
+// });
+
+
+ /* -------------------------------
+      한방 이미지 ON 상황
+------------------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const txtBoxes = document.querySelectorAll(".hanbang .txt_left ul, .hanbang .txt_right ul");
+  const imgBoxes = document.querySelectorAll(".hanbang .inner .img_box img, .hanbang .inner .img_box>div .imgTxt li");
+  let currentIndex = 0;
+  const total = txtBoxes.length;
+
+  function updateState(index) {
+    // 모든 txt 요소에서 .on 제거
+    txtBoxes.forEach(txt => txt.classList.remove("on"));
+    // 현재 txt에 .on 추가
+    txtBoxes[index].classList.add("on");
+
+    // 모든 이미지 숨김
+    imgBoxes.forEach(img => img.style.display = "none");
+    // 현재 이미지 보이기
+    if (imgBoxes[index]) {
+      imgBoxes[index].style.display = "block";
+    }
+  }
+
+  // 최초 1회 실행
+  updateState(currentIndex);
+
+  // 자동 순환
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % total;
+    updateState(currentIndex);
+  }, 4000); // 4초마다 전환
+});
+
