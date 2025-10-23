@@ -12,12 +12,14 @@
     }
 
     .main_tit .line {
+        margin-bottom: 15px;
         width: 400px;
         height: 36px;
     }
 
     .main_tit .line img {
-        width: 100%;
+        width: 400px;
+        height: 36px;
     }
 
     .main .main_tit h2 {
@@ -26,6 +28,11 @@
 
     .main .main_tit p {
         font-size: 1.125rem;
+        width: calc(100% - 112px);
+        /* 좌우 56px씩 제외 */
+        padding: 25px 0 0;
+        /* 상 25px, 좌우 56px */
+        box-sizing: border-box;
     }
 
     .scroll {
@@ -45,7 +52,7 @@
     /* sub_mian */
     .sub_main {
         width: 100%;
-        height: 700px;
+        height: 100vh;
         flex-direction: column;
         justify-content: flex-end;
         gap: 32px;
@@ -76,6 +83,25 @@
         width: 350px;
         height: 350px;
         margin-bottom: 24px;
+    }
+
+    /* sub_main2____________ */
+
+    .side_info,
+    .details {
+        position: static;
+        /* 기존 absolute 제거 */
+        text-align: center;
+        /* 중앙 정렬 */
+        width: 100%;
+        /* 좌우 여백 확보 */
+        margin: 630px auto 0 auto;
+        /* 옥타곤 아래로 spacing */
+    }
+
+    .details {
+        margin-top: 6px;
+        text-align: left;
     }
 
     /*_________________________banner1 */
@@ -194,9 +220,7 @@
         height: 510px;
     }
 
-    .main_tit .line {
-        margin-top: 140px;
-    }
+    .main_tit .line {}
 
     .main_tit .line img {
         width: 350px;
@@ -219,6 +243,9 @@
     .sub_main p {
         display: none;
     }
+
+
+
 
     .banner1 {
         height: 300px;
@@ -249,11 +276,35 @@
     .product {
         height: 2200px;
         padding: 90px 42px 0;
+
     }
 
     .product_grid {
         grid-template-columns: repeat(2, 1fr);
+
     }
+
+
+    /* filter */
+
+
+    .product_filter ul {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        /* 모바일 부드러운 스크롤 */
+        scrollbar-width: none;
+        /* Firefox 스크롤바 숨김 */
+        gap: 30px;
+        scroll-behavior: smooth;
+        /* 기존 간격 유지 */
+    }
+
+    .product_filter ul::-webkit-scrollbar {
+        display: none;
+
+    }
+
 
     /*_________________________768 banner2*/
     .banner2 {
@@ -318,84 +369,86 @@
 
 
 @media screen and (max-width:360px) {
+    .main {
+        width: 100%;
+        height: 400px;
+    }
+
+    .main .main_tit h2 {
+        width: 100%;
+        margin-top: 70px;
+        font-size: 0.875rem;
+    }
+
+    .main .main_tit p {
+        width: 320px;
+        font-size: 0.75rem;
+        padding: 0 20px;
+    }
+
+    .main .line img {
+        width: 150px;
+        height: 15px;
+        margin-top: 70px;
+    }
 
     .product_grid {
         grid-template-columns: 1fr;
     }
 
+    .scroll span {
+        display: none;
+    }
 
-    /* 커뮤니티 */
-    .community {
-        flex-direction: column;
-        /* 세로 배치 */
-        align-items: center;
+    .banner1,
+    .banner1 .inner {
+        flex-direction: column !important;
+        /* 세로 구조로 전환 */
         height: auto;
-        /* 자동 높이 */
-        padding: 0 20px;
-    }
-
-    /* 왼쪽 이미지 */
-    .community .left {
-        width: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .community .left img {
-        width: 90%;
-        height: auto;
-        object-fit: cover;
-        margin: 0 auto 20px;
-    }
-
-    /* 오른쪽 텍스트 영역 */
-    .community .right {
-        width: 100%;
-        text-align: center;
-        height: auto;
-
-    }
-
-    .community .right h2 {
-        font-size: 1.125rem;
-        text-align: left;
-    }
-
-    .community .right p {
-        font-size: 0.875rem;
-        text-align: left;
-    }
-
-    /* 링크 박스 영역 */
-    .community .link_box {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        min-height: unset;
+        padding: 20px 10px 20px 10px;
+        box-sizing: border-box;
         align-items: flex-start;
-        gap: 12px;
-        flex-wrap: nowrap;
-        padding: 0 20px;
-        width: 100%;
     }
 
-    /* 각 박스 */
-    .community .link_box .box {
+    .banner1_left {
+        order: 1;
         width: 100%;
-        height: auto;
-        text-align: center;
+        margin: 0 0 12px 0;
+        font-size: 1.6rem;
     }
 
-    .community .link_box .box img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+    .banner1_left h2 {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
     }
 
-    .community .link_box .box a {
-        font-size: 0.7rem;
-        width: 100%;
-        text-align: left;
-
+    .banner1_left ul {
+        padding: 0;
     }
+
+    .banner1_left li {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .sub_tit,
+    .sub_txt {
+        width: auto !important;
+        font-size: 0.85rem;
+        margin-right: 0;
+    }
+
+    .banner1_right {
+        order: 2;
+        width: 100%;
+        font-size: 0.85rem;
+        margin: 0 0 0 0;
+        padding: 0;
+        margin-top: 0;
+        align-items: flex-start;
+    }
+
+
 }
