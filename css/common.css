@@ -74,6 +74,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     /* display: none; */
     /* dn 지우기 */
 }
@@ -139,7 +140,7 @@ nav ul.gnb:hover>li {
     color: var(--txt_sub_77);
 }
 
-nav ul.gnb>li:hover a {
+nav ul.gnb>li:hover >a {
     color: var(--txt_main);
 }
 
@@ -173,7 +174,6 @@ nav .sub_wrap .sub {
     display: flex;
     flex-direction: column;
     padding: 30px 110px 0;
-    height: 400px;
     flex-wrap: wrap;
 }
 
@@ -236,7 +236,6 @@ nav .sub_wrap .sub_img img {
 
 .search_tab form {
     margin-top: 36px;
-
     padding-bottom: 20px;
     border-bottom: 1px solid var(--txt_main);
 }

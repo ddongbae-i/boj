@@ -2,10 +2,55 @@
 
 @media screen and (max-width:1600px) {
 
+<<<<<<< HEAD
+=======
+
+    header .inner .gnb {
+        font-size: 1.125rem
+    }
+
+    nav ul.gnb>li>a {
+        padding: 20px;
+    }
+
+    .ham_bottom ul li a {
+        font-size: 1.125rem;
+    }
+
+    .ham_bottom ul li a img {
+        width: 24px;
+    }
+
+
+}
+
+@media screen and (max-width:1280px) {
+
+    body.menu-open,
+    html.menu-open {
+        overflow: hidden;
+        height: 100%;
+    }
+    
+
+    header.on {
+        background: var(--bg_white);
+    }
+
+    .inner {
+        width: min(100%, calc(1700px + 56px * 2));
+        padding-inline: 56px;
+    }
+
+>>>>>>> 0ae06dc4369854816759b954fff464470db4e128
     header.on .inner {
         padding-inline: 56px;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0ae06dc4369854816759b954fff464470db4e128
     header.on .logo {
         display: none;
     }
@@ -70,10 +115,28 @@
     }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width:1300px) {
 
     .nav_right {
         width: none;
+=======
+    header.on nav .sub_wrap .sub {
+        padding-inline: 56px;
+    }
+
+    .ham_bottom {
+        left: 56px;
+    }
+
+
+    header.on nav ul.gnb>li .sub_img {
+        width: 310px;
+        height: 310px;
+        padding-top: 30px;
+        padding-right: 56px;
+        margin-left: auto;
+>>>>>>> 0ae06dc4369854816759b954fff464470db4e128
     }
 
         header.on nav ul.gnb>li .sub_img {
@@ -131,13 +194,170 @@
 
 }
 
+<<<<<<< HEAD
 
 @media screen and (max-width:768px) {
+=======
+@media screen and (max-width:768px) {
+    
+>>>>>>> 0ae06dc4369854816759b954fff464470db4e128
     .inner {
         padding-inline: 42px;
         width: min(100%, calc(1700px + 42px * 2))
     }
 
+<<<<<<< HEAD
+=======
+    header.on .ham_bottom ul li:nth-child(2) {
+        display: block;
+    }
+
+    header.on {
+        height: 100vh;
+        right: 0;
+    }
+
+    header.on .inner {
+        padding-inline: 42px;
+    }
+
+    header.on .inner nav {
+        width: 100%;
+        height: 100%;
+        padding-top: 150px;
+    }
+
+    header.on nav ul.gnb>li {
+        width: 100%;
+        height: auto;
+    }
+
+    header.on nav ul.gnb>li>a {
+        padding: 20px 0;
+    }
+
+    header nav ul.gnb>li:hover .sub_wrap {
+        display: none;
+    }
+
+    header.on nav ul.gnb>li .sub_wrap {
+        height: auto;
+        width: 100%;
+        padding-top: 12px;
+    }
+
+    header.on nav ul.gnb>li.on .sub_wrap,
+    header.on nav ul.gnb>li.on:nth-child(1) .sub_wrap {
+        display: flex !important;
+    }
+
+    header.on nav ul.gnb>li:nth-child(1) .sub_wrap {
+        display: none;
+    }
+
+    header.on .inner .gnb>li a {
+        height: 50px;
+    }
+
+    header.on nav .sub_wrap .sub {
+        padding: 0;
+
+        border-bottom: 1px solid var(--grey_aa);
+    }
+
+    .nav_right .search,
+    .nav_right .bag {
+        display: none;
+    }
+
+    header.on .gnb {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    header.on .gnb>li {
+        height: 50px;
+        cursor: pointer;
+    }
+
+    header.on .gnb>li>a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .gnb>li>a::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url(/asset/img/icon_btn_down_1c.svg);
+    }
+
+    header.on nav .sub_wrap {
+        border: none;
+        position: static;
+    }
+
+    header.on nav .sub_wrap:nth-child(2) {
+        flex-direction: row;
+    }
+
+    nav .sub_wrap .sub {
+        width: 100%;
+        color: var(--txt_sub_77);
+    }
+
+    header.on .ham_bottom {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: none;
+        padding-inline: 42px;
+    }
+
+    nav ul.gnb>li .sub_img {
+        display: none;
+    }
+
+    .ham_menu img:nth-child(2) {
+        position: fixed;
+        top: 47px;
+        right: 30px;
+        left: auto;
+        z-index: 10;
+    }
+
+    header.on .search_tab .keyword_wrap {
+        display: none;
+    }
+
+    header.on .search_tab button.close {
+        display: none;
+    }
+
+    header.on .search_tab {
+        height: 124px;
+        margin-top: auto;
+        padding-bottom: 0;
+        padding-inline: 42px;
+    }
+
+    .search_tab form .search_area button {
+        width: 24px;
+        height: 24px;
+    }
+
+    .search_tab form {
+        min-width: 300px;
+        margin-right: 80px;
+    }
+
+    .search_tab input[type="search"] {
+        font-size: 1rem;
+    }
+
+>>>>>>> 0ae06dc4369854816759b954fff464470db4e128
     footer .inner .logo {
         font-size: 3rem;
     }
