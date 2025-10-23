@@ -2,30 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Beauty of Joseon — Korean skincare inspired by timeless Hanbang tradition.">
+    <meta name="description" content="Beauty of Joseon">
     <meta name="keywords" content="beautyofjoseon, boj, cosmetic, brand">
     <meta name="author" content="boj">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailored for You - BEAUTY OF JOSEON</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="./css/main01.css">
-    <script src="./js/quiz.js" defer></script>
-    <script src="./js/result.js" defer></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
 </head>
 <body>
-     <!-- <header class="gnb">
-        <div class="inner">
-            <h1 class="logo">BEAUTY OF JOSEON</h1>
-            <nav class="nav" aria-label="Global">
-                <a href="#" class="nav-link">Shop</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Ingredients</a>
-            </nav>
-        </div>
-    </header> -->
-
-    <main>
     <!-- home -->
     <section id="home" class="page">
       <div class="home-inner">
@@ -36,13 +23,13 @@
           <span class="badge">5 minutes</span>
           <span class="badge">Desktop/Mobile</span>
         </div>
-        <button id="startBtn" class="btn">Start Test</button>
+        <button id="startBtn" type="button">Start Test</button>
       </div>
     </section>
 
     <!-- quiz -->
     <section id="quiz" class="page" hidden>
-      <div class="inner">
+      <div class="quiz-inner">
         <div class="card" role="group" aria-labelledby="question">
           <p id="progress" class="progress" aria-live="polite">1 of 10</p>
           <h2 id="question" tabindex="-1"></h2>
@@ -57,30 +44,145 @@
 
     <!-- result -->
     <section id="result" class="page" hidden>
-      <div class="inner">
+      <div class="result-inner">
         <div class="legend">
-          <span class="key pop"></span> Population average
-          <span>·</span>
-          <span class="key me"></span> My Skin
+        <span class="sw avg"></span><span>Population average</span>
+        <span style="width:18px"></span>
+        <span class="sw mine"></span><span>My skin</span>
+      </div>
+      <div class="radar-wrap">
+        <div class="chart">
+          <svg id="radar" viewBox="0 0 460 460"></svg>
+          <div id="chip0" class="axis-chip mid"></div>
+          <div id="chip1" class="axis-chip mid"></div>
+          <div id="chip2" class="axis-chip mid"></div>
+          <div id="chip3" class="axis-chip mid"></div>
+          <div id="chip4" class="axis-chip mid"></div>
         </div>
+      </div>
+      <div class="separator">
+        <div class="dot"></div>
+        <div class="line"></div>
+    </div>
+      <div class="mbti" id="mbti"></div>
+      <p id="summary" class="center"></p>
+      <h3 class="product-tit">Recommended products</h3>
+        <section class="product">
+          <div class="product_grid">
+            <!-- 1 -->
+            <div class="product_card">
+                <img class="product_img" src="img/product1.png" alt="Dynasty Cream">
+                <div class="tags">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="info">
+                    <h3>Dynasty Cream</h3>
+                    <p>Nourishing Cream Moisturizer</p>
+                    <span class="score"></span>
+                </div>
+                <button class="add_btn">
+                    <img src="img/icon_heart_stroke.svg" class="heart" alt="찜하기 아이콘">ADD TO WISHLIST
+                </button>
+            </div>
 
-        <div class="radar-wrap">
-          <div class="radar-box">
-            <svg id="radar5" viewBox="-120 -120 240 240" role="img" aria-label="Pentagon radar"></svg>
-            <ul id="radarTags" class="radar-tags" aria-hidden="true"></ul>
-          </div>
-        </div>
+            <!-- 2 -->
+            <div class="product_card">
+                <img class="product_img" src="img/product2.png" alt="Glow Replenishing Rice Milk">
+                <div class="tags">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="info">
+                    <h3>Glow Replenishing Rice Milk</h3>
+                    <p>Hydrating + Balancing Toner</p>
+                    <span class="score"></span>
+                </div>
+                <button class="add_btn">
+                    <img src="img/icon_heart_stroke.svg" class="heart" alt="찜하기 아이콘">ADD TO WISHLIST
+                </button>
+            </div>
 
-        <div class="center">
-          <div class="dotline"></div>
-          <h3 id="mbti" class="mbti">DRNT</h3>
-          <p id="summary" class="summary">결과 문장</p>
-        </div>
+            <!-- 3 -->
+            <div class="product_card">
+                <img class="product_img" src="img/product3.png" alt="Ginseng Essence Water">
+                <div class="tags">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="info">
+                    <h3>Ginseng Essence Water</h3>
+                    <p>Barrier-Boosting Hydrating Essence</p>
+                    <span class="score"></span>
+                </div>
+                <button class="add_btn">
+                    <img src="img/icon_heart_stroke.svg" class="heart" alt="찜하기 아이콘">ADD TO WISHLIST
+                </button>
+            </div>
 
-        <h3 class="center" style="margin:14px 0 10px">Recommended products</h3>
-        <section class="products">
-          <div id="productGrid" class="grid-p"></div>
-        </section>
+            <!-- 4 -->
+            <div class="product_card">
+                <img class="product_img" src="img/product4.png" alt="Revive Serum: Ginseng + Snail Mucin">
+                <div class="tags">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="info">
+                    <h3>Revive Serum: Ginseng + Snail Mucin</h3>
+                    <p>Nourishing Cream Moisturizer</p>
+                    <span class="score"></span>
+                </div>
+                <button class="add_btn">
+                    <img src="img/icon_heart_stroke.svg" class="heart" alt="찜하기 아이콘">ADD TO WISHLIST
+                </button>
+            </div>
+
+            <!-- 5 -->
+            <div class="product_card">
+                <img class="product_img" src="img/product5.png" alt="Ginseng Cleansing Oil">
+                <div class="tags">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="info">
+                    <h3>Ginseng Cleansing Oil</h3>
+                    <p>Hydrating + Balancing Toner</p>
+                    <span class="score"></span>
+                </div>
+                <button class="add_btn">
+                    <img src="img/icon_heart_stroke.svg" class="heart" alt="찜하기 아이콘">ADD TO WISHLIST
+                </button>
+            </div>
+
+            <!-- 6 -->
+            <div class="product_card">
+                <img class="product_img" src="img/product6.png" alt="Day Dew Sunscreen">
+                <div class="tags">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="info">
+                    <h3>Day Dew Sunscreen</h3>
+                    <p>Lightweight SPF 50</p>
+                    <span class="score"></span>
+                </div>
+                <button class="add_btn">
+                    <img src="img/icon_heart_stroke.svg" class="heart" alt="찜하기 아이콘">ADD TO WISHLIST
+                </button>
+            </div>
+    </section><!-- //.product -->
 
         <div class="result-actions center">
           <div class="row-ghosts">
@@ -90,8 +192,7 @@
         </div>
       </div>
     </section>
-  </main>
-        
+      
     <footer>
         <div class="inner">
             <h2 class="logo"><a href="">BEAUTY OF JOSEON</a></h2>
