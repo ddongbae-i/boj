@@ -20,7 +20,7 @@
   user-select: none;
   -webkit-user-drag: none;
   pointer-events: auto;
- opacity: .5;
+  opacity: .5;
 }
 
 main {
@@ -51,48 +51,44 @@ main {
   overflow: hidden;
 }
 
-.bestSeller .inner {
-  height: 860px;
-  position: absolute;
-  left: 50%;
-  translate: -50% -50%;
-  top: 50%;
-  overflow: hidden;
-}
 
-.bestSeller .inner .product {
+.bestSeller .product {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  height: 860px;
+  /*   gap: 0px;
   align-items: flex-start;
-  justify-content: flex-start;
-  width: 1920px;
+  justify-content: flex-start; */
+  /*   width: 1920px;
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: 0px; */
 }
 
-.bestSeller .inner .top,
-.bestSeller .inner .bottom {
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-  align-items: center;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.bestSeller .inner .product .card {
-  flex-shrink: 0;
-  width: 425px;
+.bestSeller .slide_wrap {
+  width: 100%;
   height: 430px;
   position: relative;
+  /* background: #ccc; */
+  /*   overflow: hidden;
+  pointer-events: auto; */
+}
+
+.bestSeller .slide_wrap2 .swiper-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  flex-wrap: nowrap;
+  width: max-content;
 }
 
 .bestSeller .product .card {
-  transition: opacity .25s ease;
+  width: 425px;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  /* transition: opacity .25s ease; */
 }
 
 .bestSeller .product:hover .card {
@@ -103,18 +99,39 @@ main {
   opacity: 1;
 }
 
-.bestSeller .inner .product .card img {
-  width: 425px;
+.bestSeller .product .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*   width: 425px;
   height: 430px;
   position: absolute;
   left: 50%;
   translate: -50% -50%;
-  top: 50%;
+  top: 50%; */
 }
 
+/* .bestSeller .top,
+.bestSeller .bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+} */
+
+.bestSeller .product .card {
+  /*   flex-shrink: 0;
+  width: 425px;
+  height: 430px; */
+  /*   position: relative; */
+}
 
 /* .bestSeller .swiper */
-.bestSeller .swiper {
+/* .bestSeller .swiper {
   width: 100%;
   overflow: hidden;
   pointer-events: auto;
@@ -124,20 +141,17 @@ main {
   display: flex;
   align-items: center;
   gap: 30px;
-  /* spaceBetween 대신 보정용 */
   transition-timing-function: linear !important;
-  /* continuous 느낌 */
 }
 
 .bestSeller .swiper-slide {
   flex: 0 0 auto;
   width: auto;
-  /* 카드 너비를 기존 .card(425px)를 따르게 함 */
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: auto;
-  /* 호버/클릭 활성화 */
+
 }
 
 .bestSeller .swiper-slide img {
@@ -146,8 +160,8 @@ main {
   height: auto;
   object-fit: contain;
   pointer-events: none;
-  /* 이미지 자체는 이벤트를 차단해 부모 카드에 이벤트가 들어가게 함 */
-}
+
+} */
 
 .banner_1 {
   width: 100%;
@@ -605,6 +619,43 @@ main {
   right: 25%;
   bottom: 0;
 }
+
+/* txt_box1/2/3 서서히 나타나게 (fade up) */
+.hanbang .inner .img_box .imgTxt .txt_box1,
+.hanbang .inner .img_box .imgTxt .txt_box2,
+.hanbang .inner .img_box .imgTxt .txt_box3 {
+  opacity: 0;
+  transform: translateY(12px);
+  animation-name: hanbang-fadeup;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.2, .8, .2, 1);
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box1 {
+  animation-delay: 0.50s;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box2 {
+  animation-delay: 1.00s;
+}
+
+.hanbang .inner .img_box .imgTxt .txt_box3 {
+  animation-delay: 1.50s;
+}
+
+@keyframes hanbang-fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .banner_2 {
   position: relative;
