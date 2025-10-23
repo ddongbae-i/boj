@@ -1,143 +1,144 @@
+// GSAP 확장 버전: 배경 변경 제거, 인터랙션 강화 전용
 
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('load', function () {
-    console.log('🎯 Fixed Timeline with Scrolling Text!');
+    console.log('🎯 Interaction-only GSAP Active!');
 
     const timelineItems = document.querySelectorAll('.timeline-item');
+    if (timelineItems.length === 0) return;
 
-    if (timelineItems.length === 0) {
-        console.error('Timeline elements not found!');
-        return;
-    }
-
-
-    timelineItems.forEach((item, index) => {
+    timelineItems.forEach((item) => {
         const textBox = item.querySelector('.timeline-text');
+        const icon = item.querySelector('.timeline-icon');
 
-        if (!textBox) return;
+        if (textBox) {
+            gsap.set(textBox, {
+                opacity: 0,
+                y: 60,
+                x: item.classList.contains('reverse') ? 40 : -40,
+            });
 
-
-        gsap.set(textBox, {
-            opacity: 0,
-            x: item.classList.contains('reverse') ? 50 : -50
-        });
-
-
-        gsap.to(textBox, {
-            opacity: 1,
-            x: 0,
-            duration: 0.8,
-            scrollTrigger: {
-                trigger: item,
-                start: 'top 60%',
-                end: 'top 40%',
-                scrub: 1,
-                markers: false
-            }
-        });
-
-        const time = textBox.querySelector('time');
-        const heading = textBox.querySelector('h4');
-        const paragraph = textBox.querySelector('p');
-
-        if (time && heading && paragraph) {
-            gsap.set([time, heading, paragraph], { opacity: 0, y: 10 });
-
-            gsap.to([time, heading, paragraph], {
+            gsap.to(textBox, {
                 opacity: 1,
                 y: 0,
-                stagger: 0.1,
+                x: 0,
+                duration: 1.2,
+                ease: 'power3.out',
                 scrollTrigger: {
                     trigger: item,
-                    start: 'top 60%',
-                    end: 'top 30%',
-                    scrub: 1
-                }
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse',
+                },
+            });
+
+            const inner = textBox.querySelectorAll('time, h4, p');
+            gsap.set(inner, { opacity: 0, y: 15 });
+            gsap.to(inner, {
+                opacity: 1,
+                y: 0,
+                stagger: 0.12,
+                duration: 0.8,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: textBox,
+                    start: 'top 75%',
+                },
+            });
+        }
+
+        if (icon) {
+            item.addEventListener('mouseenter', () => {
+                gsap.to(icon, {
+                    scale: 1.15,
+                    rotate: 5,
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.25)',
+                    duration: 0.3,
+                    ease: 'back.out(1.7)',
+                });
+            });
+
+            item.addEventListener('mouseleave', () => {
+                gsap.to(icon, {
+                    scale: 1,
+                    rotate: 0,
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+                    duration: 0.3,
+                    ease: 'power2.out',
+                });
             });
         }
     });
 
-
-    timelineItems.forEach((item) => {
-        const icon = item.querySelector('.timeline-icon');
-
-        if (!icon) return;
-
-        item.addEventListener('mouseenter', () => {
-            gsap.to(icon, {
-                scale: 1.15,
-                boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
-                duration: 0.3
-            });
-        });
-
-        item.addEventListener('mouseleave', () => {
-            gsap.to(icon, {
-                scale: 1,
-                boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-                duration: 0.3
-            });
-        });
-    });
-
     ScrollTrigger.refresh();
-    console.log('✅ Timeline animation complete!');
+    console.log('✅ Interaction-only timeline complete!');
 });
 
-window.addEventListener('resize', () => {
-    ScrollTrigger.getAll().forEach(trigger => trigger.refresh());
-});
-// ...existing code...
-
-// 갤러리 무한 스크롤 설정
 document.addEventListener('DOMContentLoaded', () => {
     const rows = document.querySelectorAll('.gallery-row');
-
-    rows.forEach(row => {
-        // 각 행의 아이템들을 2번 복제하여 더 자연스러운 무한 스크롤 효과 생성
+    rows.forEach((row, i) => {
         const originalItems = row.innerHTML;
         row.innerHTML = originalItems + originalItems + originalItems;
+
+        gsap.to(row, {
+            xPercent: -33,
+            duration: 20 + i * 5,
+            repeat: -1,
+            ease: 'none',
+        });
+
+        gsap.from(row, {
+            opacity: 0,
+            y: 40,
+            duration: 1.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: row,
+                start: 'top 85%',
+            },
+        });
     });
 });
-
-
-// ===== Our Living Heritage Accordion Toggle =====
 
 document.addEventListener('DOMContentLoaded', function () {
     const legacySection = document.querySelector('.legacy-section');
     const legacyHeader = document.querySelector('.legacy-header');
 
     if (legacySection && legacyHeader) {
-        // 헤더 클릭 이벤트
         legacyHeader.addEventListener('click', function (e) {
-            // 1024px 이하에서만 작동
             if (window.innerWidth <= 1024) {
                 e.stopPropagation();
-                legacySection.classList.toggle('active');
-            }
-        });
+                const active = legacySection.classList.toggle('active');
 
-        // Window resize 이벤트 - 반응형 체크
-        window.addEventListener('resize', function () {
-            const windowWidth = window.innerWidth;
-
-            // 1024px 초과시 아코디언 상태 초기화
-            if (windowWidth > 1024) {
-                legacySection.classList.remove('active');
-            }
-        });
-
-        // 문서 다른 부분 클릭시 아코디언 닫기
-        document.addEventListener('click', function (e) {
-            if (window.innerWidth <= 1024) {
-                if (!e.target.closest('.legacy-section')) {
-                    legacySection.classList.remove('active');
+                if (active) {
+                    gsap.fromTo(
+                        legacySection,
+                        { height: 0, opacity: 0 },
+                        { height: 'auto', opacity: 1, duration: 0.6, ease: 'power2.out' }
+                    );
+                } else {
+                    gsap.to(legacySection, {
+                        height: 0,
+                        opacity: 0,
+                        duration: 0.5,
+                        ease: 'power2.inOut',
+                    });
                 }
+            }
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 1024) {
+                legacySection.classList.remove('active');
+                gsap.set(legacySection, { height: 'auto', opacity: 1 });
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1024 && !e.target.closest('.legacy-section')) {
+                legacySection.classList.remove('active');
+                gsap.to(legacySection, { height: 0, opacity: 0, duration: 0.4 });
             }
         });
     }
 });
-
-
-
