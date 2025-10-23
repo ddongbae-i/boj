@@ -1396,7 +1396,6 @@ html {
 .tit_p {
   padding-bottom: 48px;
   font-size: 24px;
-  color: rgb(168, 168, 168);
 }
 
 .newsletter-tag {
@@ -1523,7 +1522,7 @@ html {
 .slider-item .korean-quote {
   font-family: 'Noto Serif KR', serif;
   font-size: 20px;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 16px;
   animation: glow 3s ease-in-out infinite;
 }
@@ -1551,7 +1550,7 @@ html {
 }
 
 .slider-dot.active {
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.6);
   width: 24px;
   border-radius: 4px;
 }

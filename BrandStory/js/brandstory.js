@@ -88,6 +88,56 @@ window.addEventListener('load', function () {
 window.addEventListener('resize', () => {
     ScrollTrigger.getAll().forEach(trigger => trigger.refresh());
 });
+// ...existing code...
+
+// 갤러리 무한 스크롤 설정
+document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll('.gallery-row');
+
+    rows.forEach(row => {
+        // 각 행의 아이템들을 2번 복제하여 더 자연스러운 무한 스크롤 효과 생성
+        const originalItems = row.innerHTML;
+        row.innerHTML = originalItems + originalItems + originalItems;
+    });
+});
+
+
+// ===== Our Living Heritage Accordion Toggle =====
+
+document.addEventListener('DOMContentLoaded', function () {
+    const legacySection = document.querySelector('.legacy-section');
+    const legacyHeader = document.querySelector('.legacy-header');
+
+    if (legacySection && legacyHeader) {
+        // 헤더 클릭 이벤트
+        legacyHeader.addEventListener('click', function (e) {
+            // 1024px 이하에서만 작동
+            if (window.innerWidth <= 1024) {
+                e.stopPropagation();
+                legacySection.classList.toggle('active');
+            }
+        });
+
+        // Window resize 이벤트 - 반응형 체크
+        window.addEventListener('resize', function () {
+            const windowWidth = window.innerWidth;
+
+            // 1024px 초과시 아코디언 상태 초기화
+            if (windowWidth > 1024) {
+                legacySection.classList.remove('active');
+            }
+        });
+
+        // 문서 다른 부분 클릭시 아코디언 닫기
+        document.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1024) {
+                if (!e.target.closest('.legacy-section')) {
+                    legacySection.classList.remove('active');
+                }
+            }
+        });
+    }
+});
 
 
 
