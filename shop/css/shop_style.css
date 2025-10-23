@@ -19,6 +19,10 @@ a.btn2 {
     background-image: url(../img/arrow_up.svg);
 }
 
+header {
+    color: var(--white_ff);
+}
+
 .puzzle {
     position: relative;
     width: 100%;
@@ -31,8 +35,6 @@ a.btn2 {
     height: 100vh;
     display: flex;
     justify-content: space-between;
-    /* 좌/우 배치 */
-    align-items: center;
 }
 
 .flex_area {
@@ -72,13 +74,9 @@ a.btn2 {
     inset: 0;
     display: grid;
     grid-template-columns: repeat(4, 240px);
-    /* ✅ 1fr 말고 픽셀 */
     grid-auto-rows: 240px;
-    /* ✅ 픽셀 */
     gap: 6px;
-    /* 시작값 */
     padding: 6px;
-    /* 시작값 (비디오와 동일) */
     z-index: 2;
     background: var(--bg_black);
 }
@@ -173,7 +171,6 @@ a.btn2 {
 .swiper .product_wrap {
     display: flex;
     gap: 37px;
-    padding-right: none;
 }
 
 .pro_card.swiper-slide {
@@ -250,6 +247,10 @@ a.btn2 {
     border-bottom: 1px solid var(--grey_de);
 }
 
+.p_right p {
+    padding-left: 2px;
+}
+
 .p_right .option {
     width: 100%;
     position: relative;
@@ -267,7 +268,7 @@ a.btn2 {
 .p_right .option button em {
     display: flex;
     width: 100%;
-    padding: 0 10px;
+    padding-left: 2px;
     justify-content: space-between;
 }
 
@@ -279,9 +280,9 @@ a.btn2 {
     position: absolute;
     left: 0;
     top: 33px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.934);
     width: 100%;
-    /* display: none; */
+    display: none;
     border-radius: 0 0 4px 4px;
     border-bottom: 0;
     padding: 10px;
@@ -294,7 +295,7 @@ a.btn2 {
     margin-bottom: 8px;
 }
 
-.p_right .option ul.active ul {
+.p_right .option > ul.active {
     display: block;
 }
 

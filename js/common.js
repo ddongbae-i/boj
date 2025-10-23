@@ -14,7 +14,9 @@ window.addEventListener('scroll', () => {
         //사용자가 위로 올림
         header.style.top = '0';
         header.style.backgroundColor = '#fefefef2'
-    }
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1);'
+        header.style.color = '#1c1c1c'
+      }
 
     //이번 스크롤 위치를 이전 스크롤 위치로 저장
     lastScrollY = currentScrollY
