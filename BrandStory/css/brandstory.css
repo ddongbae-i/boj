@@ -680,14 +680,14 @@ html {
   width: 64px;
   height: 64px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.308);
+  border: 1px solid rgba(255, 255, 255, 0.658);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Cormorant', serif;
   font-size: 40px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.774);
   position: relative;
   animation: glow 3s ease-in-out infinite;
 }
@@ -955,6 +955,7 @@ html {
 }
 
 
+/* Section 6 */
 /* Section 6 */
 .section-6 {
 
@@ -1364,6 +1365,7 @@ html {
     width: 100%;
   }
 }
+
 
 
 
