@@ -1,3 +1,5 @@
+/* 타임라인 - 핀을 절대위치로 고정하여 라인과 정확히 일치 */
+
 :root {
     --text-main: #1c1c1c;
     --text-gray: #444444;
@@ -14,6 +16,7 @@
     padding-bottom: 100px;
 }
 
+/* 타임라인 라인 - 정확히 중앙에 고정 */
 .timeline-line {
     position: absolute;
     left: 50%;
@@ -25,7 +28,7 @@
     z-index: 1;
 }
 
-
+/* 타임라인 아이템 - FLEX 유지 */
 .timeline-item {
     display: flex;
     align-items: center;
@@ -42,6 +45,7 @@
     flex-direction: row-reverse;
 }
 
+/* 타임라인 텍스트 박스 - 스크롤 애니메이션 */
 .timeline-text {
     width: 319px;
     text-align: right;
@@ -78,7 +82,7 @@
     line-height: 1.6;
 }
 
-
+/* 타임라인 아이콘 (핀) - 절대위치로 라인 중앙에 고정! */
 .timeline-icon {
     width: 64px;
     height: 64px;
@@ -92,16 +96,41 @@
     font-size: 22px;
     font-weight: 500;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    position: relative;
+
+    /* 절대위치로 articles 컨테이너 기준 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
-    flex-shrink: 0;
+
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+/* 각 타임라인 아이템의 핀 위치 고정 */
+.timeline-item:nth-child(2) .timeline-icon {
+    top: 0;
+}
+
+.timeline-item:nth-child(3) .timeline-icon {
+    top: 80px;
+}
+
+.timeline-item:nth-child(4) .timeline-icon {
+    top: 160px;
+}
+
+.timeline-item:nth-child(5) .timeline-icon {
+    top: 240px;
+}
+
+.timeline-item:nth-child(6) .timeline-icon {
+    top: 320px;
+}
+
 .timeline-icon:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transform: scale(1.15);
+    transform: translateX(-50%) scale(1.15);
 }
 
 .timeline-icon.modern {
@@ -109,7 +138,7 @@
     color: white;
 }
 
-
+/* 타임라인 디바이더 */
 .timeline-divider {
     width: 2px;
     height: 96px;
@@ -121,6 +150,7 @@
     z-index: 1;
 }
 
+/* 섹션 5 스타일 */
 .section-5 {
     background: linear-gradient(90deg, #fefefe, #fdfefe, #f7f7f7);
     padding: 120px 0;
