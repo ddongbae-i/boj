@@ -256,8 +256,15 @@ main {
   border-radius: 10px;
   background: var(--img_bg);
   overflow: hidden;
-  display: block;
   pointer-events: auto;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  transition: transform 1.6s cubic-bezier(.2, .8, .2, 1);
+  /* flipMs:1600ms와 일치 */
+  will-change: transform;
+  /* flipped 클래스가 붙으면 카드 전체를 한 번 회전시킴 */
 }
 
 /* 세로형 카드(3,6)는 두 칸 높이 */
@@ -266,19 +273,6 @@ main {
   height: calc(var(--card) * 2 + var(--gap));
 }
 
-/* 카드 회전 (카드 전체를 한 번만 회전) */
-.influencer .card {
-  position: relative;
-  /* 크기는 기존 선언( var(--card) )을 사용하도록 width/height 제거 */
-  perspective: 1000px;
-  -webkit-perspective: 1000px;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  transition: transform 1.6s cubic-bezier(.2, .8, .2, 1);
-  /* flipMs:1600ms와 일치 */
-  will-change: transform;
-  /* flipped 클래스가 붙으면 카드 전체를 한 번 회전시킴 */
-}
 
 .influencer .card.flipped {
   transform: rotateY(180deg);
@@ -293,19 +287,17 @@ main {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  display: block;
 }
 
-/* front는 정면, back은 180도로 미리 뒤집어서 카드 전체가 180deg 회전하면 보이도록 */
 .influencer .card .front {
   transform: rotateY(0deg);
-  z-index: 2;
 }
 
 .influencer .card .back {
   transform: rotateY(180deg);
-  z-index: 1;
 }
+
+
 
 /* 이미지가 따로 transform을 갖고 있지 않도록 안전장치 */
 .influencer .card img {
@@ -612,11 +604,25 @@ main {
 
 /* 1️⃣ 애니메이션 정의 */
 @keyframes fill-bar {
-  0% { width: 0%; }
-  25% { width: 25%; }
-  50% { width: 50%; }
-  75% { width: 75%; }
-  100% { width: 100%; }
+  0% {
+    width: 0%;
+  }
+
+  25% {
+    width: 25%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  75% {
+    width: 75%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
 /* 2️⃣ 기본 스타일 */
@@ -635,7 +641,7 @@ main {
 /* 3️⃣ 상태별 실행 */
 .hanbang .inner .txt1.on .progress .playbar,
 .hanbang .inner .txt2.on .progress .playbar,
-.hanbang .inner .txt3.on .progress .playbar, 
+.hanbang .inner .txt3.on .progress .playbar,
 .hanbang .inner .txt4.on .progress .playbar,
 .hanbang .inner .txt5.on .progress .playbar,
 .hanbang .inner .txt6.on .progress .playbar,
@@ -797,15 +803,15 @@ main {
   animation-timing-function: cubic-bezier(.2, .8, .2, 1);
 }
 
-.hanbang .inner .img_box .imgTxt .txt_box1 img{
+.hanbang .inner .img_box .imgTxt .txt_box1 img {
   animation-delay: 1.00s;
 }
 
-.hanbang .inner .img_box .imgTxt .txt_box2 img{
+.hanbang .inner .img_box .imgTxt .txt_box2 img {
   animation-delay: 2.0s;
 }
 
-.hanbang .inner .img_box .imgTxt .txt_box3 img{
+.hanbang .inner .img_box .imgTxt .txt_box3 img {
   animation-delay: 3.00s;
 }
 
@@ -828,10 +834,12 @@ main {
     transform: translateY(20px) scale(0.98);
     filter: blur(4px);
   }
+
   50% {
     opacity: 0.5;
     filter: blur(2px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -856,9 +864,11 @@ main {
 .hanbang .inner .img_box .imgTxt .txt_box1 img {
   animation-delay: 0.5s;
 }
+
 .hanbang .inner .img_box .imgTxt .txt_box2 img {
   animation-delay: 1.0s;
 }
+
 .hanbang .inner .img_box .imgTxt .txt_box3 img {
   animation-delay: 1.5s;
 }
